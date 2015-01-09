@@ -63,7 +63,7 @@ namespace DataLayer.XProject
                 HistoryCommand.NewHistory(new History()
                 {
                     ActionName = "Edit Project Installment",
-                    Description = String.Format("old Info Is Installments name {0}\n Amount : {1} Date Of Installments {2} Status {3} Pay By {4}  Pay Description {5} Active Status {6} ProjectLevelID {7} \n New Info is Installments name {8}\n Amount : {9} Date Of Installments {10} Status {11} Pay Bay  {12}  Pay Description {13} Active Status {14} ProjectLevelID {15}", q.Installments_name, q.Amount, q.DateOfInstallments, q.ActiveStatus, q.PayBy, q.PayDescription, q.ProjectLevelID, tb.Installments_name, tb.Amount, tb.DateOfInstallments,tb.ActiveStatus, tb.PayBy, tb.PayDescription, tb.ProjectLevelID),
+                    Description = String.Format("old Info Is Installments name {0}\n Amount : {1} Date Of Installments {2} Pay By {3}  Pay Description {4} Active Status {5} ProjectLevelID {6} \n New Info is Installments name {8}\n Amount : {9} Date Of Installments {10}  Pay Bay  {11}  Pay Description {12} Active Status {13} ProjectLevelID {14}", q.Installments_name, q.Amount, q.DateOfInstallments, q.ActiveStatus, q.PayBy, q.PayDescription, q.ProjectLevelID, tb.Installments_name, tb.Amount, tb.DateOfInstallments,tb.ActiveStatus, tb.PayBy, tb.PayDescription, tb.ProjectLevelID),
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser
                 });

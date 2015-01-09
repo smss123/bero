@@ -11,7 +11,7 @@ namespace DataLayer.XProject
     {
         public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
         public static event OnchangeCallBack ProcessChange;
-        public static bool NewProjectQuantity(ProjectExpenss tb)
+        public static bool NewProjectExpenss(ProjectExpenss tb)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace DataLayer.XProject
             }
         }
 
-        public static bool EditProjectQuantity(ProjectExpenss tb)
+        public static bool EditProjectExpenss(ProjectExpenss tb)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace DataLayer.XProject
             }
         }
 
-        public static bool DeleteProjectQuantity(int iD)
+        public static bool DeleteProjectExpenss(int iD)
         {
             try
             {
