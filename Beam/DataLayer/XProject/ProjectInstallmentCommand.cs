@@ -80,7 +80,7 @@ namespace DataLayer.XProject
             }
         }
 
-        public static bool DeleteprojectLevelSell(int iD)
+        public static bool DeleteprojectInstallment(int iD)
         {
             try
             {
