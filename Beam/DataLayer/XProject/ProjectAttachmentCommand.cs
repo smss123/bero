@@ -58,7 +58,7 @@ namespace DataLayer.XProject
                 HistoryCommand.NewHistory(new History()
                 {
                     ActionName = "Edit Project Attachment",
-                    Description = String.Format("old Info Is File Name {0}\n File Path : {1} File Content {2} Project ProfileID {3} \n File Name {4}\n File Path : {5} File Content {6} Project ProfileID {7}", q.FileName, q.FilePath, q.FileContent, q.ProjectProfileID, tb.FileName, tb.FilePath, tb.FileContent, tb.ProjectProfileID),
+                    Description = String.Format("old Info Is File Name {0}\n File Path : {1} File Content {2} Project ProfileID {3} \n New Info Is File Name {4}\n File Path : {5} File Content {6} Project ProfileID {7}", q.FileName, q.FilePath, q.FileContent, q.ProjectProfileID, tb.FileName, tb.FilePath, tb.FileContent, tb.ProjectProfileID),
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser
                 });
@@ -84,7 +84,7 @@ namespace DataLayer.XProject
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
                 {
-                    ActionName = "Delete Project Expenss",
+                    ActionName = "Delete Project Attachment",
                     Description = String.Format(" Info Is File Name {0}\n File Path : {1} File Content {2} Project ProfileID {3}", q.FileName, q.FilePath, q.FileContent, q.ProjectProfileID),
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser
