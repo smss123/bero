@@ -54,7 +54,20 @@
     </Compile>
     <Compile Include="Security\HistoryCommand.cs" />
     <Compile Include="Security\LoginInfomation.cs" />
+    <Compile Include="XAccountant\AccountCategoryCmd.cs" />
+    <Compile Include="XAccountant\AccountCommand.cs" />
+    <Compile Include="XAccountant\AccountDailyCommand.cs" />
+    <Compile Include="XAccountant\ExpenssesCommand.cs" />
+    <Compile Include="XAccountant\ExpenssesMovmentCommand.cs" />
+    <Compile Include="XBulidItem\BulidItemCommand.cs" />
     <Compile Include="XCustomer\CustomerCommand.cs" />
+    <Compile Include="XProject\ProjectAttachmentCommand.cs" />
+    <Compile Include="XProject\ProjectExpenssesCommand.cs" />
+    <Compile Include="XProject\ProjectInstallmentCommand.cs" />
+    <Compile Include="XProject\projectLevelCommand.cs" />
+    <Compile Include="XProject\projectLevelSellCommand.cs" />
+    <Compile Include="XProject\ProjectProfileCommand.cs" />
+    <Compile Include="XProject\ProjectQuantityCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
