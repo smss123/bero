@@ -9,7 +9,7 @@ namespace DataLayer.XAccountant
 {
    public class AccountCommand:BaseDatabase
     {
-   {
+   
        public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
        public static event OnchangeCallBack ProcessChange;
        public static bool NewAccount(Account tb)

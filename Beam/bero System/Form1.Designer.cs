@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label accountIDLabel;
             System.Windows.Forms.Label createDateLabel;
             System.Windows.Forms.Label customerNameLabel;
@@ -38,19 +37,20 @@
             System.Windows.Forms.Label no_permissibilityLabel;
             System.Windows.Forms.Label phoneNumberLabel;
             System.Windows.Forms.Label serialNumberLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.accountIDTextBox = new System.Windows.Forms.TextBox();
             this.createDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -72,6 +72,78 @@
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).BeginInit();
             this.customerBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // accountIDLabel
+            // 
+            accountIDLabel.AutoSize = true;
+            accountIDLabel.Location = new System.Drawing.Point(376, 96);
+            accountIDLabel.Name = "accountIDLabel";
+            accountIDLabel.Size = new System.Drawing.Size(64, 13);
+            accountIDLabel.TabIndex = 1;
+            accountIDLabel.Text = "Account ID:";
+            // 
+            // createDateLabel
+            // 
+            createDateLabel.AutoSize = true;
+            createDateLabel.Location = new System.Drawing.Point(370, 123);
+            createDateLabel.Name = "createDateLabel";
+            createDateLabel.Size = new System.Drawing.Size(70, 13);
+            createDateLabel.TabIndex = 3;
+            createDateLabel.Text = "Create Date:";
+            // 
+            // customerNameLabel
+            // 
+            customerNameLabel.AutoSize = true;
+            customerNameLabel.Location = new System.Drawing.Point(353, 148);
+            customerNameLabel.Name = "customerNameLabel";
+            customerNameLabel.Size = new System.Drawing.Size(87, 13);
+            customerNameLabel.TabIndex = 5;
+            customerNameLabel.Text = "Customer Name:";
+            // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Location = new System.Drawing.Point(418, 174);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(22, 13);
+            iDLabel.TabIndex = 7;
+            iDLabel.Text = "ID:";
+            // 
+            // no_buildingLabel
+            // 
+            no_buildingLabel.AutoSize = true;
+            no_buildingLabel.Location = new System.Drawing.Point(377, 200);
+            no_buildingLabel.Name = "no_buildingLabel";
+            no_buildingLabel.Size = new System.Drawing.Size(63, 13);
+            no_buildingLabel.TabIndex = 9;
+            no_buildingLabel.Text = "No building:";
+            // 
+            // no_permissibilityLabel
+            // 
+            no_permissibilityLabel.AutoSize = true;
+            no_permissibilityLabel.Location = new System.Drawing.Point(353, 226);
+            no_permissibilityLabel.Name = "no_permissibilityLabel";
+            no_permissibilityLabel.Size = new System.Drawing.Size(87, 13);
+            no_permissibilityLabel.TabIndex = 11;
+            no_permissibilityLabel.Text = "No permissibility:";
+            // 
+            // phoneNumberLabel
+            // 
+            phoneNumberLabel.AutoSize = true;
+            phoneNumberLabel.Location = new System.Drawing.Point(359, 252);
+            phoneNumberLabel.Name = "phoneNumberLabel";
+            phoneNumberLabel.Size = new System.Drawing.Size(81, 13);
+            phoneNumberLabel.TabIndex = 13;
+            phoneNumberLabel.Text = "Phone Number:";
+            // 
+            // serialNumberLabel
+            // 
+            serialNumberLabel.AutoSize = true;
+            serialNumberLabel.Location = new System.Drawing.Point(363, 278);
+            serialNumberLabel.Name = "serialNumberLabel";
+            serialNumberLabel.Size = new System.Drawing.Size(77, 13);
+            serialNumberLabel.TabIndex = 15;
+            serialNumberLabel.Text = "Serial Number:";
             // 
             // customerBindingSource
             // 
@@ -107,6 +179,31 @@
             this.customerBindingNavigator.TabIndex = 0;
             this.customerBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -139,16 +236,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -171,26 +261,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // customerBindingNavigatorSaveItem
             // 
@@ -201,15 +273,6 @@
             this.customerBindingNavigatorSaveItem.Text = "Save Data";
             this.customerBindingNavigatorSaveItem.Click += new System.EventHandler(this.customerBindingNavigatorSaveItem_Click);
             // 
-            // accountIDLabel
-            // 
-            accountIDLabel.AutoSize = true;
-            accountIDLabel.Location = new System.Drawing.Point(352, 99);
-            accountIDLabel.Name = "accountIDLabel";
-            accountIDLabel.Size = new System.Drawing.Size(64, 13);
-            accountIDLabel.TabIndex = 1;
-            accountIDLabel.Text = "Account ID:";
-            // 
             // accountIDTextBox
             // 
             this.accountIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "AccountID", true));
@@ -217,15 +280,6 @@
             this.accountIDTextBox.Name = "accountIDTextBox";
             this.accountIDTextBox.Size = new System.Drawing.Size(200, 20);
             this.accountIDTextBox.TabIndex = 2;
-            // 
-            // createDateLabel
-            // 
-            createDateLabel.AutoSize = true;
-            createDateLabel.Location = new System.Drawing.Point(352, 126);
-            createDateLabel.Name = "createDateLabel";
-            createDateLabel.Size = new System.Drawing.Size(70, 13);
-            createDateLabel.TabIndex = 3;
-            createDateLabel.Text = "Create Date:";
             // 
             // createDateDateTimePicker
             // 
@@ -235,15 +289,6 @@
             this.createDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.createDateDateTimePicker.TabIndex = 4;
             // 
-            // customerNameLabel
-            // 
-            customerNameLabel.AutoSize = true;
-            customerNameLabel.Location = new System.Drawing.Point(352, 151);
-            customerNameLabel.Name = "customerNameLabel";
-            customerNameLabel.Size = new System.Drawing.Size(87, 13);
-            customerNameLabel.TabIndex = 5;
-            customerNameLabel.Text = "Customer Name:";
-            // 
             // customerNameTextBox
             // 
             this.customerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CustomerName", true));
@@ -251,15 +296,6 @@
             this.customerNameTextBox.Name = "customerNameTextBox";
             this.customerNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.customerNameTextBox.TabIndex = 6;
-            // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(352, 177);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(22, 13);
-            iDLabel.TabIndex = 7;
-            iDLabel.Text = "ID:";
             // 
             // iDTextBox
             // 
@@ -269,15 +305,6 @@
             this.iDTextBox.Size = new System.Drawing.Size(200, 20);
             this.iDTextBox.TabIndex = 8;
             // 
-            // no_buildingLabel
-            // 
-            no_buildingLabel.AutoSize = true;
-            no_buildingLabel.Location = new System.Drawing.Point(352, 203);
-            no_buildingLabel.Name = "no_buildingLabel";
-            no_buildingLabel.Size = new System.Drawing.Size(63, 13);
-            no_buildingLabel.TabIndex = 9;
-            no_buildingLabel.Text = "No building:";
-            // 
             // no_buildingTextBox
             // 
             this.no_buildingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "No_building", true));
@@ -285,15 +312,6 @@
             this.no_buildingTextBox.Name = "no_buildingTextBox";
             this.no_buildingTextBox.Size = new System.Drawing.Size(200, 20);
             this.no_buildingTextBox.TabIndex = 10;
-            // 
-            // no_permissibilityLabel
-            // 
-            no_permissibilityLabel.AutoSize = true;
-            no_permissibilityLabel.Location = new System.Drawing.Point(352, 229);
-            no_permissibilityLabel.Name = "no_permissibilityLabel";
-            no_permissibilityLabel.Size = new System.Drawing.Size(87, 13);
-            no_permissibilityLabel.TabIndex = 11;
-            no_permissibilityLabel.Text = "No permissibility:";
             // 
             // no_permissibilityTextBox
             // 
@@ -303,15 +321,6 @@
             this.no_permissibilityTextBox.Size = new System.Drawing.Size(200, 20);
             this.no_permissibilityTextBox.TabIndex = 12;
             // 
-            // phoneNumberLabel
-            // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(352, 255);
-            phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(81, 13);
-            phoneNumberLabel.TabIndex = 13;
-            phoneNumberLabel.Text = "Phone Number:";
-            // 
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "PhoneNumber", true));
@@ -319,15 +328,6 @@
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(200, 20);
             this.phoneNumberTextBox.TabIndex = 14;
-            // 
-            // serialNumberLabel
-            // 
-            serialNumberLabel.AutoSize = true;
-            serialNumberLabel.Location = new System.Drawing.Point(352, 281);
-            serialNumberLabel.Name = "serialNumberLabel";
-            serialNumberLabel.Size = new System.Drawing.Size(77, 13);
-            serialNumberLabel.TabIndex = 15;
-            serialNumberLabel.Text = "Serial Number:";
             // 
             // serialNumberTextBox
             // 

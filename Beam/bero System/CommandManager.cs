@@ -19,15 +19,15 @@ namespace bero_System
 
         static void HistoryCommand_ProcessChange(string processName, string Usermsg, string description)
         {
-            MessageBox.Show(processName, Usermsg + "\n" + description);
+            MessageBox.Show(processName, string.Format("{0}\n{1}", Usermsg, description));
 
         }
 
-        static void CustomerCommand_ProcessChange(string processName, string Usermsg, string description)
+        static void CustomerCommand_ProcessChange(string processName, string usermsg, string description)
         {
             if (description==null)
             {
-                MessageBox.Show(Usermsg, processName);
+                MessageBox.Show(usermsg, processName);
             }
            
         }
