@@ -47,9 +47,33 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandManager.cs" />
+    <Compile Include="CustomerForms\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\FrmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmEditCustomer.Designer.cs">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\FrmManageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmManageCustomer.Designer.cs">
+      <DependentUpon>FrmManageCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +83,15 @@
     <Compile Include="Operation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerForms\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\FrmEditCustomer.resx">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\FrmManageCustomer.resx">
+      <DependentUpon>FrmManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,7 +104,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\DataLayer.Account.datasource" />
+    <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
+    <None Include="Properties\DataSources\DataLayer.AccountDaily.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BaseDatabase+OnchangeCallBackX.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BaseDatabase.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BulidItem.datasource" />
     <None Include="Properties\DataSources\DataLayer.Customer.datasource" />
+    <None Include="Properties\DataSources\DataLayer.dbDataContext.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Employee.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Expenss.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ExpenssesMovment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.History.datasource" />
+    <None Include="Properties\DataSources\DataLayer.HolyDay.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectAttachment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectExpenss.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectInstallment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.projectLevel.datasource" />
+    <None Include="Properties\DataSources\DataLayer.projectLevelSell.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectProfile.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectQuantity.datasource" />
+    <None Include="Properties\DataSources\DataLayer.SystemPermession.datasource" />
+    <None Include="Properties\DataSources\DataLayer.SystemUser.datasource" />
+    <None Include="Properties\DataSources\DataLayer.UserPermession.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +146,7 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
