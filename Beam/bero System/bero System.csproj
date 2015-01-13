@@ -55,6 +55,24 @@
     <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BulidItemForms\FrmAddBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmAddBulidItem.Designer.cs">
+      <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmEditBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmEditBulidItem.Designer.cs">
+      <DependentUpon>FrmEditBulidItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmManageBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmManageBulidItem.Designer.cs">
+      <DependentUpon>FrmManageBulidItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommandManager.cs" />
     <Compile Include="CustomerForms\FrmAddCustomer.cs">
       <SubType>Form</SubType>
@@ -100,6 +118,30 @@
     </Compile>
     <Compile Include="Operation.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectAttachmentForms\FrmAddProjectAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmAddProjectAttachment.Designer.cs">
+      <DependentUpon>FrmAddProjectAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmManageProjectAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmManageProjectAttachment.Designer.cs">
+      <DependentUpon>FrmManageProjectAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmAddProjectExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmAddProjectExpensses.Designer.cs">
+      <DependentUpon>FrmAddProjectExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmEditProjectExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmEditProjectExpensses.Designer.cs">
+      <DependentUpon>FrmEditProjectExpensses.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectForms\FrmAddProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,7 +178,34 @@
     <Compile Include="projectLevelFroms\FrmManageprojectLevel.Designer.cs">
       <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="projectLevelSellForms\FrmAddprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmAddprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmAddprojectLevelSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmEditprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmEditprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmEditprojectLevelSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BulidItemForms\FrmAddBulidItem.resx">
+      <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulidItemForms\FrmEditBulidItem.resx">
+      <DependentUpon>FrmEditBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulidItemForms\FrmManageBulidItem.resx">
+      <DependentUpon>FrmManageBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForms\FrmAddCustomer.resx">
       <DependentUpon>FrmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +227,18 @@
     <EmbeddedResource Include="MainScenarioForms\MainForms.resx">
       <DependentUpon>MainForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAttachmentForms\FrmAddProjectAttachment.resx">
+      <DependentUpon>FrmAddProjectAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAttachmentForms\FrmManageProjectAttachment.resx">
+      <DependentUpon>FrmManageProjectAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectExpenssesForms\FrmAddProjectExpensses.resx">
+      <DependentUpon>FrmAddProjectExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectExpenssesForms\FrmEditProjectExpensses.resx">
+      <DependentUpon>FrmEditProjectExpensses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectForms\FrmAddProject.resx">
       <DependentUpon>FrmAddProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +256,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projectLevelFroms\FrmManageprojectLevel.resx">
       <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmAddprojectLevelSell.resx">
+      <DependentUpon>FrmAddprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmEditprojectLevelSell.resx">
+      <DependentUpon>FrmEditprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmManageprojectLevelSell.resx">
+      <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

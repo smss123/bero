@@ -264,7 +264,7 @@
             this.radGroupBox1.HeaderText = "بيانات المشروع";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 25);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(906, 158);
+            this.radGroupBox1.Size = new System.Drawing.Size(906, 163);
             this.radGroupBox1.TabIndex = 3;
             this.radGroupBox1.Text = "بيانات المشروع";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -321,9 +321,9 @@
             this.radGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox2.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox2.HeaderText = "اضافات اخرى";
-            this.radGroupBox2.Location = new System.Drawing.Point(0, 183);
+            this.radGroupBox2.Location = new System.Drawing.Point(0, 188);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(906, 302);
+            this.radGroupBox2.Size = new System.Drawing.Size(906, 297);
             this.radGroupBox2.TabIndex = 4;
             this.radGroupBox2.Text = "اضافات اخرى";
             this.radGroupBox2.ThemeName = "Office2013Light";

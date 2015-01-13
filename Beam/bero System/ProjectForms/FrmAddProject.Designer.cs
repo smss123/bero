@@ -29,14 +29,27 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label customerIDLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label projectDescriptionLabel;
+            System.Windows.Forms.Label projectFullAmountLabel;
+            System.Windows.Forms.Label projectNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.projectDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.projectFullAmountTextBox = new System.Windows.Forms.TextBox();
+            this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.CustomerComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.object_77c47ca6_f4db_413a_9876_66f5e21071bc = new Telerik.WinControls.RootRadElement();
             customerIDLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            projectDescriptionLabel = new System.Windows.Forms.Label();
+            projectFullAmountLabel = new System.Windows.Forms.Label();
+            projectNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl)).BeginInit();
@@ -54,9 +67,57 @@
             customerIDLabel.TabIndex = 6;
             customerIDLabel.Text = "العميل:";
             // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(256, 148);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(76, 13);
+            label1.TabIndex = 18;
+            label1.Text = "تار يخ التسليم:";
+            // 
+            // projectDescriptionLabel
+            // 
+            projectDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            projectDescriptionLabel.AutoSize = true;
+            projectDescriptionLabel.Location = new System.Drawing.Point(256, 91);
+            projectDescriptionLabel.Name = "projectDescriptionLabel";
+            projectDescriptionLabel.Size = new System.Drawing.Size(80, 13);
+            projectDescriptionLabel.TabIndex = 16;
+            projectDescriptionLabel.Text = "وصف المشروع:";
+            // 
+            // projectFullAmountLabel
+            // 
+            projectFullAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            projectFullAmountLabel.AutoSize = true;
+            projectFullAmountLabel.Location = new System.Drawing.Point(255, 65);
+            projectFullAmountLabel.Name = "projectFullAmountLabel";
+            projectFullAmountLabel.Size = new System.Drawing.Size(83, 13);
+            projectFullAmountLabel.TabIndex = 13;
+            projectFullAmountLabel.Text = "موازنة المشروع:";
+            // 
+            // projectNameLabel
+            // 
+            projectNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            projectNameLabel.AutoSize = true;
+            projectNameLabel.Location = new System.Drawing.Point(255, 35);
+            projectNameLabel.Name = "projectNameLabel";
+            projectNameLabel.Size = new System.Drawing.Size(82, 13);
+            projectNameLabel.TabIndex = 11;
+            projectNameLabel.Text = "اسم المشرورع:";
+            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(label1);
+            this.radGroupBox1.Controls.Add(this.radDateTimePicker1);
+            this.radGroupBox1.Controls.Add(projectDescriptionLabel);
+            this.radGroupBox1.Controls.Add(this.projectDescriptionTextBox);
+            this.radGroupBox1.Controls.Add(projectFullAmountLabel);
+            this.radGroupBox1.Controls.Add(this.projectFullAmountTextBox);
+            this.radGroupBox1.Controls.Add(projectNameLabel);
+            this.radGroupBox1.Controls.Add(this.projectNameTextBox);
             this.radGroupBox1.Controls.Add(this.AddBtn);
             this.radGroupBox1.Controls.Add(this.CustomerComboBox);
             this.radGroupBox1.Controls.Add(customerIDLabel);
@@ -68,6 +129,48 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // radDateTimePicker1
+            // 
+            this.radDateTimePicker1.CustomFormat = "d";
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(144, 145);
+            this.radDateTimePicker1.Name = "radDateTimePicker1";
+            this.radDateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radDateTimePicker1.Size = new System.Drawing.Size(106, 21);
+            this.radDateTimePicker1.TabIndex = 17;
+            this.radDateTimePicker1.TabStop = false;
+            this.radDateTimePicker1.Text = "12/01/15";
+            this.radDateTimePicker1.ThemeName = "Office2013Light";
+            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            // 
+            // projectDescriptionTextBox
+            // 
+            this.projectDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.projectDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectDescriptionTextBox.Location = new System.Drawing.Point(21, 84);
+            this.projectDescriptionTextBox.Multiline = true;
+            this.projectDescriptionTextBox.Name = "projectDescriptionTextBox";
+            this.projectDescriptionTextBox.Size = new System.Drawing.Size(229, 55);
+            this.projectDescriptionTextBox.TabIndex = 15;
+            // 
+            // projectFullAmountTextBox
+            // 
+            this.projectFullAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.projectFullAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectFullAmountTextBox.Location = new System.Drawing.Point(96, 58);
+            this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
+            this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
+            this.projectFullAmountTextBox.TabIndex = 14;
+            // 
+            // projectNameTextBox
+            // 
+            this.projectNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.projectNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectNameTextBox.Location = new System.Drawing.Point(21, 32);
+            this.projectNameTextBox.Name = "projectNameTextBox";
+            this.projectNameTextBox.Size = new System.Drawing.Size(229, 20);
+            this.projectNameTextBox.TabIndex = 12;
             // 
             // AddBtn
             // 
@@ -91,7 +194,7 @@
             this.CustomerComboBox.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // CustomerComboBox.NestedRadGridView
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -135,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl)).EndInit();
@@ -151,5 +255,9 @@
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadButton AddBtn;
         private Telerik.WinControls.RootRadElement object_77c47ca6_f4db_413a_9876_66f5e21071bc;
+        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private System.Windows.Forms.TextBox projectDescriptionTextBox;
+        private System.Windows.Forms.TextBox projectFullAmountTextBox;
+        private System.Windows.Forms.TextBox projectNameTextBox;
     }
 }

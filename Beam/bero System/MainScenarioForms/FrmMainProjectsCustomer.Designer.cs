@@ -77,11 +77,11 @@
             // 
             no_permissibilityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             no_permissibilityLabel.AutoSize = true;
-            no_permissibilityLabel.Location = new System.Drawing.Point(231, 76);
+            no_permissibilityLabel.Location = new System.Drawing.Point(190, 75);
             no_permissibilityLabel.Name = "no_permissibilityLabel";
-            no_permissibilityLabel.Size = new System.Drawing.Size(56, 13);
+            no_permissibilityLabel.Size = new System.Drawing.Size(101, 13);
             no_permissibilityLabel.TabIndex = 12;
-            no_permissibilityLabel.Text = "رقم الجواز:";
+            no_permissibilityLabel.Text = "رقم الوحدة السكنية:";
             // 
             // phoneNumberLabel
             // 
@@ -153,7 +153,7 @@
             // 
             this.no_permissibilityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.no_permissibilityTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.no_permissibilityTextBox.Location = new System.Drawing.Point(53, 73);
+            this.no_permissibilityTextBox.Location = new System.Drawing.Point(12, 72);
             this.no_permissibilityTextBox.Name = "no_permissibilityTextBox";
             this.no_permissibilityTextBox.Size = new System.Drawing.Size(176, 20);
             this.no_permissibilityTextBox.TabIndex = 13;
