@@ -80,6 +80,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.Designer.cs">
+      <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmViewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmViewProject.Designer.cs">
+      <DependentUpon>FrmViewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\MainForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\MainForms.Designer.cs">
+      <DependentUpon>MainForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectForms\FrmAddProject.cs">
@@ -106,6 +124,18 @@
     <Compile Include="projectLevelFroms\FrmAddprojectLevel.Designer.cs">
       <DependentUpon>FrmAddprojectLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="projectLevelFroms\FrmEditprojectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmEditprojectLevel.Designer.cs">
+      <DependentUpon>FrmEditprojectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmManageprojectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmManageprojectLevel.Designer.cs">
+      <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerForms\FrmAddCustomer.resx">
       <DependentUpon>FrmAddCustomer.cs</DependentUpon>
@@ -119,6 +149,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\FrmMainProjectsCustomer.resx">
+      <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\FrmViewProject.resx">
+      <DependentUpon>FrmViewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\MainForms.resx">
+      <DependentUpon>MainForms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectForms\FrmAddProject.resx">
       <DependentUpon>FrmAddProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projectLevelFroms\FrmAddprojectLevel.resx">
       <DependentUpon>FrmAddprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelFroms\FrmEditprojectLevel.resx">
+      <DependentUpon>FrmEditprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelFroms\FrmManageprojectLevel.resx">
+      <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

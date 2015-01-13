@@ -33,7 +33,7 @@
             System.Windows.Forms.Label phoneNumberLabel;
             System.Windows.Forms.Label customerNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.no_buildingTextBox = new System.Windows.Forms.TextBox();
             this.no_permissibilityTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             customerNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.radButton1);
+            this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(no_buildingLabel);
             this.radGroupBox1.Controls.Add(this.no_buildingTextBox);
             this.radGroupBox1.Controls.Add(no_permissibilityLabel);
@@ -110,15 +110,15 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // radButton1
+            // SaveBtn
             // 
-            this.radButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radButton1.Location = new System.Drawing.Point(206, 169);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(110, 36);
-            this.radButton1.TabIndex = 5;
-            this.radButton1.Text = "حفظ";
-            this.radButton1.ThemeName = "Office2013Light";
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Location = new System.Drawing.Point(206, 169);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 5;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.ThemeName = "Office2013Light";
             // 
             // no_buildingTextBox
             // 
@@ -173,7 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -182,7 +182,7 @@
         #endregion
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.TextBox no_buildingTextBox;
         private System.Windows.Forms.TextBox no_permissibilityTextBox;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
