@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label expenssesIDLabel;
             System.Windows.Forms.Label amountLabel;
             System.Windows.Forms.Label dateOfExpenssesLabel;
@@ -40,8 +39,8 @@
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.expenssesComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.projectExpenssBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             expenssesIDLabel = new System.Windows.Forms.Label();
             amountLabel = new System.Windows.Forms.Label();
             dateOfExpenssesLabel = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectExpenssBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).BeginInit();
@@ -155,7 +153,6 @@
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectExpenssBindingSource, "Description", true));
             this.descriptionTextBox.Location = new System.Drawing.Point(26, 130);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
@@ -166,7 +163,6 @@
             // 
             this.amountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.amountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.amountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectExpenssBindingSource, "Amount", true));
             this.amountTextBox.Location = new System.Drawing.Point(26, 64);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(210, 20);
@@ -201,10 +197,6 @@
             this.expenssesComboBox.TabIndex = 20;
             this.expenssesComboBox.TabStop = false;
             this.expenssesComboBox.ThemeName = "Office2013Light";
-            // 
-            // projectExpenssBindingSource
-            // 
-            this.projectExpenssBindingSource.DataSource = typeof(DataLayer.ProjectExpenss);
             // 
             // projectLevelComboBox
             // 
@@ -269,7 +261,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectExpenssBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).EndInit();
@@ -282,11 +273,11 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.BindingSource projectExpenssBindingSource;
         private System.Windows.Forms.TextBox amountTextBox;
         private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
         private Telerik.WinControls.UI.RadButton AddBtn;
         private Telerik.WinControls.UI.RadMultiColumnComboBox expenssesComboBox;
         private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

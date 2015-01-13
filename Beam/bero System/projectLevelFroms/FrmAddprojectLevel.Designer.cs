@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label levelNameLabel;
             System.Windows.Forms.Label levelAmountLabel;
             System.Windows.Forms.Label descripotionLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.descripotionTextBox = new System.Windows.Forms.TextBox();
-            this.projectLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.levelAmountTextBox = new System.Windows.Forms.TextBox();
             this.levelNameTextBox = new System.Windows.Forms.TextBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             levelNameLabel = new System.Windows.Forms.Label();
             levelAmountLabel = new System.Windows.Forms.Label();
             descripotionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectLevelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,22 +111,16 @@
             // 
             this.descripotionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.descripotionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.descripotionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectLevelBindingSource, "Descripotion", true));
             this.descripotionTextBox.Location = new System.Drawing.Point(25, 82);
             this.descripotionTextBox.Multiline = true;
             this.descripotionTextBox.Name = "descripotionTextBox";
             this.descripotionTextBox.Size = new System.Drawing.Size(232, 64);
             this.descripotionTextBox.TabIndex = 5;
             // 
-            // projectLevelBindingSource
-            // 
-            this.projectLevelBindingSource.DataSource = typeof(DataLayer.projectLevel);
-            // 
             // levelAmountTextBox
             // 
             this.levelAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.levelAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.levelAmountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectLevelBindingSource, "LevelAmount", true));
             this.levelAmountTextBox.Location = new System.Drawing.Point(99, 56);
             this.levelAmountTextBox.Name = "levelAmountTextBox";
             this.levelAmountTextBox.Size = new System.Drawing.Size(158, 20);
@@ -138,7 +130,6 @@
             // 
             this.levelNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.levelNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.levelNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectLevelBindingSource, "LevelName", true));
             this.levelNameTextBox.Location = new System.Drawing.Point(25, 30);
             this.levelNameTextBox.Name = "levelNameTextBox";
             this.levelNameTextBox.Size = new System.Drawing.Size(232, 20);
@@ -163,7 +154,6 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectLevelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,9 +163,9 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private System.Windows.Forms.TextBox descripotionTextBox;
-        private System.Windows.Forms.BindingSource projectLevelBindingSource;
         private System.Windows.Forms.TextBox levelAmountTextBox;
         private System.Windows.Forms.TextBox levelNameTextBox;
         private Telerik.WinControls.UI.RadButton AddBtn;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

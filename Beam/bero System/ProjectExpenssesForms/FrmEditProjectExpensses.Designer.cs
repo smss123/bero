@@ -40,6 +40,7 @@
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             descriptionLabel = new System.Windows.Forms.Label();
             dateOfExpenssesLabel = new System.Windows.Forms.Label();
             amountLabel = new System.Windows.Forms.Label();
@@ -276,5 +277,6 @@
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox amountTextBox;
         private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

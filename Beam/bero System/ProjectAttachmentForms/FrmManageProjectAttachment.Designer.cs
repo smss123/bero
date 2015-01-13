@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageProjectAttachment));
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -44,13 +43,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.ProjectAttachmentGridView = new Telerik.WinControls.UI.RadGridView();
-            this.projectAttachmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAttachmentGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAttachmentGridView.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAttachmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,7 +162,6 @@
             gridViewTextBoxColumn3,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.ProjectAttachmentGridView.MasterTemplate.DataSource = this.projectAttachmentBindingSource;
             this.ProjectAttachmentGridView.Name = "ProjectAttachmentGridView";
             this.ProjectAttachmentGridView.ReadOnly = true;
             this.ProjectAttachmentGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -173,10 +169,6 @@
             this.ProjectAttachmentGridView.TabIndex = 0;
             this.ProjectAttachmentGridView.Text = "radGridView1";
             this.ProjectAttachmentGridView.ThemeName = "Office2013Light";
-            // 
-            // projectAttachmentBindingSource
-            // 
-            this.projectAttachmentBindingSource.DataSource = typeof(DataLayer.ProjectAttachment);
             // 
             // FrmManageProjectAttachment
             // 
@@ -201,7 +193,6 @@
             this.radGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAttachmentGridView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectAttachmentGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAttachmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,6 +210,5 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView ProjectAttachmentGridView;
-        private System.Windows.Forms.BindingSource projectAttachmentBindingSource;
     }
 }

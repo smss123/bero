@@ -38,6 +38,7 @@
             this.no_permissibilityTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             no_buildingLabel = new System.Windows.Forms.Label();
             no_permissibilityLabel = new System.Windows.Forms.Label();
             phoneNumberLabel = new System.Windows.Forms.Label();
@@ -187,5 +188,6 @@
         private System.Windows.Forms.TextBox no_permissibilityTextBox;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox customerNameTextBox;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

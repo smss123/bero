@@ -36,6 +36,7 @@
             this.itemSummeryTextBox = new System.Windows.Forms.TextBox();
             this.itemDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             itemSummeryLabel = new System.Windows.Forms.Label();
             itemDescriptionLabel = new System.Windows.Forms.Label();
             itemNameLabel = new System.Windows.Forms.Label();
@@ -164,5 +165,6 @@
         private System.Windows.Forms.TextBox itemSummeryTextBox;
         private System.Windows.Forms.TextBox itemDescriptionTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label itemNameLabel;
             System.Windows.Forms.Label itemDescriptionLabel;
             System.Windows.Forms.Label itemSummeryLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.itemSummeryTextBox = new System.Windows.Forms.TextBox();
-            this.bulidItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
@@ -45,7 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bulidItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,21 +110,15 @@
             // 
             this.itemSummeryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemSummeryTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemSummeryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bulidItemBindingSource, "ItemSummery", true));
             this.itemSummeryTextBox.Location = new System.Drawing.Point(24, 122);
             this.itemSummeryTextBox.Name = "itemSummeryTextBox";
             this.itemSummeryTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemSummeryTextBox.TabIndex = 3;
             // 
-            // bulidItemBindingSource
-            // 
-            this.bulidItemBindingSource.DataSource = typeof(DataLayer.BulidItem);
-            // 
             // itemDescriptionTextBox
             // 
             this.itemDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemDescriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bulidItemBindingSource, "ItemDescription", true));
             this.itemDescriptionTextBox.Location = new System.Drawing.Point(24, 57);
             this.itemDescriptionTextBox.Multiline = true;
             this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
@@ -138,7 +129,6 @@
             // 
             this.itemNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bulidItemBindingSource, "ItemName", true));
             this.itemNameTextBox.Location = new System.Drawing.Point(24, 31);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(232, 20);
@@ -163,7 +153,6 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bulidItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,7 +162,6 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private System.Windows.Forms.TextBox itemSummeryTextBox;
-        private System.Windows.Forms.BindingSource bulidItemBindingSource;
         private System.Windows.Forms.TextBox itemDescriptionTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private Telerik.WinControls.UI.RadButton AddBtn;
