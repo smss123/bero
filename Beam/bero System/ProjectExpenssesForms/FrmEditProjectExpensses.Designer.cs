@@ -32,23 +32,29 @@
             System.Windows.Forms.Label dateOfExpenssesLabel;
             System.Windows.Forms.Label amountLabel;
             System.Windows.Forms.Label expenssesIDLabel;
+            System.Windows.Forms.Label label1;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.expenssesComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.EditBtn = new Telerik.WinControls.UI.RadButton();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
+            this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             descriptionLabel = new System.Windows.Forms.Label();
             dateOfExpenssesLabel = new System.Windows.Forms.Label();
             amountLabel = new System.Windows.Forms.Label();
             expenssesIDLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,8 +101,10 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(label1);
+            this.radGroupBox1.Controls.Add(this.projectLevelComboBox);
             this.radGroupBox1.Controls.Add(this.expenssesComboBox);
-            this.radGroupBox1.Controls.Add(this.EditBtn);
+            this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(this.radDateTimePicker1);
             this.radGroupBox1.Controls.Add(descriptionLabel);
             this.radGroupBox1.Controls.Add(this.descriptionTextBox);
@@ -109,7 +117,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(313, 258);
+            this.radGroupBox1.Size = new System.Drawing.Size(313, 292);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -124,7 +132,7 @@
             this.expenssesComboBox.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.expenssesComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // expenssesComboBox.NestedRadGridView
             // 
             this.expenssesComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.expenssesComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -144,15 +152,15 @@
             this.expenssesComboBox.TabStop = false;
             this.expenssesComboBox.ThemeName = "Office2013Light";
             // 
-            // EditBtn
+            // SaveBtn
             // 
-            this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditBtn.Location = new System.Drawing.Point(196, 213);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(110, 36);
-            this.EditBtn.TabIndex = 27;
-            this.EditBtn.Text = "اضافة";
-            this.EditBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Location = new System.Drawing.Point(198, 244);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 27;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.ThemeName = "Office2013Light";
             // 
             // radDateTimePicker1
             // 
@@ -188,11 +196,51 @@
             this.amountTextBox.Size = new System.Drawing.Size(210, 20);
             this.amountTextBox.TabIndex = 22;
             // 
+            // projectLevelComboBox
+            // 
+            // 
+            // projectLevelComboBox.NestedRadGridView
+            // 
+            this.projectLevelComboBox.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.projectLevelComboBox.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.projectLevelComboBox.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // projectLevelComboBox.NestedRadGridView
+            // 
+            this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.projectLevelComboBox.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            this.projectLevelComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.projectLevelComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.projectLevelComboBox.EditorControl.Name = "NestedRadGridView";
+            this.projectLevelComboBox.EditorControl.ReadOnly = true;
+            this.projectLevelComboBox.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.projectLevelComboBox.EditorControl.ShowGroupPanel = false;
+            this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.projectLevelComboBox.EditorControl.TabIndex = 0;
+            this.projectLevelComboBox.Location = new System.Drawing.Point(25, 199);
+            this.projectLevelComboBox.Name = "projectLevelComboBox";
+            this.projectLevelComboBox.Size = new System.Drawing.Size(210, 20);
+            this.projectLevelComboBox.TabIndex = 29;
+            this.projectLevelComboBox.TabStop = false;
+            this.projectLevelComboBox.ThemeName = "Office2013Light";
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(238, 203);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(55, 13);
+            label1.TabIndex = 30;
+            label1.Text = "المستوى:";
+            // 
             // FrmEditProjectExpensses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 258);
+            this.ClientSize = new System.Drawing.Size(313, 292);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmEditProjectExpensses";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -209,8 +257,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -220,9 +271,10 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadMultiColumnComboBox expenssesComboBox;
-        private Telerik.WinControls.UI.RadButton EditBtn;
+        private Telerik.WinControls.UI.RadButton SaveBtn;
         private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox amountTextBox;
+        private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
     }
 }

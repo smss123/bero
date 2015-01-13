@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
-namespace bero_System.projectLevelSellForms
+namespace bero_System.ProjectExpenssesForms
 {
-    public partial class FrmManageprojectLevelSell : RadForm
+    public partial class FrmManageProjectExpensses : RadForm
     {
-        public FrmManageprojectLevelSell()
+        public FrmManageProjectExpensses()
         {
             InitializeComponent();
         }
