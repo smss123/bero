@@ -56,6 +56,48 @@
     <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountForms\FrmAddAccountCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddAccountCategory.Designer.cs">
+      <DependentUpon>FrmAddAccountCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpensses.Designer.cs">
+      <DependentUpon>FrmAddExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpensses.Designer.cs">
+      <DependentUpon>FrmEditExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmEditExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpensses.Designer.cs">
+      <DependentUpon>FrmManageExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
+    </Compile>
     <Compile Include="BulidItemForms\FrmAddBulidItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +264,27 @@
       <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountForms\FrmAddAccountCategory.resx">
+      <DependentUpon>FrmAddAccountCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddExpensses.resx">
+      <DependentUpon>FrmAddExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddExpenssesMovment.resx">
+      <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditExpensses.resx">
+      <DependentUpon>FrmEditExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditExpenssesMovment.resx">
+      <DependentUpon>FrmEditExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageExpensses.resx">
+      <DependentUpon>FrmManageExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageExpenssesMovment.resx">
+      <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulidItemForms\FrmAddBulidItem.resx">
       <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
     </EmbeddedResource>
