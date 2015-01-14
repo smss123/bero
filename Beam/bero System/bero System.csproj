@@ -203,6 +203,24 @@
     <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.Designer.cs">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.Designer.cs">
+      <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmEditProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmEditProjectQuantity.Designer.cs">
+      <DependentUpon>frmEditProjectQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmManageProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmManageProjectQuantity.Designer.cs">
+      <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BulidItemForms\FrmAddBulidItem.resx">
       <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
@@ -275,6 +293,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projectLevelSellForms\FrmManageprojectLevelSell.resx">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmAddProjectQuantity.resx">
+      <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmEditProjectQuantity.resx">
+      <DependentUpon>frmEditProjectQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmManageProjectQuantity.resx">
+      <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
-﻿namespace bero_System.BulidItemForms
+﻿namespace bero_System.ProjectQuantityForms
 {
-    partial class FrmManageBulidItem
+    partial class frmManageProjectQuantity
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageBulidItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageProjectQuantity));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.AddBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.BulidItemGridView = new Telerik.WinControls.UI.RadGridView();
+            this.ProjectQuantityGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectQuantityGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectQuantityGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 491);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStrip1
             // 
@@ -62,8 +69,8 @@
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(796, 25);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // AddBtn
@@ -72,8 +79,8 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(88, 22);
-            this.AddBtn.Text = "اضافة صنف";
+            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Text = "اضافة";
             // 
             // toolStripSeparator1
             // 
@@ -94,121 +101,104 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 443);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(796, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.BulidItemGridView);
+            this.radGroupBox1.Controls.Add(this.ProjectQuantityGridView);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 25);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(796, 418);
-            this.radGroupBox1.TabIndex = 3;
+            this.radGroupBox1.Size = new System.Drawing.Size(800, 466);
+            this.radGroupBox1.TabIndex = 6;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // BulidItemGridView
+            // ProjectQuantityGridView
             // 
-            this.BulidItemGridView.BackColor = System.Drawing.SystemColors.Control;
-            this.BulidItemGridView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BulidItemGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BulidItemGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BulidItemGridView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BulidItemGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BulidItemGridView.Location = new System.Drawing.Point(2, 18);
+            this.ProjectQuantityGridView.BackColor = System.Drawing.SystemColors.Control;
+            this.ProjectQuantityGridView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ProjectQuantityGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectQuantityGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProjectQuantityGridView.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ProjectQuantityGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ProjectQuantityGridView.Location = new System.Drawing.Point(2, 18);
             // 
-            // BulidItemGridView
+            // ProjectQuantityGridView
             // 
-            this.BulidItemGridView.MasterTemplate.AllowAddNewRow = false;
-            this.BulidItemGridView.MasterTemplate.AutoGenerateColumns = false;
-            this.BulidItemGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
+            this.ProjectQuantityGridView.MasterTemplate.AllowAddNewRow = false;
+            this.ProjectQuantityGridView.MasterTemplate.AutoGenerateColumns = false;
+            this.ProjectQuantityGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
             gridViewDecimalColumn1.HeaderText = "ID";
             gridViewDecimalColumn1.IsAutoGenerated = true;
             gridViewDecimalColumn1.Name = "ID";
-            gridViewDecimalColumn1.Width = 51;
+            gridViewDecimalColumn1.Width = 47;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "ItemName";
-            gridViewTextBoxColumn1.HeaderText = "اسم الصنف";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "ItemName";
-            gridViewTextBoxColumn1.Width = 159;
+            gridViewTextBoxColumn1.FieldName = "BulidItem.ItemName";
+            gridViewTextBoxColumn1.HeaderText = "الصنف";
+            gridViewTextBoxColumn1.Name = "BulidItem";
+            gridViewTextBoxColumn1.Width = 289;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "ItemDescription";
-            gridViewTextBoxColumn2.HeaderText = "الوصف";
+            gridViewTextBoxColumn2.FieldName = "Qty";
+            gridViewTextBoxColumn2.HeaderText = "الكمية";
             gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "ItemDescription";
-            gridViewTextBoxColumn2.Width = 182;
+            gridViewTextBoxColumn2.Name = "Qty";
+            gridViewTextBoxColumn2.Width = 162;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "ItemSummery";
-            gridViewTextBoxColumn3.HeaderText = "ItemSummery";
+            gridViewTextBoxColumn3.FieldName = "SerialNumber";
+            gridViewTextBoxColumn3.HeaderText = "SerialNumber";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "ItemSummery";
-            gridViewTextBoxColumn3.Width = 133;
-            gridViewTextBoxColumn4.DataType = typeof(System.Nullable<System.Guid>);
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "SerialNumber";
-            gridViewTextBoxColumn4.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "SerialNumber";
-            gridViewTextBoxColumn4.Width = 133;
+            gridViewTextBoxColumn3.Name = "SerialNumber";
+            gridViewTextBoxColumn3.Width = 165;
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.HeaderText = "تعديل";
-            gridViewCommandColumn1.Name = "EditCol";
+            gridViewCommandColumn1.Name = "column1";
             gridViewCommandColumn1.Width = 55;
             gridViewCommandColumn2.EnableExpressionEditor = false;
             gridViewCommandColumn2.HeaderText = "حذف";
-            gridViewCommandColumn2.Name = "DeleteCol";
-            gridViewCommandColumn2.Width = 60;
-            this.BulidItemGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewCommandColumn2.Name = "column2";
+            gridViewCommandColumn2.Width = 58;
+            this.ProjectQuantityGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.BulidItemGridView.Name = "BulidItemGridView";
-            this.BulidItemGridView.ReadOnly = true;
-            this.BulidItemGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.BulidItemGridView.Size = new System.Drawing.Size(792, 398);
-            this.BulidItemGridView.TabIndex = 0;
-            this.BulidItemGridView.Text = "radGridView1";
-            this.BulidItemGridView.ThemeName = "Office2013Light";
+            this.ProjectQuantityGridView.Name = "ProjectQuantityGridView";
+            this.ProjectQuantityGridView.ReadOnly = true;
+            this.ProjectQuantityGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ProjectQuantityGridView.Size = new System.Drawing.Size(796, 446);
+            this.ProjectQuantityGridView.TabIndex = 0;
+            this.ProjectQuantityGridView.Text = "radGridView1";
+            this.ProjectQuantityGridView.ThemeName = "Office2013Light";
             // 
-            // FrmManageBulidItem
+            // frmManageProjectQuantity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 465);
+            this.ClientSize = new System.Drawing.Size(800, 513);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "FrmManageBulidItem";
+            this.Name = "frmManageProjectQuantity";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FrmManageBulidItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmManageProjectQuantity";
             this.ThemeName = "Office2013Light";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectQuantityGridView.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectQuantityGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,14 +207,14 @@
 
         #endregion
 
+        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton AddBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView BulidItemGridView;
+        private Telerik.WinControls.UI.RadGridView ProjectQuantityGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.BwrsBtn = new Telerik.WinControls.UI.RadButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BwrsBtn = new Telerik.WinControls.UI.RadButton();
+            this.pathtextBox = new System.Windows.Forms.TextBox();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BwrsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BwrsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +50,7 @@
             this.radGroupBox1.Controls.Add(this.radButton1);
             this.radGroupBox1.Controls.Add(this.label1);
             this.radGroupBox1.Controls.Add(this.BwrsBtn);
-            this.radGroupBox1.Controls.Add(this.textBox1);
+            this.radGroupBox1.Controls.Add(this.pathtextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
@@ -58,21 +61,15 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // textBox1
+            // radButton1
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // BwrsBtn
-            // 
-            this.BwrsBtn.Location = new System.Drawing.Point(47, 37);
-            this.BwrsBtn.Name = "BwrsBtn";
-            this.BwrsBtn.Size = new System.Drawing.Size(43, 24);
-            this.BwrsBtn.TabIndex = 1;
-            this.BwrsBtn.Text = "...";
-            this.BwrsBtn.ThemeName = "Office2013Light";
+            this.radButton1.Location = new System.Drawing.Point(241, 80);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(125, 33);
+            this.radButton1.TabIndex = 3;
+            this.radButton1.Text = "اضافة الملف";
+            this.radButton1.ThemeName = "Office2013Light";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // label1
             // 
@@ -83,14 +80,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "الملف:";
             // 
-            // radButton1
+            // BwrsBtn
             // 
-            this.radButton1.Location = new System.Drawing.Point(241, 80);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(125, 33);
-            this.radButton1.TabIndex = 3;
-            this.radButton1.Text = "اضافة الملف";
-            this.radButton1.ThemeName = "Office2013Light";
+            this.BwrsBtn.Location = new System.Drawing.Point(47, 37);
+            this.BwrsBtn.Name = "BwrsBtn";
+            this.BwrsBtn.Size = new System.Drawing.Size(43, 24);
+            this.BwrsBtn.TabIndex = 1;
+            this.BwrsBtn.Text = "...";
+            this.BwrsBtn.ThemeName = "Office2013Light";
+            // 
+            // pathtextBox
+            // 
+            this.pathtextBox.Location = new System.Drawing.Point(96, 39);
+            this.pathtextBox.Name = "pathtextBox";
+            this.pathtextBox.Size = new System.Drawing.Size(238, 20);
+            this.pathtextBox.TabIndex = 0;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
             // 
             // FrmAddProjectAttachment
             // 
@@ -110,8 +119,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BwrsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BwrsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -124,6 +134,7 @@
         private Telerik.WinControls.UI.RadButton radButton1;
         private System.Windows.Forms.Label label1;
         private Telerik.WinControls.UI.RadButton BwrsBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pathtextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

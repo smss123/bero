@@ -17,5 +17,31 @@ namespace bero_System.ProjectAttachmentForms
         {
             InitializeComponent();
         }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            #region "  CheckFillTextBox "
+
+            if (pathtextBox.Text == "")
+            {
+
+                pathtextBox.BackColor = Color.OrangeRed;
+
+                pathtextBox.Focus();
+                errorProvider1.SetError(this.pathtextBox, "من فضلك قم باختيار الملف");
+
+                return;
+            }
+            else
+            {
+                pathtextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+
+
+            #endregion
+        }
     }
 }

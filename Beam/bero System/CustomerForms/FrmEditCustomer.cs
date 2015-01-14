@@ -17,5 +17,31 @@ namespace bero_System.CustomerForms
         {
             InitializeComponent();
         }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            #region "  CheckFillTextBox "
+
+            if (customerNameTextBox.Text == "")
+            {
+
+                customerNameTextBox.BackColor = Color.OrangeRed;
+
+                customerNameTextBox.Focus();
+                errorProvider1.SetError(this.customerNameTextBox, "من فضلك ادخل اسم العميل");
+
+                return;
+            }
+            else
+            {
+                customerNameTextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+
+
+            #endregion
+        }
     }
 }

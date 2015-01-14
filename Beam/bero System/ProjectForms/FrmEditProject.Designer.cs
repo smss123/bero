@@ -28,19 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label customerIDLabel;
             System.Windows.Forms.Label projectDescriptionLabel;
             System.Windows.Forms.Label projectFullAmountLabel;
             System.Windows.Forms.Label projectNameLabel;
             System.Windows.Forms.Label label1;
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
             this.CustomerComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.AddBtn = new Telerik.WinControls.UI.RadButton();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.projectFullAmountTextBox = new System.Windows.Forms.TextBox();
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             customerIDLabel = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
@@ -48,11 +55,12 @@
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,13 +104,23 @@
             projectNameLabel.TabIndex = 0;
             projectNameLabel.Text = "اسم المشرورع:";
             // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(256, 146);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(76, 13);
+            label1.TabIndex = 10;
+            label1.Text = "تار يخ التسليم:";
+            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(label1);
             this.radGroupBox1.Controls.Add(this.radDateTimePicker1);
             this.radGroupBox1.Controls.Add(this.CustomerComboBox);
-            this.radGroupBox1.Controls.Add(this.AddBtn);
+            this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(customerIDLabel);
             this.radGroupBox1.Controls.Add(projectDescriptionLabel);
             this.radGroupBox1.Controls.Add(this.projectDescriptionTextBox);
@@ -119,6 +137,19 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
+            // radDateTimePicker1
+            // 
+            this.radDateTimePicker1.CustomFormat = "d";
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(126, 143);
+            this.radDateTimePicker1.Name = "radDateTimePicker1";
+            this.radDateTimePicker1.Size = new System.Drawing.Size(124, 21);
+            this.radDateTimePicker1.TabIndex = 9;
+            this.radDateTimePicker1.TabStop = false;
+            this.radDateTimePicker1.Text = "12/01/15";
+            this.radDateTimePicker1.ThemeName = "Office2013Light";
+            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            // 
             // CustomerComboBox
             // 
             this.CustomerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -126,8 +157,10 @@
             // CustomerComboBox.NestedRadGridView
             // 
             this.CustomerComboBox.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.CustomerComboBox.EditorControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.CustomerComboBox.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
             this.CustomerComboBox.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
             // 
@@ -135,6 +168,49 @@
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            this.CustomerComboBox.EditorControl.MasterTemplate.AutoGenerateColumns = false;
+            this.CustomerComboBox.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "ID";
+            gridViewDecimalColumn1.HeaderText = "ID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.IsVisible = false;
+            gridViewDecimalColumn1.Name = "ID";
+            gridViewDecimalColumn1.Width = 121;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "CustomerName";
+            gridViewTextBoxColumn1.HeaderText = "اسم العميل";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "CustomerName";
+            gridViewTextBoxColumn1.Width = 62;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "PhoneNumber";
+            gridViewTextBoxColumn2.HeaderText = "رقم الهاتف";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "PhoneNumber";
+            gridViewTextBoxColumn2.Width = 53;
+            gridViewDateTimeColumn1.DataType = typeof(System.Nullable<System.DateTime>);
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "CreateDate";
+            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn1.HeaderText = "تاريخ الاضافة";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "CreateDate";
+            gridViewDateTimeColumn1.Width = 53;
+            gridViewTextBoxColumn3.DataType = typeof(System.Nullable<System.Guid>);
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "SerialNumber";
+            gridViewTextBoxColumn3.HeaderText = "SerialNumber";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "SerialNumber";
+            gridViewTextBoxColumn3.Width = 55;
+            this.CustomerComboBox.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn3});
             this.CustomerComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
             this.CustomerComboBox.EditorControl.Name = "NestedRadGridView";
@@ -150,15 +226,16 @@
             this.CustomerComboBox.TabStop = false;
             this.CustomerComboBox.ThemeName = "Office2013Light";
             // 
-            // AddBtn
+            // SaveBtn
             // 
-            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(234, 207);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(110, 36);
-            this.AddBtn.TabIndex = 5;
-            this.AddBtn.Text = "اضافة";
-            this.AddBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Location = new System.Drawing.Point(234, 207);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 5;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // projectDescriptionTextBox
             // 
@@ -188,26 +265,10 @@
             this.projectNameTextBox.Size = new System.Drawing.Size(229, 20);
             this.projectNameTextBox.TabIndex = 1;
             // 
-            // label1
+            // errorProvider1
             // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(256, 146);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 13);
-            label1.TabIndex = 10;
-            label1.Text = "تار يخ التسليم:";
-            // 
-            // radDateTimePicker1
-            // 
-            this.radDateTimePicker1.Location = new System.Drawing.Point(126, 143);
-            this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(124, 21);
-            this.radDateTimePicker1.TabIndex = 9;
-            this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12 يناير, 2015";
-            this.radDateTimePicker1.ThemeName = "Office2013Light";
-            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
             // 
             // FrmEditProject
             // 
@@ -224,14 +285,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditProject";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmEditProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -241,12 +304,13 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadMultiColumnComboBox CustomerComboBox;
-        private Telerik.WinControls.UI.RadButton AddBtn;
+        private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.TextBox projectDescriptionTextBox;
         private System.Windows.Forms.TextBox projectFullAmountTextBox;
         private System.Windows.Forms.TextBox projectNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }

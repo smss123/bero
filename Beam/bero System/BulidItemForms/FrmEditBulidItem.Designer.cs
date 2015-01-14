@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label itemSummeryLabel;
             System.Windows.Forms.Label itemDescriptionLabel;
             System.Windows.Forms.Label itemNameLabel;
@@ -37,12 +38,14 @@
             this.itemDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             itemSummeryLabel = new System.Windows.Forms.Label();
             itemDescriptionLabel = new System.Windows.Forms.Label();
             itemNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,9 +55,9 @@
             itemSummeryLabel.AutoSize = true;
             itemSummeryLabel.Location = new System.Drawing.Point(249, 125);
             itemSummeryLabel.Name = "itemSummeryLabel";
-            itemSummeryLabel.Size = new System.Drawing.Size(80, 13);
+            itemSummeryLabel.Size = new System.Drawing.Size(73, 13);
             itemSummeryLabel.TabIndex = 4;
-            itemSummeryLabel.Text = "Item Summery:";
+            itemSummeryLabel.Text = "اختصار الصنف:";
             // 
             // itemDescriptionLabel
             // 
@@ -105,6 +108,7 @@
             this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "حفظ";
             this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // itemSummeryTextBox
             // 
@@ -134,6 +138,11 @@
             this.itemNameTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemNameTextBox.TabIndex = 1;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
+            // 
             // FrmEditBulidItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +162,7 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -166,5 +176,6 @@
         private System.Windows.Forms.TextBox itemDescriptionTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

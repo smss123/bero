@@ -17,5 +17,31 @@ namespace bero_System.BulidItemForms
         {
             InitializeComponent();
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            #region "  CheckFillTextBox "
+
+            if (itemNameTextBox.Text == "")
+            {
+
+                itemNameTextBox.BackColor = Color.OrangeRed;
+
+                itemNameTextBox.Focus();
+                errorProvider1.SetError(this.itemNameTextBox, "من فضلك ادخل اسم الصنف");
+
+                return;
+            }
+            else
+            {
+                itemNameTextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+           
+
+            #endregion
+        }
     }
 }

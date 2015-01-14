@@ -17,5 +17,46 @@ namespace bero_System.projectLevelFroms
         {
             InitializeComponent();
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            #region "  CheckFillTextBox "
+
+            if (levelNameTextBox.Text == "")
+            {
+
+                levelNameTextBox.BackColor = Color.OrangeRed;
+
+                levelNameTextBox.Focus();
+                errorProvider1.SetError(this.levelNameTextBox, "من فضلك ادخل اسم المستوى");
+
+                return;
+            }
+            else
+            {
+                levelNameTextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+            if (levelAmountTextBox.Text == "")
+            {
+
+                levelAmountTextBox.BackColor = Color.OrangeRed;
+
+                levelAmountTextBox.Focus();
+                errorProvider1.SetError(this.levelAmountTextBox, "من فضلك ادخل الموزانة");
+
+                return;
+            }
+            else
+            {
+                levelAmountTextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+            #endregion
+        }
     }
 }
