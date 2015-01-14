@@ -98,5 +98,11 @@ namespace DataLayer.XAccountant
             return db.AccountCategories.ToList();
         }
 
+        public static AccountCategory GetAccountCategoryByID(int xid)
+        {
+            AccountCategory CategTb = db.AccountCategories.Where(p => p.ID == xid).Single();
+
+            return CategTb;
+        }
     }
 }
