@@ -95,9 +95,27 @@ namespace DataLayer.XBulidItem
             }
         }
 
+        #region "^^^ Searching Data"
+
         public static List<BulidItem> GetAll()
         {
             return db.BulidItems.ToList();
         }
+
+        public static BulidItem GetBuildItemByID(int xid)
+        {
+
+            BulidItem tb = db.BulidItems.Where(b => b.ID == xid).Single();
+            return tb;
+        }
+
+        public static BulidItem GetBuildItemByItemName(string ItmName)
+        {
+
+            BulidItem tb = db.BulidItems.Where(b => b.ItemName == ItmName ).Single();
+            return tb;
+        }
+        #endregion 
+
     }
 }

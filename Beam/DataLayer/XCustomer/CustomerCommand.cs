@@ -100,5 +100,16 @@ namespace DataLayer.XCustomer
             return db.Customers.ToList();
         }
 
+        public static Customer GetCustomerByID(int XID)
+        {
+            Customer tb = db.Customers .Where (p => p.ID == XID ).Single();
+            return tb;
+        }
+        public static Customer GetCustomerByName(string Custname)
+        {
+            Customer tb = db.Customers.Where(p => p.CustomerName == Custname ).Single();
+            return tb;
+        }
+
     }
 }
