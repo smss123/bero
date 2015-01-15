@@ -100,10 +100,20 @@ namespace DataLayer.XProject
                 return false;
             }
         }
-
+        
+        #region "^^^^ Get Data "
         public static List<ProjectAttachment> GetAll()
         {
             return db.ProjectAttachments.ToList();
         }
+
+        public static ProjectAttachment GetByProjectProfileID(int ProjtID)
+        {
+            ProjectAttachment atb = db.ProjectAttachments.Where(a => a.ProjectProfileID == ProjtID).SingleOrDefault();
+            return atb;
+        }
+
+        #endregion
+
     }
 }

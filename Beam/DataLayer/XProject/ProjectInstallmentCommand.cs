@@ -111,6 +111,10 @@ namespace DataLayer.XProject
             return db.ProjectInstallments.ToList();
         }
 
-
+        public static ProjectInstallment GetById(int xid)
+        {
+            ProjectInstallment tb = db.ProjectInstallments.Where(s => s.id == xid).SingleOrDefault();
+            return tb;
+        }
     }
 }

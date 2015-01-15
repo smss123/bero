@@ -102,10 +102,22 @@ namespace DataLayer.XProject
             }
         }
 
+        #region " ^^^ Searching Data"
+
         public static List<projectLevelSell> GetAll()
         {
             return db.projectLevelSells.ToList();
         }
 
+        public static projectLevelSell GetByProjectLevelID(int  PrjLevelId)
+        {
+            projectLevelSell stb = db.projectLevelSells.Where(c => c.ProjectLevelID == PrjLevelId).SingleOrDefault();
+            return stb;
+        }
+
+
+
+
+        #endregion
     }
 }

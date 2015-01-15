@@ -100,9 +100,31 @@ namespace DataLayer.XProject
             }
         }
 
+
+     
+
+
         public static List<ProjectExpenss> GetAll()
         {
             return db.ProjectExpensses.ToList();
         }
+
+
+
+        public static ProjectExpenss GetByExpId(int xid)
+        {
+            ProjectExpenss xtb = db.ProjectExpensses .Where(x => x.ExpenssesID == xid).SingleOrDefault();
+            return xtb;
+        }
+
+        public static ProjectExpenss GetById(int xid)
+        {
+            ProjectExpenss xtb = db.ProjectExpensses.Where(x => x.ID == xid).SingleOrDefault();
+            return xtb;
+        }
+
+
+
+           
     }
 }
