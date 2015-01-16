@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using DataLayer;
+using DataLayer.XCustomer;
 namespace bero_System.CustomerForms
 {
     public partial class FrmAddCustomer : RadForm
@@ -42,6 +43,34 @@ namespace bero_System.CustomerForms
 
 
             #endregion
+
+            Customer CustTb = new Customer()
+            {
+                CustomerName = customerNameTextBox .Text ,
+                PhoneNumber = phoneNumberTextBox .Text ,
+                No_building = no_buildingTextBox .Text ,
+                No_permissibility = no_permissibilityTextBox .Text 
+
+            };
+            CustomerCommand.NewCustomer(CustTb, customerNameTextBox.Text);
+            MessageBox.Show("Okey");
+            broom();
+
+        }
+
+        void broom()
+        {
+            customerNameTextBox.Text = "";
+            phoneNumberTextBox.Text = "";
+            no_buildingTextBox.Text = "";
+            no_permissibilityTextBox.Text = "";
+            customerNameTextBox.Focus();
+        }
+
+        private void FrmAddCustomer_Load(object sender, EventArgs e)
+        {
+            Customer tb = CustomerCommand.GetCustomerByID(1);
+            MessageBox.Show(tb.CustomerName);
         }
     }
 }

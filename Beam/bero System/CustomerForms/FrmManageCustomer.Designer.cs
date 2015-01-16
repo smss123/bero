@@ -45,13 +45,13 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
+            this.DGVCustomers = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerGridView.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,8 +74,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(86, 22);
+            this.AddBtn.Size = new System.Drawing.Size(80, 22);
             this.AddBtn.Text = "اضافة عميل";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -88,8 +89,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -107,7 +109,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.CustomerGridView);
+            this.radGroupBox1.Controls.Add(this.DGVCustomers);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "سجلات العملاء";
@@ -118,22 +120,22 @@
             this.radGroupBox1.Text = "سجلات العملاء";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // CustomerGridView
+            // DGVCustomers
             // 
-            this.CustomerGridView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
-            this.CustomerGridView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CustomerGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CustomerGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.CustomerGridView.ForeColor = System.Drawing.Color.Black;
-            this.CustomerGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CustomerGridView.Location = new System.Drawing.Point(2, 18);
+            this.DGVCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.DGVCustomers.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVCustomers.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DGVCustomers.ForeColor = System.Drawing.Color.Black;
+            this.DGVCustomers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVCustomers.Location = new System.Drawing.Point(2, 18);
             // 
-            // CustomerGridView
+            // DGVCustomers
             // 
-            this.CustomerGridView.MasterTemplate.AllowAddNewRow = false;
-            this.CustomerGridView.MasterTemplate.AllowSearchRow = true;
-            this.CustomerGridView.MasterTemplate.AutoGenerateColumns = false;
-            this.CustomerGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVCustomers.MasterTemplate.AllowAddNewRow = false;
+            this.DGVCustomers.MasterTemplate.AllowSearchRow = true;
+            this.DGVCustomers.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVCustomers.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
             gridViewDecimalColumn1.HeaderText = "ID";
@@ -186,7 +188,7 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "DelteCol";
             gridViewCommandColumn2.Width = 58;
-            this.CustomerGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVCustomers.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -196,14 +198,15 @@
             gridViewTextBoxColumn5,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.CustomerGridView.MasterTemplate.EnableFiltering = true;
-            this.CustomerGridView.Name = "CustomerGridView";
-            this.CustomerGridView.ReadOnly = true;
-            this.CustomerGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CustomerGridView.Size = new System.Drawing.Size(801, 475);
-            this.CustomerGridView.TabIndex = 0;
-            this.CustomerGridView.Text = "radGridView1";
-            this.CustomerGridView.ThemeName = "Office2013Light";
+            this.DGVCustomers.MasterTemplate.EnableFiltering = true;
+            this.DGVCustomers.Name = "DGVCustomers";
+            this.DGVCustomers.ReadOnly = true;
+            this.DGVCustomers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVCustomers.Size = new System.Drawing.Size(801, 475);
+            this.DGVCustomers.TabIndex = 0;
+            this.DGVCustomers.Text = "radGridView1";
+            this.DGVCustomers.ThemeName = "Office2013Light";
+            this.DGVCustomers.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVCustomers_CommandCellClick);
             // 
             // FrmManageCustomer
             // 
@@ -222,12 +225,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageCustomer";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageCustomer_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerGridView.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,6 +248,6 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
-        private Telerik.WinControls.UI.RadGridView CustomerGridView;
+        private Telerik.WinControls.UI.RadGridView DGVCustomers;
     }
 }

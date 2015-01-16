@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using DataLayer;
+using DataLayer.XCustomer;
 namespace bero_System.CustomerForms
 {
     public partial class FrmEditCustomer : RadForm
@@ -18,6 +19,7 @@ namespace bero_System.CustomerForms
             InitializeComponent();
         }
 
+        public Customer TargetRecord { get; set; }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -42,6 +44,22 @@ namespace bero_System.CustomerForms
 
 
             #endregion
+
+            TargetRecord.CustomerName = this.customerNameTextBox.Text;
+            TargetRecord.PhoneNumber = this.phoneNumberTextBox.Text;
+            TargetRecord.No_building = this.no_buildingTextBox.Text;
+            TargetRecord.No_permissibility = this.no_permissibilityTextBox.Text;
+            CustomerCommand.EditCustomer(TargetRecord);
+            this.Hide();
+        }
+
+        private void FrmEditCustomer_Load(object sender, EventArgs e)
+        {
+            this.customerNameTextBox.Text = this.TargetRecord.CustomerName;
+            this.phoneNumberTextBox.Text = this.TargetRecord.PhoneNumber;
+            this.no_buildingTextBox.Text  = this.TargetRecord.No_building;
+            this.no_permissibilityTextBox.Text = this.TargetRecord.No_permissibility;
+
         }
     }
 }

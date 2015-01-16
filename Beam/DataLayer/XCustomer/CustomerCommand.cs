@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace DataLayer.XCustomer
 {
     public class CustomerCommand:BaseDatabase
@@ -12,25 +12,36 @@ namespace DataLayer.XCustomer
         public  delegate void OnchangeCallBack(string processName, string Usermsg, string description);
         public static event OnchangeCallBack ProcessChange;
 
-        public static bool NewCustomer(Customer cust)
+        public static bool NewCustomer(Customer cust , string CustName)
         {
             try
             {
-               
-                db.Customers.InsertOnSubmit(cust);
-                db.SubmitChanges();
-                HistoryCommand.NewHistory(new History() {
-                 ActionName="Adding New Customer",
-                  Description = "customer Name "+cust.CustomerName+
-                   "\n Phone Number : "+cust.PhoneNumber+
-                   "Created At "+cust.CreateDate.ToString(),
-                    DateOfProcess = DateTime.Now,
-                     SystemUser = LoginInfomation.CurrnetUser,
-                 HistoryAction = "Adding New Customer",
+
+                Customer tb = db.Customers.Where(i => i.CustomerName == CustName).Single();
+                if (tb.ID == 0)
+                {
+                       // ^^^ If Not Existed : Start Save At Customer Table & Write New History  
+                        db.Customers.InsertOnSubmit(cust);
+                        db.SubmitChanges();
+
+                        HistoryCommand.NewHistory(new History() {
+                         ActionName="Adding New Customer",
+                          Description = "customer Name "+cust.CustomerName+
+                           "\n Phone Number : "+cust.PhoneNumber+
+                           "Created At "+cust.CreateDate.ToString(),
+                            DateOfProcess = DateTime.Now,
+                             SystemUser = LoginInfomation.CurrnetUser,
+                         HistoryAction = "Adding New Customer",
                  
-                });
+                        });
                 ProcessChange("Adding Customer", cust.CustomerName + " has Been Saved ",null);
                 return true;
+                }
+                // ^^^ If Already Existed : Cancel Process.
+                MessageBox.Show("The Current Customer Already Exiest ..");
+
+                return false; ;
+              
             }
             catch (Exception e)
             {
@@ -102,7 +113,7 @@ namespace DataLayer.XCustomer
 
         public static Customer GetCustomerByID(int XID)
         {
-            Customer tb = db.Customers .Where (p => p.ID == XID ).Single();
+            Customer tb = db.Customers .Where (p => p.ID == XID ).Single()
             return tb;
         }
         public static Customer GetCustomerByName(string Custname)
