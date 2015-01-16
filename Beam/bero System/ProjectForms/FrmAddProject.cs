@@ -12,6 +12,11 @@ using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
 
+
+using DataLayer;
+using DataLayer.XProject;
+using bero_System.ProjectForms;
+
 namespace bero_System.ProjectForms
 {
     public partial class FrmAddProject : RadForm
@@ -21,10 +26,10 @@ namespace bero_System.ProjectForms
             InitializeComponent();
         }
         Thread th;
-
+        #region "^^^ Fill CUstomersCmb"
         private void FillCombo()
         {
-            //Fill CUstomersCmb
+            
             this.CustomerComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
             Operation.BeginOperation(this);
 
@@ -59,6 +64,8 @@ namespace bero_System.ProjectForms
           
             th.Abort();
         }
+        #endregion
+        
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -113,8 +120,27 @@ namespace bero_System.ProjectForms
             }
 
             #endregion
-        }
+            Operation.BeginOperation(this);
 
+
+            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ());
+
+            ProjectProfile PrjTb = new ProjectProfile() {
+                  ProjectName = projectNameTextBox .Text ,
+                  ProjectDescription = projectDescriptionTextBox.Text ,
+                  createdDate = DateTime .Now ,
+                  DeliverDate =  DeliverDateText .Value ,
+                  ProjectFullAmount =   Convert.ToDouble ( projectFullAmountTextBox .Text) ,
+                  CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ()),
+                  AccountID = CurrentCustomer.AccountID ,
+
+            };
+            ProjectProfileCommand.NewProject(PrjTb);
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
+           
+        }
+        
         private void FrmAddProject_Load(object sender, EventArgs e)
         {
             th = new Thread(FillCombo);

@@ -108,5 +108,13 @@ namespace DataLayer.XProject
             return db.ProjectProfiles.ToList();
         }
 
+        public static Customer  GetAccountNumberForCustomer(int CustmerId)
+        {
+
+            Customer TargetCustomer = (from c in db.Customers where c.ID == CustmerId select c).Single();
+
+            return TargetCustomer;
+           
+        }
     }
 }
