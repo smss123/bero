@@ -12,14 +12,14 @@ namespace DataLayer.XCustomer
         public  delegate void OnchangeCallBack(string processName, string Usermsg, string description);
         public static event OnchangeCallBack ProcessChange;
 
-        public static bool NewCustomer(Customer cust , string CustName)
+        public static bool NewCustomer(Customer cust )
         {
             try
             {
 
-                Customer tb = db.Customers.Where(i => i.CustomerName == CustName).Single();
-                if (tb.ID == 0)
-                {
+                //Customer tb = db.Customers.Where(i => i.CustomerName == CustName).Single();
+                //if (tb.ID == 0)
+                //{
                        // ^^^ If Not Existed : Start Save At Customer Table & Write New History  
                         db.Customers.InsertOnSubmit(cust);
                         db.SubmitChanges();
@@ -36,11 +36,11 @@ namespace DataLayer.XCustomer
                         });
                 ProcessChange("Adding Customer", cust.CustomerName + " has Been Saved ",null);
                 return true;
-                }
-                // ^^^ If Already Existed : Cancel Process.
-                MessageBox.Show("The Current Customer Already Exiest ..");
+                //}
+                //// ^^^ If Already Existed : Cancel Process.
+                //MessageBox.Show("The Current Customer Already Exiest ..");
 
-                return false; ;
+                //return false; ;
               
             }
             catch (Exception e)
@@ -113,7 +113,7 @@ namespace DataLayer.XCustomer
 
         public static Customer GetCustomerByID(int XID)
         {
-            Customer tb = db.Customers .Where (p => p.ID == XID ).Single()
+            Customer tb = db.Customers.Where(p => p.ID == XID).Single();
             return tb;
         }
         public static Customer GetCustomerByName(string Custname)

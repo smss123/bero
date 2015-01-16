@@ -52,8 +52,8 @@ namespace bero_System.CustomerForms
                 No_permissibility = no_permissibilityTextBox .Text 
 
             };
-            CustomerCommand.NewCustomer(CustTb, customerNameTextBox.Text);
-            MessageBox.Show("Okey");
+            CustomerCommand.NewCustomer(CustTb);
+            MessageBox.Show("Save");
             broom();
 
         }
@@ -69,7 +69,7 @@ namespace bero_System.CustomerForms
 
         private void FrmAddCustomer_Load(object sender, EventArgs e)
         {
-            Customer tb = CustomerCommand.GetCustomerByID(1);
+            Customer tb = CustomerCommand.GetCustomerByID(2);
             MessageBox.Show(tb.CustomerName);
         }
     }

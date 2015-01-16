@@ -24,7 +24,7 @@ namespace bero_System.ProjectForms
 
         private void FillCombo()
         {
-            //Fill Expensses ComBob
+            //Fill CUstomersCmb
             this.CustomerComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
             Operation.BeginOperation(this);
 

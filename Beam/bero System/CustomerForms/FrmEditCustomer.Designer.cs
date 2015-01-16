@@ -178,6 +178,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditCustomer";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditCustomer_Load);
