@@ -39,6 +39,17 @@ namespace bero_System.MainScenarioForms
 
         private void ManageProjects_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void AddProjectBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddProject frm = new FrmAddProject();
+            frm.ShowDialog();
+        }
+
+        private void ProjectManageBtn_Click(object sender, EventArgs e)
+        {
             FrmManageProject frm = new FrmManageProject();
             frm.Show();
         }
