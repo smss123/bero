@@ -11,7 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+//================================
+using System.Threading;
+using DataLayer;
+using DataLayer.XAccountant;
 namespace bero_System.AccountForms
 {
     public partial class FrmAddExpenssesMovment : RadForm
@@ -21,6 +24,11 @@ namespace bero_System.AccountForms
             InitializeComponent();
         }
         Thread th;
+
+
+        public int ExpenssId { get; set; }
+        public Expenss TragetExpenss { get; set; }
+
         private void FillCombo()
         {
             //Fill Expensses ComBob
@@ -101,6 +109,64 @@ namespace bero_System.AccountForms
          
 
             #endregion
+
+
+            Operation.BeginOperation(this);
+            ExpenssesMovment tb = new ExpenssesMovment
+            {
+                ExpenssesID = ExpenssId,
+                Amount = double.Parse(amountTextBox.Text),
+                DateOfProcess = DateTime.Now,
+                Description = descriptionTextBox.Text,
+
+
+            };
+
+            if (ExpenssesMovmentCommand.NewExpenssesMovment(tb))
+            {
+
+                if (AccountDailyCommand.NewAccountDaily(new AccountDaily()
+                {
+                    AccountID = int .Parse (expenssesComboBox.SelectedValue.ToString()),
+                    DateOfProcess = DateTime.Now,
+                    Description = "عبارة عن مبلغ مسحوب لصالح المصروفات ",
+                    TotalOut = Convert .ToDouble ( amountTextBox.Text),
+                    TotalIn = 0f,
+                    CommandArg = "",
+
+
+                }))
+                {
+                    Operation.ShowToustOk("Expenss Has Been Saved", this);
+                    foreach (Control item in radGroupBox1.Controls)
+                    {
+                        if (item is TextBox)
+                        {
+                            ((TextBox)item).Clear();
+                        }
+                        amountTextBox.Focus();
+                        Operation.EndOperation(this);
+                    }
+                }
+
+            }
+
+        }
+
+        private void amountTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch == 46 && amountTextBox.Text.IndexOf(".") != -1)
+            {
+
+                e.Handled = true;
+                return;
+            }
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

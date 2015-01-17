@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+//================================
+using System.Threading;
+using DataLayer;
+using DataLayer.XAccountant;
 namespace bero_System.AccountForms
 {
     public partial class FrmAddExpensses : RadForm
@@ -42,6 +45,29 @@ namespace bero_System.AccountForms
 
 
             #endregion
+
+            Operation.BeginOperation(this);
+            Expenss extb = new Expenss() 
+            { ExpenssesName = expenssesNameTextBox.Text, Description = descriptionTextBox.Text };
+
+            ExpenssesCommand.NewExpensses(extb);
+            
+
+               
+                foreach (Control item in radGroupBox1.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        ((TextBox)item).Clear();
+                    }
+                }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
+            expenssesNameTextBox.Focus();
+
+
         }
     }
 }
