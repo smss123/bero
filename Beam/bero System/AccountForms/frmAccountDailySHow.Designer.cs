@@ -44,13 +44,13 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.DGVAccountsDaily = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsDaily)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsDaily.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(862, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // AddBtn
             // 
@@ -81,8 +82,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Size = new System.Drawing.Size(54, 22);
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -95,8 +97,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -106,7 +109,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.radGridView1);
+            this.radGroupBox1.Controls.Add(this.DGVAccountsDaily);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
@@ -117,21 +120,21 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // radGridView1
+            // DGVAccountsDaily
             // 
-            this.radGridView1.BackColor = System.Drawing.SystemColors.Control;
-            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(2, 18);
+            this.DGVAccountsDaily.BackColor = System.Drawing.SystemColors.Control;
+            this.DGVAccountsDaily.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVAccountsDaily.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVAccountsDaily.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DGVAccountsDaily.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DGVAccountsDaily.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVAccountsDaily.Location = new System.Drawing.Point(2, 18);
             // 
-            // radGridView1
+            // DGVAccountsDaily
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AutoGenerateColumns = false;
-            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVAccountsDaily.MasterTemplate.AllowAddNewRow = false;
+            this.DGVAccountsDaily.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVAccountsDaily.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
@@ -186,7 +189,7 @@
             gridViewDecimalColumn4.IsAutoGenerated = true;
             gridViewDecimalColumn4.Name = "AccountID";
             gridViewDecimalColumn4.Width = 76;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVAccountsDaily.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewDecimalColumn2,
@@ -195,13 +198,13 @@
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewDecimalColumn4});
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(858, 435);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            this.radGridView1.ThemeName = "Office2013Light";
+            this.DGVAccountsDaily.Name = "DGVAccountsDaily";
+            this.DGVAccountsDaily.ReadOnly = true;
+            this.DGVAccountsDaily.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVAccountsDaily.Size = new System.Drawing.Size(858, 435);
+            this.DGVAccountsDaily.TabIndex = 0;
+            this.DGVAccountsDaily.Text = "radGridView1";
+            this.DGVAccountsDaily.ThemeName = "Office2013Light";
             // 
             // frmAccountDailySHow
             // 
@@ -220,12 +223,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAccountDailySHow";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.frmAccountDailySHow_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsDaily.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsDaily)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,7 +245,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView DGVAccountsDaily;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

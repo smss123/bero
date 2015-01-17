@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
+//================================
+using DataLayer;
+using DataLayer.XAccountant;
 
 namespace bero_System.AccountForms
 {
@@ -20,28 +23,20 @@ namespace bero_System.AccountForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            #region "  CheckFillTextBox "
+            Operation.BeginOperation(this);
+            AccountCategory tb = new AccountCategory() {
+                 AccountCategoryName = accountCategoryNameTextBox .Text ,
+                  Description = descriptionTextBox .Text 
+                 
+            };
+            AccountCategoryCmd.NewAccountCategory(tb);
 
-            if (accountCategoryNameTextBox.Text == "")
-            {
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+            accountCategoryNameTextBox.Text = "";
+            descriptionTextBox.Text = "";
+            accountCategoryNameTextBox.Focus();
 
-                accountCategoryNameTextBox.BackColor = Color.OrangeRed;
-
-                accountCategoryNameTextBox.Focus();
-                errorProvider1.SetError(this.accountCategoryNameTextBox, "من فضلك ادخل تصنيف الحساب");
-
-                return;
-            }
-            else
-            {
-                accountCategoryNameTextBox.BackColor = Color.White;
-                errorProvider1.Clear();
-
-            }
-
-
-
-            #endregion
         }
     }
 }

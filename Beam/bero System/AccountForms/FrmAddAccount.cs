@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+//================================
+using DataLayer;
+using DataLayer.XAccountant;
 namespace bero_System.AccountForms
 {
     public partial class FrmAddAccount : RadForm
@@ -102,6 +104,23 @@ namespace bero_System.AccountForms
 
 
             #endregion
+
+            Operation.BeginOperation(this);
+
+            Account tb = new Account() { 
+             CategoryID  = int .Parse( CmbCategories .SelectedValue .ToString ()),
+             AccountName = txtAccountName .Text ,
+             Description = txtDescription .Text 
+            };
+            AccountCommand.NewAccount(tb);
+
+            Operation.EndOperation(this);
+
+            Operation.ShowToustOk("", this);
+
+            txtDescription .Text = "";
+            txtAccountName .Text = "";
+            txtAccountName.Focus();
         }
     }
 }
