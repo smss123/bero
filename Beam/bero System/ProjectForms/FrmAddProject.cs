@@ -132,7 +132,7 @@ namespace bero_System.ProjectForms
                   DeliverDate =  DeliverDateText .Value ,
                   ProjectFullAmount =   Convert.ToDouble ( projectFullAmountTextBox .Text) ,
                   CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ()),
-                  AccountID = CurrentCustomer.AccountID ,
+                 // AccountID = 
 
             };
             ProjectProfileCommand.NewProject(PrjTb);

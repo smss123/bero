@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using bero_System;
+using System.Threading;
+using DataLayer;
+using DataLayer.XProject;
 namespace bero_System.ProjectForms
 {
     public partial class FrmManageProject : RadForm
@@ -16,6 +19,59 @@ namespace bero_System.ProjectForms
         public FrmManageProject()
         {
             InitializeComponent();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddProject frm = new FrmAddProject();
+            frm.Show();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageProject_Load(sender, e);
+
+        }
+        void PopulateDgv()
+        {
+            var LstProjects = ProjectProfileCommand.GetAll();
+            this.Invoke((MethodInvoker)delegate { DGVProducts.DataSource = LstProjects; });
+
+        }
+        private void FrmManageProject_Load(object sender, EventArgs e)
+        {
+            Thread th = new Thread(PopulateDgv);
+            th.Start();
+        }
+
+        private void DGVProducts_CommandCellClick(object sender, EventArgs e)
+        {
+            if (DGVProducts.Rows.Count != 0)
+            {
+                var col = DGVProducts.CurrentColumn.Index;
+                if (col == 8)
+                {
+                   
+                    Operation.BeginOperation(this);
+                    FrmEditProject frm = new FrmEditProject();
+
+                    ProjectProfile tb = (ProjectProfile)DGVProducts.CurrentRow.DataBoundItem;
+                    frm.TargetProject = tb;
+                    frm.CustomerComboBox.Text = DGVProducts.CurrentRow.Cells[6].Value.ToString();
+                    frm.ShowDialog();
+                    Operation.EndOperation(this);
+                }
+                if (col == 9)
+                {
+
+                    Operation.BeginOperation(this);
+
+                    ProjectProfileCommand.DeleteProject (int.Parse(DGVProducts.CurrentRow.Cells[0].Value.ToString()));
+                    FrmManageProject_Load(sender, e);
+
+                    Operation.EndOperation(this);
+                }
+            }
         }
     }
 }

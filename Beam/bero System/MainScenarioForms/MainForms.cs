@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using bero_System.ProjectForms;
 namespace bero_System.MainScenarioForms
 {
     public partial class MainForms : RadForm
@@ -23,6 +23,24 @@ namespace bero_System.MainScenarioForms
         {
             FrmAddCustomer Frm = new FrmAddCustomer();
             Frm.ShowDialog();
+        }
+
+        private void ManageCustomerBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageCustomer frm = new FrmManageCustomer();
+            frm.Show();
+        }
+
+
+        private void MainForms_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageProjects_Click(object sender, EventArgs e)
+        {
+            FrmManageProject frm = new FrmManageProject();
+            frm.Show();
         }
     }
 }

@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using DataLayer;
+using DataLayer.XProject;
+using bero_System.ProjectForms;
 namespace bero_System.ProjectForms
 {
     public partial class FrmEditProject : RadForm
@@ -58,6 +60,7 @@ namespace bero_System.ProjectForms
 
             th.Abort();
         }
+        public ProjectProfile  TargetProject { get; set; }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -112,10 +115,34 @@ namespace bero_System.ProjectForms
             }
 
             #endregion
+
+            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(CustomerComboBox.SelectedValue.ToString()));
+
+           
+              TargetProject.  ProjectName = projectNameTextBox.Text;
+              TargetProject.  ProjectDescription = projectDescriptionTextBox.Text;
+               TargetProject. createdDate = DateTime.Now;
+              TargetProject.  DeliverDate = DeliverDateText.Value;
+               TargetProject. ProjectFullAmount = Convert.ToDouble(projectFullAmountTextBox.Text);
+               TargetProject.CustomerID = int.Parse(CustomerComboBox.SelectedValue.ToString());
+                // AccountID = 
+         
+            ProjectProfileCommand.EditProject (TargetProject);
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
+
+       
         }
 
         private void FrmEditProject_Load(object sender, EventArgs e)
         {
+            // ^^^ Display Data In TextBoxes :
+            projectNameTextBox.Text = TargetProject.ProjectName;
+            projectDescriptionTextBox.Text = TargetProject.ProjectDescription;
+            DeliverDateText.Text = TargetProject.DeliverDate.ToString ();
+            projectFullAmountTextBox.Text = TargetProject.ProjectFullAmount.ToString ();
+
+            //===============================
             th = new Thread(FillCombo);
             th.Start();
         }
