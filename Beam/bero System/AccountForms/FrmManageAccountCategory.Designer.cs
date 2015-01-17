@@ -1,6 +1,6 @@
 ﻿namespace bero_System.AccountForms
 {
-    partial class FrmManageExpensses
+    partial class FrmManageAccountCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageExpensses));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageAccountCategory));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -42,21 +42,21 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.ExpenssesGridView = new Telerik.WinControls.UI.RadGridView();
+            this.AccountCategoryGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpenssesGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpenssesGridView.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 463);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 366);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(807, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(709, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -69,7 +69,7 @@
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(807, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(709, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,8 +79,8 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(100, 22);
-            this.AddBtn.Text = "اضافة مصروف";
+            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Text = "اضافة";
             // 
             // toolStripSeparator1
             // 
@@ -104,103 +104,104 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.ExpenssesGridView);
+            this.radGroupBox1.Controls.Add(this.AccountCategoryGridView);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 25);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(807, 438);
+            this.radGroupBox1.Size = new System.Drawing.Size(709, 341);
             this.radGroupBox1.TabIndex = 5;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // ExpenssesGridView
+            // AccountCategoryGridView
             // 
-            this.ExpenssesGridView.BackColor = System.Drawing.Color.White;
-            this.ExpenssesGridView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ExpenssesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExpenssesGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ExpenssesGridView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExpenssesGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ExpenssesGridView.Location = new System.Drawing.Point(2, 18);
+            this.AccountCategoryGridView.BackColor = System.Drawing.SystemColors.Control;
+            this.AccountCategoryGridView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AccountCategoryGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AccountCategoryGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AccountCategoryGridView.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AccountCategoryGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.AccountCategoryGridView.Location = new System.Drawing.Point(2, 18);
             // 
-            // ExpenssesGridView
+            // AccountCategoryGridView
             // 
-            this.ExpenssesGridView.MasterTemplate.AllowAddNewRow = false;
-            this.ExpenssesGridView.MasterTemplate.AllowSearchRow = true;
-            this.ExpenssesGridView.MasterTemplate.AutoGenerateColumns = false;
-            this.ExpenssesGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.AccountCategoryGridView.MasterTemplate.AllowAddNewRow = false;
+            this.AccountCategoryGridView.MasterTemplate.AllowSearchRow = true;
+            this.AccountCategoryGridView.MasterTemplate.AutoGenerateColumns = false;
+            this.AccountCategoryGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
             gridViewDecimalColumn1.HeaderText = "ID";
             gridViewDecimalColumn1.IsAutoGenerated = true;
             gridViewDecimalColumn1.Name = "ID";
-            gridViewDecimalColumn1.Width = 40;
+            gridViewDecimalColumn1.Width = 57;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "ExpenssesName";
-            gridViewTextBoxColumn1.HeaderText = "المصروف";
+            gridViewTextBoxColumn1.FieldName = "AccountCategoryName";
+            gridViewTextBoxColumn1.HeaderText = "تصنيف الحساب";
             gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "ExpenssesName";
-            gridViewTextBoxColumn1.Width = 170;
+            gridViewTextBoxColumn1.Name = "AccountCategoryName";
+            gridViewTextBoxColumn1.Width = 199;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "Description";
             gridViewTextBoxColumn2.HeaderText = "الوصف";
             gridViewTextBoxColumn2.IsAutoGenerated = true;
             gridViewTextBoxColumn2.Name = "Description";
-            gridViewTextBoxColumn2.Width = 262;
+            gridViewTextBoxColumn2.Width = 163;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.FieldName = "SerialNumber";
             gridViewTextBoxColumn3.HeaderText = "SerialNumber";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
             gridViewTextBoxColumn3.Name = "SerialNumber";
-            gridViewTextBoxColumn3.Width = 103;
+            gridViewTextBoxColumn3.Width = 154;
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.HeaderText = "تعديل";
             gridViewCommandColumn1.Name = "column1";
-            gridViewCommandColumn1.Width = 103;
+            gridViewCommandColumn1.Width = 56;
             gridViewCommandColumn2.EnableExpressionEditor = false;
-            gridViewCommandColumn2.HeaderText = "عرض المصاريف";
+            gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "column2";
-            gridViewCommandColumn2.Width = 105;
-            this.ExpenssesGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewCommandColumn2.Width = 56;
+            this.AccountCategoryGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.ExpenssesGridView.MasterTemplate.EnableFiltering = true;
-            this.ExpenssesGridView.Name = "ExpenssesGridView";
-            this.ExpenssesGridView.ReadOnly = true;
-            this.ExpenssesGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ExpenssesGridView.Size = new System.Drawing.Size(803, 418);
-            this.ExpenssesGridView.TabIndex = 0;
-            this.ExpenssesGridView.Text = "radGridView1";
-            this.ExpenssesGridView.ThemeName = "Office2013Light";
+            this.AccountCategoryGridView.MasterTemplate.EnableFiltering = true;
+            this.AccountCategoryGridView.Name = "AccountCategoryGridView";
+            this.AccountCategoryGridView.ReadOnly = true;
+            this.AccountCategoryGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.AccountCategoryGridView.Size = new System.Drawing.Size(705, 321);
+            this.AccountCategoryGridView.TabIndex = 0;
+            this.AccountCategoryGridView.Text = "radGridView1";
+            this.AccountCategoryGridView.ThemeName = "Office2013Light";
             // 
-            // FrmManageExpensses
+            // FrmManageAccountCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 485);
+            this.ClientSize = new System.Drawing.Size(709, 388);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "FrmManageExpensses";
+            this.Name = "FrmManageAccountCategory";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManageExpensses";
+            this.Text = "FrmManageAccountCategory";
             this.ThemeName = "Office2013Light";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ExpenssesGridView.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpenssesGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,7 +217,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView ExpenssesGridView;
+        private Telerik.WinControls.UI.RadGridView AccountCategoryGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

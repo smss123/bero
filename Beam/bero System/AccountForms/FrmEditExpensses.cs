@@ -17,5 +17,31 @@ namespace bero_System.AccountForms
         {
             InitializeComponent();
         }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            #region "  CheckFillTextBox "
+
+            if (expenssesNameTextBox.Text == "")
+            {
+
+                expenssesNameTextBox.BackColor = Color.OrangeRed;
+
+                expenssesNameTextBox.Focus();
+                errorProvider1.SetError(this.expenssesNameTextBox, "من فضلك ادخل نوع المصروف");
+
+                return;
+            }
+            else
+            {
+                expenssesNameTextBox.BackColor = Color.White;
+                errorProvider1.Clear();
+
+            }
+
+
+
+            #endregion
+        }
     }
 }

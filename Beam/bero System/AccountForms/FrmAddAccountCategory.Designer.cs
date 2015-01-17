@@ -32,9 +32,9 @@
             System.Windows.Forms.Label accountCategoryNameLabel;
             System.Windows.Forms.Label descriptionLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.accountCategoryNameTextBox = new System.Windows.Forms.TextBox();
-            this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             accountCategoryNameLabel = new System.Windows.Forms.Label();
@@ -74,14 +74,24 @@
             this.radGroupBox1.Controls.Add(this.accountCategoryNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radGroupBox1.Size = new System.Drawing.Size(325, 164);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Location = new System.Drawing.Point(209, 122);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(110, 36);
+            this.AddBtn.TabIndex = 8;
+            this.AddBtn.Text = "اضافة";
+            this.AddBtn.ThemeName = "Office2013Light";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // descriptionTextBox
             // 
@@ -98,19 +108,10 @@
             this.accountCategoryNameTextBox.Size = new System.Drawing.Size(209, 20);
             this.accountCategoryNameTextBox.TabIndex = 1;
             // 
-            // AddBtn
-            // 
-            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(209, 122);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(110, 36);
-            this.AddBtn.TabIndex = 8;
-            this.AddBtn.Text = "اضافة";
-            this.AddBtn.ThemeName = "Office2013Light";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
             // 
             // FrmAddAccountCategory
             // 

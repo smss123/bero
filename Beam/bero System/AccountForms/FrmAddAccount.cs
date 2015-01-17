@@ -14,36 +14,37 @@ using Telerik.WinControls.UI;
 
 namespace bero_System.AccountForms
 {
-    public partial class FrmAddExpenssesMovment : RadForm
+    public partial class FrmAddAccount : RadForm
     {
-        public FrmAddExpenssesMovment()
+        public FrmAddAccount()
         {
             InitializeComponent();
         }
+
         Thread th;
         private void FillCombo()
         {
             //Fill Expensses ComBob
-            this.expenssesComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
+            this.CmbCategories.MultiColumnComboBoxElement.DropDownWidth = 550;
             Operation.BeginOperation(this);
 
             this.Invoke((MethodInvoker)delegate
             {
-                this.expenssesComboBox.AutoFilter = true;
-                this.expenssesComboBox.ValueMember = "ID";
-                this.expenssesComboBox.DisplayMember = "ExpenssesName";
+                this.CmbCategories.AutoFilter = true;
+                this.CmbCategories.ValueMember = "ID";
+                this.CmbCategories.DisplayMember = "AccountCategoryName";
             });
 
 
-            var q = ExpenssesCommand.GetAll();
+            var q = AccountCategoryCmd.GetAll();
             this.Invoke((MethodInvoker)delegate
             {
-                expenssesComboBox.DataSource = q;
+                CmbCategories.DataSource = q;
                 CompositeFilterDescriptor compositeFilter = new CompositeFilterDescriptor();
-                FilterDescriptor ExpName = new FilterDescriptor("ExpenssesName", FilterOperator.Contains, "");
+                FilterDescriptor ExpName = new FilterDescriptor("AccountCategoryName", FilterOperator.Contains, "");
                 compositeFilter.FilterDescriptors.Add(ExpName);
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
-                this.expenssesComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
+                this.CmbCategories.EditorControl.FilterDescriptors.Add(compositeFilter);
 
 
 
@@ -53,7 +54,7 @@ namespace bero_System.AccountForms
 
             th.Abort();
         }
-        private void FrmAddExpenssesMovment_Load(object sender, EventArgs e)
+        private void FrmAddAccount_Load(object sender, EventArgs e)
         {
             th = new Thread(FillCombo);
             th.Start();
@@ -65,40 +66,40 @@ namespace bero_System.AccountForms
 
 
 
-            if (expenssesComboBox.SelectedValue == null)
+            if (CmbCategories.SelectedValue == null)
             {
 
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
-                expenssesComboBox.Focus();
-                errorProvider1.SetError(this.expenssesComboBox, "من فضلك اختر نوع المصروف");
+                CmbCategories.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
+                CmbCategories.Focus();
+                errorProvider1.SetError(this.CmbCategories, "من فضلك اختر تصنيف الحساب");
                 return;
             }
             else
             {
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.White;
+                CmbCategories.MultiColumnComboBoxElement.BackColor = Color.White;
                 errorProvider1.Clear();
             }
 
-            if (amountTextBox.Text == "")
+            if (txtAccountName.Text == "")
             {
 
-                amountTextBox.BackColor = Color.OrangeRed;
+                txtAccountName.BackColor = Color.OrangeRed;
 
-                amountTextBox.Focus();
-                errorProvider1.SetError(this.amountTextBox, "من فضلك ادخل التكلفة");
+                txtAccountName.Focus();
+                errorProvider1.SetError(this.txtAccountName, "من فضلك ادخل اسم الحساب");
 
                 return;
             }
             else
             {
-                
-                amountTextBox.BackColor = Color.White;
+
+                txtAccountName.BackColor = Color.White;
                 errorProvider1.Clear();
 
             }
 
 
-         
+
 
             #endregion
         }

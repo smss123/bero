@@ -11,14 +11,14 @@ using Telerik.WinControls.UI;
 
 namespace bero_System.AccountForms
 {
-    public partial class FrmAddAccountCategory : RadForm
+    public partial class FrmEditAccountCategory : RadForm
     {
-        public FrmAddAccountCategory()
+        public FrmEditAccountCategory()
         {
             InitializeComponent();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void EditBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
 

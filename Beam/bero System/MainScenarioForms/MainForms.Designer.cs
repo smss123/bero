@@ -52,6 +52,8 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.AddCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -100,6 +102,9 @@
             // 
             // toolStripDropDownButton2
             // 
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddCustomerBtn,
+            this.ManageCustomerBtn});
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
@@ -251,6 +256,19 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             // 
+            // AddCustomerBtn
+            // 
+            this.AddCustomerBtn.Name = "AddCustomerBtn";
+            this.AddCustomerBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddCustomerBtn.Text = "اضافة عميل";
+            this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
+            // 
+            // ManageCustomerBtn
+            // 
+            this.ManageCustomerBtn.Name = "ManageCustomerBtn";
+            this.ManageCustomerBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageCustomerBtn.Text = "ادارة العملاء";
+            // 
             // MainForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,5 +315,7 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
         private Telerik.WinControls.UI.RadGridView CustomerGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.ToolStripMenuItem AddCustomerBtn;
+        private System.Windows.Forms.ToolStripMenuItem ManageCustomerBtn;
     }
 }

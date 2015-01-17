@@ -115,6 +115,7 @@
             this.AddBtn.TabIndex = 8;
             this.AddBtn.Text = "اضافة";
             this.AddBtn.ThemeName = "Office2013Light";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // descriptionTextBox
             // 
@@ -146,7 +147,7 @@
             this.expenssesComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.expenssesComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // expenssesComboBox.NestedRadGridView
+            // 
             // 
             this.expenssesComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.expenssesComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -219,6 +220,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddExpenssesMovment";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmAddExpenssesMovment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();

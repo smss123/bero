@@ -1,6 +1,6 @@
 ﻿namespace bero_System.AccountForms
 {
-    partial class FrmAddExpensses
+    partial class FrmEditAccountCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -29,113 +29,109 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label expenssesNameLabel;
             System.Windows.Forms.Label descriptionLabel;
+            System.Windows.Forms.Label accountCategoryNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.AddBtn = new Telerik.WinControls.UI.RadButton();
+            this.EditBtn = new Telerik.WinControls.UI.RadButton();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.expenssesNameTextBox = new System.Windows.Forms.TextBox();
-            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.accountCategoryNameTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            expenssesNameLabel = new System.Windows.Forms.Label();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             descriptionLabel = new System.Windows.Forms.Label();
+            accountCategoryNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // expenssesNameLabel
-            // 
-            expenssesNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            expenssesNameLabel.AutoSize = true;
-            expenssesNameLabel.Location = new System.Drawing.Point(252, 34);
-            expenssesNameLabel.Name = "expenssesNameLabel";
-            expenssesNameLabel.Size = new System.Drawing.Size(53, 13);
-            expenssesNameLabel.TabIndex = 0;
-            expenssesNameLabel.Text = "المصروف:";
-            // 
             // descriptionLabel
             // 
-            descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(252, 65);
+            descriptionLabel.Location = new System.Drawing.Point(236, 43);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(37, 13);
+            descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 2;
-            descriptionLabel.Text = "الوصف";
+            descriptionLabel.Text = "الوصف:";
+            // 
+            // accountCategoryNameLabel
+            // 
+            accountCategoryNameLabel.AutoSize = true;
+            accountCategoryNameLabel.Location = new System.Drawing.Point(236, 17);
+            accountCategoryNameLabel.Name = "accountCategoryNameLabel";
+            accountCategoryNameLabel.Size = new System.Drawing.Size(77, 13);
+            accountCategoryNameLabel.TabIndex = 0;
+            accountCategoryNameLabel.Text = "تصنيف الحساب";
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.AddBtn);
+            this.radGroupBox1.Controls.Add(this.EditBtn);
             this.radGroupBox1.Controls.Add(descriptionLabel);
             this.radGroupBox1.Controls.Add(this.descriptionTextBox);
-            this.radGroupBox1.Controls.Add(expenssesNameLabel);
-            this.radGroupBox1.Controls.Add(this.expenssesNameTextBox);
+            this.radGroupBox1.Controls.Add(accountCategoryNameLabel);
+            this.radGroupBox1.Controls.Add(this.accountCategoryNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(311, 188);
-            this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
+            this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radGroupBox1.Size = new System.Drawing.Size(317, 156);
+            this.radGroupBox1.TabIndex = 1;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // AddBtn
+            // EditBtn
             // 
-            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(176, 143);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(110, 36);
-            this.AddBtn.TabIndex = 7;
-            this.AddBtn.Text = "اضافة";
-            this.AddBtn.ThemeName = "Office2013Light";
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditBtn.Location = new System.Drawing.Point(199, 115);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(110, 36);
+            this.EditBtn.TabIndex = 8;
+            this.EditBtn.Text = "حفظ";
+            this.EditBtn.ThemeName = "Office2013Light";
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.descriptionTextBox.Location = new System.Drawing.Point(24, 62);
+            this.descriptionTextBox.Location = new System.Drawing.Point(21, 40);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(222, 60);
+            this.descriptionTextBox.Size = new System.Drawing.Size(209, 69);
             this.descriptionTextBox.TabIndex = 3;
             // 
-            // expenssesNameTextBox
+            // accountCategoryNameTextBox
             // 
-            this.expenssesNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.expenssesNameTextBox.Location = new System.Drawing.Point(24, 31);
-            this.expenssesNameTextBox.Name = "expenssesNameTextBox";
-            this.expenssesNameTextBox.Size = new System.Drawing.Size(222, 20);
-            this.expenssesNameTextBox.TabIndex = 1;
+            this.accountCategoryNameTextBox.Location = new System.Drawing.Point(21, 14);
+            this.accountCategoryNameTextBox.Name = "accountCategoryNameTextBox";
+            this.accountCategoryNameTextBox.Size = new System.Drawing.Size(209, 20);
+            this.accountCategoryNameTextBox.TabIndex = 1;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
-            // FrmAddExpensses
+            // FrmEditAccountCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 188);
+            this.ClientSize = new System.Drawing.Size(317, 156);
             this.Controls.Add(this.radGroupBox1);
-            this.Name = "FrmAddExpensses";
+            this.Name = "FrmEditAccountCategory";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddExpensses";
+            this.Text = "FrmEditAccountCategory";
             this.ThemeName = "Office2013Light";
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -145,10 +141,10 @@
         #endregion
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        private Telerik.WinControls.UI.RadButton EditBtn;
         private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox expenssesNameTextBox;
-        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
-        private Telerik.WinControls.UI.RadButton AddBtn;
+        private System.Windows.Forms.TextBox accountCategoryNameTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

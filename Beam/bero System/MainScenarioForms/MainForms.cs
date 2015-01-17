@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bero_System.CustomerForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,12 @@ namespace bero_System.MainScenarioForms
         public MainForms()
         {
             InitializeComponent();
+        }
+
+        private void AddCustomerBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddCustomer Frm = new FrmAddCustomer();
+            Frm.ShowDialog();
         }
     }
 }

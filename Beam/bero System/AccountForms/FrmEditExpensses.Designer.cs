@@ -98,6 +98,7 @@
             this.SaveBtn.TabIndex = 7;
             this.SaveBtn.Text = "حفظ";
             this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // descriptionTextBox
             // 
