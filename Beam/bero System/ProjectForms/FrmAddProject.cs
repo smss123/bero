@@ -123,7 +123,7 @@ namespace bero_System.ProjectForms
             Operation.BeginOperation(this);
 
 
-            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ());
+            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ()));
 
             ProjectProfile PrjTb = new ProjectProfile() {
                   ProjectName = projectNameTextBox .Text ,
