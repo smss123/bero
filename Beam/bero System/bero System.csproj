@@ -177,6 +177,24 @@
     <Compile Include="CustomerForms\FrmManageCustomer.Designer.cs">
       <DependentUpon>FrmManageCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeForms\FrmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddEmployee.Designer.cs">
+      <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditEmployee.Designer.cs">
+      <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageEmployee.Designer.cs">
+      <DependentUpon>FrmManageEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +377,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForms\FrmManageCustomer.resx">
       <DependentUpon>FrmManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmAddEmployee.resx">
+      <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmEditEmployee.resx">
+      <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmManageEmployee.resx">
+      <DependentUpon>FrmManageEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScenarioForms\FrmMainProjectsCustomer.resx">
       <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
