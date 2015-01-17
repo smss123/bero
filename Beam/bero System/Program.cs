@@ -9,6 +9,8 @@ using System.Drawing.Imaging;
 using System.Net.Mail;
 using DataLayer;
 using DataLayer.Security;
+using Telerik.WinControls;
+using bero_System.MainScenarioForms;
 
 namespace bero_System
 {
@@ -26,7 +28,7 @@ namespace bero_System
 
             CommandManager.ini();
             Application.ThreadException += Application_ThreadException;
-            Application.Run(new Form1());
+            Application.Run(new MainForms());
         }
 
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
