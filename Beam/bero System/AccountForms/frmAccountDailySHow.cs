@@ -32,6 +32,7 @@ namespace bero_System.AccountForms
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+
         }
 
         private void frmAccountDailySHow_Load(object sender, EventArgs e)

@@ -78,14 +78,14 @@
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox1.Size = new System.Drawing.Size(325, 164);
+            this.radGroupBox1.Size = new System.Drawing.Size(336, 174);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(209, 122);
+            this.AddBtn.Location = new System.Drawing.Point(220, 122);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 164);
+            this.ClientSize = new System.Drawing.Size(336, 174);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmAddAccountCategory";
             // 

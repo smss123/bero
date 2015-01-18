@@ -60,7 +60,7 @@
             // 
             descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(267, 87);
+            descriptionLabel.Location = new System.Drawing.Point(294, 87);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 12;
@@ -70,7 +70,7 @@
             // 
             amountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(266, 61);
+            amountLabel.Location = new System.Drawing.Point(293, 61);
             amountLabel.Name = "amountLabel";
             amountLabel.Size = new System.Drawing.Size(43, 13);
             amountLabel.TabIndex = 10;
@@ -80,7 +80,7 @@
             // 
             expenssesIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             expenssesIDLabel.AutoSize = true;
-            expenssesIDLabel.Location = new System.Drawing.Point(269, 34);
+            expenssesIDLabel.Location = new System.Drawing.Point(296, 34);
             expenssesIDLabel.Name = "expenssesIDLabel";
             expenssesIDLabel.Size = new System.Drawing.Size(53, 13);
             expenssesIDLabel.TabIndex = 9;
@@ -105,7 +105,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(327, 217);
+            this.radGroupBox1.Size = new System.Drawing.Size(354, 223);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -168,7 +168,7 @@
             this.expenssesComboBox.EditorControl.ShowGroupPanel = false;
             this.expenssesComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.expenssesComboBox.EditorControl.TabIndex = 0;
-            this.expenssesComboBox.Location = new System.Drawing.Point(12, 31);
+            this.expenssesComboBox.Location = new System.Drawing.Point(39, 31);
             this.expenssesComboBox.Name = "expenssesComboBox";
             this.expenssesComboBox.Size = new System.Drawing.Size(250, 20);
             this.expenssesComboBox.TabIndex = 15;
@@ -178,7 +178,7 @@
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(205, 167);
+            this.SaveBtn.Location = new System.Drawing.Point(232, 167);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 14;
@@ -189,7 +189,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.descriptionTextBox.Location = new System.Drawing.Point(12, 84);
+            this.descriptionTextBox.Location = new System.Drawing.Point(39, 84);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(253, 67);
@@ -198,7 +198,7 @@
             // amountTextBox
             // 
             this.amountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.amountTextBox.Location = new System.Drawing.Point(96, 57);
+            this.amountTextBox.Location = new System.Drawing.Point(123, 57);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(167, 20);
             this.amountTextBox.TabIndex = 11;
@@ -207,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 217);
+            this.ClientSize = new System.Drawing.Size(354, 223);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmEditExpenssesMovment";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

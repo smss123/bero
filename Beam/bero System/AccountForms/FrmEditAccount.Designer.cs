@@ -92,7 +92,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(341, 243);
+            this.radGroupBox1.Size = new System.Drawing.Size(361, 252);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -158,7 +158,7 @@
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(224, 201);
+            this.SaveBtn.Location = new System.Drawing.Point(244, 201);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 3;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 243);
+            this.ClientSize = new System.Drawing.Size(361, 252);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmEditAccount";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

@@ -60,6 +60,7 @@ namespace bero_System.AccountForms
         {
             th = new Thread(FillCombo);
             th.Start();
+
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
