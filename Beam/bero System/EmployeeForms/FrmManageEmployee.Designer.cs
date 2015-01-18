@@ -86,6 +86,7 @@
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(83, 22);
             this.AddBtn.Text = "اضافة موظف";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -100,6 +101,7 @@
             this.RefreshBtn.Name = "RefreshBtn";
             this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -220,6 +222,7 @@
             this.EmployeeGridView.TabIndex = 0;
             this.EmployeeGridView.Text = "radGridView1";
             this.EmployeeGridView.ThemeName = "Office2013Light";
+            this.EmployeeGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.EmployeeGridView_CommandCellClick);
             // 
             // FrmManageEmployee
             // 
@@ -238,6 +241,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageEmployee";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageEmployee_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

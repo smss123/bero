@@ -64,6 +64,86 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
+            // statusLabel
+            // 
+            statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(271, 218);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(36, 13);
+            statusLabel.TabIndex = 14;
+            statusLabel.Text = "الحالة:";
+            // 
+            // personaltyExpiredDateLabel
+            // 
+            personaltyExpiredDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            personaltyExpiredDateLabel.AutoSize = true;
+            personaltyExpiredDateLabel.Location = new System.Drawing.Point(271, 165);
+            personaltyExpiredDateLabel.Name = "personaltyExpiredDateLabel";
+            personaltyExpiredDateLabel.Size = new System.Drawing.Size(87, 13);
+            personaltyExpiredDateLabel.TabIndex = 12;
+            personaltyExpiredDateLabel.Text = "تاريخ انتهاء الهوية:";
+            // 
+            // passportExpierdDateLabel
+            // 
+            passportExpierdDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            passportExpierdDateLabel.AutoSize = true;
+            passportExpierdDateLabel.Location = new System.Drawing.Point(269, 116);
+            passportExpierdDateLabel.Name = "passportExpierdDateLabel";
+            passportExpierdDateLabel.Size = new System.Drawing.Size(112, 13);
+            passportExpierdDateLabel.TabIndex = 10;
+            passportExpierdDateLabel.Text = "تاريخ انتهاء جواز السفر:";
+            // 
+            // salaryLabel
+            // 
+            salaryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            salaryLabel.AutoSize = true;
+            salaryLabel.Location = new System.Drawing.Point(271, 192);
+            salaryLabel.Name = "salaryLabel";
+            salaryLabel.Size = new System.Drawing.Size(38, 13);
+            salaryLabel.TabIndex = 8;
+            salaryLabel.Text = "الراتب:";
+            // 
+            // peronaltyNumberLabel
+            // 
+            peronaltyNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            peronaltyNumberLabel.AutoSize = true;
+            peronaltyNumberLabel.Location = new System.Drawing.Point(271, 142);
+            peronaltyNumberLabel.Name = "peronaltyNumberLabel";
+            peronaltyNumberLabel.Size = new System.Drawing.Size(57, 13);
+            peronaltyNumberLabel.TabIndex = 6;
+            peronaltyNumberLabel.Text = "رقم الهوية:";
+            // 
+            // passportNumberLabel
+            // 
+            passportNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            passportNumberLabel.AutoSize = true;
+            passportNumberLabel.Location = new System.Drawing.Point(270, 94);
+            passportNumberLabel.Name = "passportNumberLabel";
+            passportNumberLabel.Size = new System.Drawing.Size(82, 13);
+            passportNumberLabel.TabIndex = 4;
+            passportNumberLabel.Text = "رقم جواز السفر:";
+            // 
+            // nationaltyLabel
+            // 
+            nationaltyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            nationaltyLabel.AutoSize = true;
+            nationaltyLabel.Location = new System.Drawing.Point(270, 63);
+            nationaltyLabel.Name = "nationaltyLabel";
+            nationaltyLabel.Size = new System.Drawing.Size(42, 13);
+            nationaltyLabel.TabIndex = 2;
+            nationaltyLabel.Text = "الجنس:";
+            // 
+            // employeeNameLabel
+            // 
+            employeeNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            employeeNameLabel.AutoSize = true;
+            employeeNameLabel.Location = new System.Drawing.Point(270, 33);
+            employeeNameLabel.Name = "employeeNameLabel";
+            employeeNameLabel.Size = new System.Drawing.Size(71, 13);
+            employeeNameLabel.TabIndex = 0;
+            employeeNameLabel.Text = "اسم الموظف:";
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -110,16 +190,6 @@
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // statusLabel
-            // 
-            statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(271, 218);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(36, 13);
-            statusLabel.TabIndex = 14;
-            statusLabel.Text = "الحالة:";
-            // 
             // statusComboBox
             // 
             this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -134,16 +204,6 @@
             this.statusComboBox.Size = new System.Drawing.Size(161, 21);
             this.statusComboBox.TabIndex = 15;
             // 
-            // personaltyExpiredDateLabel
-            // 
-            personaltyExpiredDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            personaltyExpiredDateLabel.AutoSize = true;
-            personaltyExpiredDateLabel.Location = new System.Drawing.Point(271, 165);
-            personaltyExpiredDateLabel.Name = "personaltyExpiredDateLabel";
-            personaltyExpiredDateLabel.Size = new System.Drawing.Size(87, 13);
-            personaltyExpiredDateLabel.TabIndex = 12;
-            personaltyExpiredDateLabel.Text = "تاريخ انتهاء الهوية:";
-            // 
             // personaltyExpiredDateDateTimePicker
             // 
             this.personaltyExpiredDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -153,16 +213,6 @@
             this.personaltyExpiredDateDateTimePicker.Name = "personaltyExpiredDateDateTimePicker";
             this.personaltyExpiredDateDateTimePicker.Size = new System.Drawing.Size(126, 20);
             this.personaltyExpiredDateDateTimePicker.TabIndex = 6;
-            // 
-            // passportExpierdDateLabel
-            // 
-            passportExpierdDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            passportExpierdDateLabel.AutoSize = true;
-            passportExpierdDateLabel.Location = new System.Drawing.Point(269, 116);
-            passportExpierdDateLabel.Name = "passportExpierdDateLabel";
-            passportExpierdDateLabel.Size = new System.Drawing.Size(112, 13);
-            passportExpierdDateLabel.TabIndex = 10;
-            passportExpierdDateLabel.Text = "تاريخ انتهاء جواز السفر:";
             // 
             // passportExpierdDateDateTimePicker
             // 
@@ -174,16 +224,6 @@
             this.passportExpierdDateDateTimePicker.Size = new System.Drawing.Size(126, 20);
             this.passportExpierdDateDateTimePicker.TabIndex = 4;
             // 
-            // salaryLabel
-            // 
-            salaryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            salaryLabel.AutoSize = true;
-            salaryLabel.Location = new System.Drawing.Point(271, 192);
-            salaryLabel.Name = "salaryLabel";
-            salaryLabel.Size = new System.Drawing.Size(38, 13);
-            salaryLabel.TabIndex = 8;
-            salaryLabel.Text = "الراتب:";
-            // 
             // salaryTextBox
             // 
             this.salaryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -192,16 +232,6 @@
             this.salaryTextBox.Size = new System.Drawing.Size(126, 20);
             this.salaryTextBox.TabIndex = 7;
             // 
-            // peronaltyNumberLabel
-            // 
-            peronaltyNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            peronaltyNumberLabel.AutoSize = true;
-            peronaltyNumberLabel.Location = new System.Drawing.Point(271, 142);
-            peronaltyNumberLabel.Name = "peronaltyNumberLabel";
-            peronaltyNumberLabel.Size = new System.Drawing.Size(57, 13);
-            peronaltyNumberLabel.TabIndex = 6;
-            peronaltyNumberLabel.Text = "رقم الهوية:";
-            // 
             // peronaltyNumberTextBox
             // 
             this.peronaltyNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -209,16 +239,6 @@
             this.peronaltyNumberTextBox.Name = "peronaltyNumberTextBox";
             this.peronaltyNumberTextBox.Size = new System.Drawing.Size(194, 20);
             this.peronaltyNumberTextBox.TabIndex = 5;
-            // 
-            // passportNumberLabel
-            // 
-            passportNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            passportNumberLabel.AutoSize = true;
-            passportNumberLabel.Location = new System.Drawing.Point(270, 94);
-            passportNumberLabel.Name = "passportNumberLabel";
-            passportNumberLabel.Size = new System.Drawing.Size(82, 13);
-            passportNumberLabel.TabIndex = 4;
-            passportNumberLabel.Text = "رقم جواز السفر:";
             // 
             // passportNumberTextBox
             // 
@@ -236,26 +256,6 @@
             this.nationaltyComboBox.Name = "nationaltyComboBox";
             this.nationaltyComboBox.Size = new System.Drawing.Size(152, 21);
             this.nationaltyComboBox.TabIndex = 2;
-            // 
-            // nationaltyLabel
-            // 
-            nationaltyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            nationaltyLabel.AutoSize = true;
-            nationaltyLabel.Location = new System.Drawing.Point(270, 63);
-            nationaltyLabel.Name = "nationaltyLabel";
-            nationaltyLabel.Size = new System.Drawing.Size(42, 13);
-            nationaltyLabel.TabIndex = 2;
-            nationaltyLabel.Text = "الجنس:";
-            // 
-            // employeeNameLabel
-            // 
-            employeeNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            employeeNameLabel.AutoSize = true;
-            employeeNameLabel.Location = new System.Drawing.Point(270, 33);
-            employeeNameLabel.Name = "employeeNameLabel";
-            employeeNameLabel.Size = new System.Drawing.Size(71, 13);
-            employeeNameLabel.TabIndex = 0;
-            employeeNameLabel.Text = "اسم الموظف:";
             // 
             // employeeNameTextBox
             // 
@@ -280,6 +280,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditEmployee";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmEditEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
