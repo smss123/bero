@@ -42,7 +42,7 @@
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.expenssesComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
-            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.DateProcessBox = new Telerik.WinControls.UI.RadDateTimePicker();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateProcessBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +123,7 @@
             this.radGroupBox1.Controls.Add(this.projectLevelComboBox);
             this.radGroupBox1.Controls.Add(this.expenssesComboBox);
             this.radGroupBox1.Controls.Add(this.SaveBtn);
-            this.radGroupBox1.Controls.Add(this.radDateTimePicker1);
+            this.radGroupBox1.Controls.Add(this.DateProcessBox);
             this.radGroupBox1.Controls.Add(descriptionLabel);
             this.radGroupBox1.Controls.Add(this.descriptionTextBox);
             this.radGroupBox1.Controls.Add(dateOfExpenssesLabel);
@@ -246,20 +246,20 @@
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // radDateTimePicker1
+            // DateProcessBox
             // 
-            this.radDateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radDateTimePicker1.CustomFormat = "d";
-            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker1.Location = new System.Drawing.Point(129, 89);
-            this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radDateTimePicker1.Size = new System.Drawing.Size(106, 21);
-            this.radDateTimePicker1.TabIndex = 26;
-            this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12/01/15";
-            this.radDateTimePicker1.ThemeName = "Office2013Light";
-            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            this.DateProcessBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateProcessBox.CustomFormat = "d";
+            this.DateProcessBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateProcessBox.Location = new System.Drawing.Point(129, 89);
+            this.DateProcessBox.Name = "DateProcessBox";
+            this.DateProcessBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DateProcessBox.Size = new System.Drawing.Size(106, 21);
+            this.DateProcessBox.TabIndex = 26;
+            this.DateProcessBox.TabStop = false;
+            this.DateProcessBox.Text = "1/12/2015";
+            this.DateProcessBox.ThemeName = "Office2013Light";
+            this.DateProcessBox.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
             // descriptionTextBox
             // 
@@ -311,7 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateProcessBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -321,13 +321,13 @@
         #endregion
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox expenssesComboBox;
         private Telerik.WinControls.UI.RadButton SaveBtn;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private Telerik.WinControls.UI.RadDateTimePicker DateProcessBox;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox amountTextBox;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox expenssesComboBox;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
     }
 }

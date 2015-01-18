@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+
+using DataLayer;
+
 namespace bero_System.EmployeeForms
 {
     public partial class FrmAddEmployee : RadForm

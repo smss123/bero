@@ -45,13 +45,13 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.ProjectExpenssesGridView = new Telerik.WinControls.UI.RadGridView();
+            this.DGVExpensses = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectExpenssesGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectExpenssesGridView.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVExpensses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVExpensses.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,8 +82,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Size = new System.Drawing.Size(54, 22);
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -96,8 +97,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -107,7 +109,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.ProjectExpenssesGridView);
+            this.radGroupBox1.Controls.Add(this.DGVExpensses);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
@@ -118,21 +120,21 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // ProjectExpenssesGridView
+            // DGVExpensses
             // 
-            this.ProjectExpenssesGridView.BackColor = System.Drawing.SystemColors.Control;
-            this.ProjectExpenssesGridView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ProjectExpenssesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectExpenssesGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ProjectExpenssesGridView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ProjectExpenssesGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ProjectExpenssesGridView.Location = new System.Drawing.Point(2, 18);
+            this.DGVExpensses.BackColor = System.Drawing.SystemColors.Control;
+            this.DGVExpensses.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVExpensses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVExpensses.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DGVExpensses.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DGVExpensses.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVExpensses.Location = new System.Drawing.Point(2, 18);
             // 
-            // ProjectExpenssesGridView
+            // DGVExpensses
             // 
-            this.ProjectExpenssesGridView.MasterTemplate.AllowAddNewRow = false;
-            this.ProjectExpenssesGridView.MasterTemplate.AutoGenerateColumns = false;
-            this.ProjectExpenssesGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVExpensses.MasterTemplate.AllowAddNewRow = false;
+            this.DGVExpensses.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVExpensses.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
@@ -187,7 +189,7 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "column2";
             gridViewCommandColumn2.Width = 71;
-            this.ProjectExpenssesGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVExpensses.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewDecimalColumn2,
             gridViewTextBoxColumn1,
@@ -197,13 +199,14 @@
             gridViewTextBoxColumn4,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.ProjectExpenssesGridView.Name = "ProjectExpenssesGridView";
-            this.ProjectExpenssesGridView.ReadOnly = true;
-            this.ProjectExpenssesGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ProjectExpenssesGridView.Size = new System.Drawing.Size(836, 487);
-            this.ProjectExpenssesGridView.TabIndex = 0;
-            this.ProjectExpenssesGridView.Text = "radGridView1";
-            this.ProjectExpenssesGridView.ThemeName = "Office2013Light";
+            this.DGVExpensses.Name = "DGVExpensses";
+            this.DGVExpensses.ReadOnly = true;
+            this.DGVExpensses.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVExpensses.Size = new System.Drawing.Size(836, 487);
+            this.DGVExpensses.TabIndex = 0;
+            this.DGVExpensses.Text = "radGridView1";
+            this.DGVExpensses.ThemeName = "Office2013Light";
+            this.DGVExpensses.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVExpensses_CommandCellClick);
             // 
             // FrmManageProjectExpensses
             // 
@@ -222,12 +225,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageProjectExpensses";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageProjectExpensses_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectExpenssesGridView.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectExpenssesGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVExpensses.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVExpensses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,7 +247,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView ProjectExpenssesGridView;
+        private Telerik.WinControls.UI.RadGridView DGVExpensses;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

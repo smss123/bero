@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using DataLayer;
+using DataLayer.XProject;
 namespace bero_System.ProjectExpenssesForms
 {
     public partial class FrmEditProjectExpensses : RadForm
@@ -22,6 +23,7 @@ namespace bero_System.ProjectExpenssesForms
             InitializeComponent();
         }
         Thread th;
+        public ProjectExpenss TargetExp { get; set; }
         private void FillCombo()
         {
             //Fill Expensses ComBob
@@ -135,6 +137,30 @@ namespace bero_System.ProjectExpenssesForms
             }
 
             #endregion
+
+
+
+            Operation.BeginOperation(this);
+         
+              TargetExp.  ExpenssesID = int.Parse(expenssesComboBox.SelectedValue.ToString());
+              TargetExp.Amount = Convert.ToDouble(amountTextBox.Text);
+              TargetExp.Description = descriptionTextBox.Text;
+              TargetExp.dateOfExpensses = DateProcessBox.Value;
+              TargetExp.ProjectLevelID = int.Parse(projectLevelComboBox.SelectedValue.ToString());
+          
+            ProjectExpenssesCommand.EditProjectExpenss (TargetExp );
+
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
         }
 
         private void FrmEditProjectExpensses_Load(object sender, EventArgs e)
