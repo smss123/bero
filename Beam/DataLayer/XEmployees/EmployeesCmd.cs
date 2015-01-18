@@ -20,6 +20,7 @@ namespace DataLayer.XEmployees
         }
 
 
+
         public static bool EditEmployee(Employee tb)
         {
             var q = db.Employees.Where(d => d.id == tb.id).SingleOrDefault();

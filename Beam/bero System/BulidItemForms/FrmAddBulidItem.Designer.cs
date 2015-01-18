@@ -53,7 +53,7 @@
             // 
             itemNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemNameLabel.AutoSize = true;
-            itemNameLabel.Location = new System.Drawing.Point(256, 33);
+            itemNameLabel.Location = new System.Drawing.Point(263, 33);
             itemNameLabel.Name = "itemNameLabel";
             itemNameLabel.Size = new System.Drawing.Size(65, 13);
             itemNameLabel.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             itemDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemDescriptionLabel.AutoSize = true;
-            itemDescriptionLabel.Location = new System.Drawing.Point(258, 60);
+            itemDescriptionLabel.Location = new System.Drawing.Point(265, 60);
             itemDescriptionLabel.Name = "itemDescriptionLabel";
             itemDescriptionLabel.Size = new System.Drawing.Size(41, 13);
             itemDescriptionLabel.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             itemSummeryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemSummeryLabel.AutoSize = true;
-            itemSummeryLabel.Location = new System.Drawing.Point(257, 126);
+            itemSummeryLabel.Location = new System.Drawing.Point(264, 126);
             itemSummeryLabel.Name = "itemSummeryLabel";
             itemSummeryLabel.Size = new System.Drawing.Size(73, 13);
             itemSummeryLabel.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(343, 216);
+            this.radGroupBox1.Size = new System.Drawing.Size(350, 221);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -102,7 +102,7 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(224, 168);
+            this.AddBtn.Location = new System.Drawing.Point(231, 168);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             this.itemSummeryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemSummeryTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemSummeryTextBox.Location = new System.Drawing.Point(24, 122);
+            this.itemSummeryTextBox.Location = new System.Drawing.Point(31, 122);
             this.itemSummeryTextBox.Name = "itemSummeryTextBox";
             this.itemSummeryTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemSummeryTextBox.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             this.itemDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemDescriptionTextBox.Location = new System.Drawing.Point(24, 57);
+            this.itemDescriptionTextBox.Location = new System.Drawing.Point(31, 57);
             this.itemDescriptionTextBox.Multiline = true;
             this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
             this.itemDescriptionTextBox.Size = new System.Drawing.Size(232, 57);
@@ -133,7 +133,7 @@
             // 
             this.itemNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemNameTextBox.Location = new System.Drawing.Point(24, 31);
+            this.itemNameTextBox.Location = new System.Drawing.Point(31, 31);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemNameTextBox.TabIndex = 1;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 216);
+            this.ClientSize = new System.Drawing.Size(350, 221);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmAddBulidItem";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

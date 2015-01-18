@@ -39,6 +39,7 @@ namespace DataLayer.XEmployees
             return true;
         }
 
+
         public static List<HolyDay> GetAllHolyDays()
         {
             return db.HolyDays.ToList();
