@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using System.Threading;
+using DataLayer;
+using DataLayer.XAccountant;
 namespace bero_System.AccountForms
 {
     public partial class FrmEditExpensses : RadForm
@@ -18,6 +20,7 @@ namespace bero_System.AccountForms
             InitializeComponent();
         }
 
+        public Expenss TragetExpenss  { get; set; }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -42,6 +45,17 @@ namespace bero_System.AccountForms
 
 
             #endregion
+
+            TragetExpenss.ExpenssesName = expenssesNameTextBox.Text;
+            TragetExpenss.Description = descriptionTextBox.Text;
+            ExpenssesCommand.EditExpensses(TragetExpenss);
+
+        }
+
+        private void FrmEditExpensses_Load(object sender, EventArgs e)
+        {
+            expenssesNameTextBox.Text = TragetExpenss.ExpenssesName;
+            descriptionTextBox.Text = TragetExpenss.Description;
         }
     }
 }

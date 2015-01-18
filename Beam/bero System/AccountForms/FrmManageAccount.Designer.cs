@@ -79,8 +79,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(91, 22);
+            this.AddBtn.Size = new System.Drawing.Size(85, 22);
             this.AddBtn.Text = "اضافة حساب";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -93,8 +94,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -179,6 +181,7 @@
             this.AccountGridView.TabIndex = 0;
             this.AccountGridView.Text = "سجلات الحسابات";
             this.AccountGridView.ThemeName = "Office2013Light";
+            this.AccountGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.AccountGridView_CommandCellClick);
             // 
             // FrmManageAccount
             // 
@@ -197,6 +200,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageAccount";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageAccount_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

@@ -131,6 +131,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "FrmEditExpensses";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmEditExpensses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);

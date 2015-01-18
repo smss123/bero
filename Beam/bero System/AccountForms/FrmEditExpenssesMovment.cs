@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using System.Threading;
+using DataLayer;
+using DataLayer.XAccountant;
 namespace bero_System.AccountForms
 {
     public partial class FrmEditExpenssesMovment : RadForm
@@ -53,6 +55,7 @@ namespace bero_System.AccountForms
 
             th.Abort();
         }
+     
         private void FrmEditExpenssesMovment_Load(object sender, EventArgs e)
         {
             th = new Thread(FillCombo);

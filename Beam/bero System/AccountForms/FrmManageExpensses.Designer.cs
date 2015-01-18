@@ -79,7 +79,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(100, 22);
+            this.AddBtn.Size = new System.Drawing.Size(92, 22);
             this.AddBtn.Text = "اضافة مصروف";
             // 
             // toolStripSeparator1
@@ -93,7 +93,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
             // 
             // toolStripSeparator2
@@ -177,6 +177,7 @@
             this.ExpenssesGridView.TabIndex = 0;
             this.ExpenssesGridView.Text = "radGridView1";
             this.ExpenssesGridView.ThemeName = "Office2013Light";
+            this.ExpenssesGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ExpenssesGridView_CommandCellClick);
             // 
             // FrmManageExpensses
             // 
@@ -195,6 +196,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageExpensses";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageExpensses_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

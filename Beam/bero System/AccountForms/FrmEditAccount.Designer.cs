@@ -31,28 +31,46 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label accountNameLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.CmbCategories = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtAccountName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CmbCategories = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             descriptionLabel = new System.Windows.Forms.Label();
             accountNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(260, 93);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.TabIndex = 12;
+            descriptionLabel.Text = "الوصف:";
+            // 
+            // accountNameLabel
+            // 
+            accountNameLabel.AutoSize = true;
+            accountNameLabel.Location = new System.Drawing.Point(258, 58);
+            accountNameLabel.Name = "accountNameLabel";
+            accountNameLabel.Size = new System.Drawing.Size(73, 13);
+            accountNameLabel.TabIndex = 10;
+            accountNameLabel.Text = "اسم الحساب:";
             // 
             // errorProvider1
             // 
@@ -78,59 +96,7 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(224, 201);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
-            this.SaveBtn.TabIndex = 3;
-            this.SaveBtn.Text = "حفظ";
-            this.SaveBtn.ThemeName = "Office2013Light";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(260, 93);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
-            descriptionLabel.TabIndex = 12;
-            descriptionLabel.Text = "الوصف:";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(12, 86);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(244, 98);
-            this.txtDescription.TabIndex = 2;
-            // 
-            // accountNameLabel
-            // 
-            accountNameLabel.AutoSize = true;
-            accountNameLabel.Location = new System.Drawing.Point(258, 58);
-            accountNameLabel.Name = "accountNameLabel";
-            accountNameLabel.Size = new System.Drawing.Size(73, 13);
-            accountNameLabel.TabIndex = 10;
-            accountNameLabel.Text = "اسم الحساب:";
-            // 
-            // txtAccountName
-            // 
-            this.txtAccountName.Location = new System.Drawing.Point(12, 54);
-            this.txtAccountName.Name = "txtAccountName";
-            this.txtAccountName.Size = new System.Drawing.Size(240, 20);
-            this.txtAccountName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "تصنيف الحساب:";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // CmbCategories
             // 
@@ -151,29 +117,29 @@
             this.CmbCategories.EditorControl.MasterTemplate.AllowColumnChooser = false;
             this.CmbCategories.EditorControl.MasterTemplate.AutoGenerateColumns = false;
             this.CmbCategories.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn3.DataType = typeof(int);
-            gridViewDecimalColumn3.EnableExpressionEditor = false;
-            gridViewDecimalColumn3.FieldName = "ID";
-            gridViewDecimalColumn3.HeaderText = "ID";
-            gridViewDecimalColumn3.IsAutoGenerated = true;
-            gridViewDecimalColumn3.IsVisible = false;
-            gridViewDecimalColumn3.Name = "ID";
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "AccountCategoryName";
-            gridViewTextBoxColumn5.HeaderText = "تصنيف الحساب";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "AccountCategoryName";
-            gridViewTextBoxColumn5.Width = 95;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Description";
-            gridViewTextBoxColumn6.HeaderText = "الوصف";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "Description";
-            gridViewTextBoxColumn6.Width = 126;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "ID";
+            gridViewDecimalColumn1.HeaderText = "ID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.IsVisible = false;
+            gridViewDecimalColumn1.Name = "ID";
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "AccountCategoryName";
+            gridViewTextBoxColumn1.HeaderText = "تصنيف الحساب";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "AccountCategoryName";
+            gridViewTextBoxColumn1.Width = 95;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Description";
+            gridViewTextBoxColumn2.HeaderText = "الوصف";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "Description";
+            gridViewTextBoxColumn2.Width = 126;
             this.CmbCategories.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn3,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2});
             this.CmbCategories.EditorControl.MasterTemplate.EnableGrouping = false;
             this.CmbCategories.EditorControl.MasterTemplate.ShowFilteringRow = false;
             this.CmbCategories.EditorControl.Name = "NestedRadGridView";
@@ -188,6 +154,41 @@
             this.CmbCategories.TabIndex = 0;
             this.CmbCategories.TabStop = false;
             this.CmbCategories.ThemeName = "Office2013Light";
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Location = new System.Drawing.Point(224, 201);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 3;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(12, 86);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(244, 98);
+            this.txtDescription.TabIndex = 2;
+            // 
+            // txtAccountName
+            // 
+            this.txtAccountName.Location = new System.Drawing.Point(12, 54);
+            this.txtAccountName.Name = "txtAccountName";
+            this.txtAccountName.Size = new System.Drawing.Size(240, 20);
+            this.txtAccountName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(258, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "تصنيف الحساب:";
             // 
             // FrmEditAccount
             // 
@@ -209,10 +210,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -223,10 +224,10 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox CmbCategories;
         private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtAccountName;
         private System.Windows.Forms.Label label1;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox CmbCategories;
     }
 }

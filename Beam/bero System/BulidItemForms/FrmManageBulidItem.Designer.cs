@@ -72,7 +72,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(88, 22);
+            this.AddBtn.Size = new System.Drawing.Size(80, 22);
             this.AddBtn.Text = "اضافة صنف";
             // 
             // toolStripSeparator1
@@ -86,7 +86,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
             // 
             // toolStripSeparator2
@@ -186,6 +186,7 @@
             this.BulidItemGridView.TabIndex = 0;
             this.BulidItemGridView.Text = "radGridView1";
             this.BulidItemGridView.ThemeName = "Office2013Light";
+            this.BulidItemGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.BulidItemGridView_CommandCellClick);
             // 
             // FrmManageBulidItem
             // 
@@ -203,6 +204,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "FrmManageBulidItem";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageBulidItem_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

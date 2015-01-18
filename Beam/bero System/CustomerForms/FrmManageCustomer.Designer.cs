@@ -45,13 +45,13 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.DGVCustomers = new Telerik.WinControls.UI.RadGridView();
+            this.BulidItemGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.DGVCustomers);
+            this.radGroupBox1.Controls.Add(this.BulidItemGridView);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "سجلات العملاء";
@@ -120,22 +120,22 @@
             this.radGroupBox1.Text = "سجلات العملاء";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // DGVCustomers
+            // BulidItemGridView
             // 
-            this.DGVCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
-            this.DGVCustomers.Cursor = System.Windows.Forms.Cursors.Default;
-            this.DGVCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVCustomers.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DGVCustomers.ForeColor = System.Drawing.Color.Black;
-            this.DGVCustomers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DGVCustomers.Location = new System.Drawing.Point(2, 18);
+            this.BulidItemGridView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
+            this.BulidItemGridView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BulidItemGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BulidItemGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BulidItemGridView.ForeColor = System.Drawing.Color.Black;
+            this.BulidItemGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BulidItemGridView.Location = new System.Drawing.Point(2, 18);
             // 
-            // DGVCustomers
+            // BulidItemGridView
             // 
-            this.DGVCustomers.MasterTemplate.AllowAddNewRow = false;
-            this.DGVCustomers.MasterTemplate.AllowSearchRow = true;
-            this.DGVCustomers.MasterTemplate.AutoGenerateColumns = false;
-            this.DGVCustomers.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.BulidItemGridView.MasterTemplate.AllowAddNewRow = false;
+            this.BulidItemGridView.MasterTemplate.AllowSearchRow = true;
+            this.BulidItemGridView.MasterTemplate.AutoGenerateColumns = false;
+            this.BulidItemGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
             gridViewDecimalColumn1.HeaderText = "ID";
@@ -188,7 +188,7 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "DelteCol";
             gridViewCommandColumn2.Width = 58;
-            this.DGVCustomers.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.BulidItemGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -198,15 +198,15 @@
             gridViewTextBoxColumn5,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.DGVCustomers.MasterTemplate.EnableFiltering = true;
-            this.DGVCustomers.Name = "DGVCustomers";
-            this.DGVCustomers.ReadOnly = true;
-            this.DGVCustomers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGVCustomers.Size = new System.Drawing.Size(801, 475);
-            this.DGVCustomers.TabIndex = 0;
-            this.DGVCustomers.Text = "radGridView1";
-            this.DGVCustomers.ThemeName = "Office2013Light";
-            this.DGVCustomers.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVCustomers_CommandCellClick);
+            this.BulidItemGridView.MasterTemplate.EnableFiltering = true;
+            this.BulidItemGridView.Name = "BulidItemGridView";
+            this.BulidItemGridView.ReadOnly = true;
+            this.BulidItemGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.BulidItemGridView.Size = new System.Drawing.Size(801, 475);
+            this.BulidItemGridView.TabIndex = 0;
+            this.BulidItemGridView.Text = "radGridView1";
+            this.BulidItemGridView.ThemeName = "Office2013Light";
+            this.BulidItemGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.BulidItemGridView_CommandCellClick);
             // 
             // FrmManageCustomer
             // 
@@ -230,8 +230,8 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulidItemGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,6 +248,6 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
-        private Telerik.WinControls.UI.RadGridView DGVCustomers;
+        private Telerik.WinControls.UI.RadGridView BulidItemGridView;
     }
 }

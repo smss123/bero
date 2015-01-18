@@ -42,13 +42,13 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.AccountCategoryGridView = new Telerik.WinControls.UI.RadGridView();
+            this.DGVAccountsCategories = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsCategories.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Size = new System.Drawing.Size(54, 22);
             this.AddBtn.Text = "اضافة";
             // 
             // toolStripSeparator1
@@ -93,7 +93,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
             // 
             // toolStripSeparator2
@@ -104,7 +104,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.AccountCategoryGridView);
+            this.radGroupBox1.Controls.Add(this.DGVAccountsCategories);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
@@ -115,22 +115,22 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // AccountCategoryGridView
+            // DGVAccountsCategories
             // 
-            this.AccountCategoryGridView.BackColor = System.Drawing.SystemColors.Control;
-            this.AccountCategoryGridView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.AccountCategoryGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AccountCategoryGridView.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AccountCategoryGridView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AccountCategoryGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AccountCategoryGridView.Location = new System.Drawing.Point(2, 18);
+            this.DGVAccountsCategories.BackColor = System.Drawing.SystemColors.Control;
+            this.DGVAccountsCategories.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVAccountsCategories.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVAccountsCategories.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DGVAccountsCategories.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DGVAccountsCategories.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVAccountsCategories.Location = new System.Drawing.Point(2, 18);
             // 
-            // AccountCategoryGridView
+            // DGVAccountsCategories
             // 
-            this.AccountCategoryGridView.MasterTemplate.AllowAddNewRow = false;
-            this.AccountCategoryGridView.MasterTemplate.AllowSearchRow = true;
-            this.AccountCategoryGridView.MasterTemplate.AutoGenerateColumns = false;
-            this.AccountCategoryGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVAccountsCategories.MasterTemplate.AllowAddNewRow = false;
+            this.DGVAccountsCategories.MasterTemplate.AllowSearchRow = true;
+            this.DGVAccountsCategories.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVAccountsCategories.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
             gridViewDecimalColumn1.HeaderText = "ID";
@@ -163,21 +163,22 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "column2";
             gridViewCommandColumn2.Width = 56;
-            this.AccountCategoryGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVAccountsCategories.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.AccountCategoryGridView.MasterTemplate.EnableFiltering = true;
-            this.AccountCategoryGridView.Name = "AccountCategoryGridView";
-            this.AccountCategoryGridView.ReadOnly = true;
-            this.AccountCategoryGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.AccountCategoryGridView.Size = new System.Drawing.Size(705, 321);
-            this.AccountCategoryGridView.TabIndex = 0;
-            this.AccountCategoryGridView.Text = "radGridView1";
-            this.AccountCategoryGridView.ThemeName = "Office2013Light";
+            this.DGVAccountsCategories.MasterTemplate.EnableFiltering = true;
+            this.DGVAccountsCategories.Name = "DGVAccountsCategories";
+            this.DGVAccountsCategories.ReadOnly = true;
+            this.DGVAccountsCategories.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVAccountsCategories.Size = new System.Drawing.Size(705, 321);
+            this.DGVAccountsCategories.TabIndex = 0;
+            this.DGVAccountsCategories.Text = "radGridView1";
+            this.DGVAccountsCategories.ThemeName = "Office2013Light";
+            this.DGVAccountsCategories.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVAccountsCategories_CommandCellClick);
             // 
             // FrmManageAccountCategory
             // 
@@ -196,12 +197,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageAccountCategory";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageAccountCategory_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountCategoryGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsCategories.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVAccountsCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,7 +219,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView AccountCategoryGridView;
+        private Telerik.WinControls.UI.RadGridView DGVAccountsCategories;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

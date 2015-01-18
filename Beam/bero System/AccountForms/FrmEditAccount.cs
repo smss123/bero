@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using DataLayer.XAccountant;
+using DataLayer;
+using System.Threading;
 namespace bero_System.AccountForms
 {
     public partial class FrmEditAccount : RadForm
@@ -24,7 +26,7 @@ namespace bero_System.AccountForms
         Thread th;
         private void FillCombo()
         {
-            //Fill Expensses ComBob
+          
             this.CmbCategories.MultiColumnComboBoxElement.DropDownWidth = 550;
             Operation.BeginOperation(this);
 
@@ -54,7 +56,7 @@ namespace bero_System.AccountForms
 
             th.Abort();
         }
-
+        public Account  TargetAccount { get; set; }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -97,12 +99,31 @@ namespace bero_System.AccountForms
 
 
             #endregion
+
+            Operation.BeginOperation(this);
+            TargetAccount.Description = txtDescription.Text;
+            TargetAccount.AccountName = txtAccountName.Text;
+            TargetAccount.CategoryID = int .Parse ( CmbCategories.SelectedValue.ToString());
+            AccountCommand.EditAccount(TargetAccount);
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم التعديل", this);
+            txtAccountName.Text = "";
+            txtAccountName.Text = "";
+            this.Hide();
         }
 
         private void FrmEditAccount_Load(object sender, EventArgs e)
         {
+            txtAccountName.Text = TargetAccount.AccountName;
+            txtDescription.Text = TargetAccount.Description;
+
             th = new Thread(FillCombo);
             th.Start();
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

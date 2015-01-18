@@ -23,7 +23,7 @@ namespace bero_System.CustomerForms
        public  void PopulateDgv()
         {
             var LstCustomers= CustomerCommand.GetAll();
-            this.Invoke((MethodInvoker)delegate { DGVCustomers.DataSource = LstCustomers; });
+            this.Invoke((MethodInvoker)delegate { BulidItemGridView.DataSource = LstCustomers; });
            
         }
 
@@ -47,16 +47,16 @@ namespace bero_System.CustomerForms
             FrmManageCustomer_Load(sender, e);
         }
 
-        private void DGVCustomers_CommandCellClick(object sender, EventArgs e)
+        private void BulidItemGridView_CommandCellClick(object sender, EventArgs e)
         {
-            var col = DGVCustomers.CurrentColumn.Index;
+            var col = BulidItemGridView.CurrentColumn.Index;
             if (col == 7)
             {
                
                 Operation.BeginOperation(this);
                 FrmEditCustomer frm = new FrmEditCustomer();
 
-                Customer tb = (Customer)DGVCustomers.CurrentRow.DataBoundItem;
+                Customer tb = (Customer)BulidItemGridView.CurrentRow.DataBoundItem;
                 frm.TargetRecord = tb;
 
                 frm.ShowDialog();
@@ -67,7 +67,7 @@ namespace bero_System.CustomerForms
 
                 Operation.BeginOperation(this);
 
-                CustomerCommand .DeleteCustomer (int.Parse(DGVCustomers.CurrentRow.Cells[0].Value.ToString()));
+                CustomerCommand .DeleteCustomer (int.Parse(BulidItemGridView.CurrentRow.Cells[0].Value.ToString()));
                 FrmManageCustomer_Load(sender, e);
 
                 Operation.EndOperation(this);

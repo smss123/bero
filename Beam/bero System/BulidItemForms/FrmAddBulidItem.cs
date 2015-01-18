@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+using DataLayer;
+using DataLayer.XBulidItem;
+
 namespace bero_System.BulidItemForms
 {
     public partial class FrmAddBulidItem : RadForm
@@ -42,6 +45,24 @@ namespace bero_System.BulidItemForms
            
 
             #endregion
+
+
+            Operation.BeginOperation(this);
+
+            BulidItem tb = new BulidItem() {
+             ItemName = itemNameTextBox .Text ,
+              ItemDescription = itemDescriptionTextBox .Text ,
+             ItemSummery = itemSummeryTextBox.Text 
+            };
+            BulidItemCommand.NewBulidItem(tb);
+
+            Operation.EndOperation(this);
+
+            Operation.ShowToustOk("تم الحفظ بنجاح", this);
+            itemDescriptionTextBox.Text = "";
+            itemNameTextBox.Text = "";
+            itemSummeryTextBox.Text = "";
+            itemNameTextBox.Focus();
         }
     }
 }
