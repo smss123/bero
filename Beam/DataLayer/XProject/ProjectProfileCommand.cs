@@ -11,7 +11,7 @@ namespace DataLayer.XProject
     {
 
         public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
-        public static event OnchangeCallBack ProcessChange;
+        public static  event OnchangeCallBack ProcessChange;
         public static bool NewProject(ProjectProfile Pro)
         {
             try
@@ -33,7 +33,8 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Profile",
 
                 });
-                ProcessChange("Adding Project Profile", Pro.ProjectName + " has Been Saved ", null);
+                string str = Pro.ProjectName;
+                ProcessChange("Adding Project Profile", str + " has Been Saved ","-");
                 return true;
             }
             catch (Exception e)
@@ -108,6 +109,13 @@ namespace DataLayer.XProject
             return db.ProjectProfiles.ToList();
         }
 
+        public static List<ProjectProfile> GetAllByCustomerId(int CustId)
+        {
+            var Lst = ( from p in  db.ProjectProfiles 
+                        orderby p.createdDate ascending 
+                        where p.CustomerID == CustId  select p ).ToList();
+            return Lst;
+        }
         public static Customer  GetAccountNumberForCustomer(int CustmerId)
         {
 

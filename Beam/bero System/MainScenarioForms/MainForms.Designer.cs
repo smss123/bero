@@ -54,8 +54,6 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.AddProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.ProjectManageBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -94,7 +92,7 @@
             this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(96, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(88, 22);
             this.toolStripDropDownButton1.Text = "المستخدمين";
             // 
             // toolStripSeparator2
@@ -110,20 +108,20 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(69, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(64, 22);
             this.toolStripDropDownButton2.Text = "العملاء";
             // 
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Name = "AddCustomerBtn";
-            this.AddCustomerBtn.Size = new System.Drawing.Size(133, 22);
+            this.AddCustomerBtn.Size = new System.Drawing.Size(127, 22);
             this.AddCustomerBtn.Text = "اضافة عميل";
             this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // ManageCustomerBtn
             // 
             this.ManageCustomerBtn.Name = "ManageCustomerBtn";
-            this.ManageCustomerBtn.Size = new System.Drawing.Size(133, 22);
+            this.ManageCustomerBtn.Size = new System.Drawing.Size(127, 22);
             this.ManageCustomerBtn.Text = "ادارة العملاء";
             this.ManageCustomerBtn.Click += new System.EventHandler(this.ManageCustomerBtn_Click);
             // 
@@ -134,13 +132,10 @@
             // 
             // ManageProjects
             // 
-            this.ManageProjects.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddProjectBtn,
-            this.ProjectManageBtn});
             this.ManageProjects.Image = ((System.Drawing.Image)(resources.GetObject("ManageProjects.Image")));
             this.ManageProjects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ManageProjects.Name = "ManageProjects";
-            this.ManageProjects.Size = new System.Drawing.Size(80, 22);
+            this.ManageProjects.Size = new System.Drawing.Size(77, 22);
             this.ManageProjects.Text = "المشاريع";
             this.ManageProjects.Click += new System.EventHandler(this.ManageProjects_Click);
             // 
@@ -155,8 +150,9 @@
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(77, 22);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
             this.toolStripDropDownButton4.Text = "الاصناف";
+            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
             // 
             // toolStripSeparator5
             // 
@@ -169,7 +165,7 @@
             this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(81, 22);
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(78, 22);
             this.toolStripDropDownButton5.Text = "الحسابات";
             // 
             // statusStrip1
@@ -275,20 +271,7 @@
             this.CustomerGridView.TabIndex = 1;
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
-            // 
-            // AddProjectBtn
-            // 
-            this.AddProjectBtn.Name = "AddProjectBtn";
-            this.AddProjectBtn.Size = new System.Drawing.Size(152, 22);
-            this.AddProjectBtn.Text = "اضافة مشروع";
-            this.AddProjectBtn.Click += new System.EventHandler(this.AddProjectBtn_Click);
-            // 
-            // ProjectManageBtn
-            // 
-            this.ProjectManageBtn.Name = "ProjectManageBtn";
-            this.ProjectManageBtn.Size = new System.Drawing.Size(152, 22);
-            this.ProjectManageBtn.Text = "ادارة المشاريع";
-            this.ProjectManageBtn.Click += new System.EventHandler(this.ProjectManageBtn_Click);
+            this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
             // 
             // MainForms
             // 
@@ -339,7 +322,5 @@
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ToolStripMenuItem AddCustomerBtn;
         private System.Windows.Forms.ToolStripMenuItem ManageCustomerBtn;
-        private System.Windows.Forms.ToolStripMenuItem AddProjectBtn;
-        private System.Windows.Forms.ToolStripMenuItem ProjectManageBtn;
     }
 }

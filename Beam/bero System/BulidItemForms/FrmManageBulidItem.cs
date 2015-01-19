@@ -57,5 +57,16 @@ namespace bero_System.BulidItemForms
                 Operation.EndOperation(this);
             }
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddBulidItem FRM = new FrmAddBulidItem();
+            FRM.ShowDialog();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageBulidItem_Load(sender, e);
+        }
     }
 }

@@ -136,6 +136,7 @@ namespace bero_System.ProjectForms
 
         private void FrmEditProject_Load(object sender, EventArgs e)
         {
+
             // ^^^ Display Data In TextBoxes :
             projectNameTextBox.Text = TargetProject.ProjectName;
             projectDescriptionTextBox.Text = TargetProject.ProjectDescription;

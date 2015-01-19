@@ -16,7 +16,7 @@ namespace DataLayer.XCustomer
         {
             try
             {
-
+               
                 //Customer tb = db.Customers.Where(i => i.CustomerName == CustName).Single();
                 //if (tb.ID == 0)
                 //{

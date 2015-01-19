@@ -48,6 +48,7 @@
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             customerIDLabel = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
@@ -117,6 +118,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.label2);
             this.radGroupBox1.Controls.Add(label1);
             this.radGroupBox1.Controls.Add(this.DeliverDateText);
             this.radGroupBox1.Controls.Add(this.CustomerComboBox);
@@ -163,7 +165,7 @@
             this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // CustomerComboBox.NestedRadGridView
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -219,6 +221,7 @@
             this.CustomerComboBox.EditorControl.ShowGroupPanel = false;
             this.CustomerComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.CustomerComboBox.EditorControl.TabIndex = 0;
+            this.CustomerComboBox.Enabled = false;
             this.CustomerComboBox.Location = new System.Drawing.Point(23, 172);
             this.CustomerComboBox.Name = "CustomerComboBox";
             this.CustomerComboBox.Size = new System.Drawing.Size(227, 20);
@@ -270,6 +273,15 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(57, 207);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "ملاحظه : لن يتم تعديل العميل";
+            // 
             // FrmEditProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +323,7 @@
         private Telerik.WinControls.UI.RadDateTimePicker DeliverDateText;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Telerik.WinControls.UI.RadMultiColumnComboBox CustomerComboBox;
+        private System.Windows.Forms.Label label2;
 
     }
 }
