@@ -277,6 +277,7 @@
             this.ProjectGridView.TabIndex = 4;
             this.ProjectGridView.Text = "radGridView1";
             this.ProjectGridView.ThemeName = "Office2013Light";
+            this.ProjectGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ProjectGridView_CommandCellClick);
             // 
             // FrmMainProjectsCustomer
             // 

@@ -154,7 +154,7 @@
             this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(125, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(116, 22);
             this.toolStripDropDownButton1.Text = "مستويات المشروع";
             // 
             // toolStripSeparator2
@@ -167,7 +167,7 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(107, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(99, 22);
             this.toolStripDropDownButton2.Text = "مستويات البيع";
             // 
             // toolStripSeparator3
@@ -180,7 +180,7 @@
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(74, 22);
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(69, 22);
             this.toolStripDropDownButton3.Text = "الكميات";
             // 
             // toolStripSeparator4
@@ -194,7 +194,7 @@
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(111, 22);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(104, 22);
             this.toolStripDropDownButton4.Text = "اقساط المشروع";
             // 
             // toolStripSeparator5
@@ -208,7 +208,7 @@
             this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(127, 22);
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(119, 22);
             this.toolStripDropDownButton5.Text = "مصروفات المشروع";
             // 
             // toolStripSeparator6
@@ -221,7 +221,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(107, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(100, 22);
             this.toolStripButton1.Text = "مرفقات المشروع";
             // 
             // toolStripSeparator7
@@ -235,7 +235,7 @@
             this.toolStripDropDownButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(107, 22);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(106, 22);
             this.toolStripDropDownButton6.Text = "تقارير المشروع";
             // 
             // statusStrip1
@@ -346,6 +346,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmViewProject";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmViewProject_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

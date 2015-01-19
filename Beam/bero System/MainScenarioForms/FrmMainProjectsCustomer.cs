@@ -43,5 +43,26 @@ namespace bero_System.MainScenarioForms
             Thread th = new Thread(GetAllProjectForCurrentCustomer);
             th.Start();
         }
+
+        private void ProjectGridView_CommandCellClick(object sender, EventArgs e)
+        {
+            if (ProjectGridView.Rows.Count != 0)
+            {
+
+                var col = ProjectGridView.CurrentColumn.Index;
+                if (col == 7)
+                {
+
+                    Operation.BeginOperation(this);
+                    FrmViewProject frm = new FrmViewProject();
+
+                    ProjectProfile tb = (ProjectProfile)ProjectGridView.CurrentRow.DataBoundItem;
+                    frm.TargetProject = tb;
+
+                    frm.ShowDialog();
+                    Operation.EndOperation(this);
+                }
+            }
+        }
     }
 }
