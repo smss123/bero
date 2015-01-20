@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using System.Threading;
+using DataLayer.XProject;
+using DataLayer;
 namespace bero_System.ProjectQuantityForms
 {
     public partial class frmEditProjectQuantity : RadForm
@@ -18,6 +20,11 @@ namespace bero_System.ProjectQuantityForms
             InitializeComponent();
         }
 
-      
+        public  ProjectQuantity TargetProject { get; set; }
+
+        private void frmEditProjectQuantity_Load(object sender, EventArgs e)
+        {
+            //this 
+        }
     }
 }

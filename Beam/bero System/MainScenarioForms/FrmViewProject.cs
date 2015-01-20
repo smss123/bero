@@ -13,6 +13,7 @@ using DataLayer;
 using DataLayer.XProject;
 using bero_System.ProjectExpenssesForms;
 using bero_System.projectLevelFroms;
+using bero_System.ProjectQuantityForms;
 
 
 
@@ -51,6 +52,13 @@ namespace bero_System.MainScenarioForms
         {
             FrmManageprojectLevel frm = new FrmManageprojectLevel();
             frm.TargetProjectx = this.TargetProject;
+            frm.ShowDialog();
+        }
+
+        private void QuantityBtn_Click(object sender, EventArgs e)
+        {
+            frmManageProjectQuantity frm = new frmManageProjectQuantity();
+            frm.TargetProject = this.TargetProject;
             frm.ShowDialog();
         }
 

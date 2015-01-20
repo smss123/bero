@@ -40,7 +40,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.QuantityBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -128,7 +128,7 @@
             this.toolStripSeparator2,
             this.toolStripDropDownButton2,
             this.toolStripSeparator3,
-            this.toolStripDropDownButton3,
+            this.QuantityBtn,
             this.toolStripSeparator4,
             this.toolStripDropDownButton4,
             this.toolStripSeparator5,
@@ -176,13 +176,14 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton3
+            // QuantityBtn
             // 
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(69, 22);
-            this.toolStripDropDownButton3.Text = "الكميات";
+            this.QuantityBtn.Image = ((System.Drawing.Image)(resources.GetObject("QuantityBtn.Image")));
+            this.QuantityBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.QuantityBtn.Name = "QuantityBtn";
+            this.QuantityBtn.Size = new System.Drawing.Size(69, 22);
+            this.QuantityBtn.Text = "الكميات";
+            this.QuantityBtn.Click += new System.EventHandler(this.QuantityBtn_Click);
             // 
             // toolStripSeparator4
             // 
@@ -369,7 +370,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripDropDownButton QuantityBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
