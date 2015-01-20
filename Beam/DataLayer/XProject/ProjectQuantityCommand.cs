@@ -105,18 +105,18 @@ namespace DataLayer.XProject
 
         public static ProjectQuantity GetByID(int xid)
         {
-            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ID == xid).Single();
+            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ID == xid).SingleOrDefault ();
             return tb;
         }
 
         public static ProjectQuantity GetByPojectProfileID(int xid)
         {
-            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ProjectProfileID == xid).Single();
+            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ProjectProfileID == xid).SingleOrDefault(); ;
             return tb;
         }
         public static ProjectQuantity GetByItemID(int xid)
         {
-            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ItemID == xid).Single();
+            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ItemID == xid).SingleOrDefault ();
             return tb;
         }
     }
