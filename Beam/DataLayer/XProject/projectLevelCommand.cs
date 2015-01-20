@@ -104,6 +104,12 @@ namespace DataLayer.XProject
                 return db.projectLevels.ToList();
             }
 
+            public static List<projectLevel> GetByProjectProfileID(int XID)
+            {
+                var lst = db.projectLevels.Where(i => i.ProjectProfileID == XID).ToList();
+                return lst;
+            }
+
         
     }
 }

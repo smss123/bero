@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLayer;
+using DataLayer.XProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +59,38 @@ namespace bero_System.projectLevelFroms
             }
 
             #endregion
+
+            Operation.BeginOperation(this);
+
+        
+               TargetLevel. LevelName = levelAmountTextBox.Text;
+                TargetLevel.  LevelAmount = Convert.ToDouble(levelAmountTextBox.Text.ToString());
+                TargetLevel.  Descripotion = descripotionTextBox.Text;
+                TargetLevel.ProjectProfileID = TargetLevel.ProjectProfileID;
+
+
+            projectLevelCommand.EditprojectLevel (TargetLevel );
+
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
+
+        }
+        public projectLevel  TargetLevel { get; set; }
+        private void FrmEditprojectLevel_Load(object sender, EventArgs e)
+        {
+            levelNameTextBox.Text = TargetLevel.LevelName.ToString();
+            levelAmountTextBox.Text = TargetLevel.LevelAmount.ToString();
+            descripotionTextBox.Text = TargetLevel.Descripotion.ToString();
+
         }
     }
 }

@@ -72,8 +72,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(96, 22);
+            this.AddBtn.Size = new System.Drawing.Size(90, 22);
             this.AddBtn.Text = "اضافة مستوى";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -86,8 +87,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -186,6 +188,7 @@
             this.projectLevelGridView.TabIndex = 0;
             this.projectLevelGridView.Text = "radGridView1";
             this.projectLevelGridView.ThemeName = "Office2013Light";
+            this.projectLevelGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.projectLevelGridView_CommandCellClick);
             // 
             // FrmManageprojectLevel
             // 
@@ -204,6 +207,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageprojectLevel";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageprojectLevel_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

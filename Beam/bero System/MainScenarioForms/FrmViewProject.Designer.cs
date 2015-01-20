@@ -36,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmViewProject));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ProjectLevelsBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,7 +44,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ProjectExpensessBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -124,7 +124,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
-            this.toolStripDropDownButton1,
+            this.ProjectLevelsBtn,
             this.toolStripSeparator2,
             this.toolStripDropDownButton2,
             this.toolStripSeparator3,
@@ -132,7 +132,7 @@
             this.toolStripSeparator4,
             this.toolStripDropDownButton4,
             this.toolStripSeparator5,
-            this.toolStripDropDownButton5,
+            this.ProjectExpensessBtn,
             this.toolStripSeparator6,
             this.toolStripButton1,
             this.toolStripSeparator7,
@@ -148,14 +148,15 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton1
+            // ProjectLevelsBtn
             // 
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(116, 22);
-            this.toolStripDropDownButton1.Text = "مستويات المشروع";
+            this.ProjectLevelsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProjectLevelsBtn.Image")));
+            this.ProjectLevelsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProjectLevelsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProjectLevelsBtn.Name = "ProjectLevelsBtn";
+            this.ProjectLevelsBtn.Size = new System.Drawing.Size(116, 22);
+            this.ProjectLevelsBtn.Text = "مستويات المشروع";
+            this.ProjectLevelsBtn.Click += new System.EventHandler(this.ProjectLevelsBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -202,14 +203,15 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton5
+            // ProjectExpensessBtn
             // 
-            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
-            this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(119, 22);
-            this.toolStripDropDownButton5.Text = "مصروفات المشروع";
+            this.ProjectExpensessBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProjectExpensessBtn.Image")));
+            this.ProjectExpensessBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProjectExpensessBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProjectExpensessBtn.Name = "ProjectExpensessBtn";
+            this.ProjectExpensessBtn.Size = new System.Drawing.Size(119, 22);
+            this.ProjectExpensessBtn.Text = "مصروفات المشروع";
+            this.ProjectExpensessBtn.Click += new System.EventHandler(this.ProjectExpensessBtn_Click);
             // 
             // toolStripSeparator6
             // 
@@ -363,7 +365,7 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton ProjectLevelsBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -371,7 +373,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
+        private System.Windows.Forms.ToolStripDropDownButton ProjectExpensessBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;

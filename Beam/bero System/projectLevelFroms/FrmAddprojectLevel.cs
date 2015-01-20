@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+
+using DataLayer;
+using DataLayer.XProject;
 namespace bero_System.projectLevelFroms
 {
     public partial class FrmAddprojectLevel : RadForm
@@ -17,7 +20,7 @@ namespace bero_System.projectLevelFroms
         {
             InitializeComponent();
         }
-
+        public ProjectProfile TargetProjectx { get; set; }
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -57,6 +60,29 @@ namespace bero_System.projectLevelFroms
             }
 
             #endregion
+
+            Operation.BeginOperation(this);
+
+            projectLevel tb = new projectLevel() {
+             LevelName = levelNameTextBox .Text ,
+             LevelAmount = Convert.ToDouble (levelAmountTextBox .Text .ToString ()),
+             Descripotion = descripotionTextBox .Text ,
+             ProjectProfileID = TargetProjectx .ID 
+            
+            
+            };
+            projectLevelCommand.NewprojectLevel(tb);
+
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
         }
     }
 }

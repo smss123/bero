@@ -21,10 +21,16 @@ namespace bero_System.ProjectExpenssesForms
             InitializeComponent();
         }
 
-
+        public ProjectProfile  TargetProject { get; set; }
         void PopulateGrd()
         {
-            var q = ProjectExpenssesCommand.GetAll();
+            //جلب كل مستويات المشروع المحدد
+           // var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProject.ID);
+           //=============================================================================================
+
+            // نحتاج الى تعبئة الجريد بكل مصروفات المشروع بناءا على المستوى المختار 
+
+            var q = ProjectExpenssesCommand.GetAll (TargetProject .ID );
             this.Invoke((MethodInvoker)delegate { DGVExpensses.DataSource = q; });
         }
         private void AddBtn_Click(object sender, EventArgs e)

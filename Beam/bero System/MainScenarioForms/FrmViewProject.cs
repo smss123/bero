@@ -11,6 +11,8 @@ using Telerik.WinControls.UI;
 using System.Threading;
 using DataLayer;
 using DataLayer.XProject;
+using bero_System.ProjectExpenssesForms;
+using bero_System.projectLevelFroms;
 
 
 
@@ -37,6 +39,22 @@ namespace bero_System.MainScenarioForms
         {
             LoadingProjectData();
         }
+       
+        private void ProjectExpensessBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageProjectExpensses frm = new FrmManageProjectExpensses();
+            frm.TargetProject = this.TargetProject;
+            frm.ShowDialog();
+        }
+
+        private void ProjectLevelsBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageprojectLevel frm = new FrmManageprojectLevel();
+            frm.TargetProjectx = this.TargetProject;
+            frm.ShowDialog();
+        }
+
+      
 
     }
 }
