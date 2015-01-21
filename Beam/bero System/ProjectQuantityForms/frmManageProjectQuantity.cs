@@ -42,8 +42,9 @@ namespace bero_System.ProjectQuantityForms
                 frmEditProjectQuantity frm = new frmEditProjectQuantity();
 
                 ProjectQuantity tb = (ProjectQuantity)ProjectQuantityGridView.CurrentRow.DataBoundItem;
-
+                frm.CmbItems.Text = ProjectQuantityGridView.CurrentRow.Cells[1].Value.ToString();
                 frm.TargetProject = tb;
+             
 
                 frm.ShowDialog();
                 Operation.EndOperation(this);
@@ -63,6 +64,7 @@ namespace bero_System.ProjectQuantityForms
         private void AddBtn_Click(object sender, EventArgs e)
         {
             frmAddProjectQuantity frm = new frmAddProjectQuantity();
+            frm.TargetProject = this.TargetProject;
             frm.ShowDialog();
         }
 

@@ -57,7 +57,7 @@ namespace DataLayer.XBulidItem
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-                ProcessChange("Edit Bulid Item", tb.ItemName + " has Been Edited ", null);
+             //   ProcessChange("Edit Bulid Item",    tb.ItemName + " has Been Edited ",null);
                 q = null;
                 return true;
             }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-using System.Threading;
+
 using DataLayer.XProject;
 using DataLayer;
 namespace bero_System.ProjectQuantityForms
@@ -27,26 +27,26 @@ namespace bero_System.ProjectQuantityForms
         {
 
             //Fill project Level ComBo
-            this.ItemComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
+            this.CmbItems.MultiColumnComboBoxElement.DropDownWidth = 550;
             Operation.BeginOperation(this);
 
             this.Invoke((MethodInvoker)delegate
             {
-                this.ItemComboBox.AutoFilter = true;
-                this.ItemComboBox.ValueMember = "id";
-                this.ItemComboBox.DisplayMember = "LevelName";
+                this.CmbItems.AutoFilter = true;
+                this.CmbItems.ValueMember = "ID";
+                this.CmbItems.DisplayMember = "ItemName";
             });
 
 
             var q1 = BulidItemCommand.GetAll();
             this.Invoke((MethodInvoker)delegate
             {
-                ItemComboBox.DataSource = q1;
+                CmbItems.DataSource = q1;
                 CompositeFilterDescriptor compositeFilter = new CompositeFilterDescriptor();
-                FilterDescriptor LeveName = new FilterDescriptor("LevelName", FilterOperator.Contains, "");
+                FilterDescriptor LeveName = new FilterDescriptor("ItemName", FilterOperator.Contains, "");
                 compositeFilter.FilterDescriptors.Add(LeveName);
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
-                this.ItemComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
+                this.CmbItems.EditorControl.FilterDescriptors.Add(compositeFilter);
 
 
 
@@ -61,45 +61,66 @@ namespace bero_System.ProjectQuantityForms
             th = new Thread(FillCombo);
             th.Start();
         }
-
+        public ProjectProfile TargetProject { get; set; }
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
 
-            if (ItemComboBox.SelectedValue == null)
+            if (CmbItems.SelectedValue == null)
             {
 
-                ItemComboBox.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
-                ItemComboBox.Focus();
-                errorProvider1.SetError(this.ItemComboBox, "من فضلك اختر الصنف");
+                CmbItems.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
+                CmbItems.Focus();
+                errorProvider1.SetError(this.CmbItems, "من فضلك اختر الصنف");
                 return;
             }
             else
             {
-                ItemComboBox.MultiColumnComboBoxElement.BackColor = Color.White;
+                CmbItems.MultiColumnComboBoxElement.BackColor = Color.White;
                 errorProvider1.Clear();
             }
 
 
-            if (qtyTextBox.Text == "")
+            if (QtyText.Text == "")
             {
 
-                qtyTextBox.BackColor = Color.OrangeRed;
+                QtyText.BackColor = Color.OrangeRed;
 
-                qtyTextBox.Focus();
-                errorProvider1.SetError(this.qtyTextBox, "من فضلك ادخل الكمية");
+                QtyText.Focus();
+                errorProvider1.SetError(this.QtyText, "من فضلك ادخل الكمية");
 
                 return;
             }
             else
             {
-                qtyTextBox.BackColor = Color.White;
+                QtyText.BackColor = Color.White;
                 errorProvider1.Clear();
 
             }
            
 
             #endregion
+
+            Operation.BeginOperation(this);
+
+            ProjectQuantity Qtb = new ProjectQuantity() {
+             ItemID =int .Parse ( CmbItems .SelectedValue .ToString ()),
+             ProjectProfileID = this .TargetProject .ID ,
+             Qty = this .QtyText .Text 
+            };
+            ProjectQuantityCommand.NewProjectQuantity(Qtb);
+
+     
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
         }
     }
 }
