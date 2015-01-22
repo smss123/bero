@@ -11,7 +11,7 @@ namespace bero_System.ReportSystem.ReportOBj
       public string LevelName { get; set; }
       public string Descripotion { get; set; }
       public double LevelAmount { get; set; }
-      public string SerialNumber { get; set; }
+      public string SerialNumberLevel { get; set; }
 
 
 
