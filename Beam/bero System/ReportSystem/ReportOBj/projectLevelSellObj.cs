@@ -15,6 +15,7 @@ namespace bero_System.ReportSystem.ReportOBj
         public string Description { get; set; }
         public string Status { get; set; }
         public string SerialNumber { get; set; }
+        public string ProjectLevelName { get; set; }
        
 //
 

@@ -13,6 +13,7 @@ namespace bero_System.ReportSystem.ReportOBj
         public double Amount { get; set; }
         public DateTime DateOfProcess { get; set; }
         public string Description { get; set; }
+        public string ProjectLevelName { get; set; }
  //
         public string ProjectName { get; set; }
         public string CustomerName { get; set; }
