@@ -302,12 +302,6 @@
     <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.Designer.cs">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectOffers\FrmProjectOffers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectOffers\FrmProjectOffers.Designer.cs">
-      <DependentUpon>FrmProjectOffers.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,9 +451,6 @@
     <EmbeddedResource Include="projectLevelSellForms\FrmManageprojectLevelSell.resx">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjectOffers\FrmProjectOffers.resx">
-      <DependentUpon>FrmProjectOffers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ProjectQuantityForms\frmAddProjectQuantity.resx">
       <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +512,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ProjectOffers\" />
     <Folder Include="ReportSystem\ReportCommand\" />
     <Folder Include="ReportSystem\ReportDesign\" />
   </ItemGroup>
