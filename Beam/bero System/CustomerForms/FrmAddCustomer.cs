@@ -54,6 +54,7 @@ namespace bero_System.CustomerForms
             };
             CustomerCommand.NewCustomer(CustTb);
             MessageBox.Show("Save");
+          
             broom();
 
         }
@@ -69,8 +70,8 @@ namespace bero_System.CustomerForms
 
         private void FrmAddCustomer_Load(object sender, EventArgs e)
         {
-            Customer tb = CustomerCommand.GetCustomerByID(2);
-            MessageBox.Show(tb.CustomerName);
+          
+          
         }
     }
 }

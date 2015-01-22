@@ -132,11 +132,11 @@ namespace bero_System.ProjectForms
                   DeliverDate =  DeliverDateText .Value ,
                   ProjectFullAmount =   Convert.ToDouble ( projectFullAmountTextBox .Text) ,
                   CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ())  
-
+                 
             };
             ProjectProfileCommand.NewProject(PrjTb);
             //=======================================================================================================
-            // Write At AccountDaily : 
+            // Write At AccountDaily : {  دخل في حساب المشروع}
 
             AccountDaily actTb1 = new AccountDaily() { 
                  AccountID = PrjTb .AccountID ,
@@ -148,8 +148,8 @@ namespace bero_System.ProjectForms
             };
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
-            //^^^^
 
+            //^^^^{ خرج من حساب العميل}
             AccountDaily actTb2 = new AccountDaily()
             {
                 AccountID = CurrentCustomer.AccountID,
