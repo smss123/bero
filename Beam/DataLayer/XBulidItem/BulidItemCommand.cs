@@ -29,7 +29,7 @@ namespace DataLayer.XBulidItem
                     HistoryAction = "Adding New Bulid Item",
 
                 });
-                ProcessChange("Adding Bulid Item ", tb.ItemName + " has Been Saved ", null);
+               // ProcessChange("Adding Bulid Item ", tb.ItemName + " has Been Saved ", null);
                 return true;
             }
             catch (Exception e)

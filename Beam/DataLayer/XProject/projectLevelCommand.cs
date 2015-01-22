@@ -41,11 +41,16 @@ namespace DataLayer.XProject
                     return false;
                 }
             }
-
+            private static bool WriteHistory(History htb)
+            {
+                db.Histories.InsertOnSubmit(htb);
+                db.SubmitChanges();
+                return true;
+            }
             public static bool EditprojectLevel(projectLevel tb)
             {
-                try
-                {
+                //try
+                //{
                     var q = db.projectLevels.Where(p => p.id == tb.id).Single();
                     q.LevelName = tb.LevelName;
                     q.Descripotion = tb.Descripotion;
@@ -53,50 +58,59 @@ namespace DataLayer.XProject
                     q.LevelAmount = tb.LevelAmount;
                     q.SerialNumber = tb.SerialNumber;
                     db.SubmitChanges();
-                    HistoryCommand.NewHistory(new History()
+
+                    //HistoryCommand.NewHistory(new History()
+                    //{
+                    History htb = new History()
                     {
                         ActionName = "Edit project Level",
                         Description = String.Format("old Info Is Level Name {0}\n Project Description : {1}Project Profile {2} Level Amount {3} \n New Info is Level Name {4}\n Project Description : {5}Project Profile {6} Level Amount {7}", q.LevelName, q.Descripotion, q.LevelAmount, tb.LevelName, tb.Descripotion, tb.ProjectProfile.ProjectName, tb.LevelAmount),
                         DateOfProcess = DateTime.Now,
                         SystemUser = LoginInfomation.CurrnetUser
-                    });
+                    };
+                    WriteHistory(htb);
+                    //});
 
-                    ProcessChange("Edit project Level", tb.LevelName + " has Been Edited ", null);
-                    q = null;
+                   // ProcessChange("Edit project Level", tb.LevelName + " has Been Edited ", null);
+                  q = null;
                     return true;
-                }
-                catch (Exception e)
-                {
+                //}
+                //catch (Exception e)
+                //{
 
-                    ProcessChange("Error message", "Can't Edit project Level", e.ToString());
-                    return false;
-                }
+                //    ProcessChange("Error message", "Can't Edit project Level", e.ToString());
+                //    return false;
+                //}
             }
-
+           
             public static bool DeleteprojectLevel(int iD)
             {
-                try
-                {
+                //try
+                //{
                     var q = db.projectLevels.Where(p => p.id == iD).Single();
                     db.projectLevels.DeleteOnSubmit(q);
                     db.SubmitChanges();
-                    HistoryCommand.NewHistory(new History()
+                    //HistoryCommand.NewHistory(new History()
+                    //{
+                    History htb = new History()
                     {
                         ActionName = "Edit project Level",
                         Description = String.Format(" Info Is Level Name {0}\n Project Description : {1}Project Profile {2} Level Amount {3}", q.LevelName, q.Descripotion, q.ProjectProfile.ProjectName, q.LevelAmount),
                         DateOfProcess = DateTime.Now,
                         SystemUser = LoginInfomation.CurrnetUser
-                    });
+                    };
+                    WriteHistory(htb);
+                   // });;
                     q = null;
-                    ProcessChange("Delete Project Level", q.LevelName + " has Been Deleted ", null);
+                   // ProcessChange("Delete Project Level", q.LevelName + " has Been Deleted ", null);
                     return true;
-                }
-                catch (Exception e)
-                {
+                //}
+                //catch (Exception e)
+                //{
 
-                    ProcessChange("Error message", "Can't Delete Project Level", e.ToString());
-                    return false;
-                }
+                //    ProcessChange("Error message", "Can't Delete Project Level", e.ToString());
+                //    return false;
+              //  }
             }
 
             public static List<projectLevel> GetAll()

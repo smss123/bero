@@ -131,11 +131,36 @@ namespace bero_System.ProjectForms
                   createdDate = DateTime .Now ,
                   DeliverDate =  DeliverDateText .Value ,
                   ProjectFullAmount =   Convert.ToDouble ( projectFullAmountTextBox .Text) ,
-                  CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ()),
-                 // AccountID = 
+                  CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ())  
 
             };
             ProjectProfileCommand.NewProject(PrjTb);
+            //=======================================================================================================
+            // Write At AccountDaily : 
+
+            AccountDaily actTb1 = new AccountDaily() { 
+                 AccountID = PrjTb .AccountID ,
+                 TotalIn = Convert.ToDouble(projectFullAmountTextBox.Text),
+                 TotalOut = 0f,
+                 DateOfProcess = DateTime.Now,
+                 Description = string.Format("Income in the project : {0} account an amount of :  {1}", PrjTb.ProjectName, projectFullAmountTextBox.Text),
+                 CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
+
+            //^^^^
+
+            AccountDaily actTb2 = new AccountDaily()
+            {
+                AccountID = CurrentCustomer.AccountID,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble(projectFullAmountTextBox.Text),
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("Came out of the customer's {0} account and the amount of {1}", CurrentCustomer.CustomerName, projectFullAmountTextBox.Text),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
+            //========================================================================================================
             Operation.EndOperation(this);
             Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
            
