@@ -63,6 +63,8 @@
     <Compile Include="XAccountant\ExpenssesMovmentCommand.cs" />
     <Compile Include="XBulidItem\BulidItemCommand.cs" />
     <Compile Include="XCustomer\CustomerCommand.cs" />
+    <Compile Include="XEmployee\EmployeesCmd.cs" />
+    <Compile Include="XEmployee\HolyDayCmd.cs" />
     <Compile Include="XProject\ProjectAttachmentCommand.cs" />
     <Compile Include="XProject\ProjectExpenssesCommand.cs" />
     <Compile Include="XProject\ProjectInstallmentCommand.cs" />
