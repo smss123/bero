@@ -327,7 +327,16 @@
       <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\PaymentVoucherReportObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectExpenssesObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectInstallmentObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\projectLevelObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
     <EmbeddedResource Include="AccountForms\frmAccountDailySHow.resx">
       <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
     </EmbeddedResource>

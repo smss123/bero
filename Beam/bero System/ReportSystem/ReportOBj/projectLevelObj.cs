@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace bero_System.ReportSystem.ReportOBj
 {
-   public class CustomerProjectObj
+  public  class projectLevelObj
     {
+      public string LevelName { get; set; }
+      public string Descripotion { get; set; }
+      public double LevelAmount { get; set; }
+      public string SerialNumber { get; set; }
 
+
+
+      //Project
         public string ProjectName { get; set; }
         public string ProjectDescription { get; set; }
         public DateTime createdDate { get; set; }
@@ -16,7 +23,5 @@ namespace bero_System.ReportSystem.ReportOBj
         public double ProjectFullAmount { get; set; }
         public string CustomerName { get; set; }
         public string SerialNumber { get; set; }
-
-
     }
 }
