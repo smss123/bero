@@ -21,9 +21,45 @@ namespace bero_System.ProjectQuantityForms
         }
        
         public  ProjectQuantity TargetProject { get; set; }
+        Thread th;
+        private void FillCombo()
+        {
 
+            //Fill project Level ComBo
+            this.CmbItems.MultiColumnComboBoxElement.DropDownWidth = 550;
+            Operation.BeginOperation(this);
+
+            this.Invoke((MethodInvoker)delegate
+            {
+                this.CmbItems.AutoFilter = true;
+                this.CmbItems.ValueMember = "ID";
+                this.CmbItems.DisplayMember = "ItemName";
+            });
+
+
+            var q1 = BulidItemCommand.GetAll();
+            this.Invoke((MethodInvoker)delegate
+            {
+                CmbItems.DataSource = q1;
+                CompositeFilterDescriptor compositeFilter = new CompositeFilterDescriptor();
+                FilterDescriptor LeveName = new FilterDescriptor("ItemName", FilterOperator.Contains, "");
+                compositeFilter.FilterDescriptors.Add(LeveName);
+                compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
+                this.CmbItems.EditorControl.FilterDescriptors.Add(compositeFilter);
+
+
+
+
+            });
+
+            Operation.EndOperation(this);
+            th.Abort();
+        }
         private void frmEditProjectQuantity_Load(object sender, EventArgs e)
         {
+            th = new Thread(FillCombo);
+            th.Start();
+
             QtyText.Text = TargetProject.Qty.ToString();
         }
 

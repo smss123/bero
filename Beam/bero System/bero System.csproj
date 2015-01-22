@@ -327,6 +327,7 @@
       <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
     <EmbeddedResource Include="AccountForms\frmAccountDailySHow.resx">
       <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,7 +511,10 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ReportSystem\ReportCommand\" />
+    <Folder Include="ReportSystem\ReportDesign\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
