@@ -26,8 +26,7 @@ namespace DataLayer.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BLACKSWORD\\SQLEXPRESS;Initial Catalog=xprema_bero;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Heroo;Initial Catalog=xprema_bero;Integrated Security=True")]
         public string xprema_beroConnectionString {
             get {
                 return ((string)(this["xprema_beroConnectionString"]));
