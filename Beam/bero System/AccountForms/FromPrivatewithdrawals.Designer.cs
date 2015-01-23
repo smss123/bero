@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.AddBtn = new Telerik.WinControls.UI.RadButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CmbToAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.CmbFromAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblAvailableAmount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CmbFromAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.CmbToAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.AddBtn = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,116 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Location = new System.Drawing.Point(251, 286);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(110, 36);
+            this.AddBtn.TabIndex = 21;
+            this.AddBtn.Text = "اضافة";
+            this.AddBtn.ThemeName = "Office2013Light";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(313, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "الوصف:";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(29, 191);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(278, 74);
+            this.txtDescription.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(309, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "الى حساب:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(308, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "من حساب:";
+            // 
+            // CmbToAccount
+            // 
+            this.CmbToAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // CmbToAccount.NestedRadGridView
+            // 
+            this.CmbToAccount.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.CmbToAccount.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.CmbToAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CmbToAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.CmbToAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.CmbToAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.CmbToAccount.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            this.CmbToAccount.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.CmbToAccount.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.CmbToAccount.EditorControl.Name = "NestedRadGridView";
+            this.CmbToAccount.EditorControl.ReadOnly = true;
+            this.CmbToAccount.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbToAccount.EditorControl.ShowGroupPanel = false;
+            this.CmbToAccount.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.CmbToAccount.EditorControl.TabIndex = 0;
+            this.CmbToAccount.Location = new System.Drawing.Point(26, 138);
+            this.CmbToAccount.Name = "CmbToAccount";
+            this.CmbToAccount.Size = new System.Drawing.Size(281, 20);
+            this.CmbToAccount.TabIndex = 16;
+            this.CmbToAccount.TabStop = false;
+            this.CmbToAccount.ThemeName = "Office2013Light";
+            // 
+            // CmbFromAccount
+            // 
+            this.CmbFromAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // CmbFromAccount.NestedRadGridView
+            // 
+            this.CmbFromAccount.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.CmbFromAccount.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.CmbFromAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CmbFromAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.CmbFromAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.CmbFromAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.CmbFromAccount.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            this.CmbFromAccount.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.CmbFromAccount.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.CmbFromAccount.EditorControl.Name = "NestedRadGridView";
+            this.CmbFromAccount.EditorControl.ReadOnly = true;
+            this.CmbFromAccount.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CmbFromAccount.EditorControl.ShowGroupPanel = false;
+            this.CmbFromAccount.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.CmbFromAccount.EditorControl.TabIndex = 0;
+            this.CmbFromAccount.Location = new System.Drawing.Point(26, 91);
+            this.CmbFromAccount.Name = "CmbFromAccount";
+            this.CmbFromAccount.Size = new System.Drawing.Size(281, 20);
+            this.CmbFromAccount.TabIndex = 15;
+            this.CmbFromAccount.TabStop = false;
+            this.CmbFromAccount.ThemeName = "Office2013Light";
             // 
             // label2
             // 
@@ -116,115 +226,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "المبلغ المتوفر:";
             // 
-            // CmbFromAccount
-            // 
-            this.CmbFromAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // CmbFromAccount.NestedRadGridView
-            // 
-            this.CmbFromAccount.EditorControl.BackColor = System.Drawing.SystemColors.Window;
-            this.CmbFromAccount.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.CmbFromAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CmbFromAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
-            // 
-            // CmbFromAccount.NestedRadGridView
-            // 
-            this.CmbFromAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
-            this.CmbFromAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
-            this.CmbFromAccount.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            this.CmbFromAccount.EditorControl.MasterTemplate.EnableGrouping = false;
-            this.CmbFromAccount.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.CmbFromAccount.EditorControl.Name = "NestedRadGridView";
-            this.CmbFromAccount.EditorControl.ReadOnly = true;
-            this.CmbFromAccount.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbFromAccount.EditorControl.ShowGroupPanel = false;
-            this.CmbFromAccount.EditorControl.Size = new System.Drawing.Size(240, 150);
-            this.CmbFromAccount.EditorControl.TabIndex = 0;
-            this.CmbFromAccount.Location = new System.Drawing.Point(26, 91);
-            this.CmbFromAccount.Name = "CmbFromAccount";
-            this.CmbFromAccount.Size = new System.Drawing.Size(281, 20);
-            this.CmbFromAccount.TabIndex = 15;
-            this.CmbFromAccount.TabStop = false;
-            this.CmbFromAccount.ThemeName = "Office2013Light";
-            // 
-            // CmbToAccount
-            // 
-            this.CmbToAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // CmbToAccount.NestedRadGridView
-            // 
-            this.CmbToAccount.EditorControl.BackColor = System.Drawing.SystemColors.Window;
-            this.CmbToAccount.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.CmbToAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CmbToAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
-            // 
-            // CmbToAccount.NestedRadGridView
-            // 
-            this.CmbToAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
-            this.CmbToAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
-            this.CmbToAccount.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            this.CmbToAccount.EditorControl.MasterTemplate.EnableGrouping = false;
-            this.CmbToAccount.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.CmbToAccount.EditorControl.Name = "NestedRadGridView";
-            this.CmbToAccount.EditorControl.ReadOnly = true;
-            this.CmbToAccount.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CmbToAccount.EditorControl.ShowGroupPanel = false;
-            this.CmbToAccount.EditorControl.Size = new System.Drawing.Size(240, 150);
-            this.CmbToAccount.EditorControl.TabIndex = 0;
-            this.CmbToAccount.Location = new System.Drawing.Point(26, 138);
-            this.CmbToAccount.Name = "CmbToAccount";
-            this.CmbToAccount.Size = new System.Drawing.Size(281, 20);
-            this.CmbToAccount.TabIndex = 16;
-            this.CmbToAccount.TabStop = false;
-            this.CmbToAccount.ThemeName = "Office2013Light";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "الى حساب:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "من حساب:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(313, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "الوصف:";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(29, 191);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(278, 74);
-            this.txtDescription.TabIndex = 19;
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(251, 286);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(110, 36);
-            this.AddBtn.TabIndex = 21;
-            this.AddBtn.Text = "اضافة";
-            this.AddBtn.ThemeName = "Office2013Light";
-            // 
             // FromPrivatewithdrawals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,13 +245,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbToAccount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount.EditorControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbFromAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
