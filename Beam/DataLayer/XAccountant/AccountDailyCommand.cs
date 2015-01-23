@@ -13,12 +13,12 @@ namespace DataLayer.XAccountant
         public static event OnchangeCallBack ProcessChange;
         public static bool NewAccountDaily(AccountDaily tb)
         {
-            try
-            {
+            //try
+            //{
 
                 db.AccountDailies.InsertOnSubmit(tb);
                 db.SubmitChanges();
-                HistoryCommand.NewHistory(new History()
+                History htb = new History()
                 {
                     ActionName = "Adding New Account Daily",
                     Description = "Account ID " + tb.AccountID +
@@ -31,16 +31,18 @@ namespace DataLayer.XAccountant
                     SystemUser = LoginInfomation.CurrnetUser,
                     HistoryAction = "Adding New Account Daily",
 
-                });
-                ProcessChange("Adding Account Daily ", tb.AccountID + " has Been Saved ", null);
+                };
+                db.Histories.InsertOnSubmit(htb);
+                db.SubmitChanges();
+                //ProcessChange("Adding Account Daily ", tb.AccountID + " has Been Saved ", null);
                 return true;
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Account Daily", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Account Daily", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool EditAccountDaily(AccountDaily tb)

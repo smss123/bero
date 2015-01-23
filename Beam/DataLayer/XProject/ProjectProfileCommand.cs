@@ -14,35 +14,37 @@ namespace DataLayer.XProject
         public static  event OnchangeCallBack ProcessChange;
         public static bool NewProject(ProjectProfile Pro)
         {
-            try
-            {
+            //try
+            //{
 
                 db.ProjectProfiles.InsertOnSubmit(Pro);
                 db.SubmitChanges();
-                HistoryCommand.NewHistory(new History()
+                History NewHistory = new History()
                 {
                     ActionName = "Adding New Project Profile",
                     Description = "ProjectProfile Name " + Pro.ProjectName +
                      "\n Description : " + Pro.ProjectDescription +
-                     "Created At " + Pro.createdDate.ToString()+
-                     "Deliver Date"+Pro.DeliverDate.ToString()+
-                     "Project Full Amount"+Pro.ProjectFullAmount.ToString()+
-                     "Customer"+Pro.CustomerID.ToString(),
+                     "Created At " + Pro.createdDate.ToString() +
+                     "Deliver Date" + Pro.DeliverDate.ToString() +
+                     "Project Full Amount" + Pro.ProjectFullAmount.ToString() +
+                     "Customer" + Pro.CustomerID.ToString(),
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser,
                     HistoryAction = "Adding New Project Profile",
 
-                });
-                string str = Pro.ProjectName;
-                ProcessChange("Adding Project Profile", str + " has Been Saved ","-");
-                return true;
-            }
-            catch (Exception e)
-            {
+                };
+                db.Histories.InsertOnSubmit(NewHistory);
+                db.SubmitChanges();
+            //    string str = Pro.ProjectName;
+            //    ProcessChange("Adding Project Profile", str + " has Been Saved ","-");
+              return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Project Profile", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Project Profile", e.ToString());
+                //return false;
+           // }
         }
 
         public static bool EditProject(ProjectProfile pro)
@@ -108,7 +110,13 @@ namespace DataLayer.XProject
         {
             return db.ProjectProfiles.ToList();
         }
-
+        public static ProjectProfile GetByProjId(int ProjectId)
+        {
+            var GetOne = (from p in db.ProjectProfiles
+                       where p.ID == ProjectId 
+                       select p).SingleOrDefault ();
+            return GetOne ;
+        }
         public static List<ProjectProfile> GetAllByCustomerId(int CustId)
         {
             var Lst = ( from p in  db.ProjectProfiles 

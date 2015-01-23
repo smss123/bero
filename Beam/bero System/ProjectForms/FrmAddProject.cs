@@ -135,31 +135,39 @@ namespace bero_System.ProjectForms
                  
             };
             ProjectProfileCommand.NewProject(PrjTb);
-            //=======================================================================================================
-            // Write At AccountDaily : {  دخل في حساب المشروع}
+            //===================================================================
 
-            AccountDaily actTb1 = new AccountDaily() { 
-                 AccountID = PrjTb .AccountID ,
-                 TotalIn = Convert.ToDouble(projectFullAmountTextBox.Text),
-                 TotalOut = 0f,
+             var CurrentProject = ProjectProfileCommand.GetByProjId(PrjTb.ID);
+
+            //====================================================================
+            // بعد الاتفاق على سعر المشروع
+            // يصبح الزبون مدين للمشروع بكامل المبلغ لانه لم يدفع حتى الان
+
+            // ^^^ [حساب العميل \ مدين]
+            AccountDaily actTb2 = new AccountDaily()
+            {
+                AccountID = CurrentCustomer.AccountID,
+                TotalIn = Convert.ToDouble(projectFullAmountTextBox.Text),
+                TotalOut = 0f,
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("inCame in of the customer's {0} account and the amount of {1}", CurrentCustomer.CustomerName, projectFullAmountTextBox.Text),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
+
+
+            // ^^^ [حساب المشروع \ دائن]
+            AccountDaily actTb1 = new AccountDaily() {
+                AccountID = CurrentProject.AccountID ,
+                 TotalIn = 0f,
+                 TotalOut = Convert.ToDouble(projectFullAmountTextBox.Text),
                  DateOfProcess = DateTime.Now,
-                 Description = string.Format("Income in the project : {0} account an amount of :  {1}", PrjTb.ProjectName, projectFullAmountTextBox.Text),
+                 Description = string.Format("come out the project : {0} account an amount of :  {1}", PrjTb.ProjectName, projectFullAmountTextBox.Text),
                  CommandArg = ""
             };
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
-
-            //^^^^{ خرج من حساب العميل}
-            AccountDaily actTb2 = new AccountDaily()
-            {
-                AccountID = CurrentCustomer.AccountID,
-                TotalIn = 0f,
-                TotalOut = Convert.ToDouble(projectFullAmountTextBox.Text),
-                DateOfProcess = DateTime.Now,
-                Description = string.Format("Came out of the customer's {0} account and the amount of {1}", CurrentCustomer.CustomerName, projectFullAmountTextBox.Text),
-                CommandArg = ""
-            };
-            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
+          
             //========================================================================================================
             Operation.EndOperation(this);
             Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
