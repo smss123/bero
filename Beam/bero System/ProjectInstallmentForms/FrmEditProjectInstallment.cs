@@ -14,9 +14,9 @@ using Telerik.WinControls.UI;
 
 namespace bero_System.ProjectInstallmentForms
 {
-    public partial class FrmAddProjectInstallment : RadForm
+    public partial class FrmEditProjectInstallment : RadForm
     {
-        public FrmAddProjectInstallment()
+        public FrmEditProjectInstallment()
         {
             InitializeComponent();
         }
@@ -54,15 +54,15 @@ namespace bero_System.ProjectInstallmentForms
             Operation.EndOperation(this);
             th.Abort();
         }
-        private void FrmAddProjectInstallment_Load(object sender, EventArgs e)
+        private void FrmEditProjectInstallment_Load(object sender, EventArgs e)
         {
-            th = new Thread(FillCombo);
+             th = new Thread(FillCombo);
             th.Start();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void SaveBtn_Click(object sender, EventArgs e)
         {
-            #region "  CheckFillTextBox "
+          #region "  CheckFillTextBox "
 
             if (installments_nameTextBox.Text == "")
             {
@@ -114,6 +114,7 @@ namespace bero_System.ProjectInstallmentForms
             }
 
             #endregion
+        }
         }
     }
 }
