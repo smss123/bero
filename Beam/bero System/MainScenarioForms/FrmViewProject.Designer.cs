@@ -37,14 +37,24 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectLevelsBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddprojectLevelBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageprojectLevelBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddprojectLevelSellBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageprojectLevelSellBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.QuantityBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddProjectQuantityBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageProjectQuantityBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.اضافةقسطToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ادارةالاقساطToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectExpensessBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddProjectExpenssesBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageProjectExpensses = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -150,13 +160,30 @@
             // 
             // ProjectLevelsBtn
             // 
+            this.ProjectLevelsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddprojectLevelBtn,
+            this.ManageprojectLevelBtn});
             this.ProjectLevelsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProjectLevelsBtn.Image")));
             this.ProjectLevelsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProjectLevelsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProjectLevelsBtn.Name = "ProjectLevelsBtn";
-            this.ProjectLevelsBtn.Size = new System.Drawing.Size(116, 22);
+            this.ProjectLevelsBtn.Size = new System.Drawing.Size(125, 22);
             this.ProjectLevelsBtn.Text = "مستويات المشروع";
             this.ProjectLevelsBtn.Click += new System.EventHandler(this.ProjectLevelsBtn_Click);
+            // 
+            // AddprojectLevelBtn
+            // 
+            this.AddprojectLevelBtn.Name = "AddprojectLevelBtn";
+            this.AddprojectLevelBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddprojectLevelBtn.Text = "اضافة مستوى";
+            this.AddprojectLevelBtn.Click += new System.EventHandler(this.AddprojectLevelBtn_Click);
+            // 
+            // ManageprojectLevelBtn
+            // 
+            this.ManageprojectLevelBtn.Name = "ManageprojectLevelBtn";
+            this.ManageprojectLevelBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageprojectLevelBtn.Text = "ادارة المستويات";
+            this.ManageprojectLevelBtn.Click += new System.EventHandler(this.ManageprojectLevelBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -165,11 +192,29 @@
             // 
             // toolStripDropDownButton2
             // 
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddprojectLevelSellBtn,
+            this.ManageprojectLevelSellBtn});
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(99, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(107, 22);
             this.toolStripDropDownButton2.Text = "مستويات البيع";
+            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
+            // 
+            // AddprojectLevelSellBtn
+            // 
+            this.AddprojectLevelSellBtn.Name = "AddprojectLevelSellBtn";
+            this.AddprojectLevelSellBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddprojectLevelSellBtn.Text = "اضافة";
+            this.AddprojectLevelSellBtn.Click += new System.EventHandler(this.AddprojectLevelSellBtn_Click);
+            // 
+            // ManageprojectLevelSellBtn
+            // 
+            this.ManageprojectLevelSellBtn.Name = "ManageprojectLevelSellBtn";
+            this.ManageprojectLevelSellBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageprojectLevelSellBtn.Text = "ادارة";
+            this.ManageprojectLevelSellBtn.Click += new System.EventHandler(this.ManageprojectLevelSellBtn_Click);
             // 
             // toolStripSeparator3
             // 
@@ -178,12 +223,29 @@
             // 
             // QuantityBtn
             // 
+            this.QuantityBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddProjectQuantityBtn,
+            this.ManageProjectQuantityBtn});
             this.QuantityBtn.Image = ((System.Drawing.Image)(resources.GetObject("QuantityBtn.Image")));
             this.QuantityBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.QuantityBtn.Name = "QuantityBtn";
-            this.QuantityBtn.Size = new System.Drawing.Size(69, 22);
+            this.QuantityBtn.Size = new System.Drawing.Size(74, 22);
             this.QuantityBtn.Text = "الكميات";
             this.QuantityBtn.Click += new System.EventHandler(this.QuantityBtn_Click);
+            // 
+            // AddProjectQuantityBtn
+            // 
+            this.AddProjectQuantityBtn.Name = "AddProjectQuantityBtn";
+            this.AddProjectQuantityBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddProjectQuantityBtn.Text = "اضافة كمية";
+            this.AddProjectQuantityBtn.Click += new System.EventHandler(this.AddProjectQuantityBtn_Click);
+            // 
+            // ManageProjectQuantityBtn
+            // 
+            this.ManageProjectQuantityBtn.Name = "ManageProjectQuantityBtn";
+            this.ManageProjectQuantityBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageProjectQuantityBtn.Text = "ادارة الكميات";
+            this.ManageProjectQuantityBtn.Click += new System.EventHandler(this.ManageProjectQuantityBtn_Click);
             // 
             // toolStripSeparator4
             // 
@@ -192,12 +254,27 @@
             // 
             // toolStripDropDownButton4
             // 
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةقسطToolStripMenuItem,
+            this.ادارةالاقساطToolStripMenuItem});
             this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(104, 22);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(111, 22);
             this.toolStripDropDownButton4.Text = "اقساط المشروع";
+            // 
+            // اضافةقسطToolStripMenuItem
+            // 
+            this.اضافةقسطToolStripMenuItem.Name = "اضافةقسطToolStripMenuItem";
+            this.اضافةقسطToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.اضافةقسطToolStripMenuItem.Text = "اضافة قسط";
+            // 
+            // ادارةالاقساطToolStripMenuItem
+            // 
+            this.ادارةالاقساطToolStripMenuItem.Name = "ادارةالاقساطToolStripMenuItem";
+            this.ادارةالاقساطToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ادارةالاقساطToolStripMenuItem.Text = "ادارة الاقساط";
             // 
             // toolStripSeparator5
             // 
@@ -206,13 +283,30 @@
             // 
             // ProjectExpensessBtn
             // 
+            this.ProjectExpensessBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddProjectExpenssesBtn,
+            this.ManageProjectExpensses});
             this.ProjectExpensessBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProjectExpensessBtn.Image")));
             this.ProjectExpensessBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProjectExpensessBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProjectExpensessBtn.Name = "ProjectExpensessBtn";
-            this.ProjectExpensessBtn.Size = new System.Drawing.Size(119, 22);
+            this.ProjectExpensessBtn.Size = new System.Drawing.Size(127, 22);
             this.ProjectExpensessBtn.Text = "مصروفات المشروع";
             this.ProjectExpensessBtn.Click += new System.EventHandler(this.ProjectExpensessBtn_Click);
+            // 
+            // AddProjectExpenssesBtn
+            // 
+            this.AddProjectExpenssesBtn.Name = "AddProjectExpenssesBtn";
+            this.AddProjectExpenssesBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddProjectExpenssesBtn.Text = "اضافة مصروف";
+            this.AddProjectExpenssesBtn.Click += new System.EventHandler(this.AddProjectExpenssesBtn_Click);
+            // 
+            // ManageProjectExpensses
+            // 
+            this.ManageProjectExpensses.Name = "ManageProjectExpensses";
+            this.ManageProjectExpensses.Size = new System.Drawing.Size(152, 22);
+            this.ManageProjectExpensses.Text = "ادارة المصروفا";
+            this.ManageProjectExpensses.Click += new System.EventHandler(this.ManageProjectExpensses_Click);
             // 
             // toolStripSeparator6
             // 
@@ -224,7 +318,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(107, 22);
             this.toolStripButton1.Text = "مرفقات المشروع";
             // 
             // toolStripSeparator7
@@ -238,7 +332,7 @@
             this.toolStripDropDownButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(106, 22);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(107, 22);
             this.toolStripDropDownButton6.Text = "تقارير المشروع";
             // 
             // statusStrip1
@@ -388,5 +482,15 @@
         private System.Windows.Forms.TextBox projectNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
+        private System.Windows.Forms.ToolStripMenuItem AddprojectLevelBtn;
+        private System.Windows.Forms.ToolStripMenuItem ManageprojectLevelBtn;
+        private System.Windows.Forms.ToolStripMenuItem AddprojectLevelSellBtn;
+        private System.Windows.Forms.ToolStripMenuItem ManageprojectLevelSellBtn;
+        private System.Windows.Forms.ToolStripMenuItem AddProjectQuantityBtn;
+        private System.Windows.Forms.ToolStripMenuItem ManageProjectQuantityBtn;
+        private System.Windows.Forms.ToolStripMenuItem اضافةقسطToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ادارةالاقساطToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddProjectExpenssesBtn;
+        private System.Windows.Forms.ToolStripMenuItem ManageProjectExpensses;
     }
 }

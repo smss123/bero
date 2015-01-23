@@ -14,6 +14,7 @@ using DataLayer.XProject;
 using bero_System.ProjectExpenssesForms;
 using bero_System.projectLevelFroms;
 using bero_System.ProjectQuantityForms;
+using bero_System.projectLevelSellForms;
 
 
 
@@ -43,24 +44,76 @@ namespace bero_System.MainScenarioForms
        
         private void ProjectExpensessBtn_Click(object sender, EventArgs e)
         {
-            FrmManageProjectExpensses frm = new FrmManageProjectExpensses();
-            frm.TargetProject = this.TargetProject;
-            frm.ShowDialog();
+           
         }
 
         private void ProjectLevelsBtn_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void QuantityBtn_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void AddprojectLevelBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddprojectLevel frm = new FrmAddprojectLevel();
+            frm.ShowDialog();
+        }
+
+        private void ManageprojectLevelBtn_Click(object sender, EventArgs e)
         {
             FrmManageprojectLevel frm = new FrmManageprojectLevel();
             frm.TargetProjectx = this.TargetProject;
             frm.ShowDialog();
         }
 
-        private void QuantityBtn_Click(object sender, EventArgs e)
+        private void AddprojectLevelSellBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddprojectLevelSell frm = new FrmAddprojectLevelSell();
+            frm.ShowDialog();
+        }
+
+        private void ManageprojectLevelSellBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageprojectLevelSell frm = new FrmManageprojectLevelSell();
+            frm.ShowDialog();
+        }
+
+        private void AddProjectQuantityBtn_Click(object sender, EventArgs e)
+        {
+            frmAddProjectQuantity frm = new frmAddProjectQuantity();
+            frm.ShowDialog();
+        }
+
+        private void ManageProjectQuantityBtn_Click(object sender, EventArgs e)
         {
             frmManageProjectQuantity frm = new frmManageProjectQuantity();
             frm.TargetProject = this.TargetProject;
             frm.ShowDialog();
         }
+
+        private void AddProjectExpenssesBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddProjectExpensses frm = new FrmAddProjectExpensses();
+            frm.ShowDialog();
+        }
+
+        private void ManageProjectExpensses_Click(object sender, EventArgs e)
+        {
+            FrmManageProjectExpensses frm = new FrmManageProjectExpensses();
+            frm.TargetProject = this.TargetProject;
+            frm.ShowDialog();
+        }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
       
 

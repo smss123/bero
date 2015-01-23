@@ -14,6 +14,8 @@ using System.Threading;
 using DataLayer.XCustomer;
 using bero_System.BulidItemForms;
 using DataLayer;
+using bero_System.AccountForms;
+using bero_System.EmployeeForms;
 namespace bero_System.MainScenarioForms
 {
     public partial class MainForms : RadForm
@@ -48,14 +50,12 @@ namespace bero_System.MainScenarioForms
         }
 
 
-    
+
 
         private void ManageProjects_Click(object sender, EventArgs e)
         {
-            FrmManageProject FRM = new FrmManageProject();
-            FRM.Show();
-        }
 
+        }
         
 
         private void toolStripDropDownButton4_Click(object sender, EventArgs e)
@@ -81,6 +81,66 @@ namespace bero_System.MainScenarioForms
                 frm.ShowDialog();
                 Operation.EndOperation(this);
             }
+        }
+
+        private void ManageAccountCategory_Click(object sender, EventArgs e)
+        {
+            FrmManageAccountCategory frm = new FrmManageAccountCategory();
+            frm.ShowDialog();
+        }
+
+        private void ManageAccount_Click(object sender, EventArgs e)
+        {
+            FrmManageAccount frm = new FrmManageAccount();
+            frm.ShowDialog();
+        }
+
+        private void AccountDailySHow_Click(object sender, EventArgs e)
+        {
+            frmAccountDailySHow frm = new frmAccountDailySHow();
+            frm.ShowDialog();
+        }
+
+        private void ManageExpensses_Click(object sender, EventArgs e)
+        {
+            FrmManageExpensses frm = new FrmManageExpensses();
+            frm.ShowDialog();
+        }
+
+        private void AddItem_Click(object sender, EventArgs e)
+        {
+            FrmAddBulidItem frm = new FrmAddBulidItem();
+            frm.ShowDialog();
+        }
+
+        private void ManageItem_Click(object sender, EventArgs e)
+        {
+            FrmManageBulidItem frm = new FrmManageBulidItem();
+            frm.ShowDialog();
+        }
+
+        private void AddEmpployeeBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddEmployee frm = new FrmAddEmployee();
+            frm.ShowDialog();
+        }
+
+        private void EditEmployeebtn_Click(object sender, EventArgs e)
+        {
+            FrmManageEmployee frm = new FrmManageEmployee();
+            frm.ShowDialog();
+        }
+
+        private void AddProjectBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddProject frm = new FrmAddProject();
+            frm.ShowDialog();
+        }
+
+        private void ManageProjectBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageProject frm=new FrmManageProject();
+            frm.ShowDialog();
         }
 
     }
