@@ -71,5 +71,10 @@ namespace bero_System.AccountForms
             th = new Thread(FillCmbo);
             th.Start();
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

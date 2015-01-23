@@ -50,6 +50,9 @@ namespace bero_System.AccountForms
         private void AddBtn_Click(object sender, EventArgs e)
         {
 
+            FromPrivatewithdrawals frm = new FromPrivatewithdrawals();
+            frm.ShowDialog();
+
         }
 
     }
