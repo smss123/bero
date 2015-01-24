@@ -21,8 +21,11 @@ namespace bero_System.AccountForms
         }
         void PopulateDgv()
         {
+            Operation.BeginOperation(this);
             var LstAccount = AccountCommand.GetAll();
             this.Invoke((MethodInvoker)delegate { AccountGridView.DataSource = LstAccount; });
+
+            Operation.EndOperation(this);
         }
         private void RefreshBtn_Click(object sender, EventArgs e)
         {

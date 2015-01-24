@@ -14,30 +14,30 @@ namespace DataLayer.XAccountant
         public static event OnchangeCallBack ProcessChange;
         public static bool NewExpensses(Expenss tb)
         {
-            try
-            {
+            //try
+            //{
 
                 db.Expensses.InsertOnSubmit(tb);
                 db.SubmitChanges();
-                HistoryCommand.NewHistory(new History()
-                {
-                    ActionName = "Adding New Expensses",
-                    Description = "Expensses Name " + tb.ExpenssesName +
-                     "\n Description : " + tb.Description,
-                    DateOfProcess = DateTime.Now,
-                    SystemUser = LoginInfomation.CurrnetUser,
-                    HistoryAction = "Adding New Expensses",
+            //    HistoryCommand.NewHistory(new History()
+            //    {
+            //        ActionName = "Adding New Expensses",
+            //        Description = "Expensses Name " + tb.ExpenssesName +
+            //         "\n Description : " + tb.Description,
+            //        DateOfProcess = DateTime.Now,
+            //        SystemUser = LoginInfomation.CurrnetUser,
+            //        HistoryAction = "Adding New Expensses",
 
-                });
-                ProcessChange("Adding Expensses ", tb.ExpenssesName + " has Been Saved ", null);
-                return true;
-            }
-            catch (Exception e)
-            {
+            //    });
+            //    ProcessChange("Adding Expensses ", tb.ExpenssesName + " has Been Saved ", null);
+           return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Expensses", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Expensses", e.ToString());
+            //    return false;
+           // }
         }
 
         public static bool EditExpensses(Expenss tb)

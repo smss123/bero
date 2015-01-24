@@ -44,6 +44,7 @@ namespace bero_System.AccountForms
                 toolStrip1.Text = "Compelete Load .... ";
 
             });
+            Operation.EndOperation (this);
         }
 
         private void FrmManageExpensses_Load(object sender, EventArgs e)
@@ -65,16 +66,34 @@ namespace bero_System.AccountForms
                 Operation.EndOperation(this);
             }
 
-            //if (col == 5)
-            //{
+            if (col == 5)
+            {
+                Operation.BeginOperation(this);
 
+                FrmEditExpensses frm = new FrmEditExpensses();
 
-            //    Operation.BeginOperation(this);
-          
+                Expenss tb = (Expenss)ExpenssesGridView.CurrentRow.DataBoundItem;
 
-            //    Operation.EndOperation(this);
+                frm.TragetExpenss = tb;
 
-            //}
+                frm.SaveBtn.Visible = false;
+
+                frm.ShowDialog();
+              
+                Operation.EndOperation(this);
+
+            }
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageExpensses_Load(sender, e);
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddExpensses frm = new FrmAddExpensses();
+            frm.ShowDialog();
         }
 
 

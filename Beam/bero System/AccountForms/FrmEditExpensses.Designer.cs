@@ -129,6 +129,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditExpensses";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditExpensses_Load);
@@ -146,9 +147,9 @@
 
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox expenssesNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        public Telerik.WinControls.UI.RadButton SaveBtn;
     }
 }

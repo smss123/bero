@@ -38,7 +38,7 @@ namespace bero_System.AccountForms
         private void DGVAccountsCategories_CommandCellClick(object sender, EventArgs e)
         {
             var col = DGVAccountsCategories.CurrentColumn.Index;
-            if (col == 3)
+            if (col == 4)
             {
                 Operation.BeginOperation(this);
                 FrmEditAccountCategory frm = new FrmEditAccountCategory();
@@ -47,6 +47,27 @@ namespace bero_System.AccountForms
                 frm.ShowDialog();
                 Operation.EndOperation(this);
             }
+            if (col == 5)
+            {
+                Operation.BeginOperation(this);
+             
+              
+                AccountCategoryCmd.DeleteAccountCategory(int.Parse(DGVAccountsCategories.CurrentRow.Cells[0].Value.ToString()));
+              
+                Operation.EndOperation(this);
+                FrmManageAccountCategory_Load(sender, e);
+            }
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddAccountCategory frm = new FrmAddAccountCategory();
+            frm.ShowDialog();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageAccountCategory_Load(sender, e);
         }
 
     }
