@@ -29,47 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForms));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn4 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditUser = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddEmpployeeBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditEmployeebtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.ManageProjects = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AddItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ManageAccountCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountDailySHow = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountsTreeBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.ManageExpensses = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.ManageAccountCategory = new System.Windows.Forms.ToolStripMenuItem();
-            this.ManageAccount = new System.Windows.Forms.ToolStripMenuItem();
-            this.AccountDailySHow = new System.Windows.Forms.ToolStripMenuItem();
-            this.شجرةالحساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.ManageExpensses = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ManageItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.ManageProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.AddEmpployeeBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditEmployeebtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -113,13 +113,55 @@
             this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(96, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(88, 22);
             this.toolStripDropDownButton1.Text = "المستخدمين";
+            // 
+            // AddUser
+            // 
+            this.AddUser.Name = "AddUser";
+            this.AddUser.Size = new System.Drawing.Size(151, 22);
+            this.AddUser.Text = "اضافة مستخدم";
+            // 
+            // EditUser
+            // 
+            this.EditUser.Name = "EditUser";
+            this.EditUser.Size = new System.Drawing.Size(151, 22);
+            this.EditUser.Text = "ادارة المستخدمين";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddEmpployeeBtn,
+            this.EditEmployeebtn});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(75, 22);
+            this.toolStripDropDownButton3.Text = "الموظفين";
+            // 
+            // AddEmpployeeBtn
+            // 
+            this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
+            this.AddEmpployeeBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddEmpployeeBtn.Text = "اضافة موظف";
+            this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
+            // 
+            // EditEmployeebtn
+            // 
+            this.EditEmployeebtn.Name = "EditEmployeebtn";
+            this.EditEmployeebtn.Size = new System.Drawing.Size(138, 22);
+            this.EditEmployeebtn.Text = "ادارة الموظفين";
+            this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripDropDownButton2
             // 
@@ -129,20 +171,20 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(69, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(64, 22);
             this.toolStripDropDownButton2.Text = "العملاء";
             // 
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Name = "AddCustomerBtn";
-            this.AddCustomerBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddCustomerBtn.Size = new System.Drawing.Size(127, 22);
             this.AddCustomerBtn.Text = "اضافة عميل";
             this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // ManageCustomerBtn
             // 
             this.ManageCustomerBtn.Name = "ManageCustomerBtn";
-            this.ManageCustomerBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageCustomerBtn.Size = new System.Drawing.Size(127, 22);
             this.ManageCustomerBtn.Text = "ادارة العملاء";
             this.ManageCustomerBtn.Click += new System.EventHandler(this.ManageCustomerBtn_Click);
             // 
@@ -159,9 +201,23 @@
             this.ManageProjects.Image = ((System.Drawing.Image)(resources.GetObject("ManageProjects.Image")));
             this.ManageProjects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ManageProjects.Name = "ManageProjects";
-            this.ManageProjects.Size = new System.Drawing.Size(80, 22);
+            this.ManageProjects.Size = new System.Drawing.Size(77, 22);
             this.ManageProjects.Text = "المشاريع";
             this.ManageProjects.Click += new System.EventHandler(this.ManageProjects_Click);
+            // 
+            // AddProjectBtn
+            // 
+            this.AddProjectBtn.Name = "AddProjectBtn";
+            this.AddProjectBtn.Size = new System.Drawing.Size(140, 22);
+            this.AddProjectBtn.Text = "اضافة مشروع";
+            this.AddProjectBtn.Click += new System.EventHandler(this.AddProjectBtn_Click);
+            // 
+            // ManageProjectBtn
+            // 
+            this.ManageProjectBtn.Name = "ManageProjectBtn";
+            this.ManageProjectBtn.Size = new System.Drawing.Size(140, 22);
+            this.ManageProjectBtn.Text = "ادارة المشاريع";
+            this.ManageProjectBtn.Click += new System.EventHandler(this.ManageProjectBtn_Click);
             // 
             // toolStripSeparator4
             // 
@@ -177,9 +233,23 @@
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(77, 22);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
             this.toolStripDropDownButton4.Text = "الاصناف";
             this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
+            // 
+            // AddItem
+            // 
+            this.AddItem.Name = "AddItem";
+            this.AddItem.Size = new System.Drawing.Size(136, 22);
+            this.AddItem.Text = "اضافة صنف ";
+            this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
+            // 
+            // ManageItem
+            // 
+            this.ManageItem.Name = "ManageItem";
+            this.ManageItem.Size = new System.Drawing.Size(136, 22);
+            this.ManageItem.Text = "ادارة الأصناف";
+            this.ManageItem.Click += new System.EventHandler(this.ManageItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -192,15 +262,55 @@
             this.ManageAccountCategory,
             this.ManageAccount,
             this.AccountDailySHow,
-            this.شجرةالحساباتToolStripMenuItem,
+            this.AccountsTreeBtn,
             this.toolStripSeparator6,
             this.ManageExpensses});
             this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
             this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(81, 22);
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(78, 22);
             this.toolStripDropDownButton5.Text = "الحسابات";
+            // 
+            // ManageAccountCategory
+            // 
+            this.ManageAccountCategory.Name = "ManageAccountCategory";
+            this.ManageAccountCategory.Size = new System.Drawing.Size(177, 22);
+            this.ManageAccountCategory.Text = "تصنيف الحسابات";
+            this.ManageAccountCategory.Click += new System.EventHandler(this.ManageAccountCategory_Click);
+            // 
+            // ManageAccount
+            // 
+            this.ManageAccount.Name = "ManageAccount";
+            this.ManageAccount.Size = new System.Drawing.Size(177, 22);
+            this.ManageAccount.Text = "الحسابات";
+            this.ManageAccount.Click += new System.EventHandler(this.ManageAccount_Click);
+            // 
+            // AccountDailySHow
+            // 
+            this.AccountDailySHow.Name = "AccountDailySHow";
+            this.AccountDailySHow.Size = new System.Drawing.Size(177, 22);
+            this.AccountDailySHow.Text = "حركة الحسابات اليومية";
+            this.AccountDailySHow.Click += new System.EventHandler(this.AccountDailySHow_Click);
+            // 
+            // AccountsTreeBtn
+            // 
+            this.AccountsTreeBtn.Name = "AccountsTreeBtn";
+            this.AccountsTreeBtn.Size = new System.Drawing.Size(177, 22);
+            this.AccountsTreeBtn.Text = "شجرة الحسابات";
+            this.AccountsTreeBtn.Click += new System.EventHandler(this.AccountsTreeBtn_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(174, 6);
+            // 
+            // ManageExpensses
+            // 
+            this.ManageExpensses.Name = "ManageExpensses";
+            this.ManageExpensses.Size = new System.Drawing.Size(177, 22);
+            this.ManageExpensses.Text = "المصروفات";
+            this.ManageExpensses.Click += new System.EventHandler(this.ManageExpensses_Click);
             // 
             // statusStrip1
             // 
@@ -240,63 +350,63 @@
             this.CustomerGridView.MasterTemplate.AllowSearchRow = true;
             this.CustomerGridView.MasterTemplate.AutoGenerateColumns = false;
             this.CustomerGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn4.EnableExpressionEditor = false;
-            gridViewDecimalColumn4.FieldName = "ID";
-            gridViewDecimalColumn4.HeaderText = "ID";
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.IsVisible = false;
-            gridViewDecimalColumn4.Name = "ID";
-            gridViewDecimalColumn4.Width = 87;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "CustomerName";
-            gridViewTextBoxColumn16.HeaderText = "اسم العميل";
-            gridViewTextBoxColumn16.IsAutoGenerated = true;
-            gridViewTextBoxColumn16.Name = "CustomerName";
-            gridViewTextBoxColumn16.Width = 123;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "PhoneNumber";
-            gridViewTextBoxColumn17.HeaderText = "رقم الهاتف";
-            gridViewTextBoxColumn17.IsAutoGenerated = true;
-            gridViewTextBoxColumn17.Name = "PhoneNumber";
-            gridViewTextBoxColumn17.Width = 123;
-            gridViewDateTimeColumn4.EnableExpressionEditor = false;
-            gridViewDateTimeColumn4.FieldName = "CreateDate";
-            gridViewDateTimeColumn4.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn4.HeaderText = "تاريخ الاضافة";
-            gridViewDateTimeColumn4.IsAutoGenerated = true;
-            gridViewDateTimeColumn4.Name = "CreateDate";
-            gridViewDateTimeColumn4.Width = 123;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "No_building";
-            gridViewTextBoxColumn18.HeaderText = "رقم البناية";
-            gridViewTextBoxColumn18.IsAutoGenerated = true;
-            gridViewTextBoxColumn18.Name = "No_building";
-            gridViewTextBoxColumn18.Width = 123;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "No_permissibility";
-            gridViewTextBoxColumn19.HeaderText = "رقم الجواز";
-            gridViewTextBoxColumn19.IsAutoGenerated = true;
-            gridViewTextBoxColumn19.Name = "No_permissibility";
-            gridViewTextBoxColumn19.Width = 123;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "SerialNumber";
-            gridViewTextBoxColumn20.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn20.IsAutoGenerated = true;
-            gridViewTextBoxColumn20.Name = "SerialNumber";
-            gridViewTextBoxColumn20.Width = 123;
-            gridViewCommandColumn4.EnableExpressionEditor = false;
-            gridViewCommandColumn4.HeaderText = "دخول";
-            gridViewCommandColumn4.Name = "EditCol";
-            gridViewCommandColumn4.Width = 65;
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "ID";
+            gridViewDecimalColumn2.HeaderText = "ID";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.IsVisible = false;
+            gridViewDecimalColumn2.Name = "ID";
+            gridViewDecimalColumn2.Width = 87;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "CustomerName";
+            gridViewTextBoxColumn6.HeaderText = "اسم العميل";
+            gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Name = "CustomerName";
+            gridViewTextBoxColumn6.Width = 123;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "PhoneNumber";
+            gridViewTextBoxColumn7.HeaderText = "رقم الهاتف";
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "PhoneNumber";
+            gridViewTextBoxColumn7.Width = 123;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "CreateDate";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn2.HeaderText = "تاريخ الاضافة";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "CreateDate";
+            gridViewDateTimeColumn2.Width = 123;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "No_building";
+            gridViewTextBoxColumn8.HeaderText = "رقم البناية";
+            gridViewTextBoxColumn8.IsAutoGenerated = true;
+            gridViewTextBoxColumn8.Name = "No_building";
+            gridViewTextBoxColumn8.Width = 123;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "No_permissibility";
+            gridViewTextBoxColumn9.HeaderText = "رقم الجواز";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "No_permissibility";
+            gridViewTextBoxColumn9.Width = 123;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "SerialNumber";
+            gridViewTextBoxColumn10.HeaderText = "SerialNumber";
+            gridViewTextBoxColumn10.IsAutoGenerated = true;
+            gridViewTextBoxColumn10.Name = "SerialNumber";
+            gridViewTextBoxColumn10.Width = 123;
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "دخول";
+            gridViewCommandColumn2.Name = "EditCol";
+            gridViewCommandColumn2.Width = 65;
             this.CustomerGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn4,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewDateTimeColumn4,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20,
-            gridViewCommandColumn4});
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewDateTimeColumn2,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewCommandColumn2});
             this.CustomerGridView.MasterTemplate.EnableFiltering = true;
             this.CustomerGridView.Name = "CustomerGridView";
             this.CustomerGridView.ReadOnly = true;
@@ -306,115 +416,6 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
-            // 
-            // ManageAccountCategory
-            // 
-            this.ManageAccountCategory.Name = "ManageAccountCategory";
-            this.ManageAccountCategory.Size = new System.Drawing.Size(182, 22);
-            this.ManageAccountCategory.Text = "تصنيف الحسابات";
-            this.ManageAccountCategory.Click += new System.EventHandler(this.ManageAccountCategory_Click);
-            // 
-            // ManageAccount
-            // 
-            this.ManageAccount.Name = "ManageAccount";
-            this.ManageAccount.Size = new System.Drawing.Size(182, 22);
-            this.ManageAccount.Text = "الحسابات";
-            this.ManageAccount.Click += new System.EventHandler(this.ManageAccount_Click);
-            // 
-            // AccountDailySHow
-            // 
-            this.AccountDailySHow.Name = "AccountDailySHow";
-            this.AccountDailySHow.Size = new System.Drawing.Size(182, 22);
-            this.AccountDailySHow.Text = "حركة الحسابات اليومية";
-            this.AccountDailySHow.Click += new System.EventHandler(this.AccountDailySHow_Click);
-            // 
-            // شجرةالحساباتToolStripMenuItem
-            // 
-            this.شجرةالحساباتToolStripMenuItem.Name = "شجرةالحساباتToolStripMenuItem";
-            this.شجرةالحساباتToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.شجرةالحساباتToolStripMenuItem.Text = "شجرة الحسابات";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(179, 6);
-            // 
-            // ManageExpensses
-            // 
-            this.ManageExpensses.Name = "ManageExpensses";
-            this.ManageExpensses.Size = new System.Drawing.Size(182, 22);
-            this.ManageExpensses.Text = "المصروفات";
-            this.ManageExpensses.Click += new System.EventHandler(this.ManageExpensses_Click);
-            // 
-            // AddItem
-            // 
-            this.AddItem.Name = "AddItem";
-            this.AddItem.Size = new System.Drawing.Size(152, 22);
-            this.AddItem.Text = "اضافة صنف ";
-            this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
-            // 
-            // ManageItem
-            // 
-            this.ManageItem.Name = "ManageItem";
-            this.ManageItem.Size = new System.Drawing.Size(152, 22);
-            this.ManageItem.Text = "ادارة الأصناف";
-            this.ManageItem.Click += new System.EventHandler(this.ManageItem_Click);
-            // 
-            // AddProjectBtn
-            // 
-            this.AddProjectBtn.Name = "AddProjectBtn";
-            this.AddProjectBtn.Size = new System.Drawing.Size(152, 22);
-            this.AddProjectBtn.Text = "اضافة مشروع";
-            this.AddProjectBtn.Click += new System.EventHandler(this.AddProjectBtn_Click);
-            // 
-            // ManageProjectBtn
-            // 
-            this.ManageProjectBtn.Name = "ManageProjectBtn";
-            this.ManageProjectBtn.Size = new System.Drawing.Size(152, 22);
-            this.ManageProjectBtn.Text = "ادارة المشاريع";
-            this.ManageProjectBtn.Click += new System.EventHandler(this.ManageProjectBtn_Click);
-            // 
-            // AddUser
-            // 
-            this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(159, 22);
-            this.AddUser.Text = "اضافة مستخدم";
-            // 
-            // EditUser
-            // 
-            this.EditUser.Name = "EditUser";
-            this.EditUser.Size = new System.Drawing.Size(159, 22);
-            this.EditUser.Text = "ادارة المستخدمين";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddEmpployeeBtn,
-            this.EditEmployeebtn});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(84, 22);
-            this.toolStripDropDownButton3.Text = "الموظفين";
-            // 
-            // AddEmpployeeBtn
-            // 
-            this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
-            this.AddEmpployeeBtn.Size = new System.Drawing.Size(152, 22);
-            this.AddEmpployeeBtn.Text = "اضافة موظف";
-            this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
-            // 
-            // EditEmployeebtn
-            // 
-            this.EditEmployeebtn.Name = "EditEmployeebtn";
-            this.EditEmployeebtn.Size = new System.Drawing.Size(152, 22);
-            this.EditEmployeebtn.Text = "ادارة الموظفين";
-            this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
             // 
             // MainForms
             // 
@@ -468,7 +469,7 @@
         private System.Windows.Forms.ToolStripMenuItem ManageAccountCategory;
         private System.Windows.Forms.ToolStripMenuItem ManageAccount;
         private System.Windows.Forms.ToolStripMenuItem AccountDailySHow;
-        private System.Windows.Forms.ToolStripMenuItem شجرةالحساباتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AccountsTreeBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem ManageExpensses;
         private System.Windows.Forms.ToolStripMenuItem AddUser;

@@ -40,7 +40,13 @@ namespace DataLayer.XAccountant
                return false;
            }
        }
+       public static List<Account> GetAccountByCategoryID(int Categid)
+       {
+           db = new dbDataContext();
+           var Lst = (from c in db.Accounts where c.CategoryID == Categid select c).ToList();
+           return Lst;
 
+       }
        public static bool EditAccount(Account tb)
        {
            try
@@ -69,7 +75,14 @@ namespace DataLayer.XAccountant
                return false;
            }
        }
-
+       public static List<Account> GetAccountByName(string nam)
+       {
+           db = new dbDataContext ();
+           var ACT = (from ac in db.Accounts
+                      where ac.AccountName == nam
+                      select ac).ToList();
+           return ACT;
+       }
        public static bool DeleteAccount(int iD)
        {
            try

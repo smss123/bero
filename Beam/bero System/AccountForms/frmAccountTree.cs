@@ -33,10 +33,10 @@ namespace bero_System.AccountForms
                 {
 
                     TreeAccounts.Nodes[0].Nodes.Add("", item.AccountCategoryName, 1);
-                    var Accts = AccountsCmd.GetAccountByCategoryID(item.ID);
+                    var Accts = AccountCommand.GetAccountByCategoryID(item.ID);
                     foreach (var Actitem in Accts)
                     {
-                        TreeAccounts.Nodes[0].Nodes[Indx].Nodes.Add("", Actitem.AccountName, 2);
+                        TreeAccounts.Nodes[0].Nodes[Indx].Nodes.Add("", Actitem.AccountName, 2).ForeColor = Color .Blue ;
                     }
                     Indx++;
                 }
@@ -51,7 +51,8 @@ namespace bero_System.AccountForms
         {
             TreeAccounts.Nodes.Clear();
             TreeAccounts.ImageList = imageList1;
-            TreeAccounts.Nodes.Add("AbuEhab", "Accounts Categories", 0);
+            TreeAccounts.Nodes.Add("AbuEhab", "شجرة الحسابات", 0).ForeColor = Color .Red ;
+            TreeAccounts .Nodes ["AbuEhab"].NodeFont = new System.Drawing.Font ("Times New Roman",10, FontStyle.Bold );
             Thread TreeThread = new Thread(PopulateTreeAccounts);
             TreeThread.Start();
             //===============================
@@ -77,7 +78,7 @@ namespace bero_System.AccountForms
             if (TreeAccounts.Nodes.Count != 0)
             {
                 Broom();
-                var accts = AccountsCmd.GetAccountByName(e.Node.Text);
+                var accts = AccountCommand.GetAccountByName(e.Node.Text);
                 foreach (var actitem in accts)
                 {
                     AcctID = actitem.ID;
@@ -93,11 +94,11 @@ namespace bero_System.AccountForms
         void GetAccountDetails()
         {
             Operation.BeginOperation(this);
-            var getCurrentAccount = AccountDailyCmd.GetAllAccountDailyByAccountID(AcctID);
+            var getCurrentAccount = AccountDailyCommand.GetAllAccountDailyByAccountID(AcctID);
             this.Invoke((MethodInvoker)delegate
             {
                 DGVAccountsDaily.DataSource = getCurrentAccount;
-                double balance = AccountDailyCmd.GetBalanceByAccountID(AcctID);
+                double balance = AccountDailyCommand.GetBalanceByAccountID(AcctID);
                 txtBalance.Text = balance.ToString();
             });
             Operation.EndOperation(this);

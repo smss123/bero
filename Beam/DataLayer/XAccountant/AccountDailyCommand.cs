@@ -107,5 +107,41 @@ namespace DataLayer.XAccountant
         {
             return db.AccountDailies.ToList();
         }
+
+        public static List<AccountDaily> GetAllAccountDailyByAccountID(int actid)
+        {
+            db = new dbDataContext(); ;
+            var dy = (from d in db.AccountDailies
+                      orderby d.DateOfProcess ascending
+                      where d.AccountID == actid
+                      select d).ToList();
+            return dy;
+        }
+        public static double GetBalanceByAccountID(int ACTID)
+        {
+            double netBalance = 0;
+            try
+            {
+                db = new  dbDataContext ();
+
+                var totIn = (from d in db.AccountDailies
+                             orderby d.DateOfProcess ascending
+                             where d.AccountID == ACTID
+                             select d.TotalIn).Sum();
+
+                var totOut = (from d in db.AccountDailies
+                              orderby d.DateOfProcess ascending
+                              where d.AccountID == ACTID
+                              select d.TotalOut).Sum();
+                netBalance = totIn.Value - totOut.Value;
+
+                return netBalance;
+            }
+            catch (Exception)
+            {
+                return netBalance = 0;
+            }
+        }
+
     }
 }

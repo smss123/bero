@@ -143,5 +143,13 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
         }
 
+        private void AccountsTreeBtn_Click(object sender, EventArgs e)
+        {
+            frmAccountTree frm = new frmAccountTree();
+            frm.ShowDialog();
+        }
+
+   
+
     }
 }

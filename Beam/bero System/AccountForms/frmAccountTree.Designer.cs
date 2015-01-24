@@ -222,6 +222,7 @@
             this.TreeAccounts.FullRowSelect = true;
             this.TreeAccounts.Location = new System.Drawing.Point(16, 19);
             this.TreeAccounts.Name = "TreeAccounts";
+            this.TreeAccounts.RightToLeftLayout = true;
             this.TreeAccounts.Size = new System.Drawing.Size(313, 245);
             this.TreeAccounts.TabIndex = 0;
             this.TreeAccounts.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeAccounts_NodeMouseDoubleClick);
