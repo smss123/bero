@@ -60,22 +60,18 @@ namespace bero_System.projectLevelFroms
             }
 
             #endregion
-            //======================================================================
-            // التأكد من أن المبلغ المخصص للمستوى أقل  من ميزانية المشروع
-
-
-            //=======================================================================
+      
             Operation.BeginOperation(this);
 
-            projectLevel tb = new projectLevel() {
+            projectLevel LevelTable = new projectLevel() {
              LevelName = levelNameTextBox .Text ,
              LevelAmount = Convert.ToDouble (levelAmountTextBox .Text .ToString ()),
              Descripotion = descripotionTextBox .Text ,
              ProjectProfileID = TargetProjectx .ID 
             
             };
-            projectLevelCommand.NewprojectLevel(tb);
-            //=====================================================
+            projectLevelCommand.NewprojectLevel(LevelTable);
+            //======================================================================================
             AccountDaily actTb1 = new AccountDaily()
             {
                 AccountID = TargetProjectx .AccountID ,
@@ -87,21 +83,20 @@ namespace bero_System.projectLevelFroms
             };
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
-
+            // ^^^^ 
 
             AccountDaily actTb2 = new AccountDaily()
             {
-                AccountID = tb.AccountID,
+                AccountID = LevelTable.AccountID,
                 TotalIn = Convert.ToDouble(levelAmountTextBox.Text.ToString()),
                 TotalOut = 0F,
                 DateOfProcess = DateTime.Now,
-                Description = string.Format("INcome IN : {0} account an amount of :  {1}", tb.LevelName , levelAmountTextBox.Text.ToString()),
+                Description = string.Format("Income In : {0} account an amount of :  {1}", LevelTable.LevelName, levelAmountTextBox.Text.ToString()),
                 CommandArg = ""
             };
+
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
-
-
-            //======================================================
+            //====================================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)

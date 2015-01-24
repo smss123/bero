@@ -184,9 +184,9 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(286, 216);
+            this.AddBtn.Location = new System.Drawing.Point(235, 216);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(58, 36);
+            this.AddBtn.Size = new System.Drawing.Size(109, 36);
             this.AddBtn.TabIndex = 5;
             this.AddBtn.Text = "اضافة";
             this.AddBtn.ThemeName = "Office2013Light";

@@ -106,6 +106,16 @@ namespace bero_System.AccountForms
         void Broom() { txtDescription.Text = ""; txtAccountName.Text = ""; txtBalance.Text = ""; DGVAccountsDaily.Rows.Clear(); }
         #endregion 
 
+        private void txtAccountName_TextChanged(object sender, EventArgs e)
+        {
+         
+
+               
+
+              
+            
+        }
+
        
     }
 }

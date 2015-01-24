@@ -155,6 +155,7 @@
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(227, 20);
             this.txtAccountName.TabIndex = 3;
+            this.txtAccountName.TextChanged += new System.EventHandler(this.txtAccountName_TextChanged);
             // 
             // label3
             // 

@@ -139,7 +139,8 @@ namespace bero_System.ProjectForms
             };
             ProjectProfileCommand.NewProject(PrjTb);
             //===================================================================
-
+          
+           
              var CurrentProject = ProjectProfileCommand.GetByProjId(PrjTb.ID);
              PrjID = CurrentProject.ID;
             //====================================================================
