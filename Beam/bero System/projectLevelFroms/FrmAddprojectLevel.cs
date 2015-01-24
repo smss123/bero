@@ -60,7 +60,11 @@ namespace bero_System.projectLevelFroms
             }
 
             #endregion
+            //======================================================================
+            // التأكد من أن المبلغ المخصص للمستوى أقل  من ميزانية المشروع
 
+
+            //=======================================================================
             Operation.BeginOperation(this);
 
             projectLevel tb = new projectLevel() {
@@ -69,10 +73,35 @@ namespace bero_System.projectLevelFroms
              Descripotion = descripotionTextBox .Text ,
              ProjectProfileID = TargetProjectx .ID 
             
-            
             };
             projectLevelCommand.NewprojectLevel(tb);
+            //=====================================================
+            AccountDaily actTb1 = new AccountDaily()
+            {
+                AccountID = TargetProjectx .AccountID ,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble(levelAmountTextBox.Text.ToString()),
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("come out the project : {0} account an amount of :  {1}", TargetProjectx .ProjectName , levelAmountTextBox.Text.ToString()),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
+
+
+            AccountDaily actTb2 = new AccountDaily()
+            {
+                AccountID = tb.AccountID,
+                TotalIn = Convert.ToDouble(levelAmountTextBox.Text.ToString()),
+                TotalOut = 0F,
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("INcome IN : {0} account an amount of :  {1}", tb.LevelName , levelAmountTextBox.Text.ToString()),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
+
+
+            //======================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)

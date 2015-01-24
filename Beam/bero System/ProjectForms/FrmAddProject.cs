@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
-
+using System.Windows.Forms;
+using System.Drawing;
 using DataLayer;
 using DataLayer.XProject;
 using bero_System.ProjectForms;
@@ -24,6 +24,7 @@ namespace bero_System.ProjectForms
         public FrmAddProject()
         {
             InitializeComponent();
+          
         }
         Thread th;
         #region "^^^ Fill CUstomersCmb"
@@ -65,7 +66,9 @@ namespace bero_System.ProjectForms
             th.Abort();
         }
         #endregion
-        
+
+      
+        int PrjID = 0;
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -138,7 +141,7 @@ namespace bero_System.ProjectForms
             //===================================================================
 
              var CurrentProject = ProjectProfileCommand.GetByProjId(PrjTb.ID);
-
+             PrjID = CurrentProject.ID;
             //====================================================================
             // بعد الاتفاق على سعر المشروع
             // يصبح الزبون مدين للمشروع بكامل المبلغ لانه لم يدفع حتى الان
@@ -156,14 +159,16 @@ namespace bero_System.ProjectForms
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
 
 
+            ProjectProfile GetProject = ProjectProfileCommand.GetByProjId(PrjID);
             // ^^^ [حساب المشروع \ دائن]
-            AccountDaily actTb1 = new AccountDaily() {
-                AccountID = CurrentProject.AccountID ,
-                 TotalIn = 0f,
-                 TotalOut = Convert.ToDouble(projectFullAmountTextBox.Text),
-                 DateOfProcess = DateTime.Now,
-                 Description = string.Format("come out the project : {0} account an amount of :  {1}", PrjTb.ProjectName, projectFullAmountTextBox.Text),
-                 CommandArg = ""
+            AccountDaily actTb1 = new AccountDaily()
+            {
+                AccountID = GetProject.AccountID,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble(projectFullAmountTextBox.Text),
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("come out the project : {0} account an amount of :  {1}", GetProject.ProjectName, projectFullAmountTextBox.Text),
+                CommandArg = ""
             };
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
@@ -179,5 +184,16 @@ namespace bero_System.ProjectForms
             th = new Thread(FillCombo);
             th.Start();
         }
+   
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 }

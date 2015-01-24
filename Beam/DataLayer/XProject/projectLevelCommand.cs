@@ -14,32 +14,32 @@ namespace DataLayer.XProject
             public static event OnchangeCallBack ProcessChange;
             public static bool NewprojectLevel(projectLevel tb)
             {
-                try
-                {
+                //try
+                //{
 
                     db.projectLevels.InsertOnSubmit(tb);
                     db.SubmitChanges();
-                    HistoryCommand.NewHistory(new History()
-                    {
-                        ActionName = "Adding New project Level",
-                        Description = "Level Name Name " + tb.LevelName +
-                         "\n Description : " + tb.Descripotion +
-                         "Level Amount  " + tb.LevelAmount +
-                          "Project Profile" + tb.ProjectProfileID.ToString(),
-                        DateOfProcess = DateTime.Now,
-                        SystemUser = LoginInfomation.CurrnetUser,
-                        HistoryAction = "Adding New Pproject Level",
+                //    HistoryCommand.NewHistory(new History()
+                //    {
+                //        ActionName = "Adding New project Level",
+                //        Description = "Level Name Name " + tb.LevelName +
+                //         "\n Description : " + tb.Descripotion +
+                //         "Level Amount  " + tb.LevelAmount +
+                //          "Project Profile" + tb.ProjectProfileID.ToString(),
+                //        DateOfProcess = DateTime.Now,
+                //        SystemUser = LoginInfomation.CurrnetUser,
+                //        HistoryAction = "Adding New Pproject Level",
 
-                    });
-                    ProcessChange("Addingproject Level", tb.LevelName + " has Been Saved ", null);
-                    return true;
-                }
-                catch (Exception e)
-                {
+                //    });
+                //    ProcessChange("Addingproject Level", tb.LevelName + " has Been Saved ", null);
+                   return true;
+                //}
+                //catch (Exception e)
+                //{
 
-                    ProcessChange("Error message", "Can't project Level", e.ToString());
-                    return false;
-                }
+                //    ProcessChange("Error message", "Can't project Level", e.ToString());
+                //    return false;
+                //}
             }
             private static bool WriteHistory(History htb)
             {

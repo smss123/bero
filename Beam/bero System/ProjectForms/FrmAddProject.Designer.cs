@@ -49,6 +49,7 @@
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.object_77c47ca6_f4db_413a_9876_66f5e21071bc = new Telerik.WinControls.RootRadElement();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             customerIDLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
@@ -133,7 +134,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(349, 257);
+            this.radGroupBox1.Size = new System.Drawing.Size(349, 260);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -183,9 +184,9 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(234, 216);
+            this.AddBtn.Location = new System.Drawing.Point(286, 216);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(110, 36);
+            this.AddBtn.Size = new System.Drawing.Size(58, 36);
             this.AddBtn.TabIndex = 5;
             this.AddBtn.Text = "اضافة";
             this.AddBtn.ThemeName = "Office2013Light";
@@ -205,7 +206,7 @@
             this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // CustomerComboBox.NestedRadGridView
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -275,11 +276,15 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmAddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 257);
+            this.ClientSize = new System.Drawing.Size(349, 260);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmAddProject";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -317,5 +322,6 @@
         private System.Windows.Forms.TextBox projectFullAmountTextBox;
         private System.Windows.Forms.TextBox projectNameTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
