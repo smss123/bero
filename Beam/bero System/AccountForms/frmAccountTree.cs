@@ -32,11 +32,12 @@ namespace bero_System.AccountForms
                 foreach (var item in acctCategories)
                 {
 
-                    TreeAccounts.Nodes[0].Nodes.Add("", item.AccountCategoryName, 1);
+                    TreeAccounts.Nodes[0].Nodes.Add("", item.AccountCategoryName, 1).ForeColor = Color .Blue ;
                     var Accts = AccountCommand.GetAccountByCategoryID(item.ID);
+                   
                     foreach (var Actitem in Accts)
                     {
-                        TreeAccounts.Nodes[0].Nodes[Indx].Nodes.Add("", Actitem.AccountName, 2).ForeColor = Color .Blue ;
+                        TreeAccounts.Nodes[0].Nodes[Indx].Nodes.Add("", Actitem.AccountName, 2).ForeColor = Color.Goldenrod;
                     }
                     Indx++;
                 }
@@ -116,6 +117,12 @@ namespace bero_System.AccountForms
             
         }
 
+        private void ReportOptionBtn_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        
        
     }
 }

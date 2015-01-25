@@ -60,6 +60,7 @@ namespace bero_System.MainScenarioForms
         private void AddprojectLevelBtn_Click(object sender, EventArgs e)
         {
             FrmAddprojectLevel frm = new FrmAddprojectLevel();
+            frm.TargetProjectx = this.TargetProject;
             frm.ShowDialog();
         }
 
@@ -85,6 +86,7 @@ namespace bero_System.MainScenarioForms
         private void AddProjectQuantityBtn_Click(object sender, EventArgs e)
         {
             frmAddProjectQuantity frm = new frmAddProjectQuantity();
+            frm.TargetProject = this.TargetProject;
             frm.ShowDialog();
         }
 

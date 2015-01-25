@@ -37,9 +37,9 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportOptionBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.balanceSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BalanceOptionBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtBalance = new System.Windows.Forms.TextBox();
@@ -79,28 +79,29 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportToolStripMenuItem,
+            this.ReportOptionBtn,
             this.aToolStripMenuItem,
-            this.balanceSheetToolStripMenuItem});
+            this.BalanceOptionBtn});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(148, 54);
             // 
-            // reportToolStripMenuItem
+            // ReportOptionBtn
             // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.reportToolStripMenuItem.Text = "Report";
+            this.ReportOptionBtn.Name = "ReportOptionBtn";
+            this.ReportOptionBtn.Size = new System.Drawing.Size(147, 22);
+            this.ReportOptionBtn.Text = "Report";
+            this.ReportOptionBtn.Click += new System.EventHandler(this.ReportOptionBtn_Click);
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(144, 6);
             // 
-            // balanceSheetToolStripMenuItem
+            // BalanceOptionBtn
             // 
-            this.balanceSheetToolStripMenuItem.Name = "balanceSheetToolStripMenuItem";
-            this.balanceSheetToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.balanceSheetToolStripMenuItem.Text = "Balance Sheet";
+            this.BalanceOptionBtn.Name = "BalanceOptionBtn";
+            this.BalanceOptionBtn.Size = new System.Drawing.Size(147, 22);
+            this.BalanceOptionBtn.Text = "Balance Sheet";
             // 
             // radGroupBox2
             // 
@@ -162,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(253, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "الرصيد:";
             // 
@@ -171,7 +172,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(253, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "الوصف:";
             // 
@@ -180,7 +181,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(253, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "اسم الحساب";
             // 
@@ -244,7 +245,8 @@
             // DGVAccountsDaily
             // 
             this.DGVAccountsDaily.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DGVAccountsDaily.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVAccountsDaily.ContextMenuStrip = this.contextMenuStrip1;
+            this.DGVAccountsDaily.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DGVAccountsDaily.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVAccountsDaily.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.DGVAccountsDaily.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -253,6 +255,7 @@
             // 
             // DGVAccountsDaily
             // 
+            this.DGVAccountsDaily.MasterTemplate.AllowAddNewRow = false;
             this.DGVAccountsDaily.MasterTemplate.AutoGenerateColumns = false;
             this.DGVAccountsDaily.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.DataType = typeof(int);
@@ -269,14 +272,14 @@
             gridViewDecimalColumn2.HeaderText = "TotalIn";
             gridViewDecimalColumn2.IsAutoGenerated = true;
             gridViewDecimalColumn2.Name = "TotalIn";
-            gridViewDecimalColumn2.Width = 145;
+            gridViewDecimalColumn2.Width = 146;
             gridViewDecimalColumn3.DataType = typeof(System.Nullable<double>);
             gridViewDecimalColumn3.EnableExpressionEditor = false;
             gridViewDecimalColumn3.FieldName = "TotalOut";
             gridViewDecimalColumn3.HeaderText = "TotalOut";
             gridViewDecimalColumn3.IsAutoGenerated = true;
             gridViewDecimalColumn3.Name = "TotalOut";
-            gridViewDecimalColumn3.Width = 145;
+            gridViewDecimalColumn3.Width = 146;
             gridViewDateTimeColumn1.DataType = typeof(System.Nullable<System.DateTime>);
             gridViewDateTimeColumn1.EnableExpressionEditor = false;
             gridViewDateTimeColumn1.FieldName = "DateOfProcess";
@@ -284,13 +287,13 @@
             gridViewDateTimeColumn1.HeaderText = "DateOfProcess";
             gridViewDateTimeColumn1.IsAutoGenerated = true;
             gridViewDateTimeColumn1.Name = "DateOfProcess";
-            gridViewDateTimeColumn1.Width = 145;
+            gridViewDateTimeColumn1.Width = 146;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "Description";
             gridViewTextBoxColumn1.HeaderText = "Description";
             gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "Description";
-            gridViewTextBoxColumn1.Width = 137;
+            gridViewTextBoxColumn1.Width = 139;
             this.DGVAccountsDaily.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewDecimalColumn2,
@@ -344,9 +347,9 @@
 
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReportOptionBtn;
         private System.Windows.Forms.ToolStripSeparator aToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem balanceSheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BalanceOptionBtn;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtBalance;

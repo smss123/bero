@@ -17,7 +17,7 @@ namespace DataLayer.XProject
         {
             try
             {
-
+                db = new dbDataContext();
                 db.ProjectQuantities.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -109,9 +109,9 @@ namespace DataLayer.XProject
             return tb;
         }
 
-        public static ProjectQuantity GetByPojectProfileID(int xid)
+        public static List<ProjectQuantity> GetByPojectProfileID(int xid)
         {
-            ProjectQuantity tb = db.ProjectQuantities.Where(c => c.ProjectProfileID == xid).SingleOrDefault(); ;
+          var  tb = db.ProjectQuantities.Where(c => c.ProjectProfileID == xid).ToList () ;
             return tb;
         }
         public static ProjectQuantity GetByItemID(int xid)
