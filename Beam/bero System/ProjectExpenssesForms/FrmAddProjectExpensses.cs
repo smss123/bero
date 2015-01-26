@@ -82,8 +82,23 @@ namespace bero_System.ProjectExpenssesForms
 
             Operation.EndOperation(this);
             th.Abort();
+
+            SubGetLevelAccount();
+            SubGetExpensessAccount();
+        }
+
+        private void SubGetLevelAccount()
+        {
+
+            LevelAccount = 0;
+            var GetAccountID = (from c in ExpenssesCommand.GetAll()
+                                where c.ID == int.Parse(projectLevelComboBox.SelectedValue.ToString())
+                                select c.AccountID).SingleOrDefault();
+            LevelAccount = GetAccountID.Value; ;
         }
         public ProjectProfile TargetProject { get; set; }
+        public int LevelAccount { get; set; }
+        public int ExpenssAccount { get; set; }
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -147,6 +162,36 @@ namespace bero_System.ProjectExpenssesForms
                ProjectLevelID =int .Parse ( projectLevelComboBox.SelectedValue .ToString ())
             };
             ProjectExpenssesCommand.NewProjectExpenss(ExpTb);
+
+            //=========================================================
+            // Start Write At  : AccountDaily
+            // ^^^ [حساب المستوى \ مدين]
+            AccountDaily actTb2 = new AccountDaily()
+            {
+              AccountID = LevelAccount ,  
+               TotalIn = Convert.ToDouble(amountTextBox.Text),
+               TotalOut = 0f,
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("inCame in of the Level  {0} account and the amount of {1}",projectLevelComboBox .Text , amountTextBox.Text),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb2);
+
+
+           
+            // ^^^ [حساب  المصروف \ دائن]
+            AccountDaily actTb1 = new AccountDaily()
+            {
+                AccountID = ExpenssAccount ,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble(amountTextBox.Text),
+                DateOfProcess = DateTime.Now,
+                Description = string.Format("come out the Expenss : {0} account an amount of :  {1}", expenssesComboBox .Text , amountTextBox.Text),
+                CommandArg = ""
+            };
+            DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
+
+            //=========================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)
@@ -164,6 +209,26 @@ namespace bero_System.ProjectExpenssesForms
         {
             th = new Thread(FillCombo);
             th.Start();
+        }
+
+        private void projectLevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SubGetLevelAccount();
+        }
+
+        private void expenssesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            SubGetExpensessAccount();
+        }
+
+        private void SubGetExpensessAccount()
+        {
+            ExpenssAccount = 0;
+            var GetExpenssAccount = (from c in ExpenssesCommand.GetAll()
+                                     where c.ID == int.Parse(expenssesComboBox.SelectedValue.ToString())
+                                     select c.AccountID).SingleOrDefault();
+            ExpenssAccount = GetExpenssAccount.Value; ;
         }
     }
 }

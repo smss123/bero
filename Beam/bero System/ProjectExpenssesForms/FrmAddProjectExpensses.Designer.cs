@@ -216,6 +216,7 @@
             this.projectLevelComboBox.TabIndex = 21;
             this.projectLevelComboBox.TabStop = false;
             this.projectLevelComboBox.ThemeName = "Office2013Light";
+            this.projectLevelComboBox.SelectedIndexChanged += new System.EventHandler(this.projectLevelComboBox_SelectedIndexChanged);
             // 
             // expenssesComboBox
             // 
@@ -286,6 +287,7 @@
             this.expenssesComboBox.TabIndex = 20;
             this.expenssesComboBox.TabStop = false;
             this.expenssesComboBox.ThemeName = "Office2013Light";
+            this.expenssesComboBox.SelectedIndexChanged += new System.EventHandler(this.expenssesComboBox_SelectedIndexChanged);
             // 
             // AddBtn
             // 
