@@ -1,4 +1,5 @@
-﻿using DataLayer.XAccountant;
+﻿using DataLayer;
+using DataLayer.XAccountant;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,10 @@ namespace bero_System.AccountForms
             Operation.EndOperation(this);
 
             th.Abort();
+
+            lblAvailableAmount.Text = "";
+            lblAvailableAmount.Text = AccountCommand.GetFreeBalance(int.Parse(CmbFromAccount.SelectedValue.ToString())).ToString();
+
         }
         private void FromPrivatewithdrawals_Load(object sender, EventArgs e)
         {
@@ -74,6 +79,62 @@ namespace bero_System.AccountForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+
+            if (CmbFromAccount.Text == CmbToAccount.Text)
+            {
+                Operation.ShowToustOk("Transfer the amount from the same account unacceptable.", this);
+                return; 
+            }
+
+            if (Convert.ToDouble(txtAmount.Text.ToString()) > Convert.ToDouble(lblAvailableAmount.Text.ToString()))
+            {
+                Operation.ShowToustOk("The amount is not available.", this);
+                return;
+            }
+
+            // Start Save AT AccountDaily :
+            AccountDaily tb = new AccountDaily()
+            {
+                AccountID = int .Parse ( CmbFromAccount .SelectedValue .ToString ()),
+                DateOfProcess = DateTime.Now,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble (txtAmount.Text),
+                Description = txtDescription.Text.ToString()
+            };
+            AccountDailyCommand.NewAccountDaily (tb);
+
+
+            AccountDaily xtb = new AccountDaily()
+            {
+                AccountID = int .Parse ( CmbToAccount .SelectedValue .ToString ()),
+                DateOfProcess = DateTime.Now,
+                TotalIn = Convert.ToDouble(txtAmount.Text),
+                TotalOut = 0f,
+                Description = txtDescription.Text.ToString()
+            };
+            AccountDailyCommand.NewAccountDaily (xtb);
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch == 46 && txtAmount.Text.IndexOf(".") != -1)
+            {
+
+                e.Handled = true;
+                return;
+            }
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CmbFromAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblAvailableAmount.Text = "";
+            lblAvailableAmount.Text = AccountCommand.GetFreeBalance(int.Parse(CmbFromAccount.SelectedValue.ToString())).ToString ();
 
         }
     }

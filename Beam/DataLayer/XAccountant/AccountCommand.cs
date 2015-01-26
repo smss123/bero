@@ -113,5 +113,32 @@ namespace DataLayer.XAccountant
        {
            return db.Accounts.ToList();
        }
+
+
+       public static double GetFreeBalance(int? actid)
+       {
+           double NetBalance = 0;
+           try
+           {
+               db = new dbDataContext();
+
+               var TotIn = (from d in db.AccountDailies
+                            where d.AccountID == actid
+                            select d.TotalIn).Sum();
+
+               var TotOut = (from d in db.AccountDailies
+                             where d.AccountID == actid
+                             select d.TotalOut).Sum();
+               NetBalance = TotIn.Value - TotOut.Value;
+
+               return NetBalance;
+           }
+           catch (Exception)
+           {
+               return NetBalance = 0;
+           }
+       }
+
+
     }
 }

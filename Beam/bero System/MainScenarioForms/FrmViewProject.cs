@@ -15,6 +15,7 @@ using bero_System.ProjectExpenssesForms;
 using bero_System.projectLevelFroms;
 using bero_System.ProjectQuantityForms;
 using bero_System.projectLevelSellForms;
+using bero_System.ProjectInstallmentForms;
 
 
 
@@ -113,10 +114,22 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
         }
 
-        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        private void InstalmentsBtb_Click(object sender, EventArgs e)
         {
+            FrmManageProjectInstallment frm = new FrmManageProjectInstallment();
+            frm.TargetProject = this.TargetProject;
+            frm.ShowDialog();
 
         }
+
+        private void AddInstalmentBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddProjectInstallment frm = new FrmAddProjectInstallment();
+            frm.TargetProject = this.TargetProject;
+            frm.ShowDialog();
+
+        }
+
 
        
 

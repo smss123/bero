@@ -41,6 +41,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.payDescriptionTextBox = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.dateOfInstallmentsDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.installments_nameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             projectLevelIDLabel = new System.Windows.Forms.Label();
             activeStatusLabel = new System.Windows.Forms.Label();
@@ -60,10 +60,10 @@
             installments_nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -159,6 +159,17 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Location = new System.Drawing.Point(253, 249);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 29;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
             // projectLevelComboBox
             // 
             // 
@@ -171,7 +182,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // projectLevelComboBox.NestedRadGridView
+            // 
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -217,6 +228,7 @@
             this.projectLevelComboBox.EditorControl.ShowGroupPanel = false;
             this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.projectLevelComboBox.EditorControl.TabIndex = 0;
+            this.projectLevelComboBox.Enabled = false;
             this.projectLevelComboBox.Location = new System.Drawing.Point(32, 197);
             this.projectLevelComboBox.Name = "projectLevelComboBox";
             this.projectLevelComboBox.Size = new System.Drawing.Size(219, 20);
@@ -269,17 +281,6 @@
             this.installments_nameTextBox.Size = new System.Drawing.Size(219, 20);
             this.installments_nameTextBox.TabIndex = 16;
             // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(253, 249);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
-            this.SaveBtn.TabIndex = 29;
-            this.SaveBtn.Text = "حفظ";
-            this.SaveBtn.ThemeName = "Office2013Light";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -303,10 +304,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -322,9 +323,9 @@
         private System.Windows.Forms.TextBox amountTextBox;
         private System.Windows.Forms.DateTimePicker dateOfInstallmentsDateTimePicker;
         private System.Windows.Forms.TextBox installments_nameTextBox;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
     }
 }

@@ -46,13 +46,13 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.DGVInstalments = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVInstalments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVInstalments.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,8 +83,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(57, 22);
+            this.AddBtn.Size = new System.Drawing.Size(54, 22);
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -97,8 +98,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -108,7 +110,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.radGridView1);
+            this.radGroupBox1.Controls.Add(this.DGVInstalments);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "radGroupBox1";
@@ -119,21 +121,21 @@
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // radGridView1
+            // DGVInstalments
             // 
-            this.radGridView1.BackColor = System.Drawing.SystemColors.Control;
-            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.radGridView1.ForeColor = System.Drawing.Color.Black;
-            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(2, 18);
+            this.DGVInstalments.BackColor = System.Drawing.SystemColors.Control;
+            this.DGVInstalments.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVInstalments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVInstalments.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.DGVInstalments.ForeColor = System.Drawing.Color.Black;
+            this.DGVInstalments.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVInstalments.Location = new System.Drawing.Point(2, 18);
             // 
-            // radGridView1
+            // DGVInstalments
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AutoGenerateColumns = false;
-            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVInstalments.MasterTemplate.AllowAddNewRow = false;
+            this.DGVInstalments.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVInstalments.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "id";
@@ -195,7 +197,7 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "column2";
             gridViewCommandColumn2.Width = 82;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVInstalments.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewDecimalColumn2,
@@ -206,13 +208,14 @@
             gridViewTextBoxColumn5,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(909, 438);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            this.radGridView1.ThemeName = "Office2013Light";
+            this.DGVInstalments.Name = "DGVInstalments";
+            this.DGVInstalments.ReadOnly = true;
+            this.DGVInstalments.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVInstalments.Size = new System.Drawing.Size(909, 438);
+            this.DGVInstalments.TabIndex = 0;
+            this.DGVInstalments.Text = "radGridView1";
+            this.DGVInstalments.ThemeName = "Office2013Light";
+            this.DGVInstalments.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVInstalments_CommandCellClick);
             // 
             // FrmManageProjectInstallment
             // 
@@ -230,12 +233,13 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "FrmManageProjectInstallment";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageProjectInstallment_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVInstalments.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVInstalments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -251,7 +255,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView DGVInstalments;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

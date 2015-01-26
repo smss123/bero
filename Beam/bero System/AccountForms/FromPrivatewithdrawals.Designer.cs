@@ -92,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(313, 194);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "الوصف:";
             // 
@@ -110,7 +110,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "الى حساب:";
             // 
@@ -120,7 +120,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(308, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "من حساب:";
             // 
@@ -185,6 +185,7 @@
             this.CmbFromAccount.TabIndex = 15;
             this.CmbFromAccount.TabStop = false;
             this.CmbFromAccount.ThemeName = "Office2013Light";
+            this.CmbFromAccount.SelectedIndexChanged += new System.EventHandler(this.CmbFromAccount_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -192,7 +193,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(326, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "المبلغ:";
             // 
@@ -204,6 +205,7 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(113, 23);
             this.txtAmount.TabIndex = 13;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // lblAvailableAmount
             // 
@@ -222,7 +224,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "المبلغ المتوفر:";
             // 

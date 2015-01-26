@@ -1,4 +1,5 @@
-﻿using DataLayer.XProject;
+﻿using DataLayer;
+using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,8 @@ using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
 
+using DataLayer;
+using DataLayer.XProject;
 namespace bero_System.ProjectInstallmentForms
 {
     public partial class FrmAddProjectInstallment : RadForm
@@ -36,7 +39,7 @@ namespace bero_System.ProjectInstallmentForms
             });
 
 
-            var q1 = projectLevelCommand.GetAll();
+            var q1 = projectLevelCommand.GetByProjectProfileID(TargetProject.ID);
             this.Invoke((MethodInvoker)delegate
             {
                 projectLevelComboBox.DataSource = q1;
@@ -60,6 +63,8 @@ namespace bero_System.ProjectInstallmentForms
             th.Start();
         }
 
+        public ProjectProfile TargetProject { get; set; }
+     
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -114,6 +119,38 @@ namespace bero_System.ProjectInstallmentForms
             }
 
             #endregion
+
+            Operation.BeginOperation(this);
+            ProjectInstallment InstalmentTb = new ProjectInstallment()
+            {
+                Installments_name = installments_nameTextBox .Text ,
+                ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ()),
+                Amount = Convert.ToDouble(amountTextBox .Text ),
+                DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ,
+                ActiveStatus  = CmbActiveStatus.Text,
+                PayBy = payByTextBox .Text ,
+                PayDescription = payDescriptionTextBox .Text ,
+
+
+            };
+            ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
+            
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
+
+
+
+
+
         }
     }
 }

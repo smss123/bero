@@ -49,8 +49,8 @@
             this.ManageProjectQuantityBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.اضافةقسطToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ادارةالاقساطToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddInstalmentBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.InstalmentsBtb = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectExpensessBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddProjectExpenssesBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -200,19 +200,18 @@
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(117, 22);
             this.toolStripDropDownButton2.Text = "مشتريات المشروع";
-            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
             // AddprojectLevelSellBtn
             // 
             this.AddprojectLevelSellBtn.Name = "AddprojectLevelSellBtn";
-            this.AddprojectLevelSellBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddprojectLevelSellBtn.Size = new System.Drawing.Size(101, 22);
             this.AddprojectLevelSellBtn.Text = "اضافة";
             this.AddprojectLevelSellBtn.Click += new System.EventHandler(this.AddprojectLevelSellBtn_Click);
             // 
             // ManageprojectLevelSellBtn
             // 
             this.ManageprojectLevelSellBtn.Name = "ManageprojectLevelSellBtn";
-            this.ManageprojectLevelSellBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageprojectLevelSellBtn.Size = new System.Drawing.Size(101, 22);
             this.ManageprojectLevelSellBtn.Text = "ادارة";
             this.ManageprojectLevelSellBtn.Click += new System.EventHandler(this.ManageprojectLevelSellBtn_Click);
             // 
@@ -255,8 +254,8 @@
             // toolStripDropDownButton4
             // 
             this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةقسطToolStripMenuItem,
-            this.ادارةالاقساطToolStripMenuItem});
+            this.AddInstalmentBtn,
+            this.InstalmentsBtb});
             this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -264,17 +263,19 @@
             this.toolStripDropDownButton4.Size = new System.Drawing.Size(104, 22);
             this.toolStripDropDownButton4.Text = "اقساط المشروع";
             // 
-            // اضافةقسطToolStripMenuItem
+            // AddInstalmentBtn
             // 
-            this.اضافةقسطToolStripMenuItem.Name = "اضافةقسطToolStripMenuItem";
-            this.اضافةقسطToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.اضافةقسطToolStripMenuItem.Text = "اضافة قسط";
+            this.AddInstalmentBtn.Name = "AddInstalmentBtn";
+            this.AddInstalmentBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddInstalmentBtn.Text = "اضافة قسط";
+            this.AddInstalmentBtn.Click += new System.EventHandler(this.AddInstalmentBtn_Click);
             // 
-            // ادارةالاقساطToolStripMenuItem
+            // InstalmentsBtb
             // 
-            this.ادارةالاقساطToolStripMenuItem.Name = "ادارةالاقساطToolStripMenuItem";
-            this.ادارةالاقساطToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.ادارةالاقساطToolStripMenuItem.Text = "ادارة الاقساط";
+            this.InstalmentsBtb.Name = "InstalmentsBtb";
+            this.InstalmentsBtb.Size = new System.Drawing.Size(152, 22);
+            this.InstalmentsBtb.Text = "ادارة الاقساط";
+            this.InstalmentsBtb.Click += new System.EventHandler(this.InstalmentsBtb_Click);
             // 
             // toolStripSeparator5
             // 
@@ -488,8 +489,8 @@
         private System.Windows.Forms.ToolStripMenuItem ManageprojectLevelSellBtn;
         private System.Windows.Forms.ToolStripMenuItem AddProjectQuantityBtn;
         private System.Windows.Forms.ToolStripMenuItem ManageProjectQuantityBtn;
-        private System.Windows.Forms.ToolStripMenuItem اضافةقسطToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ادارةالاقساطToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddInstalmentBtn;
+        private System.Windows.Forms.ToolStripMenuItem InstalmentsBtb;
         private System.Windows.Forms.ToolStripMenuItem AddProjectExpenssesBtn;
         private System.Windows.Forms.ToolStripMenuItem ManageProjectExpensses;
     }

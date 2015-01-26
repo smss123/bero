@@ -1,4 +1,5 @@
-﻿using DataLayer.XProject;
+﻿using DataLayer;
+using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,10 +57,23 @@ namespace bero_System.ProjectInstallmentForms
         }
         private void FrmEditProjectInstallment_Load(object sender, EventArgs e)
         {
+            //=============================================
+
+            installments_nameTextBox.Text = TargetInstalment.Installments_name;
+            projectLevelComboBox.Text = TargetInstalment.ProjectLevelID.ToString(); 
+            amountTextBox.Text =   TargetInstalment.Amount.ToString () ;
+            dateOfInstallmentsDateTimePicker.Text = TargetInstalment.DateOfInstallments.ToString();
+            comboBox1.Text = TargetInstalment.ActiveStatus ;
+            payByTextBox.Text = TargetInstalment.PayBy ;
+            payDescriptionTextBox.Text = TargetInstalment.PayDescription ;
+
+
+            //==============================================
              th = new Thread(FillCombo);
             th.Start();
         }
-
+        public ProjectProfile TargetProject { get; set; }
+        public ProjectInstallment TargetInstalment { get; set; }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
           #region "  CheckFillTextBox "
@@ -114,6 +128,29 @@ namespace bero_System.ProjectInstallmentForms
             }
 
             #endregion
+
+            TargetInstalment.Installments_name = installments_nameTextBox.Text;
+             TargetInstalment.ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ());
+             TargetInstalment.   Amount = Convert.ToDouble(amountTextBox .Text );
+              TargetInstalment.  DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ;
+              TargetInstalment.ActiveStatus = comboBox1.Text;
+               TargetInstalment. PayBy = payByTextBox .Text ;
+               TargetInstalment. PayDescription = payDescriptionTextBox .Text ;
+
+               ProjectInstallmentCommand.EditProjectInstallment (TargetInstalment);
+            
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+            this.Hide();
+
         }
       
     }

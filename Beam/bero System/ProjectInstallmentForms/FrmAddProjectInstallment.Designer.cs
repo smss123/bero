@@ -43,15 +43,15 @@
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbActiveStatus = new System.Windows.Forms.ComboBox();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.projectLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.payDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.payByTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.dateOfInstallmentsDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.installments_nameTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.projectLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             installments_nameLabel = new System.Windows.Forms.Label();
             dateOfInstallmentsLabel = new System.Windows.Forms.Label();
             amountLabel = new System.Windows.Forms.Label();
@@ -65,8 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,7 +137,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.AddBtn);
-            this.radGroupBox1.Controls.Add(this.comboBox1);
+            this.radGroupBox1.Controls.Add(this.CmbActiveStatus);
             this.radGroupBox1.Controls.Add(projectLevelIDLabel);
             this.radGroupBox1.Controls.Add(this.projectLevelComboBox);
             this.radGroupBox1.Controls.Add(activeStatusLabel);
@@ -172,13 +172,13 @@
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // comboBox1
+            // CmbActiveStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 182);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.CmbActiveStatus.FormattingEnabled = true;
+            this.CmbActiveStatus.Location = new System.Drawing.Point(138, 182);
+            this.CmbActiveStatus.Name = "CmbActiveStatus";
+            this.CmbActiveStatus.Size = new System.Drawing.Size(121, 21);
+            this.CmbActiveStatus.TabIndex = 14;
             // 
             // projectLevelComboBox
             // 
@@ -247,6 +247,10 @@
             this.projectLevelComboBox.TabStop = false;
             this.projectLevelComboBox.ThemeName = "Office2013Light";
             // 
+            // projectLevelBindingSource
+            // 
+            this.projectLevelBindingSource.DataSource = typeof(DataLayer.projectLevel);
+            // 
             // payDescriptionTextBox
             // 
             this.payDescriptionTextBox.Location = new System.Drawing.Point(159, 151);
@@ -288,10 +292,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // projectLevelBindingSource
-            // 
-            this.projectLevelBindingSource.DataSource = typeof(DataLayer.projectLevel);
-            // 
             // FrmAddProjectInstallment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,8 +316,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectLevelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -327,7 +327,7 @@
 
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbActiveStatus;
         private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
         private System.Windows.Forms.TextBox payDescriptionTextBox;
         private System.Windows.Forms.TextBox payByTextBox;

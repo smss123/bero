@@ -116,5 +116,29 @@ namespace DataLayer.XProject
             ProjectInstallment tb = db.ProjectInstallments.Where(s => s.id == xid).SingleOrDefault();
             return tb;
         }
+
+
+        public static List<ProjectInstallment> GetAllProjectInstallmentByProjectId(int TargetProjectID)
+        {
+            var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProjectID);
+
+            List<ProjectInstallment> LstProjectInstallments = new List<ProjectInstallment>();
+
+            ProjectInstallment ProjectInstallmentTb = new ProjectInstallment();
+
+            foreach (var item in GetAllLevelsByProjectId)
+            {
+                ProjectInstallmentTb = new ProjectInstallment();
+                ProjectInstallmentTb = (from i in db.ProjectInstallments
+                      where i.ProjectLevelID == item.id
+                      select i).SingleOrDefault();
+
+                LstProjectInstallments.Add(ProjectInstallmentTb);
+            }
+            return LstProjectInstallments;
+        }
+
+
+
     }
 }
