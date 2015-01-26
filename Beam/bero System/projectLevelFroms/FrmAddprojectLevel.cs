@@ -67,8 +67,8 @@ namespace bero_System.projectLevelFroms
              LevelName = levelNameTextBox .Text ,
              LevelAmount = Convert.ToDouble (levelAmountTextBox .Text .ToString ()),
              Descripotion = descripotionTextBox .Text ,
-             ProjectProfileID = TargetProjectx .ID 
-            
+             ProjectProfileID = TargetProjectx .ID ,
+            AccountID = 4 
             };
             projectLevelCommand.NewprojectLevel(LevelTable);
             //======================================================================================
@@ -87,7 +87,7 @@ namespace bero_System.projectLevelFroms
 
             AccountDaily actTb2 = new AccountDaily()
             {
-                AccountID = LevelTable.AccountID,
+                AccountID = 4,
                 TotalIn = Convert.ToDouble(levelAmountTextBox.Text.ToString()),
                 TotalOut = 0F,
                 DateOfProcess = DateTime.Now,
