@@ -149,6 +149,19 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
         }
 
+        private void AddHolyDayBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddHolyDay frm = new FrmAddHolyDay();
+            frm.ShowDialog();
+
+        }
+
+        private void ManageHolyDayBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageHolyDay frm = new FrmManageHolyDay();
+            frm.ShowDialog();
+        }
+
    
 
     }

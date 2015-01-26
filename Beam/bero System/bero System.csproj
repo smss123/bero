@@ -190,17 +190,35 @@
     <Compile Include="EmployeeForms\FrmAddEmployee.Designer.cs">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeForms\FrmAddHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddHolyDay.Designer.cs">
+      <DependentUpon>FrmAddHolyDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeForms\FrmEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeForms\FrmEditEmployee.Designer.cs">
       <DependentUpon>FrmEditEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeForms\FrmEditHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditHolyDay.Designer.cs">
+      <DependentUpon>FrmEditHolyDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeForms\FrmManageEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeForms\FrmManageEmployee.Designer.cs">
       <DependentUpon>FrmManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageHolyDay.Designer.cs">
+      <DependentUpon>FrmManageHolyDay.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.cs">
       <SubType>Form</SubType>
@@ -425,11 +443,20 @@
     <EmbeddedResource Include="EmployeeForms\FrmAddEmployee.resx">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmAddHolyDay.resx">
+      <DependentUpon>FrmAddHolyDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForms\FrmEditEmployee.resx">
       <DependentUpon>FrmEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmEditHolyDay.resx">
+      <DependentUpon>FrmEditHolyDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForms\FrmManageEmployee.resx">
       <DependentUpon>FrmManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmManageHolyDay.resx">
+      <DependentUpon>FrmManageHolyDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScenarioForms\FrmMainProjectsCustomer.resx">
       <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
