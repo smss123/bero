@@ -31,6 +31,7 @@ namespace bero_System.ProjectExpenssesForms
         private void AddBtn_Click(object sender, EventArgs e)
         {
             FrmAddProjectExpensses frm = new FrmAddProjectExpensses();
+            frm.TargetProject = this.TargetProject;
             frm.Show();
         }
 

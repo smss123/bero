@@ -100,6 +100,7 @@ namespace bero_System.MainScenarioForms
         private void AddProjectExpenssesBtn_Click(object sender, EventArgs e)
         {
             FrmAddProjectExpensses frm = new FrmAddProjectExpensses();
+           
             frm.ShowDialog();
         }
 

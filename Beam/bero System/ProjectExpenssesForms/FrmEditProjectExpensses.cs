@@ -23,6 +23,8 @@ namespace bero_System.ProjectExpenssesForms
             InitializeComponent();
         }
         Thread th;
+        public ProjectProfile TargetProject { get; set; }
+
         public ProjectExpenss TargetExp { get; set; }
         private void FillCombo()
         {
@@ -66,7 +68,7 @@ namespace bero_System.ProjectExpenssesForms
             });
 
 
-            var q1 = projectLevelCommand.GetAll();
+            var q1 = (from c in projectLevelCommand.GetAll() where c.ProjectProfileID == TargetProject.ID select c).ToList();
             this.Invoke((MethodInvoker)delegate
             {
                 projectLevelComboBox.DataSource = q1;
