@@ -16,6 +16,7 @@ namespace DataLayer.XAccountant
             try
             {
 
+
                 db.AccountCategories.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()

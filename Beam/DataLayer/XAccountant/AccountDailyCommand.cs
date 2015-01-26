@@ -16,6 +16,7 @@ namespace DataLayer.XAccountant
             //try
             //{
 
+
                 db.AccountDailies.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 History htb = new History()

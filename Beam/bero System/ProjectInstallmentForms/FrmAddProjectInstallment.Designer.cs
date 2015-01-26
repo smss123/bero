@@ -156,7 +156,7 @@
             this.radGroupBox1.HeaderText = "radGroupBox1";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(376, 309);
+            this.radGroupBox1.Size = new System.Drawing.Size(393, 328);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -164,7 +164,7 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(261, 261);
+            this.AddBtn.Location = new System.Drawing.Point(278, 261);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 15;
@@ -297,7 +297,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(376, 309);
+            this.ClientSize = new System.Drawing.Size(393, 328);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmAddProjectInstallment";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
