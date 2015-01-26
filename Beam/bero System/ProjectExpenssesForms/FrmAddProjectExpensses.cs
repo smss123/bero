@@ -83,22 +83,21 @@ namespace bero_System.ProjectExpenssesForms
             Operation.EndOperation(this);
             th.Abort();
 
-            SubGetLevelAccount();
-            SubGetExpensessAccount();
+            //SubGetLevelAccount();
+            //SubGetExpensessAccount();
         }
 
         private void SubGetLevelAccount()
         {
 
             LevelAccount = 0;
-            var GetAccountID = (from c in ExpenssesCommand.GetAll()
-                                where c.ID == int.Parse(projectLevelComboBox.SelectedValue.ToString())
-                                select c.AccountID).SingleOrDefault();
-            LevelAccount = GetAccountID.Value; ;
+        
+       
+          
         }
         public ProjectProfile TargetProject { get; set; }
-        public int LevelAccount { get; set; }
-        public int ExpenssAccount { get; set; }
+        public int? LevelAccount { get; set; }
+        public int? ExpenssAccount { get; set; }
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -213,22 +212,21 @@ namespace bero_System.ProjectExpenssesForms
 
         private void projectLevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SubGetLevelAccount();
+           // SubGetLevelAccount();
         }
 
         private void expenssesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            SubGetExpensessAccount();
+          //  SubGetExpensessAccount();
         }
 
         private void SubGetExpensessAccount()
         {
             ExpenssAccount = 0;
-            var GetExpenssAccount = (from c in ExpenssesCommand.GetAll()
-                                     where c.ID == int.Parse(expenssesComboBox.SelectedValue.ToString())
-                                     select c.AccountID).SingleOrDefault();
-            ExpenssAccount = GetExpenssAccount.Value; ;
+            var GetExpenssAccount =  ExpenssesCommand .GetById (int .Parse (expenssesComboBox .SelectedValue .ToString ()));
+
+            ExpenssAccount = GetExpenssAccount.AccountID;
         }
     }
 }

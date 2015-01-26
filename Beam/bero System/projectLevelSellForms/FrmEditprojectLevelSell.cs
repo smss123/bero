@@ -1,4 +1,5 @@
-﻿using DataLayer.XProject;
+﻿using DataLayer;
+using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,11 +108,47 @@ namespace bero_System.projectLevelSellForms
 
 
             #endregion
-        }
 
+        
+               TargetSelTable. ProjectLevelID = int.Parse(projectLevelComboBox.SelectedValue.ToString());
+               TargetSelTable. Sell_Item = sell_ItemTextBox.Text;
+               TargetSelTable. Amount = Convert.ToDouble(amountTextBox.Text);
+               TargetSelTable. DateOfSell = DateTime.Now;
+
+               TargetSelTable. Description = descriptionTextBox.Text;
+
+               TargetSelTable.Status = statusComboBox.Text;
+          
+            projectLevelSellCommand.EditprojectLevelSell (TargetSelTable);
+
+
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
+
+
+        }
+        public ProjectProfile TargetProject { get; set; }
+        public projectLevelSell TargetSelTable { get; set; }
         private void FrmEditprojectLevelSell_Load(object sender, EventArgs e)
         {
+          sell_ItemTextBox.Text = TargetSelTable.Sell_Item;
 
+          amountTextBox.Text = TargetSelTable.Amount.ToString(); 
+
+          radDateTimePicker1 .Text =   TargetSelTable.DateOfSell .ToString ();
+
+          descriptionTextBox.Text = TargetSelTable.Description;
+
+          statusComboBox.Text =   TargetSelTable.Status ;
         }
     }
 }

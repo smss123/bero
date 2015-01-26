@@ -98,5 +98,13 @@ namespace DataLayer.XAccountant
         {
             return db.Expensses.ToList();
         }
+
+        public static Expenss GetById(int expid){
+            db = new dbDataContext ();
+            var GetOneExpensse = (from c in db .Expensses 
+                                      where c.ID == expid 
+                                      select c).SingleOrDefault ();
+            return GetOneExpensse;
+        }
     }
 }

@@ -116,7 +116,25 @@ namespace DataLayer.XProject
         }
 
 
+        public static List<projectLevelSell > GetAllByProjectId(int TargetProjectID)
+        {
+            var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProjectID);
 
+            List<projectLevelSell> LstSelles = new List<projectLevelSell>();
+
+            projectLevelSell tb = new projectLevelSell();
+
+            foreach (var item in GetAllLevelsByProjectId)
+            {
+                tb = new projectLevelSell();
+                tb = (from i in db.projectLevelSells 
+                      where i.ProjectLevelID == item.id
+                      select i).SingleOrDefault();
+
+                LstSelles.Add(tb);
+            }
+            return LstSelles;
+        }
 
         #endregion
     }

@@ -123,9 +123,9 @@
             sell_ItemLabel.AutoSize = true;
             sell_ItemLabel.Location = new System.Drawing.Point(267, 25);
             sell_ItemLabel.Name = "sell_ItemLabel";
-            sell_ItemLabel.Size = new System.Drawing.Size(57, 13);
+            sell_ItemLabel.Size = new System.Drawing.Size(37, 13);
             sell_ItemLabel.TabIndex = 0;
-            sell_ItemLabel.Text = "صنف البيع:";
+            sell_ItemLabel.Text = "الوصف";
             // 
             // radGroupBox1
             // 
@@ -220,6 +220,7 @@
             this.projectLevelComboBox.EditorControl.ShowGroupPanel = false;
             this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.projectLevelComboBox.EditorControl.TabIndex = 0;
+            this.projectLevelComboBox.Enabled = false;
             this.projectLevelComboBox.Location = new System.Drawing.Point(23, 197);
             this.projectLevelComboBox.Name = "projectLevelComboBox";
             this.projectLevelComboBox.Size = new System.Drawing.Size(241, 20);
@@ -248,9 +249,9 @@
             this.radDateTimePicker1.Size = new System.Drawing.Size(98, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12/01/15";
+            this.radDateTimePicker1.Text = "1/26/2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
-            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 26, 0, 0, 0, 0);
             // 
             // statusComboBox
             // 
@@ -328,7 +329,6 @@
         #endregion
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
         private Telerik.WinControls.UI.RadButton SaveBtn;
         private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
         private System.Windows.Forms.ComboBox statusComboBox;
@@ -337,6 +337,7 @@
         private System.Windows.Forms.TextBox sell_ItemTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
 
     }
 }

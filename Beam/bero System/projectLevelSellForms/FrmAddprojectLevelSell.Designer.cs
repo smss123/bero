@@ -74,9 +74,9 @@
             sell_ItemLabel.AutoSize = true;
             sell_ItemLabel.Location = new System.Drawing.Point(275, 27);
             sell_ItemLabel.Name = "sell_ItemLabel";
-            sell_ItemLabel.Size = new System.Drawing.Size(57, 13);
+            sell_ItemLabel.Size = new System.Drawing.Size(36, 13);
             sell_ItemLabel.TabIndex = 0;
-            sell_ItemLabel.Text = "صنف البيع:";
+            sell_ItemLabel.Text = "الصنف";
             // 
             // amountLabel
             // 
@@ -172,7 +172,7 @@
             this.radDateTimePicker1.Size = new System.Drawing.Size(124, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12 يناير, 2015";
+            this.radDateTimePicker1.Text = "Monday, January 12, 2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
             this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
