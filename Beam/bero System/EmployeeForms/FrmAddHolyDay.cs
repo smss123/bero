@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using System.Threading;
+using DataLayer;
+using DataLayer.XEmployees;
 namespace bero_System.EmployeeForms
 {
     public partial class FrmAddHolyDay : RadForm
@@ -89,6 +91,31 @@ namespace bero_System.EmployeeForms
             }
 
             #endregion
+
+            Operation.BeginOperation(this);
+
+            HolyDay HolyTb = new HolyDay()
+            { 
+             EmployeeID = int .Parse (EmployeeComboBox.SelectedValue .ToString ()),
+             fromDate = fromDateDateTimePicker.Value ,
+             ToDatetime = toDatetimeDateTimePicker .Value ,
+             commint = commintTextBox .Text ,
+             status = statusComboBox .Text ,
+            };
+            HolyDayCmd.NewHolyDay(HolyTb);
+
+          
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
         }
     }
 }

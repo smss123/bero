@@ -331,8 +331,8 @@
         private System.Windows.Forms.TextBox commintTextBox;
         private System.Windows.Forms.DateTimePicker fromDateDateTimePicker;
         private System.Windows.Forms.DateTimePicker toDatetimeDateTimePicker;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox EmployeeComboBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public Telerik.WinControls.UI.RadMultiColumnComboBox EmployeeComboBox;
     }
 }

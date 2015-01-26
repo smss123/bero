@@ -46,14 +46,14 @@
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.DGVHolydays = new Telerik.WinControls.UI.RadGridView();
             this.holyDayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.office2013LightTheme2 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHolydays)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHolydays.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.holyDayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(824, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // AddBtn
             // 
@@ -85,7 +86,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(83, 22);
+            this.AddBtn.Size = new System.Drawing.Size(82, 22);
             this.AddBtn.Text = "اضافة اجازة";
             // 
             // toolStripSeparator1
@@ -99,7 +100,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
             this.RefreshBtn.Text = "تحديث السجلات";
             // 
             // toolStripSeparator2
@@ -110,7 +111,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.radGridView1);
+            this.radGroupBox1.Controls.Add(this.DGVHolydays);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "سجلات الاجازات";
@@ -121,22 +122,22 @@
             this.radGroupBox1.Text = "سجلات الاجازات";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // radGridView1
+            // DGVHolydays
             // 
-            this.radGridView1.BackColor = System.Drawing.SystemColors.Control;
-            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(2, 18);
+            this.DGVHolydays.BackColor = System.Drawing.SystemColors.Control;
+            this.DGVHolydays.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DGVHolydays.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVHolydays.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DGVHolydays.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DGVHolydays.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DGVHolydays.Location = new System.Drawing.Point(2, 18);
             // 
-            // radGridView1
+            // DGVHolydays
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AllowSearchRow = true;
-            this.radGridView1.MasterTemplate.AutoGenerateColumns = false;
-            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.DGVHolydays.MasterTemplate.AllowAddNewRow = false;
+            this.DGVHolydays.MasterTemplate.AllowSearchRow = true;
+            this.DGVHolydays.MasterTemplate.AutoGenerateColumns = false;
+            this.DGVHolydays.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "ID";
@@ -186,7 +187,7 @@
             gridViewCommandColumn2.HeaderText = "حذف";
             gridViewCommandColumn2.Name = "column2";
             gridViewCommandColumn2.Width = 65;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.DGVHolydays.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
             gridViewDateTimeColumn1,
@@ -195,15 +196,16 @@
             gridViewTextBoxColumn3,
             gridViewCommandColumn1,
             gridViewCommandColumn2});
-            this.radGridView1.MasterTemplate.DataSource = this.holyDayBindingSource;
-            this.radGridView1.MasterTemplate.EnableFiltering = true;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(820, 322);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            this.radGridView1.ThemeName = "Office2013Light";
+            this.DGVHolydays.MasterTemplate.DataSource = this.holyDayBindingSource;
+            this.DGVHolydays.MasterTemplate.EnableFiltering = true;
+            this.DGVHolydays.Name = "DGVHolydays";
+            this.DGVHolydays.ReadOnly = true;
+            this.DGVHolydays.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGVHolydays.Size = new System.Drawing.Size(820, 322);
+            this.DGVHolydays.TabIndex = 0;
+            this.DGVHolydays.Text = "radGridView1";
+            this.DGVHolydays.ThemeName = "Office2013Light";
+            this.DGVHolydays.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVHolydays_CommandCellClick);
             // 
             // holyDayBindingSource
             // 
@@ -226,12 +228,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageHolyDay";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageHolyDay_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHolydays.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHolydays)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.holyDayBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -249,7 +252,7 @@
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView DGVHolydays;
         private System.Windows.Forms.BindingSource holyDayBindingSource;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme2;
     }

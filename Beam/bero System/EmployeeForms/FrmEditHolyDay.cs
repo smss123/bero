@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.Data;
 using Telerik.WinControls.UI;
-
+using System.Threading;
+using DataLayer;
+using DataLayer.XEmployees;
 namespace bero_System.EmployeeForms
 {
     public partial class FrmEditHolyDay : RadForm
@@ -64,8 +66,19 @@ namespace bero_System.EmployeeForms
         {
             th = new Thread(FillEmployeeCombo);
             th.Start();
+
+
+         
+            fromDateDateTimePicker.Text =  TargetHolyday.fromDate.ToString () ;
+            toDatetimeDateTimePicker .Text = TargetHolyday.ToDatetime.ToString ();
+            commintTextBox.Text = TargetHolyday.commint;
+            statusComboBox.Text = TargetHolyday.status;
+
+
+
         }
 
+        public HolyDay  TargetHolyday { get; set; }
         private void Savebtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -87,6 +100,29 @@ namespace bero_System.EmployeeForms
             }
 
             #endregion
+
+            Operation.BeginOperation(this);
+             TargetHolyday.EmployeeID = int.Parse(EmployeeComboBox.SelectedValue.ToString());
+             TargetHolyday.  fromDate = fromDateDateTimePicker.Value;
+             TargetHolyday.   ToDatetime = toDatetimeDateTimePicker.Value;
+             TargetHolyday.  commint = commintTextBox.Text;
+             TargetHolyday.status = statusComboBox.Text;
+         
+            HolyDayCmd.EditHolyDay (TargetHolyday);
+
+
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+
+
         }
     }
 }
