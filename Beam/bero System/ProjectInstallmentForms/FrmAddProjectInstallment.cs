@@ -15,6 +15,7 @@ using Telerik.WinControls.UI;
 
 using DataLayer;
 using DataLayer.XProject;
+using DataLayer.XAccountant;
 namespace bero_System.ProjectInstallmentForms
 {
     public partial class FrmAddProjectInstallment : RadForm
@@ -134,7 +135,32 @@ namespace bero_System.ProjectInstallmentForms
 
             };
             ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
+            //==================================================================
+            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ()));
+
+            // Start Save AT AccountDaily :
+            // ^^^  خرج من حساب المشروع __ دائن
+            AccountDaily tb = new AccountDaily()
+            {
+                AccountID = TargetProject .AccountID ,
+                DateOfProcess = DateTime.Now,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble(amountTextBox.Text),
+                Description = payDescriptionTextBox .Text
+            };
+            AccountDailyCommand.NewAccountDaily (tb);
             
+            // ^^^ دخل في حساب العميل  ___مدين)
+            AccountDaily xtb = new AccountDaily()
+            {
+                AccountID =  CurrentCustomer.AccountID ,
+                DateOfProcess = DateTime.Now,
+                TotalIn = Convert.ToDouble(amountTextBox.Text),
+                TotalOut = 0f,
+                Description = payDescriptionTextBox .Text
+            };
+            AccountDailyCommand.NewAccountDaily(xtb);
+            //===================================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)
