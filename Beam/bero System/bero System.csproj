@@ -377,6 +377,36 @@
     <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
+    <Compile Include="SecurityForms\FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmChangeUSerPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmChangeUSerPassword.Designer.cs">
+      <DependentUpon>FrmChangeUSerPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmEditUserPermession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmEditUserPermession.Designer.cs">
+      <DependentUpon>FrmEditUserPermession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmManageUser.Designer.cs">
+      <DependentUpon>FrmManageUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountForms\frmAccountDailySHow.resx">
       <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
     </EmbeddedResource>
@@ -538,6 +568,21 @@
     </Compile>
     <EmbeddedResource Include="RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmChangeUSerPassword.resx">
+      <DependentUpon>FrmChangeUSerPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmEditUserPermession.resx">
+      <DependentUpon>FrmEditUserPermession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmManageUser.resx">
+      <DependentUpon>FrmManageUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\DataLayer.Account.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
