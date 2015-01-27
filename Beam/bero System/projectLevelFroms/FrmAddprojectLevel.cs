@@ -68,10 +68,11 @@ namespace bero_System.projectLevelFroms
              LevelAmount = Convert.ToDouble (levelAmountTextBox .Text .ToString ()),
              Descripotion = descripotionTextBox .Text ,
              ProjectProfileID = TargetProjectx .ID ,
-            AccountID = 4 
+         
             };
             projectLevelCommand.NewprojectLevel(LevelTable);
             //======================================================================================
+            // جانب دائن : خرج من حساب المشروع
             AccountDaily actTb1 = new AccountDaily()
             {
                 AccountID = TargetProjectx .AccountID ,
@@ -83,11 +84,12 @@ namespace bero_System.projectLevelFroms
             };
             DataLayer.XAccountant.AccountDailyCommand.NewAccountDaily(actTb1);
 
-            // ^^^^ 
 
+
+            // ^^^^ جانب  مدين : دخل في حساب المستوى
             AccountDaily actTb2 = new AccountDaily()
             {
-                AccountID = 4,
+                AccountID = LevelTable.AccountID ,
                 TotalIn = Convert.ToDouble(levelAmountTextBox.Text.ToString()),
                 TotalOut = 0F,
                 DateOfProcess = DateTime.Now,

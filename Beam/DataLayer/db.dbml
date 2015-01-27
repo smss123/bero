@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="xprema_bero" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=Heroo;Initial Catalog=xprema_bero;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ABUEHAB-PC\SQLEXPRESS;Initial Catalog=XBeroData;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="Accountant.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -67,7 +67,7 @@
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="No_building" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="No_permissibility" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="Total_Need" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="Customer_ProjectProfile" Member="ProjectProfiles" ThisKey="ID" OtherKey="CustomerID" Type="ProjectProfile" />
@@ -156,7 +156,7 @@
       <Column Name="ProjectProfileID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LevelAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="projectLevel_ProjectExpenss" Member="ProjectExpensses" ThisKey="id" OtherKey="ProjectLevelID" Type="ProjectExpenss" />
       <Association Name="projectLevel_ProjectInstallment" Member="ProjectInstallments" ThisKey="id" OtherKey="ProjectLevelID" Type="ProjectInstallment" />
       <Association Name="projectLevel_projectLevelSell" Member="projectLevelSells" ThisKey="id" OtherKey="ProjectLevelID" Type="projectLevelSell" />
@@ -186,7 +186,7 @@
       <Column Name="DeliverDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ProjectFullAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Association Name="ProjectProfile_ProjectAttachment" Member="ProjectAttachments" ThisKey="ID" OtherKey="ProjectProfileID" Type="ProjectAttachment" />
       <Association Name="ProjectProfile_projectLevel" Member="projectLevels" ThisKey="ID" OtherKey="ProjectProfileID" Type="projectLevel" />
