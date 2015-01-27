@@ -124,6 +124,10 @@ namespace DataLayer.XProject
                 return lst;
             }
 
-        
+            public static projectLevel GetByID(int XID)
+            {
+                var lst = db.projectLevels.Where(i => i.id  == XID).SingleOrDefault ();
+                return lst;
+            }
     }
 }

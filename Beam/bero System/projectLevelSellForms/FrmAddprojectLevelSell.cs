@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.XAccountant;
 using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
@@ -120,8 +121,21 @@ namespace bero_System.projectLevelSellForms
              Status = statusComboBox .Text , 
             };
             projectLevelSellCommand.NewprojectLevelSell(seltb);
+            //==========================================================
+            var LevelAccount = projectLevelCommand.GetByID(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
-          
+            // Start Save AT AccountDaily :
+            AccountDaily tb = new AccountDaily()
+            {
+                AccountID = LevelAccount .AccountID ,
+                DateOfProcess = radDateTimePicker1.Value,
+                TotalIn = 0f,
+                TotalOut = Convert.ToDouble (amountTextBox .Text),
+                Description = descriptionTextBox.Text 
+            };
+            AccountDailyCommand.NewAccountDaily (tb);
+
+          //============================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)
