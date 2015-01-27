@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,17 @@ namespace DataLayer.XEmployees
         {
             db.Employees.InsertOnSubmit(tb);
             db.SubmitChanges();
+            HistoryCommand.NewHistory(new History()
+            {
+                ActionName = "Adding New Employee",
+                Description = "User  Name " +  tb.EmployeeName  +
+                 "   Created At " + DateTime.Now,
+                DateOfProcess = DateTime.Now,
+                SystemUser = LoginInfomation.CurrnetUser,
+                HistoryAction = "Adding New Employee",
+
+            });
+
             return true;
         }
 
@@ -33,6 +45,16 @@ namespace DataLayer.XEmployees
             q.SerialNumber = tb.SerialNumber;
             q.Status = tb.Status;
             db.SubmitChanges();
+
+            HistoryCommand.NewHistory(new History()
+            {
+                ActionName = "Edit Employee",
+                Description = String.Format("old Info Is Employee Name {0}Created At {1}",
+                q.EmployeeName , DateTime.Now),
+                DateOfProcess = DateTime.Now,
+                SystemUser = LoginInfomation.CurrnetUser
+            });
+
             return true;
 
 
@@ -44,6 +66,15 @@ namespace DataLayer.XEmployees
             var q = db.Employees.Where(d => d.id == xid).SingleOrDefault();
             db.Employees.DeleteOnSubmit(q);
             db.SubmitChanges();
+            HistoryCommand.NewHistory(new History()
+            {
+                ActionName = "Delete Employee",
+                Description = String.Format("old Info Is Employee Name {0}Created At {1}",
+                q.EmployeeName, DateTime.Now),
+                DateOfProcess = DateTime.Now,
+                SystemUser = LoginInfomation.CurrnetUser
+            });
+
             return true;
          
         }

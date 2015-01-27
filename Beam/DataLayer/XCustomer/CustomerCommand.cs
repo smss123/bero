@@ -16,11 +16,7 @@ namespace DataLayer.XCustomer
         {
             try
             {
-               
-                //Customer tb = db.Customers.Where(i => i.CustomerName == CustName).Single();
-                //if (tb.ID == 0)
-                //{
-                       // ^^^ If Not Existed : Start Save At Customer Table & Write New History  
+                
                         db.Customers.InsertOnSubmit(cust);
                         db.SubmitChanges();
 
@@ -36,11 +32,7 @@ namespace DataLayer.XCustomer
                         });
                 ProcessChange("Adding Customer", cust.CustomerName + " has Been Saved ",null);
                 return true;
-                //}
-                //// ^^^ If Already Existed : Cancel Process.
-                //MessageBox.Show("The Current Customer Already Exiest ..");
 
-                //return false; ;
               
             }
             catch (Exception e)

@@ -13,6 +13,18 @@ namespace DataLayer.Security
         {
             db.SystemUsers.InsertOnSubmit(usr);
             db.SubmitChanges();
+
+            HistoryCommand.NewHistory(new History()
+            {
+                ActionName = "Adding New User",
+                Description = "User  Name " + usr .UserName  +
+                 "   Created At " + DateTime .Now ,
+                DateOfProcess = DateTime.Now,
+                SystemUser = LoginInfomation.CurrnetUser,
+                HistoryAction = "Adding New User",
+
+            });
+
             return true;
         }
 
@@ -25,8 +37,18 @@ namespace DataLayer.Security
                         {
                             q.UserName = usr.UserName;
                             q.pwd = usr.pwd;
-                        
+
                             db.SubmitChanges();
+
+                HistoryCommand.NewHistory(new History()
+                {
+                    ActionName = "Edit User",
+                    Description = String.Format("old Info Is User Name {0}Created At {1}",
+                    q.UserName , DateTime .Now ),
+                    DateOfProcess = DateTime.Now,
+                    SystemUser = LoginInfomation.CurrnetUser
+                });
+
                             return true;
                         }
                         return false;
@@ -48,6 +70,16 @@ namespace DataLayer.Security
                     db.SystemUsers.DeleteOnSubmit(q);
 
                     db.SubmitChanges();
+
+                    HistoryCommand.NewHistory(new History()
+                    {
+                        ActionName = "Delete  User",
+                        Description = String.Format("old Info Is User Name {0}Created At {1}",
+                        q.UserName, DateTime.Now),
+                        DateOfProcess = DateTime.Now,
+                        SystemUser = LoginInfomation.CurrnetUser
+                    });
+
                     return true;
                 }
                 return false;
