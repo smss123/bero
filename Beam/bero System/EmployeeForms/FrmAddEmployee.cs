@@ -60,7 +60,26 @@ namespace bero_System.EmployeeForms
 
             Operation.BeginOperation(this);
 
-            Employee tb = new Employee()
+            try
+            {
+                Employee EmpTb = EmployeesCmd.GetByName(employeeNameTextBox.Text);
+                MessageBox.Show("مسجل مســـبقا");
+                Operation.EndOperation(this);
+                foreach (Control item in radGroupBox1.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        ((TextBox)item).Clear();
+                    }
+                }
+                employeeNameTextBox.Focus();
+
+                return;
+            }
+            catch (Exception)
+            {
+                
+           Employee tb = new Employee()
             {
                  EmployeeName = employeeNameTextBox.Text ,
                  nationalty = nationaltyComboBox.Text ,
@@ -84,7 +103,8 @@ namespace bero_System.EmployeeForms
             employeeNameTextBox.Focus();
             Operation.EndOperation(this);
             Operation.ShowToustOk("تم الحفظ", this);
-
+            }
+            Operation.EndOperation(this);
 
 
         }
