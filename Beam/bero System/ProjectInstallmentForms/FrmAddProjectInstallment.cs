@@ -136,7 +136,7 @@ namespace bero_System.ProjectInstallmentForms
             };
             ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
             //==================================================================
-            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ()));
+            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
             // Start Save AT AccountDaily :
             // ^^^  خرج من حساب المشروع __ دائن
