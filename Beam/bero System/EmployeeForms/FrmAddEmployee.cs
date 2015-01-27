@@ -12,7 +12,7 @@ using Telerik.WinControls.UI;
 using DataLayer;
 using DataLayer.XEmployees;
 
-using DataLayer;
+
 
 namespace bero_System.EmployeeForms
 {
@@ -63,8 +63,8 @@ namespace bero_System.EmployeeForms
             Employee tb = new Employee()
             {
                  EmployeeName = employeeNameTextBox.Text ,
-                  nationalty = nationaltyComboBox.Text ,
-                   PassportNumber = passportNumberTextBox.Text ,
+                 nationalty = nationaltyComboBox.Text ,
+                 PassportNumber = passportNumberTextBox.Text ,
                  PassportExpierdDate = passportExpierdDateDateTimePicker.Value ,
                  peronaltyNumber = peronaltyNumberTextBox.Text ,
                  personaltyExpiredDate = personaltyExpiredDateDateTimePicker.Value ,
@@ -81,10 +81,16 @@ namespace bero_System.EmployeeForms
                     ((TextBox)item).Clear();
                 }
             }
-
+            employeeNameTextBox.Focus();
             Operation.EndOperation(this);
             Operation.ShowToustOk("تم الحفظ", this);
 
+
+
+        }
+
+        private void FrmAddEmployee_Load(object sender, EventArgs e)
+        {
 
         }
     }

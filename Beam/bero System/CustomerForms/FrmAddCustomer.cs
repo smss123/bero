@@ -44,18 +44,27 @@ namespace bero_System.CustomerForms
 
             #endregion
 
-            Customer CustTb = new Customer()
-            {
-                CustomerName = customerNameTextBox .Text ,
-                PhoneNumber = phoneNumberTextBox .Text ,
-                No_building = no_buildingTextBox .Text ,
-                No_permissibility = no_permissibilityTextBox .Text 
 
-            };
-            CustomerCommand.NewCustomer(CustTb);
-            MessageBox.Show("Save");
-          
-            broom();
+            try
+            {
+                Customer ChkHim = CustomerCommand.GetCustomerByName(customerNameTextBox.Text);
+                MessageBox.Show("موجود مسبقا");
+                broom();
+            }
+            catch (Exception)
+            {
+               // Start Save
+                Customer CustTb = new Customer()
+                {
+                    CustomerName = customerNameTextBox .Text ,
+                    PhoneNumber = phoneNumberTextBox .Text ,
+                    No_building = no_buildingTextBox .Text ,
+                    No_permissibility = no_permissibilityTextBox .Text 
+
+                };
+                CustomerCommand.NewCustomer(CustTb);                
+                broom();
+                }
 
         }
 

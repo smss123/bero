@@ -259,6 +259,10 @@
             // 
             this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "فعال",
+            "مؤجز",
+            "مطرود"});
             this.statusComboBox.Location = new System.Drawing.Point(88, 116);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(176, 21);
@@ -276,14 +280,17 @@
             // fromDateDateTimePicker
             // 
             this.fromDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fromDateDateTimePicker.Location = new System.Drawing.Point(16, 56);
             this.fromDateDateTimePicker.Name = "fromDateDateTimePicker";
             this.fromDateDateTimePicker.Size = new System.Drawing.Size(248, 20);
             this.fromDateDateTimePicker.TabIndex = 19;
+            this.fromDateDateTimePicker.Value = new System.DateTime(2015, 1, 27, 12, 40, 59, 0);
             // 
             // toDatetimeDateTimePicker
             // 
             this.toDatetimeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toDatetimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.toDatetimeDateTimePicker.Location = new System.Drawing.Point(20, 86);
             this.toDatetimeDateTimePicker.Name = "toDatetimeDateTimePicker";
             this.toDatetimeDateTimePicker.Size = new System.Drawing.Size(244, 20);

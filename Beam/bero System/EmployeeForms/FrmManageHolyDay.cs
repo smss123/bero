@@ -69,13 +69,15 @@ namespace bero_System.EmployeeForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            FrmManageHolyDay_Load(sender, e);
+            
+
+            FrmAddHolyDay frm = new FrmAddHolyDay();
+            frm.ShowDialog();
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            FrmAddHolyDay frm = new FrmAddHolyDay();
-            frm.ShowDialog();
+            FrmManageHolyDay_Load(sender, e);
         }
 
     }
