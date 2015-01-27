@@ -97,5 +97,11 @@ namespace DataLayer.Security
             return db.SystemUsers.ToList();
         }
 
+
+        public static SystemUser GetByName(string UsrName)
+        {
+            SystemUser usr = db.SystemUsers.Where(u => u.UserName == UsrName).SingleOrDefault();
+            return usr;
+        }
     }
 }

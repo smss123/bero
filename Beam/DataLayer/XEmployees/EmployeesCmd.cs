@@ -89,5 +89,13 @@ namespace DataLayer.XEmployees
             Employee tb = db.Employees.Where(d => d.id == XID).Single();
             return tb;
         }
+
+        public static Employee GetByName(string EmpName)
+        {
+            Employee tb = db.Employees.Where(d =>  d.EmployeeName == EmpName ).Single();
+            return tb;
+        }
+
+
     }
 }
