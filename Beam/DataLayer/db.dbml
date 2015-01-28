@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="xprema_bero" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ABUEHAB-PC\SQLEXPRESS;Initial Catalog=XBeroData;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HEROO;Initial Catalog=xprema_bero;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="Accountant.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

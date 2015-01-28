@@ -8,7 +8,7 @@ namespace bero_System.ReportSystem.ReportOBj
 {
    public   class ProjectQuantityObj
     {
-
+       public int ID { get; set; }          
         public string ItemName { get; set; }
         public int Qty { get; set; }
         public string SerialNumber { get; set; }

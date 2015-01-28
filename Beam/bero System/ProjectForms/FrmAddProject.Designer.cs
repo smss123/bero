@@ -206,7 +206,7 @@
             this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // CustomerComboBox.NestedRadGridView
+            // 
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;

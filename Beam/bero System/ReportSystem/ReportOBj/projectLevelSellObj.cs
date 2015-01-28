@@ -8,7 +8,7 @@ namespace bero_System.ReportSystem.ReportOBj
 {
    public class projectLevelSellObj
     {
-
+        public int ID { get; set; }
         public string ItemName { get; set; }
         public double Amount { get; set; }
         public DateTime DateOfSell { get; set; }

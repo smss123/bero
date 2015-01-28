@@ -68,6 +68,7 @@ namespace bero_System.MainScenarioForms
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
+
             CustomerProjectCommand cmdRpt = new CustomerProjectCommand();
             cmdRpt.CustomerProjectByCusId(TargetCustomer.ID);
         }
