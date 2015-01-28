@@ -12,6 +12,7 @@ using DataLayer;
 using System.Threading;
 using DataLayer.XCustomer;
 using DataLayer.XProject;
+using bero_System.ReportSystem.ReportCommand;
 namespace bero_System.MainScenarioForms
 {
     public partial class FrmMainProjectsCustomer : RadForm
@@ -63,6 +64,12 @@ namespace bero_System.MainScenarioForms
                     Operation.EndOperation(this);
                 }
             }
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+            CustomerProjectCommand cmdRpt = new CustomerProjectCommand();
+            cmdRpt.CustomerProjectByCusId(TargetCustomer.ID);
         }
     }
 }

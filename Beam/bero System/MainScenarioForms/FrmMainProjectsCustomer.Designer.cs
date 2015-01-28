@@ -41,6 +41,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainProjectsCustomer));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -51,10 +52,14 @@
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.ProjectGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ReportBtn = new System.Windows.Forms.ToolStripButton();
             no_buildingLabel = new System.Windows.Forms.Label();
             no_permissibilityLabel = new System.Windows.Forms.Label();
             phoneNumberLabel = new System.Windows.Forms.Label();
             customerNameLabel = new System.Windows.Forms.Label();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
@@ -106,6 +111,10 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RefreshBtn,
+            this.toolStripSeparator1,
+            this.ReportBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(819, 25);
@@ -279,6 +288,30 @@
             this.ProjectGridView.ThemeName = "Office2013Light";
             this.ProjectGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ProjectGridView_CommandCellClick);
             // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.Image")));
+            this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(104, 22);
+            this.RefreshBtn.Text = "تحديث السجلات";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Image = ((System.Drawing.Image)(resources.GetObject("ReportBtn.Image")));
+            this.ReportBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReportBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(85, 22);
+            this.ReportBtn.Text = "طباعة تقرير";
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
+            // 
             // FrmMainProjectsCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +331,8 @@
             this.Text = "FrmMainProjectsCustomer";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmMainProjectsCustomer_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
@@ -323,5 +358,8 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadGridView ProjectGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.ToolStripButton RefreshBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton ReportBtn;
     }
 }

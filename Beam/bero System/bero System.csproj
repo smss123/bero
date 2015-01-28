@@ -36,10 +36,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DataLayer\LIB\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -367,6 +370,13 @@
     <Compile Include="RadForm1.Designer.cs">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportSystem\FrmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\FrmReportViewer.Designer.cs">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
     <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
@@ -569,6 +579,10 @@
     <EmbeddedResource Include="RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\FrmReportViewer.resx">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
     <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -584,6 +598,7 @@
     <EmbeddedResource Include="SecurityForms\FrmManageUser.resx">
       <DependentUpon>FrmManageUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
     <None Include="Properties\DataSources\DataLayer.Account.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountDaily.datasource" />
@@ -628,8 +643,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProjectOffers\" />
-    <Folder Include="ReportSystem\ReportCommand\" />
-    <Folder Include="ReportSystem\ReportDesign\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,8 +14,16 @@ namespace bero_System.ReportSystem.ReportOBj
         public DateTime createdDate { get; set; }
         public DateTime DeliverDate { get; set; }
         public double ProjectFullAmount { get; set; }
-        public string CustomerName { get; set; }
         public string SerialNumber { get; set; }
+
+       //
+        public string CustomerName { get; set; }
+        public string PhoneNumber { get; set; }
+        public string No_building { get; set; }
+        public string No_permissibility { get; set; }
+        public double Total_Need { get; set; }
+       
+
 
 
     }
