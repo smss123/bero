@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+using DataLayer;
+using DataLayer.Security;
+using bero_System.MainScenarioForms;
 namespace bero_System.SecurityForms
 {
     public partial class FrmLogin : RadForm
@@ -57,6 +60,35 @@ namespace bero_System.SecurityForms
             }
 
             #endregion
+
+
+            Operation.BeginOperation(this);
+            var q =  LoginInfomation .Login (userNameTextBox .Text ,pwdTextBox.Text);
+            if (q != null)
+            {
+                LoginInfomation.CurrnetUser = q;
+                this.Text = LoginInfomation.CurrnetUser .UserName ;
+                MainForms frm = new MainForms();
+                frm.Show();
+                this.Hide();
+                Operation.EndOperation(this);
+
+            }
+            else
+            {
+                Operation.EndOperation(this);
+                MessageBox.Show(" كلمة المرور خــــــاطئة");
+            }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

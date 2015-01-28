@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
+using DataLayer;
+using DataLayer.Security;
 namespace bero_System.SecurityForms
 {
     public partial class FrmAddUser : RadForm
@@ -57,6 +59,44 @@ namespace bero_System.SecurityForms
             }
 
             #endregion
+            try
+            {
+
+                Operation.BeginOperation(this);
+
+                 SystemUser Usr = UsersCmd.GetByName(userNameTextBox.Text);
+                
+                 MessageBox.Show("موجود مسبقا");
+              
+                 foreach (Control item in radGroupBox1.Controls)
+                 {
+                     if (item is TextBox)
+                     {
+                         ((TextBox)item).Clear();
+                     }
+                 }
+
+                 Operation.EndOperation(this);
+                 return;
+            }
+            catch (Exception)
+            {
+
+                Operation.BeginOperation(this);
+                //=================================================
+                SystemUser UsrTb = new SystemUser() { UserName = userNameTextBox.Text, pwd = pwdTextBox.Text }; UsersCmd.NewUser(UsrTb);
+                //=================================================
+                foreach (Control item in radGroupBox1.Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        ((TextBox)item).Clear();
+                    }
+                }
+
+                Operation.EndOperation(this);
+                Operation.ShowToustOk("تم الحفظ", this);
+            }
 
       }
     }

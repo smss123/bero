@@ -83,7 +83,7 @@ namespace bero_System.SecurityForms
             }
 
 
-            MessageBox.Show(" Changes Was Saved ..");
+            MessageBox.Show(" تــم حــــفظ التغيــــيرات");
 
             this.Close(); 
         }

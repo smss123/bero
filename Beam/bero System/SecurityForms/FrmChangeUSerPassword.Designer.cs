@@ -113,6 +113,7 @@
             this.AddBtn.TabIndex = 6;
             this.AddBtn.Text = "حفظ";
             this.AddBtn.ThemeName = "Office2013Light";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // OldpwdTextBox
             // 

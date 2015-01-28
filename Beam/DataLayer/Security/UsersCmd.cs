@@ -103,5 +103,37 @@ namespace DataLayer.Security
             SystemUser usr = db.SystemUsers.Where(u => u.UserName == UsrName).SingleOrDefault();
             return usr;
         }
+
+        public static bool ChangePassword(SystemUser usr)
+        {
+            try
+            {
+                var q = db.SystemUsers.Where(u => u.ID == usr.ID).SingleOrDefault();
+                if (q.ID != 0)
+                {
+                 
+                    q.pwd = usr.pwd;
+
+                    db.SubmitChanges();
+
+                    HistoryCommand.NewHistory(new History()
+                    {
+                        ActionName = "Change User's password",
+                        Description = String.Format("His Is  Name is {0}Created At {1}",
+                        q.UserName, DateTime.Now),
+                        DateOfProcess = DateTime.Now,
+                        SystemUser = LoginInfomation.CurrnetUser
+                    });
+
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
     }
 }

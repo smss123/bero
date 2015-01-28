@@ -11,7 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using DataLayer;
+using DataLayer.Security;
 namespace bero_System.SecurityForms
 {
     public partial class FrmManageUser : RadForm

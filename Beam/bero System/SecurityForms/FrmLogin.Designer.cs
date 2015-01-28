@@ -96,6 +96,7 @@
             this.ExitBtn.TabIndex = 7;
             this.ExitBtn.Text = "خروج";
             this.ExitBtn.ThemeName = "Office2013Light";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // EnterBtn
             // 
@@ -144,6 +145,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();

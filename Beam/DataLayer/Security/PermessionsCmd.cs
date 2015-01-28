@@ -50,14 +50,14 @@ namespace DataLayer.Security
             return false;
         }
 
-        //public static List<UserPermession> LoadingPermissonsOfCurrentUser()
-        //{
-          
-        //    var LST = (from u in db.UserPermessions
-        //               where u.SystemUserID == UserInfo.CurrentUserID
-        //               select u).ToList();
-        //    return LST;
-        //}
+        public static List<UserPermession> LoadingPermissonsOfCurrentUser()
+        {
+
+            var LST = (from u in db.UserPermessions
+                       where u.SystemUserID ==  LoginInfomation .CurrnetUser .ID 
+                       select u).ToList();
+            return LST;
+        }
 
         public static List<UserPermession> GetAllUserPermissonsByUserID(int UsrID)
         {
