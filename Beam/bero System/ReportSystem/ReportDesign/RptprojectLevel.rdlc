@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!CustomerName.Value</Value>
+                <Value>=Fields!ProjectName.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -20,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.17458in</Top>
-        <Left>3.655in</Left>
+        <Top>0.125in</Top>
+        <Left>2.73437in</Left>
         <Height>0.29167in</Height>
-        <Width>2.77083in</Width>
+        <Width>3.55208in</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -42,7 +42,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>اسم الزبون:</Value>
+                <Value>اسم المشروع:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -53,10 +53,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.17458in</Top>
-        <Left>6.42583in</Left>
+        <Top>0.125in</Top>
+        <Left>6.30034in</Left>
         <Height>0.29167in</Height>
-        <Width>0.83334in</Width>
+        <Width>0.95487in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -77,7 +77,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!PhoneNumber.Value</Value>
+                <Value>=Fields!createdDate.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -88,10 +88,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.17458in</Top>
-        <Left>1.2066in</Left>
+        <Top>0.58333in</Top>
+        <Left>0.53993in</Left>
         <Height>0.29167in</Height>
-        <Width>1.39583in</Width>
+        <Width>1.13541in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -111,7 +111,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>رقم الهاتف:</Value>
+                <Value>تاريخ البدء:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -122,10 +122,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.17458in</Top>
-        <Left>2.60243in</Left>
+        <Top>0.58333in</Top>
+        <Left>1.67534in</Left>
         <Height>0.29167in</Height>
-        <Width>0.83334in</Width>
+        <Width>0.95487in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -146,7 +146,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!No_building.Value</Value>
+                <Value>=Fields!ProjectDescription.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -157,10 +157,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>5.03in</Left>
-        <Height>0.29167in</Height>
-        <Width>1.39583in</Width>
+        <Top>0.58333in</Top>
+        <Left>2.73437in</Left>
+        <Height>1.04167in</Height>
+        <Width>3.55208in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -180,7 +180,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>رقم البناية:</Value>
+                <Value>وصف المشروع</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -191,10 +191,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>6.42583in</Left>
-        <Height>0.29167in</Height>
-        <Width>0.83334in</Width>
+        <Top>0.58333in</Top>
+        <Left>6.30034in</Left>
+        <Height>1.04167in</Height>
+        <Width>0.95487in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -215,7 +215,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!No_permissibility.Value</Value>
+                <Value>=Fields!DeliverDate.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -226,10 +226,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>2.7175in</Left>
+        <Top>0.94445in</Top>
+        <Left>0.53993in</Left>
         <Height>0.29167in</Height>
-        <Width>1.39583in</Width>
+        <Width>1.13541in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -249,7 +249,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>رقم الجواز:</Value>
+                <Value>تاريخ التسليم:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -260,10 +260,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>4.11333in</Left>
+        <Top>0.94445in</Top>
+        <Left>1.67534in</Left>
         <Height>0.29167in</Height>
-        <Width>0.83334in</Width>
+        <Width>0.95487in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -284,7 +284,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Total_Need.Value</Value>
+                <Value>=Fields!ProjectFullAmount.Value</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -295,10 +295,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>0.11978in</Left>
+        <Top>1.30556in</Top>
+        <Left>0.53993in</Left>
         <Height>0.29167in</Height>
-        <Width>1.39583in</Width>
+        <Width>1.13541in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -318,7 +318,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>المبلغ المطلوب:</Value>
+                <Value>الموازنة:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -329,10 +329,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.655in</Top>
-        <Left>1.51561in</Left>
+        <Top>1.30556in</Top>
+        <Left>1.67534in</Left>
         <Height>0.29167in</Height>
-        <Width>1.07292in</Width>
+        <Width>0.95487in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -346,6 +346,18 @@
           <Direction>RTL</Direction>
         </Style>
       </Textbox>
+      <Line Name="Line1">
+        <Top>4.46828cm</Top>
+        <Left>0cm</Left>
+        <Height>0cm</Height>
+        <Width>18.81187cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>Dotted</Style>
+          </Border>
+        </Style>
+      </Line>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
@@ -353,19 +365,13 @@
               <Width>0.73933in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.59054in</Width>
+              <Width>2.46554in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.88615in</Width>
+              <Width>3.03844in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.88542in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.84884in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.203in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -428,7 +434,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>اسم المشروع</Value>
+                              <Value>اسم المستوى</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -475,7 +481,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>وصف المشروع</Value>
+                              <Value>وصف المستوى</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -522,7 +528,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>تاريخ البدء</Value>
+                              <Value>الموازنة</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -535,100 +541,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox19</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox21">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>تاريخ التسليم</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox21</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox23">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>موازنة المشروع</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox23</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -669,7 +581,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber(Nothing)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -704,106 +618,115 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ProjectName">
+                    <Textbox Name="LevelAmount">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ProjectName.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>ProjectName</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ProjectDescription">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!ProjectDescription.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>ProjectDescription</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="createdDate">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!createdDate.Value</Value>
+                              <Value>=Fields!LevelAmount.Value</Value>
                               <Style>
-                                <Format>d</Format>
-                                <Calendar>GregorianUSEnglish</Calendar>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>createdDate</rd:DefaultName>
+                      <rd:DefaultName>LevelAmount</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Descripotion">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Descripotion.Value</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Descripotion</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="LevelAmount1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!LevelAmount.Value</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>LevelAmount1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -825,92 +748,6 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                         <Direction>RTL</Direction>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="DeliverDate">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!DeliverDate.Value</Value>
-                              <Style>
-                                <Format>d</Format>
-                                <Calendar>GregorianUSEnglish</Calendar>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>DeliverDate</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                        <Direction>RTL</Direction>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ProjectFullAmount">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!ProjectFullAmount.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>ProjectFullAmount</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -921,8 +758,6 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -941,11 +776,11 @@
         </TablixRowHierarchy>
         <LayoutDirection>RTL</LayoutDirection>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.51958in</Top>
-        <Left>0.10589in</Left>
+        <Top>2.27653in</Top>
+        <Left>0.12648in</Left>
         <Height>0.5in</Height>
-        <Width>7.15328in</Width>
-        <ZIndex>10</ZIndex>
+        <Width>7.12873in</Width>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -959,7 +794,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>المشاريع الخاصة بالزبون</Value>
+                <Value>مستويات المشروع</Value>
                 <Style>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -972,11 +807,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>2.72203cm</Top>
-        <Left>6.61016cm</Left>
+        <Top>4.64467cm</Top>
+        <Left>6.66247cm</Left>
         <Height>0.78493cm</Height>
         <Width>5.13826cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -988,23 +823,11 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line1">
-        <Top>2.58092cm</Top>
-        <Left>0cm</Left>
-        <Height>0cm</Height>
-        <Width>18.68932cm</Width>
-        <ZIndex>12</ZIndex>
-        <Style>
-          <Border>
-            <Style>Dotted</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
-    <Height>5.66208cm</Height>
+    <Height>7.67912cm</Height>
     <Style />
   </Body>
-  <Width>18.68932cm</Width>
+  <Width>18.81187cm</Width>
   <Page>
     <PageHeader>
       <Height>2.27542cm</Height>
@@ -1017,7 +840,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.42875cm</Height>
+      <Height>2.06375cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <Style>
@@ -1042,7 +865,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>af7f79ef-e77d-4eb3-8a8e-3d0788975b7c</rd:DataSourceID>
+      <rd:DataSourceID>41a6ddef-c548-4e04-a559-63c167de8059</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1064,16 +887,16 @@
           <DataField>DeliverDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="No_building">
-          <DataField>No_building</DataField>
+        <Field Name="Descripotion">
+          <DataField>Descripotion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="No_permissibility">
-          <DataField>No_permissibility</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="LevelAmount">
+          <DataField>LevelAmount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="PhoneNumber">
-          <DataField>PhoneNumber</DataField>
+        <Field Name="LevelName">
+          <DataField>LevelName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ProjectDescription">
@@ -1088,22 +911,14 @@
           <DataField>ProjectName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SerialNumber">
-          <DataField>SerialNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Total_Need">
-          <DataField>Total_Need</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>bero_System.ReportSystem.ReportOBj</rd:DataSetName>
-        <rd:TableName>CustomerProjectObj</rd:TableName>
-        <rd:ObjectDataSourceType>bero_System.ReportSystem.ReportOBj.CustomerProjectObj, bero System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>projectLevelObj</rd:TableName>
+        <rd:ObjectDataSourceType>bero_System.ReportSystem.ReportOBj.projectLevelObj, bero System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>0f27be50-63a7-4c7f-aa09-969275a549e9</rd:ReportID>
+  <rd:ReportID>ec636fd2-badd-4bc4-9dca-2e1c21d874b6</rd:ReportID>
 </Report>
