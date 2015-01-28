@@ -52,8 +52,10 @@ namespace bero_System.AccountForms
                 ExpenssesName = expenssesNameTextBox.Text,
                 Description = descriptionTextBox.Text 
             };
+            ExpenssesCommand.NewExpensses(extb); 
 
-            ExpenssesCommand.NewExpensses(extb);             
+   
+                        
                 foreach (Control item in radGroupBox1.Controls)
                 {
                     if (item is TextBox)
