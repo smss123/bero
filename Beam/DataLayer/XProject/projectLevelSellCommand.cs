@@ -122,16 +122,19 @@ namespace DataLayer.XProject
 
             List<projectLevelSell> LstSelles = new List<projectLevelSell>();
 
-            projectLevelSell tb = new projectLevelSell();
+            List<projectLevelSell> Lst = new List<projectLevelSell>();
 
             foreach (var item in GetAllLevelsByProjectId)
             {
-                tb = new projectLevelSell();
-                tb = (from i in db.projectLevelSells 
-                      where i.ProjectLevelID == item.id
-                      select i).SingleOrDefault();
 
-                LstSelles.Add(tb);
+                Lst = (from i in db.projectLevelSells
+                       where i.ProjectLevelID == item.id
+                       select i).ToList();
+                foreach (var itemx in Lst)
+                {
+                    LstSelles.Add(itemx);
+                }
+               
             }
             return LstSelles;
         }

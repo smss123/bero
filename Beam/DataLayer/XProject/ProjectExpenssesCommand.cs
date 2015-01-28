@@ -105,16 +105,19 @@ namespace DataLayer.XProject
             var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProjectID);
 
             List<ProjectExpenss> LstExpenss = new List<ProjectExpenss>();
-
-            ProjectExpenss tb = new ProjectExpenss();
+            List<ProjectExpenss> Lst = new List<ProjectExpenss>();
+        
          
             foreach (var item in GetAllLevelsByProjectId)
             {
-                tb= new ProjectExpenss ();
-                tb = (from i in db.ProjectExpensses 
-                      where i.ProjectLevelID == item.id select i).SingleOrDefault ();
-
-                LstExpenss.Add(tb);
+               
+                Lst = (from i in db.ProjectExpensses 
+                      where i.ProjectLevelID == item.id select i).ToList ();
+                foreach (var itemx in Lst)
+                {
+                      LstExpenss.Add(itemx);
+                }
+             
             }
             return LstExpenss ;
         }
