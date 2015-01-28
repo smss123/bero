@@ -13,8 +13,8 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewprojectLevelSell(projectLevelSell tb)
         {
-            try
-            {
+            //try
+            //{
 
                 db.projectLevelSells.InsertOnSubmit(tb);
                 db.SubmitChanges();
@@ -32,15 +32,15 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New roject Level Sell",
 
                 });
-                ProcessChange("Adding project Level Sell", tb.Sell_Item + " has Been Saved ", null);
+              //  ProcessChange("Adding project Level Sell", tb.Sell_Item + " has Been Saved ", null);
                 return true;
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't project Level Sell", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't project Level Sell", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool EditprojectLevelSell(projectLevelSell tb)
