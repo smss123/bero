@@ -14,8 +14,8 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewProjectInstallment(ProjectInstallment tb)
         {
-            try
-            {
+            //try
+            //{
 
                 db.ProjectInstallments.InsertOnSubmit(tb);
                 db.SubmitChanges();
@@ -35,15 +35,15 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Installment",
 
                 });
-                ProcessChange("Adding Project Installment", tb.Installments_name + " has Been Saved ", null);
+                //ProcessChange("Adding Project Installment", tb.Installments_name + " has Been Saved ", null);
                 return true;
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Project Installment", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Project Installment", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool EditProjectInstallment(ProjectInstallment tb)
@@ -120,20 +120,23 @@ namespace DataLayer.XProject
 
         public static List<ProjectInstallment> GetAllProjectInstallmentByProjectId(int TargetProjectID)
         {
-            var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProjectID);
+            var GetAllLevelsByProjectId = projectLevelCommand.GetByProjectProfileID(TargetProjectID).ToList ();
+
+            List<ProjectInstallment> Lst = new List<ProjectInstallment>();
 
             List<ProjectInstallment> LstProjectInstallments = new List<ProjectInstallment>();
-
-            ProjectInstallment ProjectInstallmentTb = new ProjectInstallment();
-
+    
             foreach (var item in GetAllLevelsByProjectId)
             {
-                ProjectInstallmentTb = new ProjectInstallment();
-                ProjectInstallmentTb = (from i in db.ProjectInstallments
-                      where i.ProjectLevelID == item.id
-                      select i).SingleOrDefault();
-
-                LstProjectInstallments.Add(ProjectInstallmentTb);
+             
+                Lst = (from i in db.ProjectInstallments
+                                        where i.ProjectLevelID == item.id
+                                        select i).ToList ();
+                foreach (var itemx in Lst)
+                {
+                    LstProjectInstallments.Add(itemx);
+                }
+                
             }
             return LstProjectInstallments;
         }
