@@ -12,6 +12,7 @@ using Telerik.WinControls.UI;
 
 using DataLayer;
 using DataLayer.XProject;
+using DataLayer.XAccountant;
 namespace bero_System.projectLevelFroms
 {
     public partial class FrmAddprojectLevel : RadForm
@@ -60,7 +61,20 @@ namespace bero_System.projectLevelFroms
             }
 
             #endregion
-      
+
+
+            #region "   ^^^ Check Account Balance     "
+
+            int Acct = int.Parse(TargetProjectx.AccountID.ToString());
+            double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
+            if (Convert.ToDouble(levelAmountTextBox.Text.ToString()) > balance)
+            {
+                MessageBox.Show("رصيـــــد الحساب غير كافي");
+                return;
+            }
+
+            #endregion
+
             Operation.BeginOperation(this);
 
             projectLevel LevelTable = new projectLevel() {

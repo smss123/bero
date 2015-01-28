@@ -59,7 +59,7 @@ namespace bero_System.projectLevelFroms
                 projectLevel tb = (projectLevel)projectLevelGridView.CurrentRow.DataBoundItem;
 
                 frm.TargetLevel = tb;
-
+                frm.TargetProjectx = this.TargetProjectx;
                 frm.ShowDialog();
                 Operation.EndOperation(this);
             }
