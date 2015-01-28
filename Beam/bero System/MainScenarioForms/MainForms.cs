@@ -16,6 +16,8 @@ using bero_System.BulidItemForms;
 using DataLayer;
 using bero_System.AccountForms;
 using bero_System.EmployeeForms;
+using bero_System.SecurityForms;
+
 namespace bero_System.MainScenarioForms
 {
     public partial class MainForms : RadForm
@@ -159,6 +161,18 @@ namespace bero_System.MainScenarioForms
         private void ManageHolyDayBtn_Click(object sender, EventArgs e)
         {
             FrmManageHolyDay frm = new FrmManageHolyDay();
+            frm.ShowDialog();
+        }
+
+        private void AddUser_Click(object sender, EventArgs e)
+        {
+            FrmAddUser frm = new FrmAddUser();
+            frm.ShowDialog();
+        }
+
+        private void EditUser_Click(object sender, EventArgs e)
+        {
+            FrmManageUser frm = new FrmManageUser();
             frm.ShowDialog();
         }
 

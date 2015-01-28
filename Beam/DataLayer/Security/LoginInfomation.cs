@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace DataLayer.Security
 {
     public class LoginInfomation : BaseDatabase 
@@ -13,24 +13,30 @@ namespace DataLayer.Security
 
         public static SystemUser  Login(string usr, string pass)
         {
-            var q = db.SystemUsers .Where(p => p.UserName == usr && p.pwd == pass ).ToList();
-            if (q.Count == 0 || q.Count == -1)
+            try
             {
-                return null;
-            }
-            else
+            SystemUser q = db.SystemUsers.Where(p => p.UserName == usr && p.pwd == pass).Single ();
+            if (q.ID  != 0 )
             {
+   
                 CurrnetUser = q;
 
                 var htb = new History();
                 htb.ActionName = "User LogIn";
                 htb.DateOfProcess = DateTime.Now;
                 htb.HistoryAction = "User LogIn ";
-                htb.Description = string.Format("User : {0}  LogIn And Started Use The System Now", q[0].UserName);
-                htb.UserID = q[0].ID;
+                htb.Description = string.Format("User : {0}  LogIn And Started Use The System Now", q.UserName);
+                htb.UserID = q.ID;
 
                 HistoryCommand.NewHistory(htb);
-                return q[0];
+                return q;
+            }
+            return null;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("لا يوجد بيانات مطابقة");
+                  return null;
             }
         }
     }

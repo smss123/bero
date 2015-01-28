@@ -56,5 +56,16 @@ namespace bero_System.SecurityForms
             frm.TragetUser = (SystemUser)UserGridView.CurrentRow.DataBoundItem;
             frm.ShowDialog();
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            FrmAddUser frm = new FrmAddUser();
+            frm.ShowDialog();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageUser_Load(sender, e);
+        }
     }
 }
