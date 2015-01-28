@@ -22,12 +22,11 @@ namespace bero_System.SecurityForms
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            userNameTextBox.Text = LoginInfomation.CurrnetUser.UserName;
-            userNameTextBox.ReadOnly = true;
+          
             //==========================================================
             if (OldpwdTextBox.Text == "") { MessageBox.Show("يجب أولا التحقق من كلمة المرور القديمة"); return; }
             if ( NewPwdTextBox .Text  == "") { MessageBox.Show(" يجب أدخال كلمة المرور الجدييدة أو أغلاق النافذة"); return; }
-            if (OldpwdTextBox.Text == LoginInfomation .CurrnetUser .pwd ) { MessageBox.Show("كلمة المرور خاصتك غير سليمة"); return; }
+            if (OldpwdTextBox.Text != LoginInfomation .CurrnetUser .pwd ) { MessageBox.Show("كلمة المرور خاصتك غير سليمة"); return; }
             //==========================================================
             // Start Change :
             Operation.BeginOperation(this);
@@ -45,6 +44,12 @@ namespace bero_System.SecurityForms
 
             Operation.EndOperation(this);
             Operation.ShowToustOk("تم الحفظ", this);
+        }
+
+        private void FrmChangeUSerPassword_Load(object sender, EventArgs e)
+        {
+            userNameTextBox.Text = LoginInfomation.CurrnetUser.UserName;
+            userNameTextBox.ReadOnly = true;
         }
     }
 }

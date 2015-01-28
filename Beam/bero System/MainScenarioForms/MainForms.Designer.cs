@@ -73,6 +73,8 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ChangePasswordBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -111,7 +113,9 @@
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddUser,
-            this.EditUser});
+            this.EditUser,
+            this.toolStripMenuItem1,
+            this.ChangePasswordBtn});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -122,14 +126,14 @@
             // AddUser
             // 
             this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(152, 22);
+            this.AddUser.Size = new System.Drawing.Size(153, 22);
             this.AddUser.Text = "اضافة مستخدم";
             this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // EditUser
             // 
             this.EditUser.Name = "EditUser";
-            this.EditUser.Size = new System.Drawing.Size(152, 22);
+            this.EditUser.Size = new System.Drawing.Size(153, 22);
             this.EditUser.Text = "ادارة المستخدمين";
             this.EditUser.Click += new System.EventHandler(this.EditUser_Click);
             // 
@@ -443,6 +447,19 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
+        //    this.CustomerGridView.Click += new System.EventHandler(this.CustomerGridView_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
+            // 
+            // ChangePasswordBtn
+            // 
+            this.ChangePasswordBtn.Name = "ChangePasswordBtn";
+            this.ChangePasswordBtn.Size = new System.Drawing.Size(153, 22);
+            this.ChangePasswordBtn.Text = "تعديل كلمة المرور";
+            this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click);
             // 
             // MainForms
             // 
@@ -512,5 +529,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem AddHolyDayBtn;
         private System.Windows.Forms.ToolStripMenuItem ManageHolyDayBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ChangePasswordBtn;
     }
 }

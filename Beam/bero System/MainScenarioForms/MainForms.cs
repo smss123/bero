@@ -176,6 +176,13 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
         }
 
+ 
+        private void ChangePasswordBtn_Click(object sender, EventArgs e)
+        {
+            FrmChangeUSerPassword frm = new FrmChangeUSerPassword();
+            frm.ShowDialog();
+        }
+
    
 
     }
