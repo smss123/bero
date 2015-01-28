@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.XAccountant;
 using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
@@ -109,7 +110,17 @@ namespace bero_System.projectLevelSellForms
 
             #endregion
 
-        
+            #region "   ^^^ Check Account Balance     "
+
+            int Acct = int.Parse(projectLevelComboBox.SelectedValue.ToString());
+            double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
+            if (Convert.ToDouble(amountTextBox.Text.ToString()) > balance)
+            {
+                MessageBox.Show("رصيـــــد الحساب غير كافي");
+                return;
+            }
+
+            #endregion
                TargetSelTable. ProjectLevelID = int.Parse(projectLevelComboBox.SelectedValue.ToString());
                TargetSelTable. Sell_Item = sell_ItemTextBox.Text;
                TargetSelTable. Amount = Convert.ToDouble(amountTextBox.Text);

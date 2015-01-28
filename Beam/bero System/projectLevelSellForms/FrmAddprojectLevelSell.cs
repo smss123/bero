@@ -111,6 +111,19 @@ namespace bero_System.projectLevelSellForms
             #endregion
             Operation.BeginOperation(this);
 
+
+            #region "   ^^^ Check Account Balance     "
+
+            int Acct = int.Parse(projectLevelComboBox.SelectedValue.ToString());
+            double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
+            if (Convert.ToDouble(amountTextBox.Text.ToString()) > balance)
+            {
+                MessageBox.Show("رصيـــــد الحساب غير كافي");
+                return;
+            }
+
+            #endregion
+
             projectLevelSell seltb = new projectLevelSell()
             { 
              ProjectLevelID = int.Parse (projectLevelComboBox .SelectedValue .ToString ()),
