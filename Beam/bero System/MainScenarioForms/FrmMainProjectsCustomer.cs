@@ -70,7 +70,7 @@ namespace bero_System.MainScenarioForms
         {
 
             CustomerProjectCommand cmdRpt = new CustomerProjectCommand();
-            cmdRpt.CustomerProjectByCusId(TargetCustomer.ID);
+            cmdRpt.CustomerProjectByCusId(1);
         }
     }
 }
