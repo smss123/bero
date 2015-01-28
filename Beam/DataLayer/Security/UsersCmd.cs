@@ -8,12 +8,26 @@ namespace DataLayer.Security
 {
     public   class UsersCmd : BaseDatabase 
     {
-       
+        public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
+        public static event OnchangeCallBack ProcessChange;
         public static bool NewUser(SystemUser usr)
         {
+            
             db.SystemUsers.InsertOnSubmit(usr);
             db.SubmitChanges();
+            var parmList = db.SystemPermessions.ToList();
 
+            foreach (var item in parmList)
+            {
+                var userprm = new UserPermession()
+                {
+                    PermessionValue = false.ToString(),
+                    SystemPermession = item,
+                 SystemUserID = usr.ID 
+                };
+                db.UserPermessions.InsertOnSubmit(userprm);
+            }
+            db.SubmitChanges();
             HistoryCommand.NewHistory(new History()
             {
                 ActionName = "Adding New User",
@@ -24,7 +38,6 @@ namespace DataLayer.Security
                 HistoryAction = "Adding New User",
 
             });
-
             return true;
         }
 
@@ -100,7 +113,7 @@ namespace DataLayer.Security
 
         public static SystemUser GetByName(string UsrName)
         {
-            SystemUser usr = db.SystemUsers.Where(u => u.UserName == UsrName).SingleOrDefault();
+           var usr = db.SystemUsers.Where(u => u.UserName == UsrName).Single();
             return usr;
         }
 
