@@ -15,9 +15,9 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewProjectQuantity(ProjectQuantity tb)
         {
-            try
-            {
-                db = new dbDataContext();
+            //try
+            //{
+            //    db = new dbDataContext();
                 db.ProjectQuantities.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -31,21 +31,21 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Quantity",
 
                 });
-                ProcessChange("Adding Project Quantity ", tb.ID + " has Been Saved ", null);
-                return true;
-            }
-            catch (Exception e)
-            {
+          //   ProcessChange("Adding Project Quantity ", tb.ID + " has Been Saved ", null);
+             return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Project Quantity", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Project Quantity", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool EditProjectQuantity(ProjectQuantity tb)
         {
-            try
-            {
+            //try
+            //{
                 var q = db.ProjectQuantities.Where(p => p.ID == tb.ID).Single();
                 q.ItemID = tb.ItemID;
                 q.Qty = tb.Qty;
@@ -60,22 +60,22 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-                ProcessChange("Edit Project Quantity", tb.ID + " has Been Edited ", null);
-                q = null;
-                return true;
-            }
-            catch (Exception e)
-            {
+            //    ProcessChange("Edit Project Quantity", tb.ID + " has Been Edited ", null);
+            //    q = null;
+             return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Edit Project Quantity", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Edit Project Quantity", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool DeleteProjectQuantity(int iD)
         {
-            try
-            {
+            //try
+            //{
                 var q = db.ProjectQuantities.Where(p => p.ID == iD).Single();
                 db.ProjectQuantities.DeleteOnSubmit(q);
                 db.SubmitChanges();
@@ -87,15 +87,15 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
                 q = null;
-                ProcessChange("Delete Project Quantity", q.ID + " has Been Deleted ", null);
-                return true;
-            }
-            catch (Exception e)
-            {
+              //  ProcessChange("Delete Project Quantity", q.ID + " has Been Deleted ", null);
+              return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Delete Project Quantity", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Delete Project Quantity", e.ToString());
+            //    return false;
+            //}
         }
 
         public static List<ProjectQuantity> GetAll()
