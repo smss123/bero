@@ -377,6 +377,7 @@
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
+    <Compile Include="ReportSystem\ReportCommand\ProjectInstallmentCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\projectLevelCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
@@ -584,6 +585,7 @@
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectInstallment.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptprojectLevel.rdlc" />
     <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
@@ -601,6 +603,7 @@
       <DependentUpon>FrmManageUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectInstallmentObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.projectLevelObj.datasource" />
     <None Include="Properties\DataSources\DataLayer.Account.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
