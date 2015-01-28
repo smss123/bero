@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.XAccountant;
 using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace bero_System.projectLevelFroms
         {
             InitializeComponent();
         }
-
+        public ProjectProfile TargetProjectx { get; set; }
         private void EditBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -60,6 +61,17 @@ namespace bero_System.projectLevelFroms
 
             #endregion
 
+            #region "   ^^^ Check Account Balance     "
+
+            int Acct = int.Parse(TargetProjectx.AccountID.ToString());
+            double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
+            if (Convert.ToDouble(levelAmountTextBox.Text.ToString()) > balance)
+            {
+                MessageBox.Show("رصيـــــد الحساب غير كافي");
+                return;
+            }
+
+            #endregion
             Operation.BeginOperation(this);
 
         
