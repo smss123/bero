@@ -133,12 +133,11 @@
             this.radGroupBox1.Controls.Add(employeeIDLabel);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(337, 281);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // EmployeeComboBox
@@ -153,7 +152,7 @@
             this.EmployeeComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EmployeeComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // EmployeeComboBox.NestedRadGridView
             // 
             this.EmployeeComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.EmployeeComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -247,11 +246,14 @@
             // 
             // Savebtn
             // 
-            this.Savebtn.Location = new System.Drawing.Point(199, 231);
+            this.Savebtn.Image = global::bero_System.Properties.Resources.Save;
+            this.Savebtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Savebtn.Location = new System.Drawing.Point(214, 233);
             this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(127, 36);
+            this.Savebtn.Size = new System.Drawing.Size(111, 36);
             this.Savebtn.TabIndex = 23;
             this.Savebtn.Text = "حفظ";
+            this.Savebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Savebtn.ThemeName = "Office2013Light";
             this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
@@ -281,9 +283,9 @@
             // 
             this.fromDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fromDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromDateDateTimePicker.Location = new System.Drawing.Point(16, 56);
+            this.fromDateDateTimePicker.Location = new System.Drawing.Point(154, 56);
             this.fromDateDateTimePicker.Name = "fromDateDateTimePicker";
-            this.fromDateDateTimePicker.Size = new System.Drawing.Size(248, 20);
+            this.fromDateDateTimePicker.Size = new System.Drawing.Size(110, 20);
             this.fromDateDateTimePicker.TabIndex = 19;
             this.fromDateDateTimePicker.Value = new System.DateTime(2015, 1, 27, 12, 40, 59, 0);
             // 
@@ -291,9 +293,9 @@
             // 
             this.toDatetimeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toDatetimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.toDatetimeDateTimePicker.Location = new System.Drawing.Point(20, 86);
+            this.toDatetimeDateTimePicker.Location = new System.Drawing.Point(154, 86);
             this.toDatetimeDateTimePicker.Name = "toDatetimeDateTimePicker";
-            this.toDatetimeDateTimePicker.Size = new System.Drawing.Size(244, 20);
+            this.toDatetimeDateTimePicker.Size = new System.Drawing.Size(110, 20);
             this.toDatetimeDateTimePicker.TabIndex = 16;
             // 
             // errorProvider1
@@ -307,6 +309,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 281);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(345, 312);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(345, 312);
             this.Name = "FrmEditHolyDay";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
@@ -314,7 +320,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditHolyDay";
+            this.Text = "تعديل اجازة";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditHolyDay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

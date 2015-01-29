@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label qtyLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.QtyText = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@
             // 
             qtyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             qtyLabel.AutoSize = true;
-            qtyLabel.Location = new System.Drawing.Point(277, 76);
+            qtyLabel.Location = new System.Drawing.Point(286, 58);
             qtyLabel.Name = "qtyLabel";
             qtyLabel.Size = new System.Drawing.Size(40, 13);
             qtyLabel.TabIndex = 2;
@@ -74,29 +74,31 @@
             this.radGroupBox1.Controls.Add(this.CmbItems);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(332, 164);
+            this.radGroupBox1.Size = new System.Drawing.Size(332, 141);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(208, 116);
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddBtn.Location = new System.Drawing.Point(210, 100);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 2;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // QtyText
             // 
             this.QtyText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QtyText.Location = new System.Drawing.Point(150, 73);
+            this.QtyText.Location = new System.Drawing.Point(159, 55);
             this.QtyText.Name = "QtyText";
             this.QtyText.Size = new System.Drawing.Size(124, 20);
             this.QtyText.TabIndex = 1;
@@ -105,7 +107,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 40);
+            this.label1.Location = new System.Drawing.Point(284, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 1;
@@ -124,59 +126,59 @@
             this.CmbItems.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CmbItems.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // CmbItems.NestedRadGridView
             // 
             this.CmbItems.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CmbItems.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.CmbItems.EditorControl.MasterTemplate.AllowColumnChooser = false;
             this.CmbItems.EditorControl.MasterTemplate.AutoGenerateColumns = false;
             this.CmbItems.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "ID";
-            gridViewDecimalColumn1.HeaderText = "ID";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.IsVisible = false;
-            gridViewDecimalColumn1.Name = "ID";
-            gridViewDecimalColumn1.Width = 28;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "ItemName";
-            gridViewTextBoxColumn1.HeaderText = "الصنف";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "ItemName";
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "ItemDescription";
-            gridViewTextBoxColumn2.HeaderText = "الوصف";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "ItemDescription";
-            gridViewTextBoxColumn2.Width = 72;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "ItemSummery";
-            gridViewTextBoxColumn3.HeaderText = "اختصار الصنف";
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "ItemSummery";
-            gridViewTextBoxColumn3.Width = 39;
-            gridViewTextBoxColumn4.DataType = typeof(System.Nullable<System.Guid>);
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "SerialNumber";
-            gridViewTextBoxColumn4.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "SerialNumber";
-            gridViewTextBoxColumn4.Width = 40;
-            gridViewTextBoxColumn5.DataType = typeof(System.Data.Linq.EntitySet<DataLayer.ProjectQuantity>);
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "ProjectQuantities";
-            gridViewTextBoxColumn5.HeaderText = "ProjectQuantities";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "ProjectQuantities";
-            gridViewTextBoxColumn5.Width = 23;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "ID";
+            gridViewDecimalColumn2.HeaderText = "ID";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.IsVisible = false;
+            gridViewDecimalColumn2.Name = "ID";
+            gridViewDecimalColumn2.Width = 28;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "ItemName";
+            gridViewTextBoxColumn6.HeaderText = "الصنف";
+            gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Name = "ItemName";
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "ItemDescription";
+            gridViewTextBoxColumn7.HeaderText = "الوصف";
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "ItemDescription";
+            gridViewTextBoxColumn7.Width = 72;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "ItemSummery";
+            gridViewTextBoxColumn8.HeaderText = "اختصار الصنف";
+            gridViewTextBoxColumn8.IsAutoGenerated = true;
+            gridViewTextBoxColumn8.Name = "ItemSummery";
+            gridViewTextBoxColumn8.Width = 39;
+            gridViewTextBoxColumn9.DataType = typeof(System.Nullable<System.Guid>);
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "SerialNumber";
+            gridViewTextBoxColumn9.HeaderText = "SerialNumber";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "SerialNumber";
+            gridViewTextBoxColumn9.Width = 40;
+            gridViewTextBoxColumn10.DataType = typeof(System.Data.Linq.EntitySet<DataLayer.ProjectQuantity>);
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "ProjectQuantities";
+            gridViewTextBoxColumn10.HeaderText = "ProjectQuantities";
+            gridViewTextBoxColumn10.IsAutoGenerated = true;
+            gridViewTextBoxColumn10.Name = "ProjectQuantities";
+            gridViewTextBoxColumn10.Width = 23;
             this.CmbItems.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5});
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10});
             this.CmbItems.EditorControl.MasterTemplate.EnableGrouping = false;
             this.CmbItems.EditorControl.MasterTemplate.ShowFilteringRow = false;
             this.CmbItems.EditorControl.Name = "NestedRadGridView";
@@ -185,7 +187,7 @@
             this.CmbItems.EditorControl.ShowGroupPanel = false;
             this.CmbItems.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.CmbItems.EditorControl.TabIndex = 0;
-            this.CmbItems.Location = new System.Drawing.Point(18, 38);
+            this.CmbItems.Location = new System.Drawing.Point(27, 20);
             this.CmbItems.Name = "CmbItems";
             this.CmbItems.Size = new System.Drawing.Size(256, 20);
             this.CmbItems.TabIndex = 0;
@@ -201,8 +203,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 164);
+            this.ClientSize = new System.Drawing.Size(332, 141);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(340, 172);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(340, 172);
             this.Name = "frmAddProjectQuantity";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
@@ -210,7 +216,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddProjectQuantity";
+            this.Text = "اضافة كمية";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.frmAddProjectQuantity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

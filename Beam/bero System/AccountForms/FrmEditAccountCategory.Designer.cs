@@ -49,7 +49,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(236, 43);
+            descriptionLabel.Location = new System.Drawing.Point(279, 45);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 2;
@@ -58,7 +58,7 @@
             // accountCategoryNameLabel
             // 
             accountCategoryNameLabel.AutoSize = true;
-            accountCategoryNameLabel.Location = new System.Drawing.Point(236, 17);
+            accountCategoryNameLabel.Location = new System.Drawing.Point(279, 19);
             accountCategoryNameLabel.Name = "accountCategoryNameLabel";
             accountCategoryNameLabel.Size = new System.Drawing.Size(77, 13);
             accountCategoryNameLabel.TabIndex = 0;
@@ -85,27 +85,30 @@
             // EditBtn
             // 
             this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditBtn.Location = new System.Drawing.Point(242, 115);
+            this.EditBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.EditBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EditBtn.Location = new System.Drawing.Point(245, 127);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(110, 36);
             this.EditBtn.TabIndex = 8;
             this.EditBtn.Text = "حفظ";
+            this.EditBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.EditBtn.ThemeName = "Office2013Light";
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(21, 40);
+            this.descriptionTextBox.Location = new System.Drawing.Point(27, 42);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(209, 69);
+            this.descriptionTextBox.Size = new System.Drawing.Size(246, 69);
             this.descriptionTextBox.TabIndex = 3;
             // 
             // accountCategoryNameTextBox
             // 
-            this.accountCategoryNameTextBox.Location = new System.Drawing.Point(21, 14);
+            this.accountCategoryNameTextBox.Location = new System.Drawing.Point(27, 16);
             this.accountCategoryNameTextBox.Name = "accountCategoryNameTextBox";
-            this.accountCategoryNameTextBox.Size = new System.Drawing.Size(209, 20);
+            this.accountCategoryNameTextBox.Size = new System.Drawing.Size(246, 20);
             this.accountCategoryNameTextBox.TabIndex = 1;
             // 
             // errorProvider1
@@ -119,12 +122,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 185);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(368, 216);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(368, 216);
             this.Name = "FrmEditAccountCategory";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(368, 216);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditAccountCategory";
             this.ThemeName = "Office2013Light";

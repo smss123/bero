@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             System.Windows.Forms.Label projectLevelIDLabel;
             System.Windows.Forms.Label activeStatusLabel;
             System.Windows.Forms.Label payDescriptionLabel;
@@ -36,10 +40,6 @@
             System.Windows.Forms.Label amountLabel;
             System.Windows.Forms.Label dateOfInstallmentsLabel;
             System.Windows.Forms.Label installments_nameLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
@@ -68,110 +68,49 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // projectLevelIDLabel
-            // 
-            projectLevelIDLabel.AutoSize = true;
-            projectLevelIDLabel.Location = new System.Drawing.Point(253, 200);
-            projectLevelIDLabel.Name = "projectLevelIDLabel";
-            projectLevelIDLabel.Size = new System.Drawing.Size(87, 13);
-            projectLevelIDLabel.TabIndex = 26;
-            projectLevelIDLabel.Text = "Project Level ID:";
-            // 
-            // activeStatusLabel
-            // 
-            activeStatusLabel.AutoSize = true;
-            activeStatusLabel.Location = new System.Drawing.Point(258, 170);
-            activeStatusLabel.Name = "activeStatusLabel";
-            activeStatusLabel.Size = new System.Drawing.Size(75, 13);
-            activeStatusLabel.TabIndex = 25;
-            activeStatusLabel.Text = "Active Status:";
-            // 
-            // payDescriptionLabel
-            // 
-            payDescriptionLabel.AutoSize = true;
-            payDescriptionLabel.Location = new System.Drawing.Point(258, 139);
-            payDescriptionLabel.Name = "payDescriptionLabel";
-            payDescriptionLabel.Size = new System.Drawing.Size(85, 13);
-            payDescriptionLabel.TabIndex = 23;
-            payDescriptionLabel.Text = "Pay Description:";
-            // 
-            // payByLabel
-            // 
-            payByLabel.AutoSize = true;
-            payByLabel.Location = new System.Drawing.Point(258, 112);
-            payByLabel.Name = "payByLabel";
-            payByLabel.Size = new System.Drawing.Size(44, 13);
-            payByLabel.TabIndex = 21;
-            payByLabel.Text = "Pay By:";
-            // 
-            // amountLabel
-            // 
-            amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(253, 82);
-            amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(48, 13);
-            amountLabel.TabIndex = 19;
-            amountLabel.Text = "Amount:";
-            // 
-            // dateOfInstallmentsLabel
-            // 
-            dateOfInstallmentsLabel.AutoSize = true;
-            dateOfInstallmentsLabel.Location = new System.Drawing.Point(253, 53);
-            dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
-            dateOfInstallmentsLabel.Size = new System.Drawing.Size(110, 13);
-            dateOfInstallmentsLabel.TabIndex = 17;
-            dateOfInstallmentsLabel.Text = "Date Of Installments:";
-            // 
-            // installments_nameLabel
-            // 
-            installments_nameLabel.AutoSize = true;
-            installments_nameLabel.Location = new System.Drawing.Point(254, 25);
-            installments_nameLabel.Name = "installments_nameLabel";
-            installments_nameLabel.Size = new System.Drawing.Size(98, 13);
-            installments_nameLabel.TabIndex = 15;
-            installments_nameLabel.Text = "Installments name:";
-            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.SaveBtn);
-            this.radGroupBox1.Controls.Add(this.projectLevelComboBox);
-            this.radGroupBox1.Controls.Add(this.comboBox1);
             this.radGroupBox1.Controls.Add(projectLevelIDLabel);
+            this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(activeStatusLabel);
+            this.radGroupBox1.Controls.Add(this.projectLevelComboBox);
             this.radGroupBox1.Controls.Add(payDescriptionLabel);
-            this.radGroupBox1.Controls.Add(this.payDescriptionTextBox);
+            this.radGroupBox1.Controls.Add(this.comboBox1);
             this.radGroupBox1.Controls.Add(payByLabel);
-            this.radGroupBox1.Controls.Add(this.payByTextBox);
+            this.radGroupBox1.Controls.Add(this.payDescriptionTextBox);
             this.radGroupBox1.Controls.Add(amountLabel);
-            this.radGroupBox1.Controls.Add(this.amountTextBox);
+            this.radGroupBox1.Controls.Add(this.payByTextBox);
             this.radGroupBox1.Controls.Add(dateOfInstallmentsLabel);
-            this.radGroupBox1.Controls.Add(this.dateOfInstallmentsDateTimePicker);
             this.radGroupBox1.Controls.Add(installments_nameLabel);
+            this.radGroupBox1.Controls.Add(this.amountTextBox);
+            this.radGroupBox1.Controls.Add(this.dateOfInstallmentsDateTimePicker);
             this.radGroupBox1.Controls.Add(this.installments_nameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(408, 325);
+            this.radGroupBox1.Size = new System.Drawing.Size(371, 298);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(288, 249);
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.Location = new System.Drawing.Point(256, 250);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
-            this.SaveBtn.TabIndex = 29;
+            this.SaveBtn.TabIndex = 8;
             this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // projectLevelComboBox
             // 
+            this.projectLevelComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // projectLevelComboBox.NestedRadGridView
             // 
@@ -182,7 +121,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // projectLevelComboBox.NestedRadGridView
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -229,76 +168,157 @@
             this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.projectLevelComboBox.EditorControl.TabIndex = 0;
             this.projectLevelComboBox.Enabled = false;
-            this.projectLevelComboBox.Location = new System.Drawing.Point(32, 197);
+            this.projectLevelComboBox.Location = new System.Drawing.Point(48, 196);
             this.projectLevelComboBox.Name = "projectLevelComboBox";
             this.projectLevelComboBox.Size = new System.Drawing.Size(219, 20);
-            this.projectLevelComboBox.TabIndex = 28;
+            this.projectLevelComboBox.TabIndex = 7;
             this.projectLevelComboBox.TabStop = false;
             this.projectLevelComboBox.ThemeName = "Office2013Light";
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 167);
+            this.comboBox1.Location = new System.Drawing.Point(147, 166);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 27;
+            this.comboBox1.TabIndex = 6;
             // 
             // payDescriptionTextBox
             // 
-            this.payDescriptionTextBox.Location = new System.Drawing.Point(152, 136);
+            this.payDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.payDescriptionTextBox.Location = new System.Drawing.Point(168, 135);
             this.payDescriptionTextBox.Name = "payDescriptionTextBox";
             this.payDescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.payDescriptionTextBox.TabIndex = 24;
+            this.payDescriptionTextBox.TabIndex = 5;
             // 
             // payByTextBox
             // 
-            this.payByTextBox.Location = new System.Drawing.Point(152, 105);
+            this.payByTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.payByTextBox.Location = new System.Drawing.Point(168, 104);
             this.payByTextBox.Name = "payByTextBox";
             this.payByTextBox.Size = new System.Drawing.Size(100, 20);
-            this.payByTextBox.TabIndex = 22;
+            this.payByTextBox.TabIndex = 4;
             // 
             // amountTextBox
             // 
-            this.amountTextBox.Location = new System.Drawing.Point(125, 79);
+            this.amountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.amountTextBox.Location = new System.Drawing.Point(141, 78);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(127, 20);
-            this.amountTextBox.TabIndex = 20;
+            this.amountTextBox.TabIndex = 3;
             // 
             // dateOfInstallmentsDateTimePicker
             // 
+            this.dateOfInstallmentsDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateOfInstallmentsDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.dateOfInstallmentsDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateOfInstallmentsDateTimePicker.Location = new System.Drawing.Point(118, 47);
+            this.dateOfInstallmentsDateTimePicker.Location = new System.Drawing.Point(168, 46);
             this.dateOfInstallmentsDateTimePicker.Name = "dateOfInstallmentsDateTimePicker";
-            this.dateOfInstallmentsDateTimePicker.Size = new System.Drawing.Size(133, 20);
-            this.dateOfInstallmentsDateTimePicker.TabIndex = 18;
+            this.dateOfInstallmentsDateTimePicker.Size = new System.Drawing.Size(99, 20);
+            this.dateOfInstallmentsDateTimePicker.TabIndex = 5;
             // 
             // installments_nameTextBox
             // 
-            this.installments_nameTextBox.Location = new System.Drawing.Point(32, 21);
+            this.installments_nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.installments_nameTextBox.Location = new System.Drawing.Point(34, 20);
             this.installments_nameTextBox.Name = "installments_nameTextBox";
-            this.installments_nameTextBox.Size = new System.Drawing.Size(219, 20);
-            this.installments_nameTextBox.TabIndex = 16;
+            this.installments_nameTextBox.Size = new System.Drawing.Size(233, 20);
+            this.installments_nameTextBox.TabIndex = 1;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // projectLevelIDLabel
+            // 
+            projectLevelIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            projectLevelIDLabel.AutoSize = true;
+            projectLevelIDLabel.Location = new System.Drawing.Point(269, 199);
+            projectLevelIDLabel.Name = "projectLevelIDLabel";
+            projectLevelIDLabel.Size = new System.Drawing.Size(100, 13);
+            projectLevelIDLabel.TabIndex = 20;
+            projectLevelIDLabel.Text = "المستوى المخصص:";
+            // 
+            // activeStatusLabel
+            // 
+            activeStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            activeStatusLabel.AutoSize = true;
+            activeStatusLabel.Location = new System.Drawing.Point(274, 169);
+            activeStatusLabel.Name = "activeStatusLabel";
+            activeStatusLabel.Size = new System.Drawing.Size(36, 13);
+            activeStatusLabel.TabIndex = 19;
+            activeStatusLabel.Text = "الحالة:";
+            // 
+            // payDescriptionLabel
+            // 
+            payDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            payDescriptionLabel.AutoSize = true;
+            payDescriptionLabel.Location = new System.Drawing.Point(274, 138);
+            payDescriptionLabel.Name = "payDescriptionLabel";
+            payDescriptionLabel.Size = new System.Drawing.Size(61, 13);
+            payDescriptionLabel.TabIndex = 18;
+            payDescriptionLabel.Text = "وصف الدفع:";
+            // 
+            // payByLabel
+            // 
+            payByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            payByLabel.AutoSize = true;
+            payByLabel.Location = new System.Drawing.Point(274, 111);
+            payByLabel.Name = "payByLabel";
+            payByLabel.Size = new System.Drawing.Size(66, 13);
+            payByLabel.TabIndex = 17;
+            payByLabel.Text = "دفع بواسطة:";
+            // 
+            // amountLabel
+            // 
+            amountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            amountLabel.AutoSize = true;
+            amountLabel.Location = new System.Drawing.Point(274, 81);
+            amountLabel.Name = "amountLabel";
+            amountLabel.Size = new System.Drawing.Size(38, 13);
+            amountLabel.TabIndex = 16;
+            amountLabel.Text = "المبلغ:";
+            // 
+            // dateOfInstallmentsLabel
+            // 
+            dateOfInstallmentsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            dateOfInstallmentsLabel.AutoSize = true;
+            dateOfInstallmentsLabel.Location = new System.Drawing.Point(269, 52);
+            dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
+            dateOfInstallmentsLabel.Size = new System.Drawing.Size(58, 13);
+            dateOfInstallmentsLabel.TabIndex = 15;
+            dateOfInstallmentsLabel.Text = "تاريخ الدفع:";
+            // 
+            // installments_nameLabel
+            // 
+            installments_nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            installments_nameLabel.AutoSize = true;
+            installments_nameLabel.Location = new System.Drawing.Point(270, 24);
+            installments_nameLabel.Name = "installments_nameLabel";
+            installments_nameLabel.Size = new System.Drawing.Size(68, 13);
+            installments_nameLabel.TabIndex = 14;
+            installments_nameLabel.Text = "اسم القسط:";
+            // 
             // FrmEditProjectInstallment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 325);
+            this.ClientSize = new System.Drawing.Size(371, 298);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(379, 329);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(379, 329);
             this.Name = "FrmEditProjectInstallment";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(379, 329);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditProjectInstallment";
+            this.Text = "تعديل  قسط لمشروع";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditProjectInstallment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

@@ -36,10 +36,10 @@
             System.Windows.Forms.Label payDescriptionLabel;
             System.Windows.Forms.Label activeStatusLabel;
             System.Windows.Forms.Label projectLevelIDLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
@@ -73,65 +73,65 @@
             // installments_nameLabel
             // 
             installments_nameLabel.AutoSize = true;
-            installments_nameLabel.Location = new System.Drawing.Point(261, 40);
+            installments_nameLabel.Location = new System.Drawing.Point(294, 25);
             installments_nameLabel.Name = "installments_nameLabel";
-            installments_nameLabel.Size = new System.Drawing.Size(98, 13);
+            installments_nameLabel.Size = new System.Drawing.Size(68, 13);
             installments_nameLabel.TabIndex = 0;
-            installments_nameLabel.Text = "Installments name:";
+            installments_nameLabel.Text = "اسم القسط:";
             // 
             // dateOfInstallmentsLabel
             // 
             dateOfInstallmentsLabel.AutoSize = true;
-            dateOfInstallmentsLabel.Location = new System.Drawing.Point(260, 68);
+            dateOfInstallmentsLabel.Location = new System.Drawing.Point(293, 53);
             dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
-            dateOfInstallmentsLabel.Size = new System.Drawing.Size(110, 13);
+            dateOfInstallmentsLabel.Size = new System.Drawing.Size(58, 13);
             dateOfInstallmentsLabel.TabIndex = 2;
-            dateOfInstallmentsLabel.Text = "Date Of Installments:";
+            dateOfInstallmentsLabel.Text = "تاريخ الدفع:";
             // 
             // amountLabel
             // 
             amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(260, 97);
+            amountLabel.Location = new System.Drawing.Point(298, 82);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(48, 13);
+            amountLabel.Size = new System.Drawing.Size(38, 13);
             amountLabel.TabIndex = 4;
-            amountLabel.Text = "Amount:";
+            amountLabel.Text = "المبلغ:";
             // 
             // payByLabel
             // 
             payByLabel.AutoSize = true;
-            payByLabel.Location = new System.Drawing.Point(265, 127);
+            payByLabel.Location = new System.Drawing.Point(298, 112);
             payByLabel.Name = "payByLabel";
-            payByLabel.Size = new System.Drawing.Size(44, 13);
+            payByLabel.Size = new System.Drawing.Size(66, 13);
             payByLabel.TabIndex = 6;
-            payByLabel.Text = "Pay By:";
+            payByLabel.Text = "دفع بواسطة:";
             // 
             // payDescriptionLabel
             // 
             payDescriptionLabel.AutoSize = true;
-            payDescriptionLabel.Location = new System.Drawing.Point(265, 154);
+            payDescriptionLabel.Location = new System.Drawing.Point(298, 139);
             payDescriptionLabel.Name = "payDescriptionLabel";
-            payDescriptionLabel.Size = new System.Drawing.Size(85, 13);
+            payDescriptionLabel.Size = new System.Drawing.Size(61, 13);
             payDescriptionLabel.TabIndex = 8;
-            payDescriptionLabel.Text = "Pay Description:";
+            payDescriptionLabel.Text = "وصف الدفع:";
             // 
             // activeStatusLabel
             // 
             activeStatusLabel.AutoSize = true;
-            activeStatusLabel.Location = new System.Drawing.Point(265, 185);
+            activeStatusLabel.Location = new System.Drawing.Point(298, 170);
             activeStatusLabel.Name = "activeStatusLabel";
-            activeStatusLabel.Size = new System.Drawing.Size(75, 13);
+            activeStatusLabel.Size = new System.Drawing.Size(36, 13);
             activeStatusLabel.TabIndex = 10;
-            activeStatusLabel.Text = "Active Status:";
+            activeStatusLabel.Text = "الحالة:";
             // 
             // projectLevelIDLabel
             // 
             projectLevelIDLabel.AutoSize = true;
-            projectLevelIDLabel.Location = new System.Drawing.Point(260, 215);
+            projectLevelIDLabel.Location = new System.Drawing.Point(293, 200);
             projectLevelIDLabel.Name = "projectLevelIDLabel";
-            projectLevelIDLabel.Size = new System.Drawing.Size(87, 13);
+            projectLevelIDLabel.Size = new System.Drawing.Size(100, 13);
             projectLevelIDLabel.TabIndex = 13;
-            projectLevelIDLabel.Text = "Project Level ID:";
+            projectLevelIDLabel.Text = "المستوى المخصص:";
             // 
             // radGroupBox1
             // 
@@ -153,32 +153,34 @@
             this.radGroupBox1.Controls.Add(this.installments_nameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(393, 328);
+            this.radGroupBox1.Size = new System.Drawing.Size(393, 291);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(278, 261);
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddBtn.Location = new System.Drawing.Point(274, 245);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
-            this.AddBtn.TabIndex = 15;
+            this.AddBtn.TabIndex = 8;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // CmbActiveStatus
             // 
             this.CmbActiveStatus.FormattingEnabled = true;
-            this.CmbActiveStatus.Location = new System.Drawing.Point(138, 182);
+            this.CmbActiveStatus.Location = new System.Drawing.Point(171, 167);
             this.CmbActiveStatus.Name = "CmbActiveStatus";
             this.CmbActiveStatus.Size = new System.Drawing.Size(121, 21);
-            this.CmbActiveStatus.TabIndex = 14;
+            this.CmbActiveStatus.TabIndex = 6;
             // 
             // projectLevelComboBox
             // 
@@ -193,44 +195,44 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // projectLevelComboBox.NestedRadGridView
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowColumnChooser = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AutoGenerateColumns = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "id";
-            gridViewDecimalColumn1.HeaderText = "id";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.IsVisible = false;
-            gridViewDecimalColumn1.Name = "id";
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "LevelName";
-            gridViewTextBoxColumn1.HeaderText = "المستوى";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "LevelName";
-            gridViewTextBoxColumn1.Width = 58;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Descripotion";
-            gridViewTextBoxColumn2.HeaderText = "الوصف";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "Descripotion";
-            gridViewTextBoxColumn2.Width = 106;
-            gridViewDecimalColumn2.DataType = typeof(System.Nullable<double>);
-            gridViewDecimalColumn2.EnableExpressionEditor = false;
-            gridViewDecimalColumn2.FieldName = "LevelAmount";
-            gridViewDecimalColumn2.HeaderText = "التكلفة";
-            gridViewDecimalColumn2.IsAutoGenerated = true;
-            gridViewDecimalColumn2.Name = "LevelAmount";
-            gridViewDecimalColumn2.Width = 58;
+            gridViewDecimalColumn3.DataType = typeof(int);
+            gridViewDecimalColumn3.EnableExpressionEditor = false;
+            gridViewDecimalColumn3.FieldName = "id";
+            gridViewDecimalColumn3.HeaderText = "id";
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.IsVisible = false;
+            gridViewDecimalColumn3.Name = "id";
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "LevelName";
+            gridViewTextBoxColumn3.HeaderText = "المستوى";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "LevelName";
+            gridViewTextBoxColumn3.Width = 58;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Descripotion";
+            gridViewTextBoxColumn4.HeaderText = "الوصف";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "Descripotion";
+            gridViewTextBoxColumn4.Width = 106;
+            gridViewDecimalColumn4.DataType = typeof(System.Nullable<double>);
+            gridViewDecimalColumn4.EnableExpressionEditor = false;
+            gridViewDecimalColumn4.FieldName = "LevelAmount";
+            gridViewDecimalColumn4.HeaderText = "التكلفة";
+            gridViewDecimalColumn4.IsAutoGenerated = true;
+            gridViewDecimalColumn4.Name = "LevelAmount";
+            gridViewDecimalColumn4.Width = 58;
             this.projectLevelComboBox.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewDecimalColumn2});
+            gridViewDecimalColumn3,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewDecimalColumn4});
             this.projectLevelComboBox.EditorControl.MasterTemplate.DataSource = this.projectLevelBindingSource;
             this.projectLevelComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
@@ -240,10 +242,10 @@
             this.projectLevelComboBox.EditorControl.ShowGroupPanel = false;
             this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.projectLevelComboBox.EditorControl.TabIndex = 0;
-            this.projectLevelComboBox.Location = new System.Drawing.Point(27, 212);
+            this.projectLevelComboBox.Location = new System.Drawing.Point(60, 197);
             this.projectLevelComboBox.Name = "projectLevelComboBox";
             this.projectLevelComboBox.Size = new System.Drawing.Size(232, 20);
-            this.projectLevelComboBox.TabIndex = 12;
+            this.projectLevelComboBox.TabIndex = 7;
             this.projectLevelComboBox.TabStop = false;
             this.projectLevelComboBox.ThemeName = "Office2013Light";
             // 
@@ -253,39 +255,39 @@
             // 
             // payDescriptionTextBox
             // 
-            this.payDescriptionTextBox.Location = new System.Drawing.Point(159, 151);
+            this.payDescriptionTextBox.Location = new System.Drawing.Point(171, 136);
             this.payDescriptionTextBox.Name = "payDescriptionTextBox";
-            this.payDescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.payDescriptionTextBox.TabIndex = 9;
+            this.payDescriptionTextBox.Size = new System.Drawing.Size(121, 20);
+            this.payDescriptionTextBox.TabIndex = 5;
             // 
             // payByTextBox
             // 
-            this.payByTextBox.Location = new System.Drawing.Point(159, 120);
+            this.payByTextBox.Location = new System.Drawing.Point(171, 105);
             this.payByTextBox.Name = "payByTextBox";
-            this.payByTextBox.Size = new System.Drawing.Size(100, 20);
-            this.payByTextBox.TabIndex = 7;
+            this.payByTextBox.Size = new System.Drawing.Size(121, 20);
+            this.payByTextBox.TabIndex = 4;
             // 
             // amountTextBox
             // 
-            this.amountTextBox.Location = new System.Drawing.Point(132, 94);
+            this.amountTextBox.Location = new System.Drawing.Point(171, 79);
             this.amountTextBox.Name = "amountTextBox";
-            this.amountTextBox.Size = new System.Drawing.Size(127, 20);
-            this.amountTextBox.TabIndex = 5;
+            this.amountTextBox.Size = new System.Drawing.Size(121, 20);
+            this.amountTextBox.TabIndex = 3;
             // 
             // dateOfInstallmentsDateTimePicker
             // 
             this.dateOfInstallmentsDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.dateOfInstallmentsDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateOfInstallmentsDateTimePicker.Location = new System.Drawing.Point(125, 62);
+            this.dateOfInstallmentsDateTimePicker.Location = new System.Drawing.Point(171, 47);
             this.dateOfInstallmentsDateTimePicker.Name = "dateOfInstallmentsDateTimePicker";
-            this.dateOfInstallmentsDateTimePicker.Size = new System.Drawing.Size(133, 20);
-            this.dateOfInstallmentsDateTimePicker.TabIndex = 3;
+            this.dateOfInstallmentsDateTimePicker.Size = new System.Drawing.Size(120, 20);
+            this.dateOfInstallmentsDateTimePicker.TabIndex = 2;
             // 
             // installments_nameTextBox
             // 
-            this.installments_nameTextBox.Location = new System.Drawing.Point(39, 36);
+            this.installments_nameTextBox.Location = new System.Drawing.Point(38, 21);
             this.installments_nameTextBox.Name = "installments_nameTextBox";
-            this.installments_nameTextBox.Size = new System.Drawing.Size(219, 20);
+            this.installments_nameTextBox.Size = new System.Drawing.Size(253, 20);
             this.installments_nameTextBox.TabIndex = 1;
             // 
             // errorProvider1
@@ -297,16 +299,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(393, 328);
+            this.ClientSize = new System.Drawing.Size(393, 291);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(401, 322);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(401, 322);
             this.Name = "FrmAddProjectInstallment";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(401, 322);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddProjectInstallment";
+            this.Text = "اضافة قسط مشروع";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmAddProjectInstallment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

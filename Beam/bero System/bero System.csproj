@@ -590,6 +590,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
@@ -681,6 +682,69 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProjectOffers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cus42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accoun42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee42px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refrech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editColm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletColm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pay32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qty42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Is.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expenss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1418514813_Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

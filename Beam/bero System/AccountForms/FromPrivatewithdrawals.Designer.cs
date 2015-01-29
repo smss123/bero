@@ -68,22 +68,24 @@
             this.radGroupBox1.Controls.Add(this.label1);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(369, 327);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddBtn.Location = new System.Drawing.Point(251, 286);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 21;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -92,7 +94,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(313, 194);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "الوصف:";
             // 
@@ -110,7 +112,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "الى حساب:";
             // 
@@ -120,7 +122,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(308, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "من حساب:";
             // 
@@ -193,7 +195,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(326, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "المبلغ:";
             // 
@@ -224,7 +226,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "المبلغ المتوفر:";
             // 
@@ -234,6 +236,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 327);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(377, 358);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(377, 358);
             this.Name = "FromPrivatewithdrawals";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 

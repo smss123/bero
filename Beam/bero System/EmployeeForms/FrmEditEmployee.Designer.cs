@@ -68,7 +68,7 @@
             // 
             statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(271, 218);
+            statusLabel.Location = new System.Drawing.Point(271, 210);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new System.Drawing.Size(36, 13);
             statusLabel.TabIndex = 14;
@@ -78,7 +78,7 @@
             // 
             personaltyExpiredDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             personaltyExpiredDateLabel.AutoSize = true;
-            personaltyExpiredDateLabel.Location = new System.Drawing.Point(271, 165);
+            personaltyExpiredDateLabel.Location = new System.Drawing.Point(271, 157);
             personaltyExpiredDateLabel.Name = "personaltyExpiredDateLabel";
             personaltyExpiredDateLabel.Size = new System.Drawing.Size(87, 13);
             personaltyExpiredDateLabel.TabIndex = 12;
@@ -88,7 +88,7 @@
             // 
             passportExpierdDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             passportExpierdDateLabel.AutoSize = true;
-            passportExpierdDateLabel.Location = new System.Drawing.Point(269, 116);
+            passportExpierdDateLabel.Location = new System.Drawing.Point(269, 108);
             passportExpierdDateLabel.Name = "passportExpierdDateLabel";
             passportExpierdDateLabel.Size = new System.Drawing.Size(112, 13);
             passportExpierdDateLabel.TabIndex = 10;
@@ -98,7 +98,7 @@
             // 
             salaryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             salaryLabel.AutoSize = true;
-            salaryLabel.Location = new System.Drawing.Point(271, 192);
+            salaryLabel.Location = new System.Drawing.Point(271, 184);
             salaryLabel.Name = "salaryLabel";
             salaryLabel.Size = new System.Drawing.Size(38, 13);
             salaryLabel.TabIndex = 8;
@@ -108,7 +108,7 @@
             // 
             peronaltyNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             peronaltyNumberLabel.AutoSize = true;
-            peronaltyNumberLabel.Location = new System.Drawing.Point(271, 142);
+            peronaltyNumberLabel.Location = new System.Drawing.Point(271, 134);
             peronaltyNumberLabel.Name = "peronaltyNumberLabel";
             peronaltyNumberLabel.Size = new System.Drawing.Size(57, 13);
             peronaltyNumberLabel.TabIndex = 6;
@@ -118,7 +118,7 @@
             // 
             passportNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             passportNumberLabel.AutoSize = true;
-            passportNumberLabel.Location = new System.Drawing.Point(270, 94);
+            passportNumberLabel.Location = new System.Drawing.Point(270, 86);
             passportNumberLabel.Name = "passportNumberLabel";
             passportNumberLabel.Size = new System.Drawing.Size(82, 13);
             passportNumberLabel.TabIndex = 4;
@@ -128,7 +128,7 @@
             // 
             nationaltyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             nationaltyLabel.AutoSize = true;
-            nationaltyLabel.Location = new System.Drawing.Point(270, 63);
+            nationaltyLabel.Location = new System.Drawing.Point(270, 55);
             nationaltyLabel.Name = "nationaltyLabel";
             nationaltyLabel.Size = new System.Drawing.Size(42, 13);
             nationaltyLabel.TabIndex = 2;
@@ -138,7 +138,7 @@
             // 
             employeeNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             employeeNameLabel.AutoSize = true;
-            employeeNameLabel.Location = new System.Drawing.Point(270, 33);
+            employeeNameLabel.Location = new System.Drawing.Point(270, 25);
             employeeNameLabel.Name = "employeeNameLabel";
             employeeNameLabel.Size = new System.Drawing.Size(71, 13);
             employeeNameLabel.TabIndex = 0;
@@ -171,22 +171,23 @@
             this.radGroupBox1.Controls.Add(this.employeeNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(385, 301);
             this.radGroupBox1.TabIndex = 1;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(263, 259);
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.Location = new System.Drawing.Point(263, 251);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 16;
             this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -199,7 +200,7 @@
             "فعال",
             "مؤجز",
             "مطرود"});
-            this.statusComboBox.Location = new System.Drawing.Point(104, 218);
+            this.statusComboBox.Location = new System.Drawing.Point(104, 210);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(161, 21);
             this.statusComboBox.TabIndex = 15;
@@ -209,7 +210,7 @@
             this.personaltyExpiredDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.personaltyExpiredDateDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.personaltyExpiredDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.personaltyExpiredDateDateTimePicker.Location = new System.Drawing.Point(139, 165);
+            this.personaltyExpiredDateDateTimePicker.Location = new System.Drawing.Point(139, 157);
             this.personaltyExpiredDateDateTimePicker.Name = "personaltyExpiredDateDateTimePicker";
             this.personaltyExpiredDateDateTimePicker.Size = new System.Drawing.Size(126, 20);
             this.personaltyExpiredDateDateTimePicker.TabIndex = 6;
@@ -219,7 +220,7 @@
             this.passportExpierdDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passportExpierdDateDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.passportExpierdDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.passportExpierdDateDateTimePicker.Location = new System.Drawing.Point(139, 113);
+            this.passportExpierdDateDateTimePicker.Location = new System.Drawing.Point(139, 105);
             this.passportExpierdDateDateTimePicker.Name = "passportExpierdDateDateTimePicker";
             this.passportExpierdDateDateTimePicker.Size = new System.Drawing.Size(126, 20);
             this.passportExpierdDateDateTimePicker.TabIndex = 4;
@@ -227,7 +228,7 @@
             // salaryTextBox
             // 
             this.salaryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.salaryTextBox.Location = new System.Drawing.Point(139, 192);
+            this.salaryTextBox.Location = new System.Drawing.Point(139, 184);
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(126, 20);
             this.salaryTextBox.TabIndex = 7;
@@ -235,7 +236,7 @@
             // peronaltyNumberTextBox
             // 
             this.peronaltyNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.peronaltyNumberTextBox.Location = new System.Drawing.Point(71, 139);
+            this.peronaltyNumberTextBox.Location = new System.Drawing.Point(71, 131);
             this.peronaltyNumberTextBox.Name = "peronaltyNumberTextBox";
             this.peronaltyNumberTextBox.Size = new System.Drawing.Size(194, 20);
             this.peronaltyNumberTextBox.TabIndex = 5;
@@ -243,7 +244,7 @@
             // passportNumberTextBox
             // 
             this.passportNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.passportNumberTextBox.Location = new System.Drawing.Point(71, 87);
+            this.passportNumberTextBox.Location = new System.Drawing.Point(71, 79);
             this.passportNumberTextBox.Name = "passportNumberTextBox";
             this.passportNumberTextBox.Size = new System.Drawing.Size(194, 20);
             this.passportNumberTextBox.TabIndex = 3;
@@ -252,7 +253,7 @@
             // 
             this.nationaltyComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nationaltyComboBox.FormattingEnabled = true;
-            this.nationaltyComboBox.Location = new System.Drawing.Point(113, 60);
+            this.nationaltyComboBox.Location = new System.Drawing.Point(113, 52);
             this.nationaltyComboBox.Name = "nationaltyComboBox";
             this.nationaltyComboBox.Size = new System.Drawing.Size(152, 21);
             this.nationaltyComboBox.TabIndex = 2;
@@ -260,9 +261,9 @@
             // employeeNameTextBox
             // 
             this.employeeNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.employeeNameTextBox.Location = new System.Drawing.Point(9, 30);
+            this.employeeNameTextBox.Location = new System.Drawing.Point(12, 22);
             this.employeeNameTextBox.Name = "employeeNameTextBox";
-            this.employeeNameTextBox.Size = new System.Drawing.Size(256, 20);
+            this.employeeNameTextBox.Size = new System.Drawing.Size(253, 20);
             this.employeeNameTextBox.TabIndex = 1;
             // 
             // FrmEditEmployee
@@ -278,7 +279,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditEmployee";
+            this.Text = "تعديل موظف";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

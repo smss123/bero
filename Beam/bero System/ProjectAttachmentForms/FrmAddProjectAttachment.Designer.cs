@@ -53,28 +53,30 @@
             this.radGroupBox1.Controls.Add(this.pathtextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(383, 123);
+            this.radGroupBox1.Size = new System.Drawing.Size(383, 109);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(241, 80);
+            this.radButton1.Image = global::bero_System.Properties.Resources.Add;
+            this.radButton1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButton1.Location = new System.Drawing.Point(237, 62);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(125, 33);
             this.radButton1.TabIndex = 3;
             this.radButton1.Text = "اضافة الملف";
+            this.radButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.radButton1.ThemeName = "Office2013Light";
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(334, 42);
+            this.label1.Location = new System.Drawing.Point(330, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 2;
@@ -82,7 +84,7 @@
             // 
             // BwrsBtn
             // 
-            this.BwrsBtn.Location = new System.Drawing.Point(47, 37);
+            this.BwrsBtn.Location = new System.Drawing.Point(43, 19);
             this.BwrsBtn.Name = "BwrsBtn";
             this.BwrsBtn.Size = new System.Drawing.Size(43, 24);
             this.BwrsBtn.TabIndex = 1;
@@ -91,7 +93,7 @@
             // 
             // pathtextBox
             // 
-            this.pathtextBox.Location = new System.Drawing.Point(96, 39);
+            this.pathtextBox.Location = new System.Drawing.Point(92, 21);
             this.pathtextBox.Name = "pathtextBox";
             this.pathtextBox.Size = new System.Drawing.Size(238, 20);
             this.pathtextBox.TabIndex = 0;
@@ -105,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 123);
+            this.ClientSize = new System.Drawing.Size(383, 109);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmAddProjectAttachment";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -114,7 +116,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddProjectAttachment";
+            this.Text = "اضافة مرفق";
             this.ThemeName = "Office2013Light";
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);

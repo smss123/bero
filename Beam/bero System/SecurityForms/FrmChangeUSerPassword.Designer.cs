@@ -88,12 +88,11 @@
             this.radGroupBox1.Controls.Add(this.userNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "بيانات المستخدم";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(388, 197);
             this.radGroupBox1.TabIndex = 1;
-            this.radGroupBox1.Text = "بيانات المستخدم";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // NewPwdTextBox
@@ -107,11 +106,14 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddBtn.Location = new System.Drawing.Point(271, 149);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(109, 36);
             this.AddBtn.TabIndex = 6;
             this.AddBtn.Text = "حفظ";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -137,6 +139,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 197);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(396, 228);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(396, 228);
             this.Name = "FrmChangeUSerPassword";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
@@ -144,7 +150,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmChangeUSerPassword";
+            this.Text = "تغير كلمة المرور";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmChangeUSerPassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

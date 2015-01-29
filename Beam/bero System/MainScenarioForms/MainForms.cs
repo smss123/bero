@@ -190,6 +190,11 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
         }
 
+        private void MainForms_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
    
 
     }

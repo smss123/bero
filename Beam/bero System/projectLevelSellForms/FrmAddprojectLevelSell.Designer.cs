@@ -72,7 +72,7 @@
             // 
             sell_ItemLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             sell_ItemLabel.AutoSize = true;
-            sell_ItemLabel.Location = new System.Drawing.Point(275, 27);
+            sell_ItemLabel.Location = new System.Drawing.Point(278, 15);
             sell_ItemLabel.Name = "sell_ItemLabel";
             sell_ItemLabel.Size = new System.Drawing.Size(36, 13);
             sell_ItemLabel.TabIndex = 0;
@@ -82,7 +82,7 @@
             // 
             amountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(275, 53);
+            amountLabel.Location = new System.Drawing.Point(278, 41);
             amountLabel.Name = "amountLabel";
             amountLabel.Size = new System.Drawing.Size(43, 13);
             amountLabel.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             dateOfSellLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             dateOfSellLabel.AutoSize = true;
-            dateOfSellLabel.Location = new System.Drawing.Point(272, 79);
+            dateOfSellLabel.Location = new System.Drawing.Point(275, 67);
             dateOfSellLabel.Name = "dateOfSellLabel";
             dateOfSellLabel.Size = new System.Drawing.Size(68, 13);
             dateOfSellLabel.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(276, 112);
+            descriptionLabel.Location = new System.Drawing.Point(279, 100);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(273, 172);
+            statusLabel.Location = new System.Drawing.Point(276, 160);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new System.Drawing.Size(36, 13);
             statusLabel.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             projectLevelIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             projectLevelIDLabel.AutoSize = true;
-            projectLevelIDLabel.Location = new System.Drawing.Point(272, 201);
+            projectLevelIDLabel.Location = new System.Drawing.Point(275, 189);
             projectLevelIDLabel.Name = "projectLevelIDLabel";
             projectLevelIDLabel.Size = new System.Drawing.Size(58, 13);
             projectLevelIDLabel.TabIndex = 10;
@@ -146,33 +146,35 @@
             this.radGroupBox1.Controls.Add(this.sell_ItemTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(344, 272);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.Location = new System.Drawing.Point(220, 233);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 19;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // radDateTimePicker1
             // 
-            this.radDateTimePicker1.Location = new System.Drawing.Point(148, 77);
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(163, 65);
             this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(124, 21);
+            this.radDateTimePicker1.Size = new System.Drawing.Size(112, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "Monday, January 12, 2015";
+            this.radDateTimePicker1.Text = "1/12/2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
             this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
@@ -188,7 +190,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // projectLevelComboBox.NestedRadGridView
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -247,7 +249,7 @@
             this.projectLevelComboBox.EditorControl.ShowGroupPanel = false;
             this.projectLevelComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.projectLevelComboBox.EditorControl.TabIndex = 0;
-            this.projectLevelComboBox.Location = new System.Drawing.Point(20, 199);
+            this.projectLevelComboBox.Location = new System.Drawing.Point(23, 187);
             this.projectLevelComboBox.Name = "projectLevelComboBox";
             this.projectLevelComboBox.Size = new System.Drawing.Size(251, 20);
             this.projectLevelComboBox.TabIndex = 11;
@@ -259,7 +261,7 @@
             this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.BackColor = System.Drawing.SystemColors.Menu;
             this.statusComboBox.FormattingEnabled = true;
-            this.statusComboBox.Location = new System.Drawing.Point(133, 169);
+            this.statusComboBox.Location = new System.Drawing.Point(136, 157);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(137, 21);
             this.statusComboBox.TabIndex = 9;
@@ -268,7 +270,7 @@
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.descriptionTextBox.Location = new System.Drawing.Point(20, 105);
+            this.descriptionTextBox.Location = new System.Drawing.Point(23, 93);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(251, 57);
@@ -278,7 +280,7 @@
             // 
             this.amountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.amountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.amountTextBox.Location = new System.Drawing.Point(107, 50);
+            this.amountTextBox.Location = new System.Drawing.Point(110, 38);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(165, 20);
             this.amountTextBox.TabIndex = 3;
@@ -287,7 +289,7 @@
             // 
             this.sell_ItemTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sell_ItemTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.sell_ItemTextBox.Location = new System.Drawing.Point(25, 24);
+            this.sell_ItemTextBox.Location = new System.Drawing.Point(28, 12);
             this.sell_ItemTextBox.Name = "sell_ItemTextBox";
             this.sell_ItemTextBox.Size = new System.Drawing.Size(247, 20);
             this.sell_ItemTextBox.TabIndex = 1;
@@ -310,7 +312,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddprojectLevelSell";
+            this.Text = "اضافة مشتريات";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmAddprojectLevelSell_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

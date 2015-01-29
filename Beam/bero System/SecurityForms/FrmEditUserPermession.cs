@@ -9,10 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 
 namespace bero_System.SecurityForms
 {
-    public partial class FrmEditUserPermession : Form
+    public partial class FrmEditUserPermession : RadForm
     {
         public FrmEditUserPermession()
         {

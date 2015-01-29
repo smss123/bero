@@ -50,7 +50,7 @@
             // 
             descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(261, 65);
+            descriptionLabel.Location = new System.Drawing.Point(266, 58);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 2;
@@ -60,7 +60,7 @@
             // 
             expenssesNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             expenssesNameLabel.AutoSize = true;
-            expenssesNameLabel.Location = new System.Drawing.Point(261, 34);
+            expenssesNameLabel.Location = new System.Drawing.Point(266, 27);
             expenssesNameLabel.Name = "expenssesNameLabel";
             expenssesNameLabel.Size = new System.Drawing.Size(53, 13);
             expenssesNameLabel.TabIndex = 0;
@@ -81,47 +81,49 @@
             this.radGroupBox1.Controls.Add(this.expenssesNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(320, 191);
+            this.radGroupBox1.Size = new System.Drawing.Size(329, 191);
             this.radGroupBox1.TabIndex = 1;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(197, 138);
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveBtn.Location = new System.Drawing.Point(206, 138);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 7;
             this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.descriptionTextBox.Location = new System.Drawing.Point(33, 62);
+            this.descriptionTextBox.Location = new System.Drawing.Point(17, 55);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(222, 60);
+            this.descriptionTextBox.Size = new System.Drawing.Size(243, 60);
             this.descriptionTextBox.TabIndex = 3;
             // 
             // expenssesNameTextBox
             // 
             this.expenssesNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.expenssesNameTextBox.Location = new System.Drawing.Point(33, 31);
+            this.expenssesNameTextBox.Location = new System.Drawing.Point(17, 24);
             this.expenssesNameTextBox.Name = "expenssesNameTextBox";
-            this.expenssesNameTextBox.Size = new System.Drawing.Size(222, 20);
+            this.expenssesNameTextBox.Size = new System.Drawing.Size(243, 20);
             this.expenssesNameTextBox.TabIndex = 1;
             // 
             // FrmEditExpensses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 191);
+            this.ClientSize = new System.Drawing.Size(329, 191);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmEditExpensses";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

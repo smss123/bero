@@ -53,7 +53,7 @@
             // 
             itemSummeryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemSummeryLabel.AutoSize = true;
-            itemSummeryLabel.Location = new System.Drawing.Point(280, 125);
+            itemSummeryLabel.Location = new System.Drawing.Point(257, 117);
             itemSummeryLabel.Name = "itemSummeryLabel";
             itemSummeryLabel.Size = new System.Drawing.Size(73, 13);
             itemSummeryLabel.TabIndex = 4;
@@ -63,7 +63,7 @@
             // 
             itemDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemDescriptionLabel.AutoSize = true;
-            itemDescriptionLabel.Location = new System.Drawing.Point(281, 60);
+            itemDescriptionLabel.Location = new System.Drawing.Point(258, 52);
             itemDescriptionLabel.Name = "itemDescriptionLabel";
             itemDescriptionLabel.Size = new System.Drawing.Size(41, 13);
             itemDescriptionLabel.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             itemNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             itemNameLabel.AutoSize = true;
-            itemNameLabel.Location = new System.Drawing.Point(279, 33);
+            itemNameLabel.Location = new System.Drawing.Point(256, 25);
             itemNameLabel.Name = "itemNameLabel";
             itemNameLabel.Size = new System.Drawing.Size(65, 13);
             itemNameLabel.TabIndex = 0;
@@ -91,22 +91,24 @@
             this.radGroupBox1.Controls.Add(this.itemNameTextBox);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(366, 217);
+            this.radGroupBox1.Size = new System.Drawing.Size(343, 217);
             this.radGroupBox1.TabIndex = 1;
-            this.radGroupBox1.Text = "radGroupBox1";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Location = new System.Drawing.Point(247, 162);
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveBtn.Location = new System.Drawing.Point(224, 162);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -114,7 +116,7 @@
             // 
             this.itemSummeryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemSummeryTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemSummeryTextBox.Location = new System.Drawing.Point(47, 121);
+            this.itemSummeryTextBox.Location = new System.Drawing.Point(24, 113);
             this.itemSummeryTextBox.Name = "itemSummeryTextBox";
             this.itemSummeryTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemSummeryTextBox.TabIndex = 3;
@@ -123,7 +125,7 @@
             // 
             this.itemDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemDescriptionTextBox.Location = new System.Drawing.Point(47, 57);
+            this.itemDescriptionTextBox.Location = new System.Drawing.Point(24, 49);
             this.itemDescriptionTextBox.Multiline = true;
             this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
             this.itemDescriptionTextBox.Size = new System.Drawing.Size(232, 57);
@@ -133,7 +135,7 @@
             // 
             this.itemNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.itemNameTextBox.Location = new System.Drawing.Point(47, 31);
+            this.itemNameTextBox.Location = new System.Drawing.Point(24, 23);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(232, 20);
             this.itemNameTextBox.TabIndex = 1;
@@ -147,8 +149,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 217);
+            this.ClientSize = new System.Drawing.Size(343, 217);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(351, 248);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(351, 248);
             this.Name = "FrmEditBulidItem";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 

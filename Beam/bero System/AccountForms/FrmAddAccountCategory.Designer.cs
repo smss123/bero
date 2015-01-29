@@ -49,7 +49,7 @@
             // accountCategoryNameLabel
             // 
             accountCategoryNameLabel.AutoSize = true;
-            accountCategoryNameLabel.Location = new System.Drawing.Point(245, 24);
+            accountCategoryNameLabel.Location = new System.Drawing.Point(240, 22);
             accountCategoryNameLabel.Name = "accountCategoryNameLabel";
             accountCategoryNameLabel.Size = new System.Drawing.Size(77, 13);
             accountCategoryNameLabel.TabIndex = 0;
@@ -58,7 +58,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(245, 50);
+            descriptionLabel.Location = new System.Drawing.Point(240, 48);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 2;
@@ -78,24 +78,27 @@
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox1.Size = new System.Drawing.Size(336, 174);
+            this.radGroupBox1.Size = new System.Drawing.Size(318, 173);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddBtn.Location = new System.Drawing.Point(220, 122);
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddBtn.Location = new System.Drawing.Point(196, 132);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 8;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(30, 47);
+            this.descriptionTextBox.Location = new System.Drawing.Point(25, 45);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(209, 69);
@@ -103,7 +106,7 @@
             // 
             // accountCategoryNameTextBox
             // 
-            this.accountCategoryNameTextBox.Location = new System.Drawing.Point(30, 21);
+            this.accountCategoryNameTextBox.Location = new System.Drawing.Point(25, 19);
             this.accountCategoryNameTextBox.Name = "accountCategoryNameTextBox";
             this.accountCategoryNameTextBox.Size = new System.Drawing.Size(209, 20);
             this.accountCategoryNameTextBox.TabIndex = 1;
@@ -117,8 +120,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 174);
+            this.ClientSize = new System.Drawing.Size(318, 173);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(326, 204);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(326, 204);
             this.Name = "FrmAddAccountCategory";
             // 
             // 

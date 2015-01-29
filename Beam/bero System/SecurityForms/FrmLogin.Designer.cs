@@ -32,19 +32,19 @@
             System.Windows.Forms.Label pwdLabel;
             System.Windows.Forms.Label userNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
-            this.EnterBtn = new Telerik.WinControls.UI.RadButton();
             this.pwdTextBox = new System.Windows.Forms.TextBox();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
+            this.EnterBtn = new Telerik.WinControls.UI.RadButton();
             pwdLabel = new System.Windows.Forms.Label();
             userNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnterBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,28 +87,6 @@
             this.radGroupBox1.Text = "بيانات المستخدم";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitBtn.Location = new System.Drawing.Point(22, 150);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(109, 36);
-            this.ExitBtn.TabIndex = 7;
-            this.ExitBtn.Text = "خروج";
-            this.ExitBtn.ThemeName = "Office2013Light";
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
-            // EnterBtn
-            // 
-            this.EnterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.EnterBtn.Location = new System.Drawing.Point(234, 150);
-            this.EnterBtn.Name = "EnterBtn";
-            this.EnterBtn.Size = new System.Drawing.Size(109, 36);
-            this.EnterBtn.TabIndex = 6;
-            this.EnterBtn.Text = "دخول";
-            this.EnterBtn.ThemeName = "Office2013Light";
-            this.EnterBtn.Click += new System.EventHandler(this.EnterBtn_Click);
-            // 
             // pwdTextBox
             // 
             this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -131,18 +109,50 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitBtn.Image = global::bero_System.Properties.Resources.Exit;
+            this.ExitBtn.Location = new System.Drawing.Point(22, 150);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(109, 36);
+            this.ExitBtn.TabIndex = 7;
+            this.ExitBtn.Text = "خروج";
+            this.ExitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ExitBtn.ThemeName = "Office2013Light";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // EnterBtn
+            // 
+            this.EnterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EnterBtn.Image = global::bero_System.Properties.Resources.EnterProgram;
+            this.EnterBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EnterBtn.Location = new System.Drawing.Point(234, 150);
+            this.EnterBtn.Name = "EnterBtn";
+            this.EnterBtn.Size = new System.Drawing.Size(109, 36);
+            this.EnterBtn.TabIndex = 6;
+            this.EnterBtn.Text = "دخول";
+            this.EnterBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EnterBtn.ThemeName = "Office2013Light";
+            this.EnterBtn.Click += new System.EventHandler(this.EnterBtn_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 213);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(365, 244);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(365, 244);
             this.Name = "FrmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(365, 244);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.ThemeName = "Office2013Light";
@@ -150,9 +160,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnterBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

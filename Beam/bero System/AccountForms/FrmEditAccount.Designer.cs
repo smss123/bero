@@ -57,7 +57,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(260, 93);
+            descriptionLabel.Location = new System.Drawing.Point(276, 92);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(41, 13);
             descriptionLabel.TabIndex = 12;
@@ -66,7 +66,7 @@
             // accountNameLabel
             // 
             accountNameLabel.AutoSize = true;
-            accountNameLabel.Location = new System.Drawing.Point(258, 58);
+            accountNameLabel.Location = new System.Drawing.Point(274, 57);
             accountNameLabel.Name = "accountNameLabel";
             accountNameLabel.Size = new System.Drawing.Size(73, 13);
             accountNameLabel.TabIndex = 10;
@@ -89,12 +89,12 @@
             this.radGroupBox1.Controls.Add(this.label1);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "radGroupBox1";
+            this.radGroupBox1.HeaderText = "بيانات الحساب";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(361, 252);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "radGroupBox1";
+            this.radGroupBox1.Text = "بيانات الحساب";
             this.radGroupBox1.ThemeName = "Office2013Light";
             this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
@@ -148,7 +148,7 @@
             this.CmbCategories.EditorControl.ShowGroupPanel = false;
             this.CmbCategories.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.CmbCategories.EditorControl.TabIndex = 0;
-            this.CmbCategories.Location = new System.Drawing.Point(13, 26);
+            this.CmbCategories.Location = new System.Drawing.Point(29, 25);
             this.CmbCategories.Name = "CmbCategories";
             this.CmbCategories.Size = new System.Drawing.Size(239, 20);
             this.CmbCategories.TabIndex = 0;
@@ -158,25 +158,28 @@
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.SaveBtn.Location = new System.Drawing.Point(244, 201);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 3;
             this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.ThemeName = "Office2013Light";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(12, 86);
+            this.txtDescription.Location = new System.Drawing.Point(28, 85);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(244, 98);
+            this.txtDescription.Size = new System.Drawing.Size(240, 98);
             this.txtDescription.TabIndex = 2;
             // 
             // txtAccountName
             // 
-            this.txtAccountName.Location = new System.Drawing.Point(12, 54);
+            this.txtAccountName.Location = new System.Drawing.Point(28, 53);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(240, 20);
             this.txtAccountName.TabIndex = 1;
@@ -184,7 +187,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 26);
+            this.label1.Location = new System.Drawing.Point(274, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 9;
@@ -196,12 +199,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 252);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(369, 283);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(369, 283);
             this.Name = "FrmEditAccount";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(369, 283);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditAccount";
             this.ThemeName = "Office2013Light";

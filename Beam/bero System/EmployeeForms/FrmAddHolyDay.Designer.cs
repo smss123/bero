@@ -71,7 +71,7 @@
             // 
             employeeIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             employeeIDLabel.AutoSize = true;
-            employeeIDLabel.Location = new System.Drawing.Point(286, 35);
+            employeeIDLabel.Location = new System.Drawing.Point(287, 22);
             employeeIDLabel.Name = "employeeIDLabel";
             employeeIDLabel.Size = new System.Drawing.Size(46, 13);
             employeeIDLabel.TabIndex = 0;
@@ -81,7 +81,7 @@
             // 
             toDatetimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             toDatetimeLabel.AutoSize = true;
-            toDatetimeLabel.Location = new System.Drawing.Point(284, 93);
+            toDatetimeLabel.Location = new System.Drawing.Point(285, 80);
             toDatetimeLabel.Name = "toDatetimeLabel";
             toDatetimeLabel.Size = new System.Drawing.Size(52, 13);
             toDatetimeLabel.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(286, 129);
+            statusLabel.Location = new System.Drawing.Point(287, 116);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new System.Drawing.Size(36, 13);
             statusLabel.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             fromDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             fromDateLabel.AutoSize = true;
-            fromDateLabel.Location = new System.Drawing.Point(286, 64);
+            fromDateLabel.Location = new System.Drawing.Point(287, 51);
             fromDateLabel.Name = "fromDateLabel";
             fromDateLabel.Size = new System.Drawing.Size(49, 13);
             fromDateLabel.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(287, 156);
+            label1.Location = new System.Drawing.Point(288, 143);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(38, 13);
             label1.TabIndex = 12;
@@ -133,21 +133,23 @@
             this.radGroupBox1.Controls.Add(employeeIDLabel);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
-            this.radGroupBox1.HeaderText = "اضافة بيانات";
+            this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(345, 289);
+            this.radGroupBox1.Size = new System.Drawing.Size(345, 270);
             this.radGroupBox1.TabIndex = 0;
-            this.radGroupBox1.Text = "اضافة بيانات";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
             // AddBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(207, 238);
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
+            this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddBtn.Location = new System.Drawing.Point(223, 222);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(127, 36);
+            this.AddBtn.Size = new System.Drawing.Size(111, 36);
             this.AddBtn.TabIndex = 13;
             this.AddBtn.Text = "اضافة";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -159,7 +161,7 @@
             "فعال",
             "مؤجز",
             "مطرود"});
-            this.statusComboBox.Location = new System.Drawing.Point(104, 125);
+            this.statusComboBox.Location = new System.Drawing.Point(105, 112);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(176, 21);
             this.statusComboBox.TabIndex = 11;
@@ -177,7 +179,7 @@
             this.EmployeeComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EmployeeComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // EmployeeComboBox.NestedRadGridView
             // 
             this.EmployeeComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.EmployeeComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -263,7 +265,7 @@
             this.EmployeeComboBox.EditorControl.ShowGroupPanel = false;
             this.EmployeeComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.EmployeeComboBox.EditorControl.TabIndex = 0;
-            this.EmployeeComboBox.Location = new System.Drawing.Point(32, 35);
+            this.EmployeeComboBox.Location = new System.Drawing.Point(33, 22);
             this.EmployeeComboBox.Name = "EmployeeComboBox";
             this.EmployeeComboBox.Size = new System.Drawing.Size(248, 20);
             this.EmployeeComboBox.TabIndex = 10;
@@ -273,7 +275,7 @@
             // commintTextBox
             // 
             this.commintTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.commintTextBox.Location = new System.Drawing.Point(36, 153);
+            this.commintTextBox.Location = new System.Drawing.Point(37, 140);
             this.commintTextBox.Multiline = true;
             this.commintTextBox.Name = "commintTextBox";
             this.commintTextBox.Size = new System.Drawing.Size(244, 62);
@@ -283,18 +285,18 @@
             // 
             this.fromDateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fromDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromDateDateTimePicker.Location = new System.Drawing.Point(32, 63);
+            this.fromDateDateTimePicker.Location = new System.Drawing.Point(164, 50);
             this.fromDateDateTimePicker.Name = "fromDateDateTimePicker";
-            this.fromDateDateTimePicker.Size = new System.Drawing.Size(248, 20);
+            this.fromDateDateTimePicker.Size = new System.Drawing.Size(117, 20);
             this.fromDateDateTimePicker.TabIndex = 7;
             // 
             // toDatetimeDateTimePicker
             // 
             this.toDatetimeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toDatetimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.toDatetimeDateTimePicker.Location = new System.Drawing.Point(36, 93);
+            this.toDatetimeDateTimePicker.Location = new System.Drawing.Point(164, 80);
             this.toDatetimeDateTimePicker.Name = "toDatetimeDateTimePicker";
-            this.toDatetimeDateTimePicker.Size = new System.Drawing.Size(244, 20);
+            this.toDatetimeDateTimePicker.Size = new System.Drawing.Size(117, 20);
             this.toDatetimeDateTimePicker.TabIndex = 3;
             // 
             // errorProvider1
@@ -306,16 +308,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 289);
+            this.ClientSize = new System.Drawing.Size(345, 270);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximumSize = new System.Drawing.Size(353, 301);
+            this.MinimumSize = new System.Drawing.Size(353, 301);
             this.Name = "FrmAddHolyDay";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(353, 301);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddHolyDay";
+            this.Text = "اضافة اجازة";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmAddHolyDay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
