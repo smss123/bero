@@ -69,8 +69,7 @@ namespace bero_System.MainScenarioForms
 
         private void toolStripDropDownButton4_Click(object sender, EventArgs e)
         {
-            FrmManageBulidItem FRM = new FrmManageBulidItem();
-            FRM.Show();
+           
 
         }
         #endregion 

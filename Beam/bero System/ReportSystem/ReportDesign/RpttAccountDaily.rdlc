@@ -513,14 +513,14 @@
                                   <TablixCell />
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox18">
+                                      <Textbox Name="TotalIn1">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=Sum(Fields!TotalIn.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -530,7 +530,7 @@
                                             <Style />
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox18</rd:DefaultName>
+                                        <rd:DefaultName>TotalIn1</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -585,14 +585,14 @@
                                   <TablixCell />
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox21">
+                                      <Textbox Name="TotalOut1">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=Sum(Fields!TotalOut.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -604,7 +604,7 @@
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox21</rd:DefaultName>
+                                        <rd:DefaultName>TotalOut1</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>

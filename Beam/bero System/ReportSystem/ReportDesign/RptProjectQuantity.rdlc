@@ -153,13 +153,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.65333cm</Width>
+              <Width>2.30597cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.07729cm</Width>
+              <Width>7.72993cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.15264cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -401,9 +401,9 @@
         <LayoutDirection>RTL</LayoutDirection>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.32516cm</Top>
-        <Left>0.7112cm</Left>
+        <Left>5.35435cm</Left>
         <Height>1.2cm</Height>
-        <Width>11.23062cm</Width>
+        <Width>13.18854cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>

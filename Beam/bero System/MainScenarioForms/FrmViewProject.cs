@@ -16,6 +16,7 @@ using bero_System.projectLevelFroms;
 using bero_System.ProjectQuantityForms;
 using bero_System.projectLevelSellForms;
 using bero_System.ProjectInstallmentForms;
+using bero_System.ReportSystem.ReportCommand;
 
 
 
@@ -128,6 +129,37 @@ namespace bero_System.MainScenarioForms
             frm.TargetProject = this.TargetProject;
             frm.ShowDialog();
 
+        }
+
+        private void تقريرالمشروعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            projectLevelCommandRpt cmdrpt = new projectLevelCommandRpt();
+            cmdrpt.projectLevelByProId(TargetProject.ID);
+        }
+
+        private void تقريرالمشترياتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            projectLevelSellCommandRpt CmdRpt = new projectLevelSellCommandRpt();
+            CmdRpt.projectLevelSellByProId(TargetProject.ID);
+        }
+
+        private void تقريرالكمياتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectQuantityCommandRpt Cmdrpt = new ProjectQuantityCommandRpt();
+            Cmdrpt.rojectQuantityByProId(TargetProject.ID);
+
+        }
+
+        private void تقريراقساطالمشروعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectInstallmentCommandRpt cmdrpt = new ProjectInstallmentCommandRpt();
+            cmdrpt.ProjectInstallmentByProId(TargetProject.ID);
+        }
+
+        private void تقريرمصروفاتالمشروعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectExpenssesCommandRpt cmdrpt = new ProjectExpenssesCommandRpt();
+            cmdrpt.ProjectExpenssesByProId(TargetProject.ID);
         }
 
 

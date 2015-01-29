@@ -134,6 +134,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>LightGrey</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -169,6 +170,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>LightGrey</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -204,6 +206,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>LightGrey</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -239,6 +242,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>LightGrey</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -274,6 +278,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>LightGrey</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -320,7 +325,6 @@
                                           <Direction>RTL</Direction>
                                         </Style>
                                       </Textbox>
-                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
@@ -437,6 +441,7 @@
                                                 <Value>=Fields!DateOfProcess.Value</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
+                                                  <Format>dd/MM/yyyy</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -490,6 +495,7 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>WhiteSmoke</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -504,14 +510,14 @@
                                   <TablixCell />
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox23">
+                                      <Textbox Name="Amount1">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=Sum(Fields!Amount.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -523,11 +529,12 @@
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox23</rd:DefaultName>
+                                        <rd:DefaultName>Amount1</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
+                                          <BackgroundColor>WhiteSmoke</BackgroundColor>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -608,6 +615,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <LayoutDirection>RTL</LayoutDirection>
         <DataSetName>DataSet1</DataSetName>
         <Top>3.30411cm</Top>
         <Left>0.45151cm</Left>
@@ -845,21 +853,23 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!Amount.Value)</Value>
                 <Style>
                   <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.53716in</Top>
-        <Left>4.66015in</Left>
+        <Left>5.04234in</Left>
         <Height>0.25in</Height>
-        <Width>1.5625in</Width>
+        <Width>1.18031in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>

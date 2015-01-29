@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>2.6114cm</Height>
+              <Height>2.95536cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -557,7 +557,7 @@
                                                 <Value>=Fields!DateOfInstallments.Value</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
-                                                  <Format>d</Format>
+                                                  <Format>dd/MM/yyyy</Format>
                                                   <Calendar>GregorianUSEnglish</Calendar>
                                                 </Style>
                                               </TextRun>
@@ -784,14 +784,14 @@
                                   <TablixCell />
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox30">
+                                      <Textbox Name="Amount1">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=Sum(Fields!Amount.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -801,7 +801,7 @@
                                             <Style />
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox30</rd:DefaultName>
+                                        <rd:DefaultName>Amount1</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -856,6 +856,7 @@
                               </TablixMember>
                             </TablixMembers>
                           </TablixRowHierarchy>
+                          <LayoutDirection>RTL</LayoutDirection>
                           <DataSetName>DataSet1</DataSetName>
                           <Top>0.8114cm</Top>
                           <Left>0.3175cm</Left>
@@ -940,7 +941,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>3.06925cm</Top>
         <Left>0.29668cm</Left>
-        <Height>2.6114cm</Height>
+        <Height>2.95536cm</Height>
         <Width>18.08397cm</Width>
         <Style>
           <Border>
@@ -1132,8 +1133,79 @@
           </Border>
         </Style>
       </Line>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>الإجمالي العام:</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.43786in</Top>
+        <Left>6.2816in</Left>
+        <Height>0.25in</Height>
+        <Width>0.95487in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <Direction>RTL</Direction>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Amount.Value)</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.44134in</Top>
+        <Left>4.87536in</Left>
+        <Height>0.25in</Height>
+        <Width>1.40625in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <Direction>RTL</Direction>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>5.85703cm</Height>
+    <Height>7.10939cm</Height>
     <Style />
   </Body>
   <Width>18.68932cm</Width>

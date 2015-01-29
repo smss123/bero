@@ -30,10 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.CustomerProjectObjBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerProjectObjBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // CustomerProjectObjBindingSource
+            // 
+            this.CustomerProjectObjBindingSource.DataSource = typeof(bero_System.ReportSystem.ReportOBj.CustomerProjectObj);
             // 
             // reportViewer1
             // 
@@ -47,10 +53,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(793, 514);
             this.reportViewer1.TabIndex = 0;
             // 
-            // CustomerProjectObjBindingSource
-            // 
-            this.CustomerProjectObjBindingSource.DataSource = typeof(bero_System.ReportSystem.ReportOBj.CustomerProjectObj);
-            // 
             // FrmReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -58,9 +60,16 @@
             this.ClientSize = new System.Drawing.Size(793, 514);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmReportViewer";
-            this.Text = "FrmReportViewer";
+            // 
+            // 
+            // 
+            this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "عرض تقرير";
+            this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmReportViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerProjectObjBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,6 +78,7 @@
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource CustomerProjectObjBindingSource;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
 
     }
 }

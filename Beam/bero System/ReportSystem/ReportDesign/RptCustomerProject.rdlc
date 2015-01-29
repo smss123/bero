@@ -795,7 +795,7 @@
                             <TextRun>
                               <Value>=Fields!createdDate.Value</Value>
                               <Style>
-                                <Format>d</Format>
+                                <Format>dd/MM/yyyy</Format>
                                 <Calendar>GregorianUSEnglish</Calendar>
                               </Style>
                             </TextRun>
@@ -840,7 +840,7 @@
                             <TextRun>
                               <Value>=Fields!DeliverDate.Value</Value>
                               <Style>
-                                <Format>d</Format>
+                                <Format>dd/MM/yyyy</Format>
                                 <Calendar>GregorianUSEnglish</Calendar>
                               </Style>
                             </TextRun>
@@ -955,6 +955,7 @@
                         <RightBorder>
                           <Color>Black</Color>
                         </RightBorder>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -976,7 +977,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=sum(Fields!ProjectFullAmount.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1000,6 +1001,7 @@
                         <RightBorder>
                           <Color>Black</Color>
                         </RightBorder>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>

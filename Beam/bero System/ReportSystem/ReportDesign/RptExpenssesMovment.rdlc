@@ -329,7 +329,7 @@
                                               <TextRun>
                                                 <Value>=Fields!DateOfProcess.Value</Value>
                                                 <Style>
-                                                  <Format>d</Format>
+                                                  <Format>dd/MM/yyyy</Format>
                                                   <Calendar>GregorianUSEnglish</Calendar>
                                                 </Style>
                                               </TextRun>
@@ -436,7 +436,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=sum(Fields!Amount.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>

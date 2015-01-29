@@ -341,7 +341,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=RowNumber(Nothing)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                 </Style>
@@ -472,6 +472,7 @@
                                                 <Value>=Fields!DateOfSell.Value</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
+                                                  <Format>dd/MM/yyyy</Format>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -571,14 +572,14 @@
                                   <TablixCell />
                                   <TablixCell>
                                     <CellContents>
-                                      <Textbox Name="Textbox51">
+                                      <Textbox Name="Amount1">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value />
+                                                <Value>=Sum(Fields!Amount.Value)</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -588,7 +589,7 @@
                                             <Style />
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox51</rd:DefaultName>
+                                        <rd:DefaultName>Amount1</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -637,7 +638,7 @@
                           <Top>1.10243cm</Top>
                           <Left>0.27294cm</Left>
                           <Height>1.8cm</Height>
-                          <Width>17.31588cm</Width>
+                          <Width>17.31587cm</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -917,21 +918,23 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Sum(Fields!Amount.Value)</Value>
                 <Style>
                   <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.54769in</Top>
-        <Left>5.22773in</Left>
+        <Left>5.22772in</Left>
         <Height>0.25in</Height>
-        <Width>0.98946in</Width>
+        <Width>0.98947in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
