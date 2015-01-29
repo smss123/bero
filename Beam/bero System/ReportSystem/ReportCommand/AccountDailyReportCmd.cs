@@ -68,7 +68,7 @@ public    class AccountDailyReportCmd
             FrmReportViewer frm = new FrmReportViewer();
             frm.reportViewer1.LocalReport.DataSources.Clear();
             frm.reportViewer1.LocalReport.DataSources.Add(rs);
-            frm.reportViewer1.LocalReport.ReportEmbeddedResource = "bero_System.ReportSystem.ReportDesign.RptprojectLevelSell.rdlc";
+            frm.reportViewer1.LocalReport.ReportEmbeddedResource = "bero_System.ReportSystem.ReportDesign.RpttAccountDaily.rdlc";
             frm.ShowDialog();
 
 

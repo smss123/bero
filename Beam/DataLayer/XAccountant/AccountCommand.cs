@@ -139,6 +139,44 @@ namespace DataLayer.XAccountant
            }
        }
 
+       public static double? GetAccountBalance(int accountID)
+       {
+           var balance = (double?)0d;
 
+           var allTotalIn = db.AccountDailies.Where(p => p.AccountID == accountID).Sum(p => p.TotalIn);
+           var allTotalOut = db.AccountDailies.Where(p => p.AccountID == accountID).Sum(p => p.TotalOut);
+           balance = allTotalIn - allTotalOut;
+
+           return balance;
+       }
+
+       public static double? GetAccountBalance(int accountID, DateTime fromDate, DateTime toDate)
+       {
+           var balance = (double?)0d;
+
+           var allTotalIn = db.AccountDailies.Where(
+           p => p.AccountID == accountID &&
+                p.DateOfProcess.Value.Year >= fromDate.Year
+                && p.DateOfProcess.Value.Month >= fromDate.Month &&
+                p.DateOfProcess.Value.Day >= fromDate.Day &&
+
+                 p.DateOfProcess.Value.Year <= toDate.Year
+                && p.DateOfProcess.Value.Month <= toDate.Month &&
+                p.DateOfProcess.Value.Day <= toDate.Day
+
+                ).Sum(p => p.TotalIn);
+           var allTotalOut = db.AccountDailies.Where(p => p.AccountID == accountID &&
+                p.DateOfProcess.Value.Year >= fromDate.Year
+                && p.DateOfProcess.Value.Month >= fromDate.Month &&
+                p.DateOfProcess.Value.Day >= fromDate.Day &&
+
+                 p.DateOfProcess.Value.Year <= toDate.Year
+                && p.DateOfProcess.Value.Month <= toDate.Month &&
+                p.DateOfProcess.Value.Day <= toDate.Day
+                ).Sum(p => p.TotalOut);
+           balance = allTotalIn - allTotalOut;
+
+           return balance;
+       }
     }
 }

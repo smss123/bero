@@ -377,6 +377,7 @@
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportSystem\ReportCommand\AccountDailyReportCmd.cs" />
+    <Compile Include="ReportSystem\ReportCommand\BalanceSheetCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
     <Compile Include="ReportSystem\ReportCommand\ExpenssesMovmentCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectExpenssesCommandRpt.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="ReportSystem\ReportCommand\projectLevelSellCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectQuantityCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\BalanceSheetObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\PaymentVoucherReportObj.cs" />
@@ -394,6 +396,12 @@
     <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.Designer.cs">
+      <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecurityForms\FrmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -589,14 +597,20 @@
     <EmbeddedResource Include="ReportSystem\FrmReportViewer.resx">
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptBalanceSheet.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptExpenssesMovment.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptPaymentVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectExpensses.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectInstallment.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptprojectLevel.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptprojectLevelSell.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectQuantity.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptReceiptVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RpttAccountDaily.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.resx">
+      <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -613,13 +627,16 @@
       <DependentUpon>FrmManageUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.AccountDailyObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.BalanceSheetObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ExpenssesMovmentReportObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.PaymentVoucherReportObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectExpenssesObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectInstallmentObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.projectLevelObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.projectLevelSellObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectQuantityObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ReceiptVoucherObj.datasource" />
     <None Include="Properties\DataSources\DataLayer.Account.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
     <None Include="Properties\DataSources\DataLayer.AccountDaily.datasource" />
