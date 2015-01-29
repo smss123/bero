@@ -114,6 +114,7 @@
             this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pwdTextBox.Location = new System.Drawing.Point(22, 92);
             this.pwdTextBox.Name = "pwdTextBox";
+            this.pwdTextBox.PasswordChar = '*';
             this.pwdTextBox.Size = new System.Drawing.Size(233, 20);
             this.pwdTextBox.TabIndex = 3;
             // 

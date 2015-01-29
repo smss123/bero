@@ -17,6 +17,7 @@ using DataLayer;
 using bero_System.AccountForms;
 using bero_System.EmployeeForms;
 using bero_System.SecurityForms;
+using DataLayer.Security;
 
 namespace bero_System.MainScenarioForms
 {
@@ -25,6 +26,12 @@ namespace bero_System.MainScenarioForms
         public MainForms()
         {
             InitializeComponent();
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[0].PermessionValue) == false) { this.ManageProjects.Enabled = false; }
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[1].PermessionValue) == false) { this.CustomersManager.Enabled = false; }
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[2].PermessionValue) == false) { this.UsersManager.Enabled = false; }
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[3].PermessionValue) == false) { this.EmployeesManager.Enabled = false; }
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[4].PermessionValue) == false) { this.ItemsManager.Enabled = false; }
+            if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[5].PermessionValue) == false) { this.AccountsManager.Enabled = false; }
         }
 
         void LoadingAllCustomers()

@@ -39,18 +39,20 @@
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.UsersManager = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddUser = new System.Windows.Forms.ToolStripMenuItem();
             this.EditUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ChangePasswordBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.EmployeesManager = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddEmpployeeBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.EditEmployeebtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.AddHolyDayBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageHolyDayBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.CustomersManager = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageCustomerBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,11 +60,11 @@
             this.AddProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageProjectBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.ItemsManager = new System.Windows.Forms.ToolStripDropDownButton();
             this.AddItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.AccountsManager = new System.Windows.Forms.ToolStripDropDownButton();
             this.ManageAccountCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountDailySHow = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,8 +75,6 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ChangePasswordBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -87,17 +87,17 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
-            this.toolStripDropDownButton1,
+            this.UsersManager,
             this.toolStripSeparator2,
-            this.toolStripDropDownButton3,
+            this.EmployeesManager,
             this.toolStripSeparator7,
-            this.toolStripDropDownButton2,
+            this.CustomersManager,
             this.toolStripSeparator3,
             this.ManageProjects,
             this.toolStripSeparator4,
-            this.toolStripDropDownButton4,
+            this.ItemsManager,
             this.toolStripSeparator5,
-            this.toolStripDropDownButton5});
+            this.AccountsManager});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(826, 25);
@@ -109,19 +109,19 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton1
+            // UsersManager
             // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UsersManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddUser,
             this.EditUser,
             this.toolStripMenuItem1,
             this.ChangePasswordBtn});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(88, 22);
-            this.toolStripDropDownButton1.Text = "المستخدمين";
+            this.UsersManager.Image = ((System.Drawing.Image)(resources.GetObject("UsersManager.Image")));
+            this.UsersManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UsersManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UsersManager.Name = "UsersManager";
+            this.UsersManager.Size = new System.Drawing.Size(88, 22);
+            this.UsersManager.Text = "المستخدمين";
             // 
             // AddUser
             // 
@@ -137,55 +137,67 @@
             this.EditUser.Text = "ادارة المستخدمين";
             this.EditUser.Click += new System.EventHandler(this.EditUser_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
+            // 
+            // ChangePasswordBtn
+            // 
+            this.ChangePasswordBtn.Name = "ChangePasswordBtn";
+            this.ChangePasswordBtn.Size = new System.Drawing.Size(153, 22);
+            this.ChangePasswordBtn.Text = "تعديل كلمة المرور";
+            this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton3
+            // EmployeesManager
             // 
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EmployeesManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddEmpployeeBtn,
             this.EditEmployeebtn,
             this.toolStripSeparator8,
             this.AddHolyDayBtn,
             this.ManageHolyDayBtn});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(75, 22);
-            this.toolStripDropDownButton3.Text = "الموظفين";
+            this.EmployeesManager.Image = ((System.Drawing.Image)(resources.GetObject("EmployeesManager.Image")));
+            this.EmployeesManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EmployeesManager.Name = "EmployeesManager";
+            this.EmployeesManager.Size = new System.Drawing.Size(75, 22);
+            this.EmployeesManager.Text = "الموظفين";
             // 
             // AddEmpployeeBtn
             // 
             this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
-            this.AddEmpployeeBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddEmpployeeBtn.Size = new System.Drawing.Size(152, 22);
             this.AddEmpployeeBtn.Text = "اضافة موظف";
             this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
             // 
             // EditEmployeebtn
             // 
             this.EditEmployeebtn.Name = "EditEmployeebtn";
-            this.EditEmployeebtn.Size = new System.Drawing.Size(138, 22);
+            this.EditEmployeebtn.Size = new System.Drawing.Size(152, 22);
             this.EditEmployeebtn.Text = "ادارة الموظفين";
             this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
             // 
             // AddHolyDayBtn
             // 
             this.AddHolyDayBtn.Name = "AddHolyDayBtn";
-            this.AddHolyDayBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddHolyDayBtn.Size = new System.Drawing.Size(152, 22);
             this.AddHolyDayBtn.Text = "اضافة اجازة";
             this.AddHolyDayBtn.Click += new System.EventHandler(this.AddHolyDayBtn_Click);
             // 
             // ManageHolyDayBtn
             // 
             this.ManageHolyDayBtn.Name = "ManageHolyDayBtn";
-            this.ManageHolyDayBtn.Size = new System.Drawing.Size(138, 22);
+            this.ManageHolyDayBtn.Size = new System.Drawing.Size(152, 22);
             this.ManageHolyDayBtn.Text = "ادارة الاجازات";
             this.ManageHolyDayBtn.Click += new System.EventHandler(this.ManageHolyDayBtn_Click);
             // 
@@ -194,28 +206,28 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton2
+            // CustomersManager
             // 
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CustomersManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddCustomerBtn,
             this.ManageCustomerBtn});
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(64, 22);
-            this.toolStripDropDownButton2.Text = "العملاء";
+            this.CustomersManager.Image = ((System.Drawing.Image)(resources.GetObject("CustomersManager.Image")));
+            this.CustomersManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CustomersManager.Name = "CustomersManager";
+            this.CustomersManager.Size = new System.Drawing.Size(64, 22);
+            this.CustomersManager.Text = "العملاء";
             // 
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Name = "AddCustomerBtn";
-            this.AddCustomerBtn.Size = new System.Drawing.Size(127, 22);
+            this.AddCustomerBtn.Size = new System.Drawing.Size(152, 22);
             this.AddCustomerBtn.Text = "اضافة عميل";
             this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // ManageCustomerBtn
             // 
             this.ManageCustomerBtn.Name = "ManageCustomerBtn";
-            this.ManageCustomerBtn.Size = new System.Drawing.Size(127, 22);
+            this.ManageCustomerBtn.Size = new System.Drawing.Size(152, 22);
             this.ManageCustomerBtn.Text = "ادارة العملاء";
             this.ManageCustomerBtn.Click += new System.EventHandler(this.ManageCustomerBtn_Click);
             // 
@@ -239,14 +251,14 @@
             // AddProjectBtn
             // 
             this.AddProjectBtn.Name = "AddProjectBtn";
-            this.AddProjectBtn.Size = new System.Drawing.Size(140, 22);
+            this.AddProjectBtn.Size = new System.Drawing.Size(152, 22);
             this.AddProjectBtn.Text = "اضافة مشروع";
             this.AddProjectBtn.Click += new System.EventHandler(this.AddProjectBtn_Click);
             // 
             // ManageProjectBtn
             // 
             this.ManageProjectBtn.Name = "ManageProjectBtn";
-            this.ManageProjectBtn.Size = new System.Drawing.Size(140, 22);
+            this.ManageProjectBtn.Size = new System.Drawing.Size(152, 22);
             this.ManageProjectBtn.Text = "ادارة المشاريع";
             this.ManageProjectBtn.Click += new System.EventHandler(this.ManageProjectBtn_Click);
             // 
@@ -255,30 +267,30 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton4
+            // ItemsManager
             // 
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemsManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddItem,
             this.ManageItem});
-            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
-            this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
-            this.toolStripDropDownButton4.Text = "الاصناف";
-            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
+            this.ItemsManager.Image = ((System.Drawing.Image)(resources.GetObject("ItemsManager.Image")));
+            this.ItemsManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ItemsManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ItemsManager.Name = "ItemsManager";
+            this.ItemsManager.Size = new System.Drawing.Size(73, 22);
+            this.ItemsManager.Text = "الاصناف";
+            this.ItemsManager.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
             // 
             // AddItem
             // 
             this.AddItem.Name = "AddItem";
-            this.AddItem.Size = new System.Drawing.Size(136, 22);
+            this.AddItem.Size = new System.Drawing.Size(152, 22);
             this.AddItem.Text = "اضافة صنف ";
             this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
             // ManageItem
             // 
             this.ManageItem.Name = "ManageItem";
-            this.ManageItem.Size = new System.Drawing.Size(136, 22);
+            this.ManageItem.Size = new System.Drawing.Size(152, 22);
             this.ManageItem.Text = "ادارة الأصناف";
             this.ManageItem.Click += new System.EventHandler(this.ManageItem_Click);
             // 
@@ -287,21 +299,21 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripDropDownButton5
+            // AccountsManager
             // 
-            this.toolStripDropDownButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AccountsManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ManageAccountCategory,
             this.ManageAccount,
             this.AccountDailySHow,
             this.AccountsTreeBtn,
             this.toolStripSeparator6,
             this.ManageExpensses});
-            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
-            this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(78, 22);
-            this.toolStripDropDownButton5.Text = "الحسابات";
+            this.AccountsManager.Image = ((System.Drawing.Image)(resources.GetObject("AccountsManager.Image")));
+            this.AccountsManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AccountsManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AccountsManager.Name = "AccountsManager";
+            this.AccountsManager.Size = new System.Drawing.Size(78, 22);
+            this.AccountsManager.Text = "الحسابات";
             // 
             // ManageAccountCategory
             // 
@@ -447,19 +459,6 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
-        //    this.CustomerGridView.Click += new System.EventHandler(this.CustomerGridView_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
-            // 
-            // ChangePasswordBtn
-            // 
-            this.ChangePasswordBtn.Name = "ChangePasswordBtn";
-            this.ChangePasswordBtn.Size = new System.Drawing.Size(153, 22);
-            this.ChangePasswordBtn.Text = "تعديل كلمة المرور";
-            this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click);
             // 
             // MainForms
             // 
@@ -496,16 +495,16 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton UsersManager;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripDropDownButton CustomersManager;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripDropDownButton ManageProjects;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
+        private System.Windows.Forms.ToolStripDropDownButton ItemsManager;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
+        private System.Windows.Forms.ToolStripDropDownButton AccountsManager;
         private Telerik.WinControls.UI.RadGridView CustomerGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ToolStripMenuItem AddCustomerBtn;
@@ -522,7 +521,7 @@
         private System.Windows.Forms.ToolStripMenuItem ManageProjectBtn;
         private System.Windows.Forms.ToolStripMenuItem AddItem;
         private System.Windows.Forms.ToolStripMenuItem ManageItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripDropDownButton EmployeesManager;
         private System.Windows.Forms.ToolStripMenuItem AddEmpployeeBtn;
         private System.Windows.Forms.ToolStripMenuItem EditEmployeebtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
