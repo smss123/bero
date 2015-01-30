@@ -18,7 +18,7 @@ namespace DataLayer.XAccountant
 
 
                 db.AccountDailies.InsertOnSubmit(tb);
-                db.SubmitChanges();
+
                 History htb = new History()
                 {
                     ActionName = "Adding New Account Daily",
@@ -26,7 +26,7 @@ namespace DataLayer.XAccountant
                      "\n Total In : " + tb.TotalIn.ToString() +
                      "Total Out : " + tb.TotalOut.ToString() +
                      "Date Of Process : " + tb.DateOfProcess.ToString() +
-                     "Description : " + tb.Description+
+                     "Description : " + tb.Description +
                      "Command Arg : " + tb.CommandArg,
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser,
