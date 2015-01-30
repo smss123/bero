@@ -114,5 +114,19 @@ namespace DataLayer.XCustomer
             return tb;
         }
 
+
+        public static bool EditCustomer_TotalNeed(Customer cust)
+        {
+            
+                var q = db.Customers.Where(p => p.ID == cust.ID).Single();
+                q.Total_Need = cust.Total_Need;
+                db.SubmitChanges();
+               
+              
+                return true;
+           
+        }
+
+
     }
 }

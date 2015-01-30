@@ -16,6 +16,7 @@ using Telerik.WinControls.UI;
 using DataLayer;
 using DataLayer.XProject;
 using DataLayer.XAccountant;
+using DataLayer.XCustomer;
 namespace bero_System.ProjectInstallmentForms
 {
     public partial class FrmAddProjectInstallment : RadForm
@@ -160,7 +161,12 @@ namespace bero_System.ProjectInstallmentForms
                 Description = payDescriptionTextBox .Text
             };
             AccountDailyCommand.NewAccountDaily(xtb);
-            //===================================================================
+            //=============================================================================================================
+           // Update Customer's Total_Need At Customer Table After Installment :
+            Customer EditTb = new Customer();
+            EditTb.Total_Need =  AccountDailyCommand.GetBalanceByAccountID(Convert.ToInt32  (CurrentCustomer .AccountID) );
+            CustomerCommand.EditCustomer_TotalNeed(CurrentCustomer);
+            //==============================================================================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)
