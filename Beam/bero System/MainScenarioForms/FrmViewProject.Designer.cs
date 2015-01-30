@@ -33,6 +33,9 @@
             System.Windows.Forms.Label projectFullAmountLabel;
             System.Windows.Forms.Label projectNameLabel;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectLevelsBtn = new System.Windows.Forms.ToolStripDropDownButton();
@@ -58,6 +61,11 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.تقريرالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقريرالمشترياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقريرالكمياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقريراقساطالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقريرمصروفاتالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CreatDatetextBox = new System.Windows.Forms.TextBox();
@@ -67,11 +75,15 @@
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.تقريرالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقريرالمشترياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقريرالكمياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقريراقساطالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقريرمصروفاتالمشروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
@@ -81,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -282,14 +296,14 @@
             // AddInstalmentBtn
             // 
             this.AddInstalmentBtn.Name = "AddInstalmentBtn";
-            this.AddInstalmentBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddInstalmentBtn.Size = new System.Drawing.Size(152, 22);
             this.AddInstalmentBtn.Text = "اضافة قسط";
             this.AddInstalmentBtn.Click += new System.EventHandler(this.AddInstalmentBtn_Click);
             // 
             // InstalmentsBtb
             // 
             this.InstalmentsBtb.Name = "InstalmentsBtb";
-            this.InstalmentsBtb.Size = new System.Drawing.Size(138, 22);
+            this.InstalmentsBtb.Size = new System.Drawing.Size(152, 22);
             this.InstalmentsBtb.Text = "ادارة الاقساط";
             this.InstalmentsBtb.Click += new System.EventHandler(this.InstalmentsBtb_Click);
             // 
@@ -359,9 +373,44 @@
             this.toolStripDropDownButton6.Size = new System.Drawing.Size(123, 47);
             this.toolStripDropDownButton6.Text = "تقارير المشروع";
             // 
+            // تقريرالمشروعToolStripMenuItem
+            // 
+            this.تقريرالمشروعToolStripMenuItem.Name = "تقريرالمشروعToolStripMenuItem";
+            this.تقريرالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالمشروعToolStripMenuItem.Text = "تقرير المشروع";
+            this.تقريرالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشروعToolStripMenuItem_Click);
+            // 
+            // تقريرالمشترياتToolStripMenuItem
+            // 
+            this.تقريرالمشترياتToolStripMenuItem.Name = "تقريرالمشترياتToolStripMenuItem";
+            this.تقريرالمشترياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالمشترياتToolStripMenuItem.Text = "تقرير المشتريات";
+            this.تقريرالمشترياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشترياتToolStripMenuItem_Click);
+            // 
+            // تقريرالكمياتToolStripMenuItem
+            // 
+            this.تقريرالكمياتToolStripMenuItem.Name = "تقريرالكمياتToolStripMenuItem";
+            this.تقريرالكمياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالكمياتToolStripMenuItem.Text = "تقرير الكميات";
+            this.تقريرالكمياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالكمياتToolStripMenuItem_Click);
+            // 
+            // تقريراقساطالمشروعToolStripMenuItem
+            // 
+            this.تقريراقساطالمشروعToolStripMenuItem.Name = "تقريراقساطالمشروعToolStripMenuItem";
+            this.تقريراقساطالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريراقساطالمشروعToolStripMenuItem.Text = "تقرير اقساط المشروع";
+            this.تقريراقساطالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريراقساطالمشروعToolStripMenuItem_Click);
+            // 
+            // تقريرمصروفاتالمشروعToolStripMenuItem
+            // 
+            this.تقريرمصروفاتالمشروعToolStripMenuItem.Name = "تقريرمصروفاتالمشروعToolStripMenuItem";
+            this.تقريرمصروفاتالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرمصروفاتالمشروعToolStripMenuItem.Text = "تقرير مصروفات المشروع";
+            this.تقريرمصروفاتالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرمصروفاتالمشروعToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 485);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 477);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1059, 22);
             this.statusStrip1.TabIndex = 2;
@@ -445,56 +494,126 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.chart1);
+            this.radGroupBox2.Controls.Add(this.textBox4);
+            this.radGroupBox2.Controls.Add(this.label6);
+            this.radGroupBox2.Controls.Add(this.textBox3);
+            this.radGroupBox2.Controls.Add(this.label5);
+            this.radGroupBox2.Controls.Add(this.textBox2);
+            this.radGroupBox2.Controls.Add(this.label4);
+            this.radGroupBox2.Controls.Add(this.textBox1);
+            this.radGroupBox2.Controls.Add(this.label3);
             this.radGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox2.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox2.HeaderText = "اضافات اخرى";
             this.radGroupBox2.Location = new System.Drawing.Point(0, 213);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(1059, 272);
+            this.radGroupBox2.Size = new System.Drawing.Size(1059, 264);
             this.radGroupBox2.TabIndex = 4;
             this.radGroupBox2.Text = "اضافات اخرى";
             this.radGroupBox2.ThemeName = "Office2013Light";
             // 
-            // تقريرالمشروعToolStripMenuItem
+            // label3
             // 
-            this.تقريرالمشروعToolStripMenuItem.Name = "تقريرالمشروعToolStripMenuItem";
-            this.تقريرالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.تقريرالمشروعToolStripMenuItem.Text = "تقرير المشروع";
-            this.تقريرالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشروعToolStripMenuItem_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(894, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "باقي على زمن المشروع:";
             // 
-            // تقريرالمشترياتToolStripMenuItem
+            // textBox1
             // 
-            this.تقريرالمشترياتToolStripMenuItem.Name = "تقريرالمشترياتToolStripMenuItem";
-            this.تقريرالمشترياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.تقريرالمشترياتToolStripMenuItem.Text = "تقرير المشتريات";
-            this.تقريرالمشترياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشترياتToolStripMenuItem_Click);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(723, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 26);
+            this.textBox1.TabIndex = 1;
             // 
-            // تقريرالكمياتToolStripMenuItem
+            // textBox2
             // 
-            this.تقريرالكمياتToolStripMenuItem.Name = "تقريرالكمياتToolStripMenuItem";
-            this.تقريرالكمياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.تقريرالكمياتToolStripMenuItem.Text = "تقرير الكميات";
-            this.تقريرالكمياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالكمياتToolStripMenuItem_Click);
+            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(723, 76);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(168, 26);
+            this.textBox2.TabIndex = 3;
             // 
-            // تقريراقساطالمشروعToolStripMenuItem
+            // label4
             // 
-            this.تقريراقساطالمشروعToolStripMenuItem.Name = "تقريراقساطالمشروعToolStripMenuItem";
-            this.تقريراقساطالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.تقريراقساطالمشروعToolStripMenuItem.Text = "تقرير اقساط المشروع";
-            this.تقريراقساطالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريراقساطالمشروعToolStripMenuItem_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(894, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "اجمالي مصروفات المشروع:";
             // 
-            // تقريرمصروفاتالمشروعToolStripMenuItem
+            // textBox3
             // 
-            this.تقريرمصروفاتالمشروعToolStripMenuItem.Name = "تقريرمصروفاتالمشروعToolStripMenuItem";
-            this.تقريرمصروفاتالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.تقريرمصروفاتالمشروعToolStripMenuItem.Text = "تقرير مصروفات المشروع";
-            this.تقريرمصروفاتالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرمصروفاتالمشروعToolStripMenuItem_Click);
+            this.textBox3.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(722, 118);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(168, 26);
+            this.textBox3.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(893, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "اجمالي المشتريات للمشروع:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(723, 160);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(168, 26);
+            this.textBox4.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.Location = new System.Drawing.Point(894, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "اجمالي الاقساط المدفوعة:";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(38, 31);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(408, 228);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
             // 
             // FrmViewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 507);
+            this.ClientSize = new System.Drawing.Size(1059, 499);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.statusStrip1);
@@ -515,6 +634,9 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -562,5 +684,14 @@
         private System.Windows.Forms.ToolStripMenuItem تقريرالكمياتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تقريراقساطالمشروعToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تقريرمصروفاتالمشروعToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

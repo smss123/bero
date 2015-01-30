@@ -291,7 +291,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -415,6 +417,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -462,6 +465,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -509,6 +513,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -556,6 +561,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -603,6 +609,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -650,6 +657,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -698,6 +706,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -739,6 +748,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -780,6 +790,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -800,7 +811,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>createdDate</rd:DefaultName>
@@ -845,7 +858,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>DeliverDate</rd:DefaultName>
@@ -887,7 +902,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ProjectFullAmount</rd:DefaultName>
@@ -911,6 +928,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -960,6 +978,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <Direction>RTL</Direction>
                       </Style>
                     </Textbox>
                     <ColSpan>4</ColSpan>
@@ -981,7 +1000,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox22</rd:DefaultName>

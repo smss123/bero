@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageHolyDay));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn4 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn3 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn4 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -75,40 +74,40 @@
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(824, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(824, 40);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // AddBtn
             // 
-            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
+            this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(82, 22);
+            this.AddBtn.Size = new System.Drawing.Size(100, 37);
             this.AddBtn.Text = "اضافة اجازة";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // RefreshBtn
             // 
-            this.RefreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.Image")));
+            this.RefreshBtn.Image = global::bero_System.Properties.Resources.Refrech;
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(95, 22);
+            this.RefreshBtn.Size = new System.Drawing.Size(120, 37);
             this.RefreshBtn.Text = "تحديث السجلات";
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // radGroupBox1
             // 
@@ -117,9 +116,9 @@
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "سجلات الاجازات";
-            this.radGroupBox1.Location = new System.Drawing.Point(0, 25);
+            this.radGroupBox1.Location = new System.Drawing.Point(0, 40);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(824, 342);
+            this.radGroupBox1.Size = new System.Drawing.Size(824, 327);
             this.radGroupBox1.TabIndex = 6;
             this.radGroupBox1.Text = "سجلات الاجازات";
             this.radGroupBox1.ThemeName = "Office2013Light";
@@ -140,70 +139,70 @@
             this.DGVHolydays.MasterTemplate.AllowSearchRow = true;
             this.DGVHolydays.MasterTemplate.AutoGenerateColumns = false;
             this.DGVHolydays.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn2.DataType = typeof(int);
-            gridViewDecimalColumn2.EnableExpressionEditor = false;
-            gridViewDecimalColumn2.FieldName = "ID";
-            gridViewDecimalColumn2.HeaderText = "ID";
-            gridViewDecimalColumn2.IsAutoGenerated = true;
-            gridViewDecimalColumn2.Name = "ID";
-            gridViewDecimalColumn2.Width = 66;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Employee.EmployeeName";
-            gridViewTextBoxColumn4.HeaderText = "الموظف";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "Employee";
-            gridViewTextBoxColumn4.Width = 121;
-            gridViewDateTimeColumn3.DataType = typeof(System.Nullable<System.DateTime>);
-            gridViewDateTimeColumn3.EnableExpressionEditor = false;
-            gridViewDateTimeColumn3.FieldName = "fromDate";
-            gridViewDateTimeColumn3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn3.HeaderText = "من تاريخ";
-            gridViewDateTimeColumn3.IsAutoGenerated = true;
-            gridViewDateTimeColumn3.Name = "fromDate";
-            gridViewDateTimeColumn3.Width = 121;
-            gridViewDateTimeColumn4.DataType = typeof(System.Nullable<System.DateTime>);
-            gridViewDateTimeColumn4.EnableExpressionEditor = false;
-            gridViewDateTimeColumn4.FieldName = "ToDatetime";
-            gridViewDateTimeColumn4.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn4.HeaderText = "الى تاريخ";
-            gridViewDateTimeColumn4.IsAutoGenerated = true;
-            gridViewDateTimeColumn4.Name = "ToDatetime";
-            gridViewDateTimeColumn4.Width = 121;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "commint";
-            gridViewTextBoxColumn5.HeaderText = "تعليق";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "commint";
-            gridViewTextBoxColumn5.Width = 121;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "status";
-            gridViewTextBoxColumn6.HeaderText = "الحالة";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "status";
-            gridViewTextBoxColumn6.Width = 119;
-            gridViewCommandColumn3.EnableExpressionEditor = false;
-            gridViewCommandColumn3.HeaderText = "تعديل";
-            gridViewCommandColumn3.Name = "column1";
-            gridViewCommandColumn3.Width = 68;
-            gridViewCommandColumn4.EnableExpressionEditor = false;
-            gridViewCommandColumn4.HeaderText = "حذف";
-            gridViewCommandColumn4.Name = "column2";
-            gridViewCommandColumn4.Width = 65;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "ID";
+            gridViewDecimalColumn1.HeaderText = "ID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "ID";
+            gridViewDecimalColumn1.Width = 66;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Employee.EmployeeName";
+            gridViewTextBoxColumn1.HeaderText = "الموظف";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "Employee";
+            gridViewTextBoxColumn1.Width = 121;
+            gridViewDateTimeColumn1.DataType = typeof(System.Nullable<System.DateTime>);
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "fromDate";
+            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn1.HeaderText = "من تاريخ";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "fromDate";
+            gridViewDateTimeColumn1.Width = 121;
+            gridViewDateTimeColumn2.DataType = typeof(System.Nullable<System.DateTime>);
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "ToDatetime";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn2.HeaderText = "الى تاريخ";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "ToDatetime";
+            gridViewDateTimeColumn2.Width = 121;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "commint";
+            gridViewTextBoxColumn2.HeaderText = "تعليق";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "commint";
+            gridViewTextBoxColumn2.Width = 121;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "status";
+            gridViewTextBoxColumn3.HeaderText = "الحالة";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "status";
+            gridViewTextBoxColumn3.Width = 119;
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.HeaderText = "تعديل";
+            gridViewCommandColumn1.Name = "column1";
+            gridViewCommandColumn1.Width = 68;
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "حذف";
+            gridViewCommandColumn2.Name = "column2";
+            gridViewCommandColumn2.Width = 65;
             this.DGVHolydays.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn2,
-            gridViewTextBoxColumn4,
-            gridViewDateTimeColumn3,
-            gridViewDateTimeColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6,
-            gridViewCommandColumn3,
-            gridViewCommandColumn4});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewDateTimeColumn1,
+            gridViewDateTimeColumn2,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2});
             this.DGVHolydays.MasterTemplate.DataSource = this.holyDayBindingSource;
             this.DGVHolydays.MasterTemplate.EnableFiltering = true;
             this.DGVHolydays.Name = "DGVHolydays";
             this.DGVHolydays.ReadOnly = true;
             this.DGVHolydays.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGVHolydays.Size = new System.Drawing.Size(820, 322);
+            this.DGVHolydays.Size = new System.Drawing.Size(820, 307);
             this.DGVHolydays.TabIndex = 0;
             this.DGVHolydays.Text = "radGridView1";
             this.DGVHolydays.ThemeName = "Office2013Light";
