@@ -25,7 +25,7 @@ namespace bero_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoginInfomation.CurrnetUser = BaseDatabase.db.SystemUsers.SingleOrDefault();
+            //LoginInfomation.CurrnetUser = BaseDatabase.db.SystemUsers.SingleOrDefault();
 
             CommandManager.ini();
             Application.ThreadException += Application_ThreadException;

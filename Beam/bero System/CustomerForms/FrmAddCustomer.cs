@@ -59,8 +59,8 @@ namespace bero_System.CustomerForms
                     CustomerName = customerNameTextBox .Text ,
                     PhoneNumber = phoneNumberTextBox .Text ,
                     No_building = no_buildingTextBox .Text ,
-                    No_permissibility = no_permissibilityTextBox .Text 
-
+                    No_permissibility = no_permissibilityTextBox .Text ,
+                     Total_Need = 0 
                 };
                 CustomerCommand.NewCustomer(CustTb);                
                 broom();

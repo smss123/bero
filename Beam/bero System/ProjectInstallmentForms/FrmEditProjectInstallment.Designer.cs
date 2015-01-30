@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             System.Windows.Forms.Label projectLevelIDLabel;
             System.Windows.Forms.Label activeStatusLabel;
             System.Windows.Forms.Label payDescriptionLabel;
@@ -40,6 +36,10 @@
             System.Windows.Forms.Label amountLabel;
             System.Windows.Forms.Label dateOfInstallmentsLabel;
             System.Windows.Forms.Label installments_nameLabel;
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
@@ -67,6 +67,76 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // projectLevelIDLabel
+            // 
+            projectLevelIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            projectLevelIDLabel.AutoSize = true;
+            projectLevelIDLabel.Location = new System.Drawing.Point(269, 199);
+            projectLevelIDLabel.Name = "projectLevelIDLabel";
+            projectLevelIDLabel.Size = new System.Drawing.Size(100, 13);
+            projectLevelIDLabel.TabIndex = 20;
+            projectLevelIDLabel.Text = "المستوى المخصص:";
+            // 
+            // activeStatusLabel
+            // 
+            activeStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            activeStatusLabel.AutoSize = true;
+            activeStatusLabel.Location = new System.Drawing.Point(274, 169);
+            activeStatusLabel.Name = "activeStatusLabel";
+            activeStatusLabel.Size = new System.Drawing.Size(36, 13);
+            activeStatusLabel.TabIndex = 19;
+            activeStatusLabel.Text = "الحالة:";
+            // 
+            // payDescriptionLabel
+            // 
+            payDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            payDescriptionLabel.AutoSize = true;
+            payDescriptionLabel.Location = new System.Drawing.Point(274, 138);
+            payDescriptionLabel.Name = "payDescriptionLabel";
+            payDescriptionLabel.Size = new System.Drawing.Size(61, 13);
+            payDescriptionLabel.TabIndex = 18;
+            payDescriptionLabel.Text = "وصف الدفع:";
+            // 
+            // payByLabel
+            // 
+            payByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            payByLabel.AutoSize = true;
+            payByLabel.Location = new System.Drawing.Point(274, 111);
+            payByLabel.Name = "payByLabel";
+            payByLabel.Size = new System.Drawing.Size(66, 13);
+            payByLabel.TabIndex = 17;
+            payByLabel.Text = "دفع بواسطة:";
+            // 
+            // amountLabel
+            // 
+            amountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            amountLabel.AutoSize = true;
+            amountLabel.Location = new System.Drawing.Point(274, 81);
+            amountLabel.Name = "amountLabel";
+            amountLabel.Size = new System.Drawing.Size(38, 13);
+            amountLabel.TabIndex = 16;
+            amountLabel.Text = "المبلغ:";
+            // 
+            // dateOfInstallmentsLabel
+            // 
+            dateOfInstallmentsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            dateOfInstallmentsLabel.AutoSize = true;
+            dateOfInstallmentsLabel.Location = new System.Drawing.Point(269, 52);
+            dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
+            dateOfInstallmentsLabel.Size = new System.Drawing.Size(58, 13);
+            dateOfInstallmentsLabel.TabIndex = 15;
+            dateOfInstallmentsLabel.Text = "تاريخ الدفع:";
+            // 
+            // installments_nameLabel
+            // 
+            installments_nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            installments_nameLabel.AutoSize = true;
+            installments_nameLabel.Location = new System.Drawing.Point(270, 24);
+            installments_nameLabel.Name = "installments_nameLabel";
+            installments_nameLabel.Size = new System.Drawing.Size(68, 13);
+            installments_nameLabel.TabIndex = 14;
+            installments_nameLabel.Text = "اسم القسط:";
             // 
             // radGroupBox1
             // 
@@ -121,7 +191,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // projectLevelComboBox.NestedRadGridView
+            // 
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -229,76 +299,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // projectLevelIDLabel
-            // 
-            projectLevelIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            projectLevelIDLabel.AutoSize = true;
-            projectLevelIDLabel.Location = new System.Drawing.Point(269, 199);
-            projectLevelIDLabel.Name = "projectLevelIDLabel";
-            projectLevelIDLabel.Size = new System.Drawing.Size(100, 13);
-            projectLevelIDLabel.TabIndex = 20;
-            projectLevelIDLabel.Text = "المستوى المخصص:";
-            // 
-            // activeStatusLabel
-            // 
-            activeStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            activeStatusLabel.AutoSize = true;
-            activeStatusLabel.Location = new System.Drawing.Point(274, 169);
-            activeStatusLabel.Name = "activeStatusLabel";
-            activeStatusLabel.Size = new System.Drawing.Size(36, 13);
-            activeStatusLabel.TabIndex = 19;
-            activeStatusLabel.Text = "الحالة:";
-            // 
-            // payDescriptionLabel
-            // 
-            payDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            payDescriptionLabel.AutoSize = true;
-            payDescriptionLabel.Location = new System.Drawing.Point(274, 138);
-            payDescriptionLabel.Name = "payDescriptionLabel";
-            payDescriptionLabel.Size = new System.Drawing.Size(61, 13);
-            payDescriptionLabel.TabIndex = 18;
-            payDescriptionLabel.Text = "وصف الدفع:";
-            // 
-            // payByLabel
-            // 
-            payByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            payByLabel.AutoSize = true;
-            payByLabel.Location = new System.Drawing.Point(274, 111);
-            payByLabel.Name = "payByLabel";
-            payByLabel.Size = new System.Drawing.Size(66, 13);
-            payByLabel.TabIndex = 17;
-            payByLabel.Text = "دفع بواسطة:";
-            // 
-            // amountLabel
-            // 
-            amountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(274, 81);
-            amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(38, 13);
-            amountLabel.TabIndex = 16;
-            amountLabel.Text = "المبلغ:";
-            // 
-            // dateOfInstallmentsLabel
-            // 
-            dateOfInstallmentsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            dateOfInstallmentsLabel.AutoSize = true;
-            dateOfInstallmentsLabel.Location = new System.Drawing.Point(269, 52);
-            dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
-            dateOfInstallmentsLabel.Size = new System.Drawing.Size(58, 13);
-            dateOfInstallmentsLabel.TabIndex = 15;
-            dateOfInstallmentsLabel.Text = "تاريخ الدفع:";
-            // 
-            // installments_nameLabel
-            // 
-            installments_nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            installments_nameLabel.AutoSize = true;
-            installments_nameLabel.Location = new System.Drawing.Point(270, 24);
-            installments_nameLabel.Name = "installments_nameLabel";
-            installments_nameLabel.Size = new System.Drawing.Size(68, 13);
-            installments_nameLabel.TabIndex = 14;
-            installments_nameLabel.Text = "اسم القسط:";
             // 
             // FrmEditProjectInstallment
             // 

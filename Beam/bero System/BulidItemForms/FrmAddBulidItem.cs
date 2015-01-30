@@ -47,7 +47,19 @@ namespace bero_System.BulidItemForms
             #endregion
 
 
-            Operation.BeginOperation(this);
+            try
+            {
+             Operation.BeginOperation(this);
+             BulidItem xtb = BulidItemCommand.GetBuildItemByItemName(itemNameTextBox.Text);
+             MessageBox.Show("موجود مسبقا");
+             Operation.EndOperation(this);
+             return;
+
+            }
+            catch (Exception)
+            {
+                
+             Operation.BeginOperation(this);
 
             BulidItem tb = new BulidItem() {
              ItemName = itemNameTextBox .Text ,
@@ -63,6 +75,7 @@ namespace bero_System.BulidItemForms
             itemNameTextBox.Text = "";
             itemSummeryTextBox.Text = "";
             itemNameTextBox.Focus();
+            }
         }
     }
 }

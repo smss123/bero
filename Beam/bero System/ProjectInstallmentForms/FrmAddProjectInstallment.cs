@@ -139,10 +139,10 @@ namespace bero_System.ProjectInstallmentForms
             Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
             // Start Save AT AccountDaily :
-            // ^^^  خرج من حساب المشروع __ دائن
+            // ^^^  خرج من حساب العميل __ دائن
             AccountDaily tb = new AccountDaily()
             {
-                AccountID = TargetProject .AccountID ,
+                AccountID = CurrentCustomer.AccountID ,
                 DateOfProcess = DateTime.Now,
                 TotalIn = 0f,
                 TotalOut = Convert.ToDouble(amountTextBox.Text),
@@ -150,10 +150,10 @@ namespace bero_System.ProjectInstallmentForms
             };
             AccountDailyCommand.NewAccountDaily (tb);
             
-            // ^^^ دخل في حساب العميل  ___مدين)
+            // ^^^ دخل في حساب المشروع  ___مدين)
             AccountDaily xtb = new AccountDaily()
             {
-                AccountID =  CurrentCustomer.AccountID ,
+                AccountID =  TargetProject .AccountID  ,
                 DateOfProcess = DateTime.Now,
                 TotalIn = Convert.ToDouble(amountTextBox.Text),
                 TotalOut = 0f,
