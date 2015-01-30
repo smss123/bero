@@ -184,13 +184,19 @@ namespace bero_System.MainScenarioForms
             TimeSpan xDays = DeliverProjectDate - TheTimeNow ;
            
             textBox1 .Text  = xDays.TotalDays .ToString () + "  أيــام  ";
+            if (xDays.TotalDays == 0 || xDays.TotalDays < 0) 
+            { 
+                
+                textBox1.Text = "أنتهت المده "; 
+            
+            }
             //======================================================================================================
            
             var AllInstallments = ProjectInstallmentCommand.GetAllProjectInstallmentByProjectId(TargetProject.ID);
             Double SumInstallments = 0;
             foreach (var InstallAmount in AllInstallments )
             {
-                SumInstallments = Convert.ToDouble(InstallAmount.Amount); 
+                SumInstallments += Convert.ToDouble(InstallAmount.Amount); 
             }
             txtInstallments.Text = SumInstallments.ToString();
             //======================================================================================================
@@ -199,7 +205,7 @@ namespace bero_System.MainScenarioForms
             double SumExpensses = 0;
             foreach (var ExpAmount in AllExpensses )
             {
-                SumExpensses = Convert.ToDouble(ExpAmount.Amount); 
+                SumExpensses +=Convert.ToDouble(ExpAmount.Amount); 
             }
             txtExpensses.Text = SumExpensses.ToString();
           //========================================================================================================
@@ -208,7 +214,7 @@ namespace bero_System.MainScenarioForms
             double SumSelles = 0;
             foreach (var SellAmount in AllSelles )
             {
-                SumSelles = Convert.ToDouble(SellAmount.Amount); 
+                SumSelles += Convert.ToDouble(SellAmount.Amount); 
             }
             txtSells.Text = SumSelles.ToString(); ;
             //======================================================================================================
