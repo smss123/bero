@@ -75,15 +75,15 @@
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.txtInstallments = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSells = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtExpensses = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
@@ -195,21 +195,21 @@
             this.ProjectLevelsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProjectLevelsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProjectLevelsBtn.Name = "ProjectLevelsBtn";
-            this.ProjectLevelsBtn.Size = new System.Drawing.Size(151, 47);
+            this.ProjectLevelsBtn.Size = new System.Drawing.Size(142, 47);
             this.ProjectLevelsBtn.Text = "مستويات المشروع";
             this.ProjectLevelsBtn.Click += new System.EventHandler(this.ProjectLevelsBtn_Click);
             // 
             // AddprojectLevelBtn
             // 
             this.AddprojectLevelBtn.Name = "AddprojectLevelBtn";
-            this.AddprojectLevelBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddprojectLevelBtn.Size = new System.Drawing.Size(144, 22);
             this.AddprojectLevelBtn.Text = "اضافة مستوى";
             this.AddprojectLevelBtn.Click += new System.EventHandler(this.AddprojectLevelBtn_Click);
             // 
             // ManageprojectLevelBtn
             // 
             this.ManageprojectLevelBtn.Name = "ManageprojectLevelBtn";
-            this.ManageprojectLevelBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageprojectLevelBtn.Size = new System.Drawing.Size(144, 22);
             this.ManageprojectLevelBtn.Text = "ادارة المستويات";
             this.ManageprojectLevelBtn.Click += new System.EventHandler(this.ManageprojectLevelBtn_Click);
             // 
@@ -227,20 +227,20 @@
             this.toolStripDropDownButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(151, 47);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(144, 47);
             this.toolStripDropDownButton2.Text = "مشتريات المشروع";
             // 
             // AddprojectLevelSellBtn
             // 
             this.AddprojectLevelSellBtn.Name = "AddprojectLevelSellBtn";
-            this.AddprojectLevelSellBtn.Size = new System.Drawing.Size(104, 22);
+            this.AddprojectLevelSellBtn.Size = new System.Drawing.Size(101, 22);
             this.AddprojectLevelSellBtn.Text = "اضافة";
             this.AddprojectLevelSellBtn.Click += new System.EventHandler(this.AddprojectLevelSellBtn_Click);
             // 
             // ManageprojectLevelSellBtn
             // 
             this.ManageprojectLevelSellBtn.Name = "ManageprojectLevelSellBtn";
-            this.ManageprojectLevelSellBtn.Size = new System.Drawing.Size(104, 22);
+            this.ManageprojectLevelSellBtn.Size = new System.Drawing.Size(101, 22);
             this.ManageprojectLevelSellBtn.Text = "ادارة";
             this.ManageprojectLevelSellBtn.Click += new System.EventHandler(this.ManageprojectLevelSellBtn_Click);
             // 
@@ -258,21 +258,21 @@
             this.QuantityBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.QuantityBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.QuantityBtn.Name = "QuantityBtn";
-            this.QuantityBtn.Size = new System.Drawing.Size(97, 47);
+            this.QuantityBtn.Size = new System.Drawing.Size(92, 47);
             this.QuantityBtn.Text = "الكميات";
             this.QuantityBtn.Click += new System.EventHandler(this.QuantityBtn_Click);
             // 
             // AddProjectQuantityBtn
             // 
             this.AddProjectQuantityBtn.Name = "AddProjectQuantityBtn";
-            this.AddProjectQuantityBtn.Size = new System.Drawing.Size(137, 22);
+            this.AddProjectQuantityBtn.Size = new System.Drawing.Size(132, 22);
             this.AddProjectQuantityBtn.Text = "اضافة كمية";
             this.AddProjectQuantityBtn.Click += new System.EventHandler(this.AddProjectQuantityBtn_Click);
             // 
             // ManageProjectQuantityBtn
             // 
             this.ManageProjectQuantityBtn.Name = "ManageProjectQuantityBtn";
-            this.ManageProjectQuantityBtn.Size = new System.Drawing.Size(137, 22);
+            this.ManageProjectQuantityBtn.Size = new System.Drawing.Size(132, 22);
             this.ManageProjectQuantityBtn.Text = "ادارة الكميات";
             this.ManageProjectQuantityBtn.Click += new System.EventHandler(this.ManageProjectQuantityBtn_Click);
             // 
@@ -290,20 +290,20 @@
             this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(134, 47);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(127, 47);
             this.toolStripDropDownButton4.Text = "اقساط المشروع";
             // 
             // AddInstalmentBtn
             // 
             this.AddInstalmentBtn.Name = "AddInstalmentBtn";
-            this.AddInstalmentBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddInstalmentBtn.Size = new System.Drawing.Size(133, 22);
             this.AddInstalmentBtn.Text = "اضافة قسط";
             this.AddInstalmentBtn.Click += new System.EventHandler(this.AddInstalmentBtn_Click);
             // 
             // InstalmentsBtb
             // 
             this.InstalmentsBtb.Name = "InstalmentsBtb";
-            this.InstalmentsBtb.Size = new System.Drawing.Size(152, 22);
+            this.InstalmentsBtb.Size = new System.Drawing.Size(133, 22);
             this.InstalmentsBtb.Text = "ادارة الاقساط";
             this.InstalmentsBtb.Click += new System.EventHandler(this.InstalmentsBtb_Click);
             // 
@@ -321,21 +321,21 @@
             this.ProjectExpensessBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProjectExpensessBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProjectExpensessBtn.Name = "ProjectExpensessBtn";
-            this.ProjectExpensessBtn.Size = new System.Drawing.Size(154, 47);
+            this.ProjectExpensessBtn.Size = new System.Drawing.Size(146, 47);
             this.ProjectExpensessBtn.Text = "مصروفات المشروع";
             this.ProjectExpensessBtn.Click += new System.EventHandler(this.ProjectExpensessBtn_Click);
             // 
             // AddProjectExpenssesBtn
             // 
             this.AddProjectExpenssesBtn.Name = "AddProjectExpenssesBtn";
-            this.AddProjectExpenssesBtn.Size = new System.Drawing.Size(147, 22);
+            this.AddProjectExpenssesBtn.Size = new System.Drawing.Size(139, 22);
             this.AddProjectExpenssesBtn.Text = "اضافة مصروف";
             this.AddProjectExpenssesBtn.Click += new System.EventHandler(this.AddProjectExpenssesBtn_Click);
             // 
             // ManageProjectExpensses
             // 
             this.ManageProjectExpensses.Name = "ManageProjectExpensses";
-            this.ManageProjectExpensses.Size = new System.Drawing.Size(147, 22);
+            this.ManageProjectExpensses.Size = new System.Drawing.Size(139, 22);
             this.ManageProjectExpensses.Text = "ادارة المصروفا";
             this.ManageProjectExpensses.Click += new System.EventHandler(this.ManageProjectExpensses_Click);
             // 
@@ -350,7 +350,7 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(134, 47);
+            this.toolStripButton1.Size = new System.Drawing.Size(127, 47);
             this.toolStripButton1.Text = "مرفقات المشروع";
             // 
             // toolStripSeparator7
@@ -370,41 +370,41 @@
             this.toolStripDropDownButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(123, 47);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(122, 47);
             this.toolStripDropDownButton6.Text = "تقارير المشروع";
             // 
             // تقريرالمشروعToolStripMenuItem
             // 
             this.تقريرالمشروعToolStripMenuItem.Name = "تقريرالمشروعToolStripMenuItem";
-            this.تقريرالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالمشروعToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.تقريرالمشروعToolStripMenuItem.Text = "تقرير المشروع";
             this.تقريرالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشروعToolStripMenuItem_Click);
             // 
             // تقريرالمشترياتToolStripMenuItem
             // 
             this.تقريرالمشترياتToolStripMenuItem.Name = "تقريرالمشترياتToolStripMenuItem";
-            this.تقريرالمشترياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالمشترياتToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.تقريرالمشترياتToolStripMenuItem.Text = "تقرير المشتريات";
             this.تقريرالمشترياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالمشترياتToolStripMenuItem_Click);
             // 
             // تقريرالكمياتToolStripMenuItem
             // 
             this.تقريرالكمياتToolStripMenuItem.Name = "تقريرالكمياتToolStripMenuItem";
-            this.تقريرالكمياتToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرالكمياتToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.تقريرالكمياتToolStripMenuItem.Text = "تقرير الكميات";
             this.تقريرالكمياتToolStripMenuItem.Click += new System.EventHandler(this.تقريرالكمياتToolStripMenuItem_Click);
             // 
             // تقريراقساطالمشروعToolStripMenuItem
             // 
             this.تقريراقساطالمشروعToolStripMenuItem.Name = "تقريراقساطالمشروعToolStripMenuItem";
-            this.تقريراقساطالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريراقساطالمشروعToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.تقريراقساطالمشروعToolStripMenuItem.Text = "تقرير اقساط المشروع";
             this.تقريراقساطالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريراقساطالمشروعToolStripMenuItem_Click);
             // 
             // تقريرمصروفاتالمشروعToolStripMenuItem
             // 
             this.تقريرمصروفاتالمشروعToolStripMenuItem.Name = "تقريرمصروفاتالمشروعToolStripMenuItem";
-            this.تقريرمصروفاتالمشروعToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.تقريرمصروفاتالمشروعToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.تقريرمصروفاتالمشروعToolStripMenuItem.Text = "تقرير مصروفات المشروع";
             this.تقريرمصروفاتالمشروعToolStripMenuItem.Click += new System.EventHandler(this.تقريرمصروفاتالمشروعToolStripMenuItem_Click);
             // 
@@ -494,14 +494,14 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox2.Controls.Add(this.chart1);
-            this.radGroupBox2.Controls.Add(this.textBox4);
-            this.radGroupBox2.Controls.Add(this.label6);
-            this.radGroupBox2.Controls.Add(this.textBox3);
-            this.radGroupBox2.Controls.Add(this.label5);
-            this.radGroupBox2.Controls.Add(this.textBox2);
-            this.radGroupBox2.Controls.Add(this.label4);
             this.radGroupBox2.Controls.Add(this.textBox1);
+            this.radGroupBox2.Controls.Add(this.chart1);
+            this.radGroupBox2.Controls.Add(this.txtInstallments);
+            this.radGroupBox2.Controls.Add(this.label6);
+            this.radGroupBox2.Controls.Add(this.txtSells);
+            this.radGroupBox2.Controls.Add(this.label5);
+            this.radGroupBox2.Controls.Add(this.txtExpensses);
+            this.radGroupBox2.Controls.Add(this.label4);
             this.radGroupBox2.Controls.Add(this.label3);
             this.radGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox2.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
@@ -512,6 +512,86 @@
             this.radGroupBox2.TabIndex = 4;
             this.radGroupBox2.Text = "اضافات اخرى";
             this.radGroupBox2.ThemeName = "Office2013Light";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(89, 42);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(228, 162);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            // 
+            // txtInstallments
+            // 
+            this.txtInstallments.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtInstallments.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstallments.Location = new System.Drawing.Point(723, 160);
+            this.txtInstallments.Name = "txtInstallments";
+            this.txtInstallments.Size = new System.Drawing.Size(168, 26);
+            this.txtInstallments.TabIndex = 7;
+            this.txtInstallments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.Location = new System.Drawing.Point(894, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "اجمالي الاقساط المدفوعة:";
+            // 
+            // txtSells
+            // 
+            this.txtSells.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtSells.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSells.Location = new System.Drawing.Point(722, 118);
+            this.txtSells.Name = "txtSells";
+            this.txtSells.Size = new System.Drawing.Size(168, 26);
+            this.txtSells.TabIndex = 5;
+            this.txtSells.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(893, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "اجمالي المشتريات للمشروع:";
+            // 
+            // txtExpensses
+            // 
+            this.txtExpensses.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtExpensses.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExpensses.Location = new System.Drawing.Point(723, 76);
+            this.txtExpensses.Name = "txtExpensses";
+            this.txtExpensses.Size = new System.Drawing.Size(168, 26);
+            this.txtExpensses.TabIndex = 3;
+            this.txtExpensses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(894, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "اجمالي مصروفات المشروع:";
             // 
             // label3
             // 
@@ -526,88 +606,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(723, 40);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.textBox1.Location = new System.Drawing.Point(720, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(723, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 26);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(894, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "اجمالي مصروفات المشروع:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(722, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 26);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(893, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "اجمالي المشتريات للمشروع:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(723, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 26);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Green;
-            this.label6.Location = new System.Drawing.Point(894, 162);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "اجمالي الاقساط المدفوعة:";
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(38, 31);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(408, 228);
-            this.chart1.TabIndex = 8;
-            this.chart1.Text = "chart1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(170, 26);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmViewProject
             // 
@@ -684,14 +690,14 @@
         private System.Windows.Forms.ToolStripMenuItem تقريرالكمياتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تقريراقساطالمشروعToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تقريرمصروفاتالمشروعToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtInstallments;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSells;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtExpensses;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -17,6 +17,7 @@ using bero_System.ProjectQuantityForms;
 using bero_System.projectLevelSellForms;
 using bero_System.ProjectInstallmentForms;
 using bero_System.ReportSystem.ReportCommand;
+using DataLayer.XAccountant;
 
 
 
@@ -39,11 +40,14 @@ namespace bero_System.MainScenarioForms
             DeliverDatetextBox.Text = TargetProject.DeliverDate.ToString();
 
         }
+      
         private void FrmViewProject_Load(object sender, EventArgs e)
         {
             LoadingProjectData();
+            Statistic();
         }
-       
+
+        #region " ^^^ Buttons"
         private void ProjectExpensessBtn_Click(object sender, EventArgs e)
         {
            
@@ -130,6 +134,9 @@ namespace bero_System.MainScenarioForms
             frm.ShowDialog();
 
         }
+        #endregion
+
+        #region "  ^^^ Reports   "
 
         private void تقريرالمشروعToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -162,10 +169,60 @@ namespace bero_System.MainScenarioForms
             cmdrpt.ProjectExpenssesByProId(TargetProject.ID);
         }
 
+        #endregion
 
+        #region " ^^^ Statistic "
+
+        void Statistic()
+        {
+            // Date :
+
+            DateTime TheTimeNow =  DateTime.Parse( DateTime .Now .ToString ()).Date ;
+            
+            DateTime DeliverProjectDate =  DateTime.Parse(DeliverDatetextBox .Text ).Date ;
+
+            TimeSpan xDays = DeliverProjectDate - TheTimeNow ;
+           
+            textBox1 .Text  = xDays.TotalDays .ToString () + "  أيــام  ";
+            //======================================================================================================
+           
+            var AllInstallments = ProjectInstallmentCommand.GetAllProjectInstallmentByProjectId(TargetProject.ID);
+            Double SumInstallments = 0;
+            foreach (var InstallAmount in AllInstallments )
+            {
+                SumInstallments = Convert.ToDouble(InstallAmount.Amount); 
+            }
+            txtInstallments.Text = SumInstallments.ToString();
+            //======================================================================================================
+            // Expensses :
+            var AllExpensses = ProjectExpenssesCommand.GetAll(TargetProject.ID);
+            double SumExpensses = 0;
+            foreach (var ExpAmount in AllExpensses )
+            {
+                SumExpensses = Convert.ToDouble(ExpAmount.Amount); 
+            }
+            txtExpensses.Text = SumExpensses.ToString();
+          //========================================================================================================
+            // Selles
+            var  AllSelles  = projectLevelSellCommand.GetAllByProjectId(TargetProject.ID);
+            double SumSelles = 0;
+            foreach (var SellAmount in AllSelles )
+            {
+                SumSelles = Convert.ToDouble(SellAmount.Amount); 
+            }
+            txtSells.Text = SumSelles.ToString(); ;
+            //======================================================================================================
+            // Charting :
+            double TotalOut = Convert.ToDouble ( SumSelles + SumExpensses);
+
+            this.chart1.Series[0].Points.AddXY("التكاليف",TotalOut);
+            this.chart1.Series[0].Points.AddXY("الأقساط", SumInstallments );
        
+        }
+        #endregion
 
-      
+        
+
 
     }
 }
