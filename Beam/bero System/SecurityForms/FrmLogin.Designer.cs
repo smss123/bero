@@ -32,19 +32,19 @@
             System.Windows.Forms.Label pwdLabel;
             System.Windows.Forms.Label userNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
+            this.EnterBtn = new Telerik.WinControls.UI.RadButton();
             this.pwdTextBox = new System.Windows.Forms.TextBox();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.ExitBtn = new Telerik.WinControls.UI.RadButton();
-            this.EnterBtn = new Telerik.WinControls.UI.RadButton();
             pwdLabel = new System.Windows.Forms.Label();
             userNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnterBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,28 +87,6 @@
             this.radGroupBox1.Text = "بيانات المستخدم";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
-            // pwdTextBox
-            // 
-            this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pwdTextBox.Location = new System.Drawing.Point(22, 92);
-            this.pwdTextBox.Name = "pwdTextBox";
-            this.pwdTextBox.PasswordChar = '*';
-            this.pwdTextBox.Size = new System.Drawing.Size(233, 20);
-            this.pwdTextBox.TabIndex = 3;
-            // 
-            // userNameTextBox
-            // 
-            this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userNameTextBox.Location = new System.Drawing.Point(22, 57);
-            this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(233, 20);
-            this.userNameTextBox.TabIndex = 1;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.RightToLeft = true;
-            // 
             // ExitBtn
             // 
             this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -136,6 +114,28 @@
             this.EnterBtn.ThemeName = "Office2013Light";
             this.EnterBtn.Click += new System.EventHandler(this.EnterBtn_Click);
             // 
+            // pwdTextBox
+            // 
+            this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pwdTextBox.Location = new System.Drawing.Point(22, 92);
+            this.pwdTextBox.Name = "pwdTextBox";
+            this.pwdTextBox.PasswordChar = '*';
+            this.pwdTextBox.Size = new System.Drawing.Size(233, 20);
+            this.pwdTextBox.TabIndex = 3;
+            // 
+            // userNameTextBox
+            // 
+            this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameTextBox.Location = new System.Drawing.Point(22, 57);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(233, 20);
+            this.userNameTextBox.TabIndex = 1;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,9 +160,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnterBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

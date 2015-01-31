@@ -26,7 +26,7 @@ namespace bero_System
 
         static void HistoryCommand_ProcessChange(string processName, string Usermsg, string description)
         {
-            MessageBox.Show(processName, string.Format("{0}\n{1}", Usermsg, description));
+         // MessageBox.Show(processName, string.Format("{0}\n{1}", Usermsg, description));
 
         }
 
