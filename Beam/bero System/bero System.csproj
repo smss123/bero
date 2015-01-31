@@ -397,11 +397,23 @@
     <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.Designer.cs">
+      <DependentUpon>frmReportOptionAccountDaily.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.Designer.cs">
       <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionExpensses.Designer.cs">
+      <DependentUpon>frmReportOptionExpensses.cs</DependentUpon>
     </Compile>
     <Compile Include="SecurityForms\FrmAddUser.cs">
       <SubType>Form</SubType>
@@ -610,8 +622,14 @@
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectQuantity.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptReceiptVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RpttAccountDaily.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.resx">
+      <DependentUpon>frmReportOptionAccountDaily.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.resx">
       <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionExpensses.resx">
+      <DependentUpon>frmReportOptionExpensses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>

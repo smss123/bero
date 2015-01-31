@@ -1,6 +1,6 @@
 ﻿namespace bero_System.ReportSystem.ReportOption
 {
-    partial class frmReportOptionBalanceSheet
+    partial class frmReportOptionAccountDaily
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AllYearcheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
+            this.AllYearcheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SaveBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AllYearcheckBox
-            // 
-            this.AllYearcheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AllYearcheckBox.AutoSize = true;
-            this.AllYearcheckBox.Location = new System.Drawing.Point(70, 81);
-            this.AllYearcheckBox.Name = "AllYearcheckBox";
-            this.AllYearcheckBox.Size = new System.Drawing.Size(81, 17);
-            this.AllYearcheckBox.TabIndex = 9;
-            this.AllYearcheckBox.Text = "كل السنوات";
-            this.AllYearcheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -64,8 +53,33 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(219, 177);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.PrintView;
+            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveBtn.Location = new System.Drawing.Point(106, 124);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(101, 37);
+            this.SaveBtn.TabIndex = 8;
+            this.SaveBtn.Text = "عرض";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveBtn.ThemeName = "Office2013Light";
+            // 
+            // AllYearcheckBox
+            // 
+            this.AllYearcheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AllYearcheckBox.AutoSize = true;
+            this.AllYearcheckBox.Location = new System.Drawing.Point(121, 82);
+            this.AllYearcheckBox.Name = "AllYearcheckBox";
+            this.AllYearcheckBox.Size = new System.Drawing.Size(81, 17);
+            this.AllYearcheckBox.TabIndex = 9;
+            this.AllYearcheckBox.Text = "كل السنوات";
+            this.AllYearcheckBox.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -105,22 +119,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "من تاريخ";
             // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Image = global::bero_System.Properties.Resources.PrintView;
-            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SaveBtn.Location = new System.Drawing.Point(106, 117);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(101, 37);
-            this.SaveBtn.TabIndex = 8;
-            this.SaveBtn.Text = "عرض";
-            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SaveBtn.ThemeName = "Office2013Light";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // frmReportOptionBalanceSheet
+            // frmReportOptionAccountDaily
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,14 +129,14 @@
             this.MaximumSize = new System.Drawing.Size(227, 208);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(227, 208);
-            this.Name = "frmReportOptionBalanceSheet";
+            this.Name = "frmReportOptionAccountDaily";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "تقرير ميزان المراجعة";
+            this.Text = "عرض تقرير القيود اليومية";
             this.ThemeName = "Office2013Light";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -149,13 +148,13 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox AllYearcheckBox;
-        private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Telerik.WinControls.UI.RadButton SaveBtn;
+        private System.Windows.Forms.CheckBox AllYearcheckBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.Label label1;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }
