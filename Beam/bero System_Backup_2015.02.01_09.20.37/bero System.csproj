@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{035400E3-A430-4A79-A6B6-E7C7879D0982}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bero_System</RootNamespace>
+    <AssemblyName>bero System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataLayer\LIB\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountForms\frmAccountDailySHow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\frmAccountDailySHow.Designer.cs">
+      <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\frmAccountTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\frmAccountTree.Designer.cs">
+      <DependentUpon>frmAccountTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddAccount.Designer.cs">
+      <DependentUpon>FrmAddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddAccountCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddAccountCategory.Designer.cs">
+      <DependentUpon>FrmAddAccountCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpensses.Designer.cs">
+      <DependentUpon>FrmAddExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAddExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditAccount.Designer.cs">
+      <DependentUpon>FrmEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditAccountCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditAccountCategory.Designer.cs">
+      <DependentUpon>FrmEditAccountCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpensses.Designer.cs">
+      <DependentUpon>FrmEditExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmEditExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmEditExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageAccount.Designer.cs">
+      <DependentUpon>FrmManageAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageAccountCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageAccountCategory.Designer.cs">
+      <DependentUpon>FrmManageAccountCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpensses.Designer.cs">
+      <DependentUpon>FrmManageExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmManageExpenssesMovment.Designer.cs">
+      <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FromPrivatewithdrawals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FromPrivatewithdrawals.Designer.cs">
+      <DependentUpon>FromPrivatewithdrawals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmAddBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmAddBulidItem.Designer.cs">
+      <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmEditBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmEditBulidItem.Designer.cs">
+      <DependentUpon>FrmEditBulidItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmManageBulidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulidItemForms\FrmManageBulidItem.Designer.cs">
+      <DependentUpon>FrmManageBulidItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="CustomerForms\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\FrmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmEditCustomer.Designer.cs">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForms\FrmManageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForms\FrmManageCustomer.Designer.cs">
+      <DependentUpon>FrmManageCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddEmployee.Designer.cs">
+      <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmAddHolyDay.Designer.cs">
+      <DependentUpon>FrmAddHolyDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditEmployee.Designer.cs">
+      <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmEditHolyDay.Designer.cs">
+      <DependentUpon>FrmEditHolyDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageEmployee.Designer.cs">
+      <DependentUpon>FrmManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageHolyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForms\FrmManageHolyDay.Designer.cs">
+      <DependentUpon>FrmManageHolyDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.Designer.cs">
+      <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmViewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmViewProject.Designer.cs">
+      <DependentUpon>FrmViewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\MainForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\MainForms.Designer.cs">
+      <DependentUpon>MainForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectAttachmentForms\FrmAddProjectAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmAddProjectAttachment.Designer.cs">
+      <DependentUpon>FrmAddProjectAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmManageProjectAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAttachmentForms\FrmManageProjectAttachment.Designer.cs">
+      <DependentUpon>FrmManageProjectAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmAddProjectExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmAddProjectExpensses.Designer.cs">
+      <DependentUpon>FrmAddProjectExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmEditProjectExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmEditProjectExpensses.Designer.cs">
+      <DependentUpon>FrmEditProjectExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmManageProjectExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectExpenssesForms\FrmManageProjectExpensses.Designer.cs">
+      <DependentUpon>FrmManageProjectExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\FrmAddProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\FrmAddProject.Designer.cs">
+      <DependentUpon>FrmAddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\FrmEditProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\FrmEditProject.Designer.cs">
+      <DependentUpon>FrmEditProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\FrmManageProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\FrmManageProject.Designer.cs">
+      <DependentUpon>FrmManageProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmAddProjectInstallment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmAddProjectInstallment.Designer.cs">
+      <DependentUpon>FrmAddProjectInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmEditProjectInstallment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmEditProjectInstallment.Designer.cs">
+      <DependentUpon>FrmEditProjectInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmManageProjectInstallment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectInstallmentForms\FrmManageProjectInstallment.Designer.cs">
+      <DependentUpon>FrmManageProjectInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmAddprojectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmAddprojectLevel.Designer.cs">
+      <DependentUpon>FrmAddprojectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmEditprojectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmEditprojectLevel.Designer.cs">
+      <DependentUpon>FrmEditprojectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmManageprojectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelFroms\FrmManageprojectLevel.Designer.cs">
+      <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmAddprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmAddprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmAddprojectLevelSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmEditprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmEditprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmEditprojectLevelSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.Designer.cs">
+      <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.Designer.cs">
+      <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmEditProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmEditProjectQuantity.Designer.cs">
+      <DependentUpon>frmEditProjectQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmManageProjectQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectQuantityForms\frmManageProjectQuantity.Designer.cs">
+      <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadForm1.Designer.cs">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\FrmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\FrmReportViewer.Designer.cs">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportCommand\AccountDailyReportCmd.cs" />
+    <Compile Include="ReportSystem\ReportCommand\BalanceSheetCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
+    <Compile Include="ReportSystem\ReportCommand\ExpenssesMovmentCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\ProjectExpenssesCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\ProjectInstallmentCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\projectLevelCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\projectLevelSellCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\ProjectQuantityCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\BalanceSheetObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\PaymentVoucherReportObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectExpenssesObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectInstallmentObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\projectLevelObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.Designer.cs">
+      <DependentUpon>frmReportOptionAccountDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.Designer.cs">
+      <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\frmReportOptionExpensses.Designer.cs">
+      <DependentUpon>frmReportOptionExpensses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmChangeUSerPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmChangeUSerPassword.Designer.cs">
+      <DependentUpon>FrmChangeUSerPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmEditUserPermession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmEditUserPermession.Designer.cs">
+      <DependentUpon>FrmEditUserPermession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForms\FrmManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForms\FrmManageUser.Designer.cs">
+      <DependentUpon>FrmManageUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountForms\frmAccountDailySHow.resx">
+      <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\frmAccountTree.resx">
+      <DependentUpon>frmAccountTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddAccount.resx">
+      <DependentUpon>FrmAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddAccountCategory.resx">
+      <DependentUpon>FrmAddAccountCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddExpensses.resx">
+      <DependentUpon>FrmAddExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAddExpenssesMovment.resx">
+      <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditAccount.resx">
+      <DependentUpon>FrmEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditAccountCategory.resx">
+      <DependentUpon>FrmEditAccountCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditExpensses.resx">
+      <DependentUpon>FrmEditExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmEditExpenssesMovment.resx">
+      <DependentUpon>FrmEditExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageAccount.resx">
+      <DependentUpon>FrmManageAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageAccountCategory.resx">
+      <DependentUpon>FrmManageAccountCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageExpensses.resx">
+      <DependentUpon>FrmManageExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmManageExpenssesMovment.resx">
+      <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FromPrivatewithdrawals.resx">
+      <DependentUpon>FromPrivatewithdrawals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulidItemForms\FrmAddBulidItem.resx">
+      <DependentUpon>FrmAddBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulidItemForms\FrmEditBulidItem.resx">
+      <DependentUpon>FrmEditBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulidItemForms\FrmManageBulidItem.resx">
+      <DependentUpon>FrmManageBulidItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\FrmEditCustomer.resx">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForms\FrmManageCustomer.resx">
+      <DependentUpon>FrmManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmAddEmployee.resx">
+      <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmAddHolyDay.resx">
+      <DependentUpon>FrmAddHolyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmEditEmployee.resx">
+      <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmEditHolyDay.resx">
+      <DependentUpon>FrmEditHolyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmManageEmployee.resx">
+      <DependentUpon>FrmManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForms\FrmManageHolyDay.resx">
+      <DependentUpon>FrmManageHolyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\FrmMainProjectsCustomer.resx">
+      <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\FrmViewProject.resx">
+      <DependentUpon>FrmViewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\MainForms.resx">
+      <DependentUpon>MainForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAttachmentForms\FrmAddProjectAttachment.resx">
+      <DependentUpon>FrmAddProjectAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAttachmentForms\FrmManageProjectAttachment.resx">
+      <DependentUpon>FrmManageProjectAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectExpenssesForms\FrmAddProjectExpensses.resx">
+      <DependentUpon>FrmAddProjectExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectExpenssesForms\FrmEditProjectExpensses.resx">
+      <DependentUpon>FrmEditProjectExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectExpenssesForms\FrmManageProjectExpensses.resx">
+      <DependentUpon>FrmManageProjectExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\FrmAddProject.resx">
+      <DependentUpon>FrmAddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\FrmEditProject.resx">
+      <DependentUpon>FrmEditProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\FrmManageProject.resx">
+      <DependentUpon>FrmManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstallmentForms\FrmAddProjectInstallment.resx">
+      <DependentUpon>FrmAddProjectInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstallmentForms\FrmEditProjectInstallment.resx">
+      <DependentUpon>FrmEditProjectInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstallmentForms\FrmManageProjectInstallment.resx">
+      <DependentUpon>FrmManageProjectInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelFroms\FrmAddprojectLevel.resx">
+      <DependentUpon>FrmAddprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelFroms\FrmEditprojectLevel.resx">
+      <DependentUpon>FrmEditprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelFroms\FrmManageprojectLevel.resx">
+      <DependentUpon>FrmManageprojectLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmAddprojectLevelSell.resx">
+      <DependentUpon>FrmAddprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmEditprojectLevelSell.resx">
+      <DependentUpon>FrmEditprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectLevelSellForms\FrmManageprojectLevelSell.resx">
+      <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmAddProjectQuantity.resx">
+      <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmEditProjectQuantity.resx">
+      <DependentUpon>frmEditProjectQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectQuantityForms\frmManageProjectQuantity.resx">
+      <DependentUpon>frmManageProjectQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RadForm1.resx">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\FrmReportViewer.resx">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptBalanceSheet.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptExpenssesMovment.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptPaymentVoucher.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectExpensses.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectInstallment.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptprojectLevel.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptprojectLevelSell.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectQuantity.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptReceiptVoucher.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RpttAccountDaily.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.resx">
+      <DependentUpon>frmReportOptionAccountDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionBalanceSheet.resx">
+      <DependentUpon>frmReportOptionBalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionExpensses.resx">
+      <DependentUpon>frmReportOptionExpensses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmChangeUSerPassword.resx">
+      <DependentUpon>FrmChangeUSerPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmEditUserPermession.resx">
+      <DependentUpon>FrmEditUserPermession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForms\FrmManageUser.resx">
+      <DependentUpon>FrmManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.AccountDailyObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.BalanceSheetObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ExpenssesMovmentReportObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.PaymentVoucherReportObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectExpenssesObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectInstallmentObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.projectLevelObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.projectLevelSellObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectQuantityObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ReceiptVoucherObj.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Account.datasource" />
+    <None Include="Properties\DataSources\DataLayer.AccountCategory.datasource" />
+    <None Include="Properties\DataSources\DataLayer.AccountDaily.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BaseDatabase+OnchangeCallBackX.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BaseDatabase.datasource" />
+    <None Include="Properties\DataSources\DataLayer.BulidItem.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Customer.datasource" />
+    <None Include="Properties\DataSources\DataLayer.dbDataContext.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Employee.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Expenss.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ExpenssesMovment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.History.datasource" />
+    <None Include="Properties\DataSources\DataLayer.HolyDay.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectAttachment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectExpenss.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectInstallment.datasource" />
+    <None Include="Properties\DataSources\DataLayer.projectLevel.datasource" />
+    <None Include="Properties\DataSources\DataLayer.projectLevelSell.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectProfile.datasource" />
+    <None Include="Properties\DataSources\DataLayer.ProjectQuantity.datasource" />
+    <None Include="Properties\DataSources\DataLayer.SystemPermession.datasource" />
+    <None Include="Properties\DataSources\DataLayer.SystemUser.datasource" />
+    <None Include="Properties\DataSources\DataLayer.UserPermession.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{c195c201-033b-45d0-a085-e4a63af3872b}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProjectOffers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cus42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accoun42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project42Px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee42px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refrech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editColm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletColm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pay32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qty42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Is.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expenss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1418514813_Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
