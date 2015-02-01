@@ -96,6 +96,12 @@ namespace DataLayer.XEmployees
             return tb;
         }
 
-
+        public static Employee EditStatus(Employee emptb)
+        {
+            Employee tb = db.Employees.Where(d => d.id ==  emptb .id ).Single();
+            tb.Status = emptb.Status;
+            db.SubmitChanges();
+            return tb;
+        }
     }
 }

@@ -104,7 +104,13 @@ namespace bero_System.EmployeeForms
             };
             HolyDayCmd.NewHolyDay(HolyTb);
 
-          
+          //================================================
+            // Edit Status :
+            Employee emptb = EmployeesCmd.GetByID(int.Parse(EmployeeComboBox.SelectedValue.ToString()));
+            emptb.Status = statusComboBox.Text;
+            EmployeesCmd.EditStatus(emptb);
+
+            //================================================
             foreach (Control item in radGroupBox1.Controls)
             {
                 if (item is TextBox)

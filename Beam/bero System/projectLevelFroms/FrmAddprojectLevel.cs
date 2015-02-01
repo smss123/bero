@@ -69,6 +69,7 @@ namespace bero_System.projectLevelFroms
             double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
             if (Convert.ToDouble(levelAmountTextBox.Text.ToString()) > balance)
             {
+                MessageBox.Show(balance.ToString());
                 MessageBox.Show("رصيـــــد الحساب غير كافي");
                 return;
             }

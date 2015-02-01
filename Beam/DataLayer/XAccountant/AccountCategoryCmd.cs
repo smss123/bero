@@ -13,8 +13,8 @@ namespace DataLayer.XAccountant
         public static event OnchangeCallBack ProcessChange;
         public static bool NewAccountCategory(AccountCategory tb)
         {
-            try
-            {
+            //try
+            //{
 
 
                 db.AccountCategories.InsertOnSubmit(tb);
@@ -29,15 +29,15 @@ namespace DataLayer.XAccountant
                     HistoryAction = "Adding New Account Category",
 
                 });
-                ProcessChange("Adding Account Category ", tb.AccountCategoryName + " has Been Saved ", null);
-                return true;
-            }
-            catch (Exception e)
-            {
+            //    ProcessChange("Adding Account Category ", tb.AccountCategoryName + " has Been Saved ", null);
+           return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Account Category", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Account Category", e.ToString());
+              //  return false;
+          //  }
         }
 
         public static bool EditAccountCategory(AccountCategory tb)
