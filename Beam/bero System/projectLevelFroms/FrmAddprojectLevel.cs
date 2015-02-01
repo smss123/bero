@@ -65,14 +65,14 @@ namespace bero_System.projectLevelFroms
 
             #region "   ^^^ Check Account Balance     "
 
-            int Acct = int.Parse(TargetProjectx.AccountID.ToString());
-            double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
-            if (Convert.ToDouble(levelAmountTextBox.Text.ToString()) > balance)
-            {
-                MessageBox.Show(balance.ToString());
-                MessageBox.Show("رصيـــــد الحساب غير كافي");
-                return;
-            }
+            //int Acct = int.Parse(TargetProjectx.AccountID.ToString());
+            //double balance = AccountDailyCommand.GetBalanceByAccountID(Acct);
+            //if (Convert.ToDouble(levelAmountTextBox.Text.ToString()) > balance)
+            //{
+            //    MessageBox.Show(balance.ToString());
+            //    MessageBox.Show("رصيـــــد الحساب غير كافي");
+            //    return;
+            //}
 
             #endregion
 
