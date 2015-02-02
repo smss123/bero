@@ -12,6 +12,7 @@ using System.IO;
 using DataLayer;
 using DataLayer.XProject;
 using System.Threading;
+using System.Diagnostics;
 namespace bero_System.ProjectAttachmentForms
 {
     public partial class FrmManageProjectAttachment : RadForm
@@ -56,7 +57,7 @@ namespace bero_System.ProjectAttachmentForms
 
 
                 ProjectAttachment  tb = (ProjectAttachment)ProjectAttachmentGridView.CurrentRow.DataBoundItem;
-               
+                Process.Start(tb.FilePath);
                 Operation.EndOperation(this);
             }
             if (col == 4)
