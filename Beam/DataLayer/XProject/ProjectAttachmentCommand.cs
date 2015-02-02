@@ -14,8 +14,8 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewProjectAttachment(ProjectAttachment tb)
         {
-            try
-            {
+            //try
+            //{
 
                 db.ProjectAttachments.InsertOnSubmit(tb);
                 db.SubmitChanges();
@@ -32,15 +32,15 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Attachment",
 
                 });
-                ProcessChange("Adding Project Attachment ", tb.FileName + " has Been Saved ", null);
-                return true;
-            }
-            catch (Exception e)
-            {
+            //    ProcessChange("Adding Project Attachment ", tb.FileName + " has Been Saved ", null);
+            //    return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Project Attachment", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Project Attachment", e.ToString());
+            //    return false;
+            //}
         }
 
         public static bool EditProjectAttachment(ProjectAttachment tb)

@@ -90,6 +90,7 @@
             this.BwrsBtn.TabIndex = 1;
             this.BwrsBtn.Text = "...";
             this.BwrsBtn.ThemeName = "Office2013Light";
+            this.BwrsBtn.Click += new System.EventHandler(this.BwrsBtn_Click);
             // 
             // pathtextBox
             // 
@@ -118,6 +119,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة مرفق";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmAddProjectAttachment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
