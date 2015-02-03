@@ -55,11 +55,14 @@ namespace bero_System.ReportSystem.ReportCommand
                     var cst = CustomerCommand.GetCustomerByID(Convert.ToInt32 (item .CustomerID ) );
                     ls.Add(new AllProjectObjcet()
                     {
+                         ProjectName =item.ProjectName,
                          CustomerName = cst .CustomerName ,
                          FullAmount = _FullAmount ,
                           Selles = _FullSelles ,
                            Expensses = _FullExpensses ,
-                           Installments = _FullInstallments 
+                           Installments = _FullInstallments ,
+                           CreationDate = Convert.ToDateTime (item .createdDate) ,
+                           DeliverDate =  Convert.ToDateTime (item .DeliverDate )
 
                     });
                 }
