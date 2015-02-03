@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-
+using System.IO;
+using DataLayer;
+using DataLayer.XProject;
 namespace bero_System.ProjectAttachmentForms
 {
     public partial class FrmAddProjectAttachment : RadForm
@@ -17,7 +19,7 @@ namespace bero_System.ProjectAttachmentForms
         {
             InitializeComponent();
         }
-
+        public ProjectProfile  TargetProject { get; set; }
         private void radButton1_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -42,6 +44,50 @@ namespace bero_System.ProjectAttachmentForms
 
 
             #endregion
+            Operation.BeginOperation(this);
+            ProjectAttachment th = new ProjectAttachment() {
+            FileName = Op.SafeFileName ,
+             FilePath = pathtextBox .Text ,
+            // FileContent =  Op.FileName ,
+             ProjectProfileID = TargetProject .ID 
+            };
+            ProjectAttachmentCommand.NewProjectAttachment(th);
+            
+            foreach (Control item in radGroupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
+
+            Operation.EndOperation(this);
+            Operation.ShowToustOk("تم الحفظ", this);
+        }
+        OpenFileDialog Op = new OpenFileDialog();
+        private void BwrsBtn_Click(object sender, EventArgs e)
+        {
+           Op = new OpenFileDialog();
+           if (Op.ShowDialog() == DialogResult.OK)
+           {
+
+               pathtextBox.Text = Op.FileName;
+
+
+           }
+        
+
+
+        }
+
+        private void FrmAddProjectAttachment_Load(object sender, EventArgs e)
+        {
+            //if (Directory.Exists(Application.StartupPath + "\\BermFiles") == false)
+            //{
+            //    Directory.CreateDirectory(Application.StartupPath + "\\BermFiles");
+            //}
+            
+        
         }
     }
 }

@@ -70,8 +70,9 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(100, 37);
+            this.AddBtn.Size = new System.Drawing.Size(91, 37);
             this.AddBtn.Text = "اضافة ملف";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -84,8 +85,9 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(120, 37);
+            this.RefreshBtn.Size = new System.Drawing.Size(111, 37);
             this.RefreshBtn.Text = "تحديث السجلات";
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -174,6 +176,7 @@
             this.ProjectAttachmentGridView.TabIndex = 0;
             this.ProjectAttachmentGridView.Text = "radGridView1";
             this.ProjectAttachmentGridView.ThemeName = "Office2013Light";
+            this.ProjectAttachmentGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ProjectAttachmentGridView_CommandCellClick);
             // 
             // FrmManageProjectAttachment
             // 
@@ -192,6 +195,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ادارة المرفقات";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageProjectAttachment_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

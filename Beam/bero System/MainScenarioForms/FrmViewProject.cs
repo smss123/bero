@@ -18,6 +18,7 @@ using bero_System.projectLevelSellForms;
 using bero_System.ProjectInstallmentForms;
 using bero_System.ReportSystem.ReportCommand;
 using DataLayer.XAccountant;
+using bero_System.ProjectAttachmentForms;
 
 
 
@@ -226,6 +227,13 @@ namespace bero_System.MainScenarioForms
        
         }
         #endregion
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FrmManageProjectAttachment frm = new FrmManageProjectAttachment();
+            frm.TargetProject = this.TargetProject;
+            frm.ShowDialog();
+        }
 
         
 
