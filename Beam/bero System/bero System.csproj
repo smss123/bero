@@ -116,13 +116,13 @@
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2014.3.1202.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountForms\frmAccountDailySHow.cs">
@@ -444,6 +444,7 @@
     <Compile Include="ReportSystem\ReportCommand\AccountDailyReportCmd.cs" />
     <Compile Include="ReportSystem\ReportCommand\BalanceSheetCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
+    <Compile Include="ReportSystem\ReportCommand\EmployeeCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ExpenssesMovmentCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectExpenssesCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectInstallmentCommandRpt.cs" />
@@ -453,6 +454,7 @@
     <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\BalanceSheetObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\EmployeeObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\PaymentVoucherReportObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectExpenssesObj.cs" />
@@ -677,6 +679,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptBalanceSheet.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptEmployee.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptExpenssesMovment.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptPaymentVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectExpensses.rdlc" />
@@ -714,6 +717,7 @@
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.AccountDailyObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.BalanceSheetObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.EmployeeObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ExpenssesMovmentReportObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.PaymentVoucherReportObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectExpenssesObj.datasource" />
@@ -901,36 +905,6 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="Telerik.WinControls">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="Telerik.WinControls.GridView">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="Telerik.WinControls.Themes.Office2013Light">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
     <PublishFile Include="Telerik.WinControls.Themes.VisualStudio2012Light">
       <Visible>False</Visible>
       <Group>
@@ -938,26 +912,6 @@
       <TargetPath>
       </TargetPath>
       <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="Telerik.WinControls.UI">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="TelerikCommon">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
