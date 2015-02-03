@@ -442,6 +442,7 @@
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportSystem\ReportCommand\AccountDailyReportCmd.cs" />
+    <Compile Include="ReportSystem\ReportCommand\AllProjectsCmd.cs" />
     <Compile Include="ReportSystem\ReportCommand\BalanceSheetCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
     <Compile Include="ReportSystem\ReportCommand\ExpenssesMovmentCommandRpt.cs" />
@@ -451,6 +452,7 @@
     <Compile Include="ReportSystem\ReportCommand\projectLevelSellCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectQuantityCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportOBj\AccountDailyObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\AllProjectObjcet.cs" />
     <Compile Include="ReportSystem\ReportOBj\BalanceSheetObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
