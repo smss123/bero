@@ -14,6 +14,7 @@ using Telerik.WinControls.UI;
 using System.Threading;
 using DataLayer;
 using DataLayer.XAccountant;
+using Telerik.WinControls;
 namespace bero_System.AccountForms
 {
     public partial class FrmEditExpenssesMovment : RadForm
@@ -22,44 +23,14 @@ namespace bero_System.AccountForms
         {
             InitializeComponent();
         }
-        Thread th;
-        private void FillCombo()
-        {
-            //Fill Expensses ComBob
-            this.expenssesComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
-            Operation.BeginOperation(this);
-
-            this.Invoke((MethodInvoker)delegate
-            {
-                this.expenssesComboBox.AutoFilter = true;
-                this.expenssesComboBox.ValueMember = "ID";
-                this.expenssesComboBox.DisplayMember = "ExpenssesName";
-            });
-
-
-            var q = ExpenssesCommand.GetAll();
-            this.Invoke((MethodInvoker)delegate
-            {
-                expenssesComboBox.DataSource = q;
-                CompositeFilterDescriptor compositeFilter = new CompositeFilterDescriptor();
-                FilterDescriptor ExpName = new FilterDescriptor("ExpenssesName", FilterOperator.Contains, "");
-                compositeFilter.FilterDescriptors.Add(ExpName);
-                compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
-                this.expenssesComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
-
-
-
-
-            });
-            Operation.EndOperation(this);
-
-            th.Abort();
-        }
+        public ExpenssesMovment TrExpMovment { get; set; }
      
         private void FrmEditExpenssesMovment_Load(object sender, EventArgs e)
         {
-            th = new Thread(FillCombo);
-            th.Start();
+            ExpensessNameTextBox.Text = TrExpMovment.Expenss.ExpenssesName;
+            amountTextBox.Text = TrExpMovment.Amount.ToString();
+            descriptionTextBox.Text = TrExpMovment.Description;
+
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -68,19 +39,7 @@ namespace bero_System.AccountForms
 
 
 
-            if (expenssesComboBox.SelectedValue == null)
-            {
-
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
-                expenssesComboBox.Focus();
-                errorProvider1.SetError(this.expenssesComboBox, "من فضلك اختر نوع المصروف");
-                return;
-            }
-            else
-            {
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.White;
-                errorProvider1.Clear();
-            }
+          
 
             if (amountTextBox.Text == "")
             {
@@ -104,6 +63,35 @@ namespace bero_System.AccountForms
 
 
             #endregion
+
+            if (RadMessageBox.Show(this, "هل تريد حفظ التعديلات", "حفظ التعديلات", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+            {
+                Operation.BeginOperation(this);
+                TrExpMovment.Amount = double.Parse(amountTextBox.Text);
+                TrExpMovment.Description = descriptionTextBox.Text;
+                if (ExpenssesMovmentCommand.EditExpenssesMovment(TrExpMovment))
+                {
+                    if(AccountDailyCommand.NewAccountDaily(new AccountDaily()
+                {
+                    AccountID = TrExpMovment.Expenss.AccountID,
+                    DateOfProcess = DateTime.Now,
+                    Description = "تعديل قيد لصالح المصروفات ",
+                    TotalOut = 0f,
+                    TotalIn = Convert.ToDouble(amountTextBox.Text),
+                    CommandArg = "",
+
+
+                }))
+                    {
+
+                    }
+                }
+                Operation.BeginOperation(this);
+
+                RadMessageBox.Show("تمت عملية التعديل", "نجاح العملية", MessageBoxButtons.OK, RadMessageIcon.Info);
+                this.Close();
+            }
+
         }
     }
 }

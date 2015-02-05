@@ -32,15 +32,11 @@
             System.Windows.Forms.Label expenssesIDLabel;
             System.Windows.Forms.Label amountLabel;
             System.Windows.Forms.Label descriptionLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ExpensessNameTextBox = new System.Windows.Forms.TextBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
-            this.expenssesComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             expenssesIDLabel = new System.Windows.Forms.Label();
@@ -49,9 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -89,12 +82,12 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.ExpensessNameTextBox);
             this.radGroupBox1.Controls.Add(this.AddBtn);
             this.radGroupBox1.Controls.Add(descriptionLabel);
             this.radGroupBox1.Controls.Add(this.descriptionTextBox);
             this.radGroupBox1.Controls.Add(amountLabel);
             this.radGroupBox1.Controls.Add(this.amountTextBox);
-            this.radGroupBox1.Controls.Add(this.expenssesComboBox);
             this.radGroupBox1.Controls.Add(expenssesIDLabel);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
@@ -105,6 +98,14 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "بيانات حركة المصروفات";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // ExpensessNameTextBox
+            // 
+            this.ExpensessNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExpensessNameTextBox.Location = new System.Drawing.Point(30, 23);
+            this.ExpensessNameTextBox.Name = "ExpensessNameTextBox";
+            this.ExpensessNameTextBox.Size = new System.Drawing.Size(258, 20);
+            this.ExpensessNameTextBox.TabIndex = 9;
             // 
             // AddBtn
             // 
@@ -138,72 +139,6 @@
             this.amountTextBox.TabIndex = 3;
             this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
             // 
-            // expenssesComboBox
-            // 
-            this.expenssesComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // expenssesComboBox.NestedRadGridView
-            // 
-            this.expenssesComboBox.EditorControl.BackColor = System.Drawing.SystemColors.Window;
-            this.expenssesComboBox.EditorControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.expenssesComboBox.EditorControl.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.expenssesComboBox.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.expenssesComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.expenssesComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
-            // 
-            // 
-            // 
-            this.expenssesComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
-            this.expenssesComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
-            this.expenssesComboBox.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            this.expenssesComboBox.EditorControl.MasterTemplate.AutoGenerateColumns = false;
-            this.expenssesComboBox.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn3.DataType = typeof(int);
-            gridViewDecimalColumn3.EnableExpressionEditor = false;
-            gridViewDecimalColumn3.FieldName = "ID";
-            gridViewDecimalColumn3.HeaderText = "ID";
-            gridViewDecimalColumn3.IsAutoGenerated = true;
-            gridViewDecimalColumn3.IsVisible = false;
-            gridViewDecimalColumn3.Name = "ID";
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "ExpenssesName";
-            gridViewTextBoxColumn7.HeaderText = "اسم المصروف";
-            gridViewTextBoxColumn7.IsAutoGenerated = true;
-            gridViewTextBoxColumn7.Name = "ExpenssesName";
-            gridViewTextBoxColumn7.Width = 67;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Description";
-            gridViewTextBoxColumn8.HeaderText = "الوصف";
-            gridViewTextBoxColumn8.IsAutoGenerated = true;
-            gridViewTextBoxColumn8.Name = "Description";
-            gridViewTextBoxColumn8.Width = 95;
-            gridViewTextBoxColumn9.DataType = typeof(System.Nullable<System.Guid>);
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "SerialNumber";
-            gridViewTextBoxColumn9.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn9.IsAutoGenerated = true;
-            gridViewTextBoxColumn9.Name = "SerialNumber";
-            gridViewTextBoxColumn9.Width = 60;
-            this.expenssesComboBox.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn3,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9});
-            this.expenssesComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
-            this.expenssesComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.expenssesComboBox.EditorControl.Name = "NestedRadGridView";
-            this.expenssesComboBox.EditorControl.ReadOnly = true;
-            this.expenssesComboBox.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.expenssesComboBox.EditorControl.ShowGroupPanel = false;
-            this.expenssesComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
-            this.expenssesComboBox.EditorControl.TabIndex = 0;
-            this.expenssesComboBox.Location = new System.Drawing.Point(30, 23);
-            this.expenssesComboBox.Name = "expenssesComboBox";
-            this.expenssesComboBox.Size = new System.Drawing.Size(260, 20);
-            this.expenssesComboBox.TabIndex = 1;
-            this.expenssesComboBox.TabStop = false;
-            this.expenssesComboBox.ThemeName = "Office2013Light";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -225,6 +160,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(360, 240);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddExpenssesMovment";
             this.ThemeName = "Office2013Light";
@@ -233,9 +169,6 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox.EditorControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenssesComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -247,9 +180,9 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox amountTextBox;
-        private Telerik.WinControls.UI.RadMultiColumnComboBox expenssesComboBox;
         private Telerik.WinControls.UI.RadButton AddBtn;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.TextBox ExpensessNameTextBox;
     }
 }

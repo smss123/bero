@@ -70,14 +70,9 @@ namespace bero_System.AccountForms
             {
                 Operation.BeginOperation(this);
 
-                FrmEditExpensses frm = new FrmEditExpensses();
-
+                FrmManageExpenssesMovment frm = new FrmManageExpenssesMovment();
                 Expenss tb = (Expenss)ExpenssesGridView.CurrentRow.DataBoundItem;
-
                 frm.TragetExpenss = tb;
-
-                frm.SaveBtn.Visible = false;
-
                 frm.ShowDialog();
               
                 Operation.EndOperation(this);

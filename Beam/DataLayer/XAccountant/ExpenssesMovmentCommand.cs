@@ -105,5 +105,15 @@ namespace DataLayer.XAccountant
         {
             return db.ExpenssesMovments.ToList();
         }
+
+        public static List<ExpenssesMovment> GetAllExpenssesMovmentByExpID(int expID)
+        {
+          
+
+            var LST = (from c in db.ExpenssesMovments
+                       where c.ExpenssesID == expID
+                       select c).ToList();
+            return LST;
+        }
     }
 }

@@ -34,8 +34,8 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageExpenssesMovment));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.AddBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,6 +44,7 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.ExpenssesMovmentGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -54,11 +55,19 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 502);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(816, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // toolStrip1
             // 
@@ -81,6 +90,7 @@
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(146, 37);
             this.AddBtn.Text = "اضافة حركة  مصروف";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -164,7 +174,6 @@
             gridViewTextBoxColumn2.Width = 271;
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.HeaderText = "تعديل";
-            gridViewCommandColumn1.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn1.Image")));
             gridViewCommandColumn1.Name = "column1";
             gridViewCommandColumn1.Width = 62;
             this.ExpenssesMovmentGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
@@ -182,6 +191,7 @@
             this.ExpenssesMovmentGridView.TabIndex = 0;
             this.ExpenssesMovmentGridView.Text = "radGridView1";
             this.ExpenssesMovmentGridView.ThemeName = "Office2013Light";
+            this.ExpenssesMovmentGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ExpenssesMovmentGridView_CommandCellClick);
             // 
             // FrmManageExpenssesMovment
             // 
@@ -200,6 +210,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManageExpenssesMovment";
             this.ThemeName = "Office2013Light";
+            this.Load += new System.EventHandler(this.FrmManageExpenssesMovment_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
@@ -223,5 +236,6 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView ExpenssesMovmentGridView;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

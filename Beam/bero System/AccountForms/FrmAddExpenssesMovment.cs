@@ -27,65 +27,18 @@ namespace bero_System.AccountForms
 
 
         public int ExpenssId { get; set; }
-        public Expenss TragetExpenss { get; set; }
-
-        private void FillCombo()
-        {
-            //Fill Expensses ComBob
-            this.expenssesComboBox.MultiColumnComboBoxElement.DropDownWidth = 550;
-            Operation.BeginOperation(this);
-
-            this.Invoke((MethodInvoker)delegate
-            {
-                this.expenssesComboBox.AutoFilter = true;
-                this.expenssesComboBox.ValueMember = "ID";
-                this.expenssesComboBox.DisplayMember = "ExpenssesName";
-            });
-
-
-            var q = ExpenssesCommand.GetAll();
-            this.Invoke((MethodInvoker)delegate
-            {
-                expenssesComboBox.DataSource = q;
-                CompositeFilterDescriptor compositeFilter = new CompositeFilterDescriptor();
-                FilterDescriptor ExpName = new FilterDescriptor("ExpenssesName", FilterOperator.Contains, "");
-                compositeFilter.FilterDescriptors.Add(ExpName);
-                compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
-                this.expenssesComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
-
-
-
-
-            });
-            Operation.EndOperation(this);
-
-            th.Abort();
-        }
+        public Expenss TragetExpensses { get; set; }
+              
         private void FrmAddExpenssesMovment_Load(object sender, EventArgs e)
         {
-            th = new Thread(FillCombo);
-            th.Start();
+           
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
 
-
-
-            if (expenssesComboBox.SelectedValue == null)
-            {
-
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.OrangeRed;
-                expenssesComboBox.Focus();
-                errorProvider1.SetError(this.expenssesComboBox, "من فضلك اختر نوع المصروف");
-                return;
-            }
-            else
-            {
-                expenssesComboBox.MultiColumnComboBoxElement.BackColor = Color.White;
-                errorProvider1.Clear();
-            }
+                   
 
             if (amountTextBox.Text == "")
             {
@@ -127,7 +80,7 @@ namespace bero_System.AccountForms
 
                 if (AccountDailyCommand.NewAccountDaily(new AccountDaily()
                 {
-                    AccountID = int .Parse (expenssesComboBox.SelectedValue.ToString()),
+                    AccountID = TragetExpensses.AccountID,
                     DateOfProcess = DateTime.Now,
                     Description = "عبارة عن مبلغ مسحوب لصالح المصروفات ",
                     TotalOut = Convert .ToDouble ( amountTextBox.Text),
