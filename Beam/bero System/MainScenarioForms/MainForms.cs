@@ -196,8 +196,8 @@ namespace bero_System.MainScenarioForms
 
         private void TrialbalanceBtn_Click(object sender, EventArgs e)
         {
-            //FrmStatistic frm = new FrmStatistic();
-            //frm.ShowDialog();
+            FrmAllStatistices frm = new FrmAllStatistices();
+            frm.ShowDialog();
         }
 
    
