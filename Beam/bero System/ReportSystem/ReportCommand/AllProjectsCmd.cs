@@ -15,66 +15,66 @@ namespace bero_System.ReportSystem.ReportCommand
     {
 
         public AllProjectsCmd() { }
-        public void AllProjectsStatistic()
+       
+        public void Statistic()
         {
-            var AllProjects = ProjectProfileCommand.GetAll();
+            List<AllProjectObjcet> LstStatitic = new List<AllProjectObjcet>();
 
-            double _FullAmount = 0;
-            double _FullExpensses = 0;
-            double _FullInstallments = 0;
-            double _FullSelles = 0 ;
-            foreach (var Prj in AllProjects)
-            { // Start loop
-                var q = ProjectProfileCommand.GetAll();
-                List<ProjectExpenss> AllExp = ProjectExpenssesCommand.GetAll(Prj.ID);
-                List<ProjectInstallment> AllInstalments = ProjectInstallmentCommand.GetAllProjectInstallmentByProjectId(Prj.ID);
-                List<projectLevelSell> AllProjectSells = projectLevelSellCommand.GetAllByProjectId(Prj.ID);
-                foreach (var  exp  in AllExp )
+            var LstProjects = ProjectProfileCommand.GetAll();
+            foreach (var Prj in LstProjects)
+            { //Start Loop
+
+                // Installments
+                var AllInstallments = ProjectInstallmentCommand.GetAllProjectInstallmentByProjectId(Prj.ID);
+                Double SumInstallments = 0;
+                foreach (var InstallAmount in AllInstallments)
                 {
-                    _FullExpensses +=  Convert.ToDouble (exp.Amount);
-
+                    SumInstallments += Convert.ToDouble(InstallAmount.Amount);
                 }
 
-                foreach (var install in AllInstalments )
+                //======================================================================================================
+                // Expensses :
+                var AllExpensses = ProjectExpenssesCommand.GetAll(Prj.ID);
+                double SumExpensses = 0;
+                foreach (var ExpAmount in AllExpensses)
                 {
-                    _FullInstallments += Convert.ToDouble(install.Amount);
+                    SumExpensses += Convert.ToDouble(ExpAmount.Amount);
                 }
 
-
-                foreach (var sell in AllProjectSells )
+                //======================================================================================================
+                // Selles
+                var AllSelles = projectLevelSellCommand.GetAllByProjectId(Prj.ID);
+                double SumSelles = 0;
+                foreach (var SellAmount in AllSelles)
                 {
-                    _FullSelles += Convert.ToDouble(sell.Amount);
+                    SumSelles += Convert.ToDouble(SellAmount.Amount);
                 }
-                // ^^^^^ Populate Object By Values :  
+                //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                LstStatitic.Add(new AllProjectObjcet()
+                {
+                      ProjectName = Prj.ProjectName,
+                      FullAmount = Convert.ToDouble (Prj.ProjectFullAmount),
+                      TotalExpensses = Convert.ToDouble(SumExpensses),
+                      TotalSelles = SumSelles,
+                      TotalInstallments = SumInstallments 
+    
+                 });
+  
+            } // End Loop
+
+            
                 ReportDataSource rs = new ReportDataSource();
-                List<AllProjectObjcet> ls = new List<AllProjectObjcet>();
-
-                foreach (var item in q)
-                {
-                    
-                    var cst = CustomerCommand.GetCustomerByID(Convert.ToInt32 (item .CustomerID ) );
-                    ls.Add(new AllProjectObjcet()
-                    {
-                         ProjectName =item.ProjectName,
-                         CustomerName = cst .CustomerName ,
-                         FullAmount = _FullAmount ,
-                          Selles = _FullSelles ,
-                           Expensses = _FullExpensses ,
-                           Installments = _FullInstallments ,
-                           CreationDate = Convert.ToDateTime (item .createdDate) ,
-                           DeliverDate =  Convert.ToDateTime (item .DeliverDate )
-
-                    });
-                }
+ 
                 rs.Name = "DataSet1";
-                rs.Value = ls;
+                rs.Value = LstStatitic;
                 FrmReportViewer frm = new FrmReportViewer();
                 frm.reportViewer1.LocalReport.DataSources.Clear();
                 frm.reportViewer1.LocalReport.DataSources.Add(rs);
                 frm.reportViewer1.LocalReport.ReportEmbeddedResource = "bero_System.ReportSystem.ReportDesign.hhhhhhhhhhhhh.rdlc";
                 frm.ShowDialog();
-            } // End loop
-        }
+            } 
+   
 
     }
 }

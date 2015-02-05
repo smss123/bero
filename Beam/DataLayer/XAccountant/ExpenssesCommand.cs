@@ -42,8 +42,8 @@ namespace DataLayer.XAccountant
 
         public static bool EditExpensses(Expenss tb)
         {
-            try
-            {
+            //try
+            //{
                 var q = db.Expensses.Where(p => p.ID == tb.ID).Single();
                 q.ExpenssesName = tb.ExpenssesName;
                 q.Description = tb.Description;
@@ -56,16 +56,16 @@ namespace DataLayer.XAccountant
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-                ProcessChange("Edit Expensses", tb.ExpenssesName + " has Been Edited ", null);
+                //ProcessChange("Edit Expensses", tb.ExpenssesName + " has Been Edited ", null);
                 q = null;
-                return true;
-            }
-            catch (Exception e)
-            {
+             return true;
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Edit Expensses", e.ToString());
-                return false;
-            }
+            ////    ProcessChange("Error message", "Can't Edit Expensses", e.ToString());
+            //    return false;
+           // }
         }
 
         public static bool DeleteExpensses(int iD)

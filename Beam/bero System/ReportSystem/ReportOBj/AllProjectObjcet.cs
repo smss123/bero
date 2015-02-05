@@ -10,14 +10,12 @@ namespace bero_System.ReportSystem.ReportOBj
     {
 
         public string ProjectName { get; set; }
-        public string  CustomerName { get; set; }       
-        public DateTime  CreationDate { get; set; }
-        public DateTime DeliverDate { get; set; }
+        
 
         public double FullAmount { get; set; }
-        public double Expensses { get; set; }
-        public double Selles { get; set; }
-        public double Installments { get; set; }
+        public double TotalExpensses { get; set; }
+        public double TotalSelles { get; set; }
+        public double TotalInstallments { get; set; }
 
         public string  Status { get; set; }
 
