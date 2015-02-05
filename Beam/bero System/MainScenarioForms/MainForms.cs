@@ -194,6 +194,12 @@ namespace bero_System.MainScenarioForms
             Application.Exit();
         }
 
+        private void TrialbalanceBtn_Click(object sender, EventArgs e)
+        {
+            FrmStatistic frm = new FrmStatistic();
+            frm.ShowDialog();
+        }
+
    
 
     }

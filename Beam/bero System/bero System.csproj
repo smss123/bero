@@ -209,6 +209,12 @@
     <Compile Include="AccountForms\FrmManageExpenssesMovment.Designer.cs">
       <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountForms\FrmStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmStatistic.Designer.cs">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountForms\FromPrivatewithdrawals.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountForms\FrmManageExpenssesMovment.resx">
       <DependentUpon>FrmManageExpenssesMovment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmStatistic.resx">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountForms\FromPrivatewithdrawals.resx">
       <DependentUpon>FromPrivatewithdrawals.cs</DependentUpon>
