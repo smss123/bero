@@ -35,6 +35,7 @@ namespace bero_System.MainScenarioForms
                 phoneNumberTextBox.Text = TargetCustomer.PhoneNumber;
 
                 ProjectGridView.DataSource = lst; 
+
             
             });
 
