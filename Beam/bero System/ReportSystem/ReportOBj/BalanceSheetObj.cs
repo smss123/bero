@@ -8,12 +8,9 @@ namespace bero_System.ReportSystem.ReportOBj
 {
     public class BalanceSheetObj
     {
-        public string HashNumber { get; set; }
-        public string AccountCategory { get; set; }
         public string AccountName { get; set; }
-        public double? Balance { get; set; }
-
-
+        public double InCome { get; set; }
+        public double Expensess { get; set; }
 
 
     }

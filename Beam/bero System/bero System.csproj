@@ -465,7 +465,6 @@
     <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
-    <Compile Include="ReportSystem\ReportOBj\TotalExpensesandIncomeObj.cs" />
     <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.cs">
       <SubType>Form</SubType>
     </Compile>

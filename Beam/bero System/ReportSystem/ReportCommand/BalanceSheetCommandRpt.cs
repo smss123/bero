@@ -27,10 +27,6 @@ namespace bero_System.ReportSystem.ReportCommand
 
                 ls.Add(new BalanceSheetObj()
                 {
-                    HashNumber= Guid.NewGuid().ToString(),
-                     AccountCategory  = item.AccountCategory.AccountCategoryName,
-                      AccountName  = item.AccountName,
-                       Balance = AccountCommand.GetAccountBalance(item.ID)
                 });
             }
             rs.Name = "DataSet1";
