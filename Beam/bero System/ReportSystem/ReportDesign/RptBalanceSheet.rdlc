@@ -557,6 +557,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <LayoutDirection>RTL</LayoutDirection>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.65815cm</Top>
         <Left>0.3937cm</Left>

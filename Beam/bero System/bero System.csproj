@@ -447,6 +447,7 @@
     <Compile Include="ReportSystem\ReportCommand\CustomerProjectCommand.cs" />
     <Compile Include="ReportSystem\ReportCommand\EmployeeCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ExpenssesMovmentCommandRpt.cs" />
+    <Compile Include="ReportSystem\ReportCommand\HolyDayCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectExpenssesCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\ProjectInstallmentCommandRpt.cs" />
     <Compile Include="ReportSystem\ReportCommand\projectLevelCommandRpt.cs" />
@@ -458,6 +459,7 @@
     <Compile Include="ReportSystem\ReportOBj\CustomerProjectObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\EmployeeObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ExpenssesMovmentReportObj.cs" />
+    <Compile Include="ReportSystem\ReportOBj\HolyDayObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\PaymentVoucherReportObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectExpenssesObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectInstallmentObj.cs" />
@@ -683,6 +685,7 @@
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptEmployee.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptExpenssesMovment.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptHolyDay.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptPaymentVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectExpensses.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectInstallment.rdlc" />
@@ -721,6 +724,7 @@
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.CustomerProjectObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.EmployeeObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ExpenssesMovmentReportObj.datasource" />
+    <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.HolyDayObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.PaymentVoucherReportObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectExpenssesObj.datasource" />
     <None Include="Properties\DataSources\bero_System.ReportSystem.ReportOBj.ProjectInstallmentObj.datasource" />
