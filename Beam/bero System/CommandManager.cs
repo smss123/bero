@@ -8,6 +8,7 @@ using DataLayer.XCustomer;
 using System.Windows.Forms;
 using DataLayer.XProject;
 using DataLayer.XAccountant;
+using DataLayer.Security;
 namespace bero_System
 {
     public class CommandManager
@@ -19,6 +20,33 @@ namespace bero_System
             ProjectProfileCommand.ProcessChange += ProjectProfileCommand_ProcessChange;
             DataLayer.Security.HistoryCommand.ProcessChange += HistoryCommand_ProcessChange;
             ExpenssesMovmentCommand.ProcessChange += ExpenssesMovmentCommand_ProcessChange;
+            UsersCmd.ProcessChange += UsersCmd_ProcessChange;
+            projectLevelCommand.ProcessChange += projectLevelCommand_ProcessChange;
+            ProjectQuantityCommand.ProcessChange += ProjectQuantityCommand_ProcessChange;
+            ProjectInstallmentCommand.ProcessChange += ProjectInstallmentCommand_ProcessChange;
+        }
+
+        static void ProjectInstallmentCommand_ProcessChange(string processName, string Usermsg, string description)
+        {
+            //throw new NotImplementedException();
+        }
+
+        static void ProjectQuantityCommand_ProcessChange(string processName, string Usermsg, string description)
+        {
+            
+        }
+
+        static void projectLevelCommand_ProcessChange(string processName, string Usermsg, string description)
+        {
+           
+        }
+
+        static void UsersCmd_ProcessChange(string processName, string Usermsg, string description)
+        {
+            //throw new NotImplementedException();
+          
+           
+
         }
 
         static void ExpenssesMovmentCommand_ProcessChange(string processName, string Usermsg, string description)

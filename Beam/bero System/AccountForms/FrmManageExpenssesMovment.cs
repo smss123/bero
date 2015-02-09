@@ -54,6 +54,7 @@ namespace bero_System.AccountForms
         {
             th = new Thread(filldata);
             th.Start();
+            this.Text = string.Format("{0}-{1}", this.Text, TragetExpenss.ExpenssesName);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)

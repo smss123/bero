@@ -212,6 +212,7 @@
             // lblAvailableAmount
             // 
             this.lblAvailableAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAvailableAmount.BackColor = System.Drawing.Color.Gainsboro;
             this.lblAvailableAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAvailableAmount.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvailableAmount.Location = new System.Drawing.Point(24, 36);
@@ -246,8 +247,10 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(377, 358);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FromPrivatewithdrawals";
+            this.Text = "قيد يومية";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FromPrivatewithdrawals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

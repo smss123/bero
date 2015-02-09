@@ -161,8 +161,9 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(360, 240);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddExpenssesMovment";
+            this.Text = "اضافة مصروف";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmAddExpenssesMovment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

@@ -1,23 +1,17 @@
-﻿using bero_System.CustomerForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Telerik.WinControls.UI;
-using bero_System.ProjectForms;
 using System.Threading;
-using DataLayer.XCustomer;
-using bero_System.BulidItemForms;
+using System.Windows.Forms;
 using DataLayer;
-using bero_System.AccountForms;
-using bero_System.EmployeeForms;
-using bero_System.SecurityForms;
 using DataLayer.Security;
+using DataLayer.XCustomer;
+using Telerik.WinControls.UI;
+using bero_System.AccountForms;
+using bero_System.BulidItemForms;
+using bero_System.CustomerForms;
+using bero_System.EmployeeForms;
+using bero_System.ProjectForms;
+using bero_System.SecurityForms;
 
 namespace bero_System.MainScenarioForms
 {

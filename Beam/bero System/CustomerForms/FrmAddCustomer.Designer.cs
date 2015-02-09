@@ -130,7 +130,7 @@
             // no_buildingTextBox
             // 
             this.no_buildingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_buildingTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.no_buildingTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.no_buildingTextBox.Location = new System.Drawing.Point(68, 93);
             this.no_buildingTextBox.Name = "no_buildingTextBox";
             this.no_buildingTextBox.Size = new System.Drawing.Size(194, 20);
@@ -139,7 +139,7 @@
             // no_permissibilityTextBox
             // 
             this.no_permissibilityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_permissibilityTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.no_permissibilityTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.no_permissibilityTextBox.Location = new System.Drawing.Point(68, 125);
             this.no_permissibilityTextBox.Name = "no_permissibilityTextBox";
             this.no_permissibilityTextBox.Size = new System.Drawing.Size(194, 20);
@@ -148,7 +148,7 @@
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.phoneNumberTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.phoneNumberTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.phoneNumberTextBox.Location = new System.Drawing.Point(67, 61);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(194, 20);
@@ -157,7 +157,7 @@
             // customerNameTextBox
             // 
             this.customerNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.customerNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.customerNameTextBox.Location = new System.Drawing.Point(14, 30);
             this.customerNameTextBox.Name = "customerNameTextBox";
             this.customerNameTextBox.Size = new System.Drawing.Size(248, 20);
@@ -185,6 +185,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(341, 248);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة عميل";
             this.ThemeName = "Office2013Light";

@@ -115,7 +115,7 @@
             // itemSummeryTextBox
             // 
             this.itemSummeryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemSummeryTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.itemSummeryTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.itemSummeryTextBox.Location = new System.Drawing.Point(24, 113);
             this.itemSummeryTextBox.Name = "itemSummeryTextBox";
             this.itemSummeryTextBox.Size = new System.Drawing.Size(232, 20);
@@ -124,7 +124,7 @@
             // itemDescriptionTextBox
             // 
             this.itemDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.itemDescriptionTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.itemDescriptionTextBox.Location = new System.Drawing.Point(24, 49);
             this.itemDescriptionTextBox.Multiline = true;
             this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
@@ -134,7 +134,7 @@
             // itemNameTextBox
             // 
             this.itemNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.itemNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.itemNameTextBox.Location = new System.Drawing.Point(24, 23);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(232, 20);
@@ -161,8 +161,10 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(351, 248);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditBulidItem";
+            this.Text = "تعديل صنف";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditBulidItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

@@ -31,7 +31,7 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Quantity",
 
                 });
-          //   ProcessChange("Adding Project Quantity ", tb.ID + " has Been Saved ", null);
+          ProcessChange("Adding Project Quantity ", tb.ID + " has Been Saved ", null);
              return true;
             //}
             //catch (Exception e)
@@ -60,8 +60,8 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-            //    ProcessChange("Edit Project Quantity", tb.ID + " has Been Edited ", null);
-            //    q = null;
+             ProcessChange("Edit Project Quantity", tb.ID + " has Been Edited ", null);
+               q = null;
              return true;
             //}
             //catch (Exception e)
@@ -87,7 +87,7 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
                 q = null;
-              //  ProcessChange("Delete Project Quantity", q.ID + " has Been Deleted ", null);
+              ProcessChange("Delete Project Quantity", q.ID + " has Been Deleted ", null);
               return true;
             //}
             //catch (Exception e)

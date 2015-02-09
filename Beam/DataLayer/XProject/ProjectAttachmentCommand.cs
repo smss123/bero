@@ -32,7 +32,7 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Attachment",
 
                 });
-            //    ProcessChange("Adding Project Attachment ", tb.FileName + " has Been Saved ", null);
+              ProcessChange("Adding Project Attachment ", tb.FileName + " has Been Saved ", null);
             return true;
             //}
             //catch (Exception e)

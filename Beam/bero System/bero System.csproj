@@ -116,13 +116,13 @@
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountForms\frmAccountDailySHow.cs">
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="AccountForms\FrmAddExpenssesMovment.Designer.cs">
       <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountForms\FrmAllStatistices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForms\FrmAllStatistices.Designer.cs">
+      <DependentUpon>FrmAllStatistices.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountForms\FrmEditAccount.cs">
       <SubType>Form</SubType>
@@ -293,6 +299,12 @@
     </Compile>
     <Compile Include="MainScenarioForms\FrmMainProjectsCustomer.Designer.cs">
       <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScenarioForms\FrmStatistic.Designer.cs">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScenarioForms\FrmViewProject.cs">
       <SubType>Form</SubType>
@@ -533,6 +545,9 @@
     <EmbeddedResource Include="AccountForms\FrmAddExpenssesMovment.resx">
       <DependentUpon>FrmAddExpenssesMovment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AccountForms\FrmAllStatistices.resx">
+      <DependentUpon>FrmAllStatistices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountForms\FrmEditAccount.resx">
       <DependentUpon>FrmEditAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -598,6 +613,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainScenarioForms\FrmMainProjectsCustomer.resx">
       <DependentUpon>FrmMainProjectsCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScenarioForms\FrmStatistic.resx">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScenarioForms\FrmViewProject.resx">
       <DependentUpon>FrmViewProject.cs</DependentUpon>

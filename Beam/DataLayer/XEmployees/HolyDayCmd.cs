@@ -15,6 +15,7 @@ namespace DataLayer.XEmployees
         public static bool NewHolyDay(HolyDay HolyTb)
         {
             db.HolyDays.InsertOnSubmit(HolyTb);
+            db.SubmitChanges();
             return true;
         }
 

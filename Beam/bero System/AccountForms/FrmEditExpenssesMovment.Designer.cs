@@ -105,6 +105,7 @@
             // ExpensessNameTextBox
             // 
             this.ExpensessNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExpensessNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.ExpensessNameTextBox.Location = new System.Drawing.Point(32, 20);
             this.ExpensessNameTextBox.Name = "ExpensessNameTextBox";
             this.ExpensessNameTextBox.Size = new System.Drawing.Size(253, 20);
@@ -127,6 +128,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.descriptionTextBox.Location = new System.Drawing.Point(32, 73);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
@@ -136,6 +138,7 @@
             // amountTextBox
             // 
             this.amountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.amountTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.amountTextBox.Location = new System.Drawing.Point(116, 46);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(167, 20);
@@ -158,8 +161,9 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(354, 223);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditExpenssesMovment";
+            this.Text = "تعديل مصروف";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditExpenssesMovment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

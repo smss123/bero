@@ -83,7 +83,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(74, 37);
+            this.AddBtn.Size = new System.Drawing.Size(71, 37);
             this.AddBtn.Text = "اضافة";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -98,7 +98,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(120, 37);
+            this.RefreshBtn.Size = new System.Drawing.Size(111, 37);
             this.RefreshBtn.Text = "تحديث السجلات";
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
@@ -233,6 +233,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ادارة اقساط المشروع";
             this.ThemeName = "Office2013Light";

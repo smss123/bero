@@ -105,6 +105,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.descriptionTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.descriptionTextBox.Location = new System.Drawing.Point(17, 55);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
@@ -114,6 +115,7 @@
             // expenssesNameTextBox
             // 
             this.expenssesNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.expenssesNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.expenssesNameTextBox.Location = new System.Drawing.Point(17, 24);
             this.expenssesNameTextBox.Name = "expenssesNameTextBox";
             this.expenssesNameTextBox.Size = new System.Drawing.Size(243, 20);
@@ -131,8 +133,9 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditExpensses";
+            this.Text = "تعديل مصروف";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditExpensses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

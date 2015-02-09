@@ -31,7 +31,7 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Expenss",
 
                 });
-            //    ProcessChange("Adding Project Expenss ", tb.ExpenssesID + " has Been Saved ", null);
+           ProcessChange("Adding Project Expenss ", tb.ExpenssesID + " has Been Saved ", null);
           return true;
             //}
             //catch (Exception e)

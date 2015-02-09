@@ -44,6 +44,7 @@ namespace bero_System.MainScenarioForms
         {
             Thread th = new Thread(GetAllProjectForCurrentCustomer);
             th.Start();
+            this.Text = string.Format("{0}-{1}", this.Text, TargetCustomer.CustomerName);
         }
 
         private void ProjectGridView_CommandCellClick(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace bero_System.MainScenarioForms
 
             CustomerProjectCommand cmdRpt = new CustomerProjectCommand();
             cmdRpt.CustomerProjectByCusId(1);
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

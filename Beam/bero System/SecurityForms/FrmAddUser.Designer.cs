@@ -100,6 +100,7 @@
             // pwdTextBox
             // 
             this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pwdTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.pwdTextBox.Location = new System.Drawing.Point(36, 61);
             this.pwdTextBox.Name = "pwdTextBox";
             this.pwdTextBox.Size = new System.Drawing.Size(172, 20);
@@ -108,6 +109,7 @@
             // userNameTextBox
             // 
             this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.userNameTextBox.Location = new System.Drawing.Point(36, 26);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(172, 20);
@@ -134,6 +136,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(312, 181);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة مستخدم";
             this.ThemeName = "Office2013Light";

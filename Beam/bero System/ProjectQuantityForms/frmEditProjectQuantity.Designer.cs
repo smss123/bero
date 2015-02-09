@@ -95,7 +95,7 @@
             this.CmbItems.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CmbItems.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // CmbItems.NestedRadGridView
+            // 
             // 
             this.CmbItems.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CmbItems.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -208,7 +208,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.RootElement.MaxSize = new System.Drawing.Size(309, 151);
+            this.RootElement.MaxSize = new System.Drawing.Size(309, 181);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تعديل كمية";
             this.ThemeName = "Office2013Light";

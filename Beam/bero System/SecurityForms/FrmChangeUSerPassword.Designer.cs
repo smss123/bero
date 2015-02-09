@@ -98,6 +98,7 @@
             // NewPwdTextBox
             // 
             this.NewPwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NewPwdTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.NewPwdTextBox.Location = new System.Drawing.Point(27, 100);
             this.NewPwdTextBox.Name = "NewPwdTextBox";
             this.NewPwdTextBox.Size = new System.Drawing.Size(230, 20);
@@ -120,6 +121,7 @@
             // OldpwdTextBox
             // 
             this.OldpwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OldpwdTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.OldpwdTextBox.Location = new System.Drawing.Point(27, 60);
             this.OldpwdTextBox.Name = "OldpwdTextBox";
             this.OldpwdTextBox.Size = new System.Drawing.Size(230, 20);
@@ -128,6 +130,7 @@
             // userNameTextBox
             // 
             this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.userNameTextBox.Location = new System.Drawing.Point(27, 25);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(230, 20);
@@ -149,6 +152,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(396, 228);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تغير كلمة المرور";
             this.ThemeName = "Office2013Light";

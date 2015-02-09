@@ -67,6 +67,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddBtn,
             this.toolStripSeparator1,
@@ -84,7 +85,7 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(112, 37);
+            this.AddBtn.Size = new System.Drawing.Size(100, 37);
             this.AddBtn.Text = "اضافة موظف";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -99,7 +100,7 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(120, 37);
+            this.RefreshBtn.Size = new System.Drawing.Size(111, 37);
             this.RefreshBtn.Text = "تحديث السجلات";
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
@@ -244,6 +245,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ادارة الموظفين";
             this.ThemeName = "Office2013Light";

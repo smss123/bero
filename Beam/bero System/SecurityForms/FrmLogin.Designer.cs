@@ -117,6 +117,7 @@
             // pwdTextBox
             // 
             this.pwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pwdTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.pwdTextBox.Location = new System.Drawing.Point(22, 92);
             this.pwdTextBox.Name = "pwdTextBox";
             this.pwdTextBox.PasswordChar = '*';
@@ -126,6 +127,7 @@
             // userNameTextBox
             // 
             this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.userNameTextBox.Location = new System.Drawing.Point(22, 57);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(233, 20);
@@ -153,8 +155,9 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(365, 244);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmLogin";
+            this.Text = "دخول للنظام";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

@@ -35,8 +35,8 @@ namespace DataLayer.XProject
                 };
                 db.Histories.InsertOnSubmit(NewHistory);
                 db.SubmitChanges();
-            //    string str = Pro.ProjectName;
-            //    ProcessChange("Adding Project Profile", str + " has Been Saved ","-");
+                string str = Pro.ProjectName;
+                ProcessChange("Adding Project Profile", str + " has Been Saved ", "-");
               return true;
             //}
             //catch (Exception e)

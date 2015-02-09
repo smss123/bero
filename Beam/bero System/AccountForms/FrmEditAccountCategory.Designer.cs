@@ -133,8 +133,9 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(368, 216);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditAccountCategory";
+            this.Text = "تعديل تصنيف حساب";
             this.ThemeName = "Office2013Light";
             this.Load += new System.EventHandler(this.FrmEditAccountCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();

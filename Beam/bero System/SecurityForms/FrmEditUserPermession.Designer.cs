@@ -35,12 +35,12 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
-            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SaveBtn = new Telerik.WinControls.UI.RadButton();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             passwordsLabel = new System.Windows.Forms.Label();
             userNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
@@ -89,6 +89,7 @@
             // 
             // passwordsTextBox
             // 
+            this.passwordsTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.passwordsTextBox.Location = new System.Drawing.Point(270, 60);
             this.passwordsTextBox.Name = "passwordsTextBox";
             this.passwordsTextBox.Size = new System.Drawing.Size(194, 20);
@@ -96,6 +97,7 @@
             // 
             // userNameTextBox
             // 
+            this.userNameTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.userNameTextBox.Location = new System.Drawing.Point(270, 24);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(194, 20);
@@ -135,20 +137,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(561, 258);
             this.dataGridView1.TabIndex = 13;
             // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
-            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SaveBtn.Location = new System.Drawing.Point(446, 398);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
-            this.SaveBtn.TabIndex = 3;
-            this.SaveBtn.Text = "حفظ";
-            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SaveBtn.ThemeName = "Office2013Light";
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
             // Column1
             // 
             this.Column1.FillWeight = 75.56384F;
@@ -176,6 +164,20 @@
             this.Column4.HeaderText = "تفعيل";
             this.Column4.Name = "Column4";
             // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
+            this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveBtn.Location = new System.Drawing.Point(446, 398);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(110, 36);
+            this.SaveBtn.TabIndex = 3;
+            this.SaveBtn.Text = "حفظ";
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveBtn.ThemeName = "Office2013Light";
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
             // FrmEditUserPermession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +196,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(573, 479);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تعديل الصلاجيات";
             this.ThemeName = "Office2013Light";

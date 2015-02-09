@@ -35,7 +35,7 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Installment",
 
                 });
-                //ProcessChange("Adding Project Installment", tb.Installments_name + " has Been Saved ", null);
+                ProcessChange("Adding Project Installment", tb.Installments_name + " has Been Saved ", null);
                 return true;
             //}
             //catch (Exception e)

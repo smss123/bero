@@ -66,7 +66,7 @@ namespace bero_System.EmployeeForms
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            FrmManageEmployee_Load(sender, e);
+            FrmManageEmployee_Load(null, null);
         }
     }
 }
