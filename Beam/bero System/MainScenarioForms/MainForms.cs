@@ -12,6 +12,8 @@ using bero_System.CustomerForms;
 using bero_System.EmployeeForms;
 using bero_System.ProjectForms;
 using bero_System.SecurityForms;
+using bero_System.ReportSystem.ReportOption;
+using bero_System.ProjectOffers;
 
 namespace bero_System.MainScenarioForms
 {
@@ -191,6 +193,18 @@ namespace bero_System.MainScenarioForms
         private void TrialbalanceBtn_Click(object sender, EventArgs e)
         {
             FrmAllStatistices frm = new FrmAllStatistices();
+            frm.ShowDialog();
+        }
+
+        private void empReportBtn_Click(object sender, EventArgs e)
+        {
+            EmployeeReportOption frm = new EmployeeReportOption();
+            frm.ShowDialog();
+        }
+
+        private void ProjectOffersBtn_Click(object sender, EventArgs e)
+        {
+            FrmProjectOffers frm = new FrmProjectOffers();
             frm.ShowDialog();
         }
 

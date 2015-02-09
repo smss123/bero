@@ -116,13 +116,12 @@
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2014.3.1021.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.3.1202.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountForms\frmAccountDailySHow.cs">
@@ -422,6 +421,12 @@
     <Compile Include="projectLevelSellForms\FrmManageprojectLevelSell.Designer.cs">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectOffers\FrmProjectOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectOffers\FrmProjectOffers.Designer.cs">
+      <DependentUpon>FrmProjectOffers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectQuantityForms\frmAddProjectQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -479,6 +484,18 @@
     <Compile Include="ReportSystem\ReportOBj\projectLevelSellObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ProjectQuantityObj.cs" />
     <Compile Include="ReportSystem\ReportOBj\ReceiptVoucherObj.cs" />
+    <Compile Include="ReportSystem\ReportOption\EmployeeReportOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\EmployeeReportOption.Designer.cs">
+      <DependentUpon>EmployeeReportOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\FrmHoldyempReportOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSystem\ReportOption\FrmHoldyempReportOption.Designer.cs">
+      <DependentUpon>FrmHoldyempReportOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -674,6 +691,9 @@
     <EmbeddedResource Include="projectLevelSellForms\FrmManageprojectLevelSell.resx">
       <DependentUpon>FrmManageprojectLevelSell.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectOffers\FrmProjectOffers.resx">
+      <DependentUpon>FrmProjectOffers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectQuantityForms\frmAddProjectQuantity.resx">
       <DependentUpon>frmAddProjectQuantity.cs</DependentUpon>
     </EmbeddedResource>
@@ -712,6 +732,12 @@
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptProjectQuantity.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptReceiptVoucher.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RpttAccountDaily.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportOption\EmployeeReportOption.resx">
+      <DependentUpon>EmployeeReportOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportOption\FrmHoldyempReportOption.resx">
+      <DependentUpon>FrmHoldyempReportOption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportSystem\ReportOption\frmReportOptionAccountDaily.resx">
       <DependentUpon>frmReportOptionAccountDaily.cs</DependentUpon>
     </EmbeddedResource>
@@ -792,9 +818,7 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ProjectOffers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Users.png" />
   </ItemGroup>

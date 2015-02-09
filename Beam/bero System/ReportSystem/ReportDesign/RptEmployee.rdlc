@@ -6,31 +6,31 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.96542cm</Width>
+              <Width>1.25771cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.4525cm</Width>
+              <Width>4.07305cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.44167cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.97083cm</Width>
+              <Width>2.65875cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.92333cm</Width>
+              <Width>2.20896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99729cm</Width>
+              <Width>2.94979cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79104cm</Width>
+              <Width>2.31479cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.67979cm</Width>
+              <Width>1.27091cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.57396cm</Width>
+              <Width>1.17709cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -375,15 +375,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=RowNumber(Nothing)</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <ListStyle>Numbered</ListStyle>
                           <ListLevel>1</ListLevel>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -447,7 +448,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>nationalty</rd:DefaultName>
@@ -479,7 +482,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PassportNumber</rd:DefaultName>
@@ -508,10 +513,13 @@
                               <Value>=Fields!PassportExpierdDate.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
+                                <Format>dd/MM/yyyy</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PassportExpierdDate</rd:DefaultName>
@@ -543,7 +551,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>peronaltyNumber</rd:DefaultName>
@@ -572,10 +582,13 @@
                               <Value>=Fields!personaltyExpiredDate.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
+                                <Format>dd/MM/yyyy</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>personaltyExpiredDate</rd:DefaultName>
@@ -607,7 +620,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Salary</rd:DefaultName>
@@ -639,7 +654,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Status</rd:DefaultName>
@@ -683,11 +700,12 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <LayoutDirection>RTL</LayoutDirection>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.29328cm</Top>
         <Left>0.31558cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.79583cm</Width>
+        <Width>19.35271cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -734,7 +752,7 @@
     <Height>2.88396cm</Height>
     <Style />
   </Body>
-  <Width>19.68274cm</Width>
+  <Width>19.77412cm</Width>
   <Page>
     <PageHeader>
       <Height>2.35479cm</Height>
@@ -745,8 +763,6 @@
           <Source>Embedded</Source>
           <Value>هيدرسامر</Value>
           <Sizing>Fit</Sizing>
-          <Top>0cm</Top>
-          <Left>0cm</Left>
           <Height>0.9018in</Height>
           <Width>7.74342in</Width>
           <Style>
@@ -769,7 +785,6 @@
       <ReportItems>
         <Line Name="Line3">
           <Top>0.14111cm</Top>
-          <Left>0cm</Left>
           <Height>0cm</Height>
           <Width>19.68274cm</Width>
           <Style>

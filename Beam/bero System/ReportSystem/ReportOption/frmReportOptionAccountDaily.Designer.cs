@@ -52,7 +52,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 177);
+            this.groupBox1.Size = new System.Drawing.Size(219, 178);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 177);
+            this.ClientSize = new System.Drawing.Size(219, 178);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(227, 208);
@@ -135,6 +135,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(227, 208);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "عرض تقرير القيود اليومية";
             this.ThemeName = "Office2013Light";

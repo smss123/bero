@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,6 +38,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 279);
             this.Name = "RadForm1";
+            // 
+            // 
+            // 
+            this.RootElement.ApplyShapeToControl = true;
             this.Text = "RadForm1";
             this.ThemeName = "ControlDefault";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -45,5 +50,7 @@
         }
 
         #endregion
+
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }
