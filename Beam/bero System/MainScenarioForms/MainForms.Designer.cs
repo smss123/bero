@@ -71,12 +71,12 @@
             this.AccountsTreeBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.ManageExpensses = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrialbalanceBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.CustomerGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.TrialbalanceBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -87,6 +87,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.UsersManager,
@@ -175,33 +176,33 @@
             // AddEmpployeeBtn
             // 
             this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
-            this.AddEmpployeeBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddEmpployeeBtn.Size = new System.Drawing.Size(152, 22);
             this.AddEmpployeeBtn.Text = "اضافة موظف";
             this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
             // 
             // EditEmployeebtn
             // 
             this.EditEmployeebtn.Name = "EditEmployeebtn";
-            this.EditEmployeebtn.Size = new System.Drawing.Size(138, 22);
+            this.EditEmployeebtn.Size = new System.Drawing.Size(152, 22);
             this.EditEmployeebtn.Text = "ادارة الموظفين";
             this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
             // 
             // AddHolyDayBtn
             // 
             this.AddHolyDayBtn.Name = "AddHolyDayBtn";
-            this.AddHolyDayBtn.Size = new System.Drawing.Size(138, 22);
+            this.AddHolyDayBtn.Size = new System.Drawing.Size(152, 22);
             this.AddHolyDayBtn.Text = "اضافة اجازة";
             this.AddHolyDayBtn.Click += new System.EventHandler(this.AddHolyDayBtn_Click);
             // 
             // ManageHolyDayBtn
             // 
             this.ManageHolyDayBtn.Name = "ManageHolyDayBtn";
-            this.ManageHolyDayBtn.Size = new System.Drawing.Size(138, 22);
+            this.ManageHolyDayBtn.Size = new System.Drawing.Size(152, 22);
             this.ManageHolyDayBtn.Text = "ادارة الاجازات";
             this.ManageHolyDayBtn.Click += new System.EventHandler(this.ManageHolyDayBtn_Click);
             // 
@@ -362,6 +363,13 @@
             this.ManageExpensses.Text = "المصروفات";
             this.ManageExpensses.Click += new System.EventHandler(this.ManageExpensses_Click);
             // 
+            // TrialbalanceBtn
+            // 
+            this.TrialbalanceBtn.Name = "TrialbalanceBtn";
+            this.TrialbalanceBtn.Size = new System.Drawing.Size(177, 22);
+            this.TrialbalanceBtn.Text = "ميزان المراجعه";
+            this.TrialbalanceBtn.Click += new System.EventHandler(this.TrialbalanceBtn_Click);
+            // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
@@ -474,13 +482,6 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
-            // 
-            // TrialbalanceBtn
-            // 
-            this.TrialbalanceBtn.Name = "TrialbalanceBtn";
-            this.TrialbalanceBtn.Size = new System.Drawing.Size(177, 22);
-            this.TrialbalanceBtn.Text = "ميزان المراجعه";
-            this.TrialbalanceBtn.Click += new System.EventHandler(this.TrialbalanceBtn_Click);
             // 
             // MainForms
             // 
