@@ -60,7 +60,7 @@ namespace bero_System.ProjectExpenssesForms
                 frm.expenssesComboBox.Text = this.DGVExpensses.CurrentRow.Cells[4].Value.ToString();
                 frm.projectLevelComboBox.Text = this.DGVExpensses.CurrentRow.Cells[5].Value.ToString();
 
-
+                frm.TargetProject = this.TargetProject;
                 frm.ShowDialog();
                 Operation.EndOperation(this);
             }

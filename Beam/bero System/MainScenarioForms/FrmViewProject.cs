@@ -40,6 +40,7 @@ namespace bero_System.MainScenarioForms
             CreatDatetextBox.Text = TargetProject.createdDate.ToString();
             DeliverDatetextBox.Text = TargetProject.DeliverDate.ToString();
 
+
         }
       
         private void FrmViewProject_Load(object sender, EventArgs e)

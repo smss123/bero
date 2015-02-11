@@ -33,9 +33,9 @@
             System.Windows.Forms.Label projectFullAmountLabel;
             System.Windows.Forms.Label projectNameLabel;
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectLevelsBtn = new System.Windows.Forms.ToolStripDropDownButton();
@@ -449,6 +449,7 @@
             this.CreatDatetextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreatDatetextBox.Location = new System.Drawing.Point(437, 64);
             this.CreatDatetextBox.Name = "CreatDatetextBox";
+            this.CreatDatetextBox.ReadOnly = true;
             this.CreatDatetextBox.Size = new System.Drawing.Size(154, 26);
             this.CreatDatetextBox.TabIndex = 21;
             // 
@@ -459,6 +460,7 @@
             this.DeliverDatetextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliverDatetextBox.Location = new System.Drawing.Point(437, 99);
             this.DeliverDatetextBox.Name = "DeliverDatetextBox";
+            this.DeliverDatetextBox.ReadOnly = true;
             this.DeliverDatetextBox.Size = new System.Drawing.Size(153, 26);
             this.DeliverDatetextBox.TabIndex = 19;
             // 
@@ -470,6 +472,7 @@
             this.projectDescriptionTextBox.Location = new System.Drawing.Point(720, 64);
             this.projectDescriptionTextBox.Multiline = true;
             this.projectDescriptionTextBox.Name = "projectDescriptionTextBox";
+            this.projectDescriptionTextBox.ReadOnly = true;
             this.projectDescriptionTextBox.Size = new System.Drawing.Size(229, 55);
             this.projectDescriptionTextBox.TabIndex = 15;
             // 
@@ -480,6 +483,7 @@
             this.projectFullAmountTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectFullAmountTextBox.Location = new System.Drawing.Point(437, 30);
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
+            this.projectFullAmountTextBox.ReadOnly = true;
             this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 26);
             this.projectFullAmountTextBox.TabIndex = 14;
             // 
@@ -490,6 +494,7 @@
             this.projectNameTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectNameTextBox.Location = new System.Drawing.Point(720, 30);
             this.projectNameTextBox.Name = "projectNameTextBox";
+            this.projectNameTextBox.ReadOnly = true;
             this.projectNameTextBox.Size = new System.Drawing.Size(229, 26);
             this.projectNameTextBox.TabIndex = 12;
             // 
@@ -528,17 +533,17 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(89, 42);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(228, 162);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
@@ -549,6 +554,7 @@
             this.txtInstallments.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstallments.Location = new System.Drawing.Point(723, 160);
             this.txtInstallments.Name = "txtInstallments";
+            this.txtInstallments.ReadOnly = true;
             this.txtInstallments.Size = new System.Drawing.Size(168, 26);
             this.txtInstallments.TabIndex = 7;
             this.txtInstallments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -570,6 +576,7 @@
             this.txtSells.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSells.Location = new System.Drawing.Point(722, 118);
             this.txtSells.Name = "txtSells";
+            this.txtSells.ReadOnly = true;
             this.txtSells.Size = new System.Drawing.Size(168, 26);
             this.txtSells.TabIndex = 5;
             this.txtSells.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -591,6 +598,7 @@
             this.txtExpensses.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpensses.Location = new System.Drawing.Point(723, 76);
             this.txtExpensses.Name = "txtExpensses";
+            this.txtExpensses.ReadOnly = true;
             this.txtExpensses.Size = new System.Drawing.Size(168, 26);
             this.txtExpensses.TabIndex = 3;
             this.txtExpensses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
