@@ -14,11 +14,26 @@ using bero_System.ProjectForms;
 using bero_System.SecurityForms;
 using bero_System.ReportSystem.ReportOption;
 using bero_System.ProjectOffers;
+using System.Drawing;
 
 namespace bero_System.MainScenarioForms
 {
     public partial class MainForms : RadForm
     {
+
+
+        private void SetBalloonTip()
+        {
+          
+
+            notifyIcon1.Icon = SystemIcons.Information;
+            notifyIcon1.BalloonTipTitle = "Berm";
+            notifyIcon1.BalloonTipText = "Powered By : Xprema Software Systems Company  2015";
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.Visible = true;
+            notifyIcon1.ShowBalloonTip(3000);
+        }
+
         public MainForms()
         {
             InitializeComponent();
@@ -28,6 +43,7 @@ namespace bero_System.MainScenarioForms
             if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[3].PermessionValue) == false) { this.EmployeesManager.Enabled = false; }
             if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[4].PermessionValue) == false) { this.ItemsManager.Enabled = false; }
             if (Convert.ToBoolean(LoginInfomation.CurrnetUser.UserPermessions[5].PermessionValue) == false) { this.AccountsManager.Enabled = false; }
+
         }
 
         void LoadingAllCustomers()
@@ -39,6 +55,7 @@ namespace bero_System.MainScenarioForms
         {
             Thread th = new Thread(LoadingAllCustomers);
             th.Start();
+            SetBalloonTip();
         }
 
         #region " ^^^ Open Forms"
@@ -206,6 +223,11 @@ namespace bero_System.MainScenarioForms
         {
             FrmProjectOffers frm = new FrmProjectOffers();
             frm.ShowDialog();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
 
    
