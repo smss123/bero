@@ -258,7 +258,7 @@
             this.DateProcessBox.Size = new System.Drawing.Size(106, 21);
             this.DateProcessBox.TabIndex = 26;
             this.DateProcessBox.TabStop = false;
-            this.DateProcessBox.Text = "1/12/2015";
+            this.DateProcessBox.Text = "12/01/2015";
             this.DateProcessBox.ThemeName = "Office2013Light";
             this.DateProcessBox.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
@@ -280,6 +280,7 @@
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(210, 20);
             this.amountTextBox.TabIndex = 22;
+            this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
             // 
             // errorProvider1
             // 

@@ -125,5 +125,21 @@ namespace bero_System.projectLevelFroms
             Operation.EndOperation(this);
             Operation.ShowToustOk("تم الحفظ", this);
         }
+
+        private void levelAmountTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch == 46 && levelAmountTextBox.Text.IndexOf(".") != -1)
+            {
+
+                e.Handled = true;
+                return;
+            }
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

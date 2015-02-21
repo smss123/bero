@@ -195,6 +195,22 @@ namespace bero_System.ProjectForms
         {
 
         }
+
+        private void projectFullAmountTextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch == 46 && projectFullAmountTextBox.Text.IndexOf(".") != -1)
+            {
+
+                e.Handled = true;
+                return;
+            }
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
        
     }
 }

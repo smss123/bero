@@ -143,6 +143,7 @@
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(167, 20);
             this.amountTextBox.TabIndex = 11;
+            this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
             // 
             // FrmEditExpenssesMovment
             // 

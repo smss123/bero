@@ -232,6 +232,7 @@
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(126, 20);
             this.salaryTextBox.TabIndex = 7;
+            this.salaryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salaryTextBox_KeyPress);
             // 
             // peronaltyNumberTextBox
             // 
@@ -240,6 +241,7 @@
             this.peronaltyNumberTextBox.Name = "peronaltyNumberTextBox";
             this.peronaltyNumberTextBox.Size = new System.Drawing.Size(194, 20);
             this.peronaltyNumberTextBox.TabIndex = 5;
+            this.peronaltyNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.peronaltyNumberTextBox_KeyPress);
             // 
             // passportNumberTextBox
             // 
@@ -248,6 +250,7 @@
             this.passportNumberTextBox.Name = "passportNumberTextBox";
             this.passportNumberTextBox.Size = new System.Drawing.Size(194, 20);
             this.passportNumberTextBox.TabIndex = 3;
+            this.passportNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passportNumberTextBox_KeyPress);
             // 
             // nationaltyComboBox
             // 

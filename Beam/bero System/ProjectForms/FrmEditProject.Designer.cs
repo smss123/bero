@@ -146,7 +146,7 @@
             this.DeliverDateText.Size = new System.Drawing.Size(124, 21);
             this.DeliverDateText.TabIndex = 9;
             this.DeliverDateText.TabStop = false;
-            this.DeliverDateText.Text = "1/12/2015";
+            this.DeliverDateText.Text = "12/01/2015";
             this.DeliverDateText.ThemeName = "Office2013Light";
             this.DeliverDateText.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
@@ -259,6 +259,7 @@
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
             this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
             this.projectFullAmountTextBox.TabIndex = 2;
+            this.projectFullAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectFullAmountTextBox_KeyPress);
             // 
             // projectNameTextBox
             // 

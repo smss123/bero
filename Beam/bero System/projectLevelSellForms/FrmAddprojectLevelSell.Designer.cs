@@ -174,7 +174,7 @@
             this.radDateTimePicker1.Size = new System.Drawing.Size(112, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "1/12/2015";
+            this.radDateTimePicker1.Text = "12/01/2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
             this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 
@@ -190,7 +190,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // projectLevelComboBox.NestedRadGridView
+            // 
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -284,6 +284,7 @@
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(165, 20);
             this.amountTextBox.TabIndex = 3;
+            this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
             // 
             // sell_ItemTextBox
             // 

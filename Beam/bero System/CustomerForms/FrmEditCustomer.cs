@@ -62,5 +62,10 @@ namespace bero_System.CustomerForms
             this.no_permissibilityTextBox.Text = this.TargetRecord.No_permissibility;
 
         }
+
+        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

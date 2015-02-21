@@ -88,5 +88,10 @@ namespace bero_System.ProjectQuantityForms
             Operation.ShowToustOk("تم الحفظ", this);
             this.Hide();
         }
+
+        private void QtyText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

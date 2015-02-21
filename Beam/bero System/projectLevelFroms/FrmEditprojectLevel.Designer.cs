@@ -131,6 +131,7 @@
             this.levelAmountTextBox.Name = "levelAmountTextBox";
             this.levelAmountTextBox.Size = new System.Drawing.Size(158, 20);
             this.levelAmountTextBox.TabIndex = 3;
+            this.levelAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.levelAmountTextBox_KeyPress);
             // 
             // levelNameTextBox
             // 
@@ -162,6 +163,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.RootElement.MaxSize = new System.Drawing.Size(352, 242);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تعديل مستوى مشروع";
             this.ThemeName = "Office2013Light";

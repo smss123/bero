@@ -171,6 +171,7 @@
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
             this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
             this.projectFullAmountTextBox.TabIndex = 14;
+            this.projectFullAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectFullAmountTextBox_KeyPress);
             // 
             // projectNameTextBox
             // 
