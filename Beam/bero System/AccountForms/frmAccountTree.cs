@@ -32,7 +32,7 @@ namespace bero_System.AccountForms
                 foreach (var item in acctCategories)
                 {
 
-                    TreeAccounts.Nodes[0].Nodes.Add("", item.AccountCategoryName, 1).ForeColor = Color .Blue ;
+                    TreeAccounts.Nodes[0].Nodes.Add("", item.AccountCategoryName, 1).ForeColor = Color.White ;
                     var Accts = AccountCommand.GetAccountByCategoryID(item.ID);
                    
                     foreach (var Actitem in Accts)

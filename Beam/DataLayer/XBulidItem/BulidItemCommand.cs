@@ -15,7 +15,7 @@ namespace DataLayer.XBulidItem
         {
             try
             {
-
+                db = new dbDataContext();
                 db.BulidItems.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -29,7 +29,7 @@ namespace DataLayer.XBulidItem
                     HistoryAction = "Adding New Bulid Item",
 
                 });
-               // ProcessChange("Adding Bulid Item ", tb.ItemName + " has Been Saved ", null);
+          
                 return true;
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ namespace DataLayer.XBulidItem
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-             //   ProcessChange("Edit Bulid Item",    tb.ItemName + " has Been Edited ",null);
+       
                 q = null;
                 return true;
             }

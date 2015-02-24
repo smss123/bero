@@ -14,6 +14,7 @@ namespace DataLayer.XEmployees
         public static dbDataContext db = new dbDataContext();
         public static bool NewHolyDay(HolyDay HolyTb)
         {
+            db = new dbDataContext();
             db.HolyDays.InsertOnSubmit(HolyTb);
             db.SubmitChanges();
             return true;
@@ -21,6 +22,8 @@ namespace DataLayer.XEmployees
 
         public static bool EditHolyDay(HolyDay HolyTb)
         {
+            db = new dbDataContext();
+
             var q = db.HolyDays.Where(d => d.ID == HolyTb.ID).Single();
             q.fromDate = HolyTb.fromDate;
             q.ToDatetime = HolyTb.ToDatetime;

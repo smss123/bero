@@ -16,7 +16,7 @@ namespace DataLayer.XCustomer
         {
             try
             {
-                
+                db = new dbDataContext();
                         db.Customers.InsertOnSubmit(cust);
                         db.SubmitChanges();
 
@@ -30,7 +30,7 @@ namespace DataLayer.XCustomer
                          HistoryAction = "Adding New Customer",
                  
                         });
-                ProcessChange("Adding Customer", cust.CustomerName + " has Been Saved ",null);
+              
                 return true;
 
               
@@ -61,7 +61,7 @@ namespace DataLayer.XCustomer
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-                ProcessChange("Edit Customer", cust.CustomerName + " has Been Edited ", null);
+             
                 q = null;
                 return true;
             }
@@ -87,7 +87,7 @@ namespace DataLayer.XCustomer
                     SystemUser = LoginInfomation.CurrnetUser
                 });
                 q = null;
-                ProcessChange("Delete Customer", q.CustomerName + " has Been Deleted ", null);
+            
                 return true;
             }
             catch (Exception e)

@@ -27,9 +27,7 @@ namespace bero_System.AccountForms
         private void FrmStatistic_Load(object sender, EventArgs e)
         {
             DgvStatistic.Rows.Clear();
-            DgvStatistic.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DgvStatistic.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
+           
 
 
 
@@ -74,7 +72,9 @@ namespace bero_System.AccountForms
             DgvStatistic.Rows.Add(new string[] {"المجاميع",_TotalFullAmount .ToString (),_TotalFullExpensses .ToString (),_TotalFullSells .ToString (), _TotalFullInstalments .ToString () });
 
             //===============================================================
-
+            DgvStatistic.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvStatistic.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvStatistic.RowHeadersWidth = 70;
 
             foreach (DataGridViewRow r in DgvStatistic.Rows)
             {

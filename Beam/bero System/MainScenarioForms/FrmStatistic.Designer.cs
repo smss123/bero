@@ -51,11 +51,12 @@
             this.ColInstallments,
             this.ColProfit});
             this.DgvStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DgvStatistic.Location = new System.Drawing.Point(12, 38);
+            this.DgvStatistic.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DgvStatistic.Location = new System.Drawing.Point(0, 43);
             this.DgvStatistic.Name = "DgvStatistic";
             this.DgvStatistic.ReadOnly = true;
             this.DgvStatistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvStatistic.Size = new System.Drawing.Size(748, 390);
+            this.DgvStatistic.Size = new System.Drawing.Size(789, 426);
             this.DgvStatistic.TabIndex = 0;
             // 
             // ColProjectName
