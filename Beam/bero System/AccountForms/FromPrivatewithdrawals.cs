@@ -82,13 +82,13 @@ namespace bero_System.AccountForms
 
             if (CmbFromAccount.Text == CmbToAccount.Text)
             {
-                Operation.ShowToustOk("Transfer the amount from the same account unacceptable.", this);
+               _Alert .Warning ("لايجــوز الترحيـــل من نفس الحساب");
                 return; 
             }
 
             if (Convert.ToDouble(txtAmount.Text.ToString()) > Convert.ToDouble(lblAvailableAmount.Text.ToString()))
             {
-                Operation.ShowToustOk("The amount is not available.", this);
+                _Alert .Error ("رصـــــــــيد غيـــر كافي");
                 return;
             }
 
@@ -113,6 +113,8 @@ namespace bero_System.AccountForms
                 Description = txtDescription.Text.ToString()
             };
             AccountDailyCommand.NewAccountDaily (xtb);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
+
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)

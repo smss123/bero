@@ -120,7 +120,7 @@ namespace bero_System.ProjectQuantityForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
         }
 
         private void QtyText_KeyPress(object sender, KeyPressEventArgs e)

@@ -35,7 +35,7 @@ namespace DataLayer.Security
             }
             catch (Exception)
             {
-                MessageBox.Show("لا يوجد بيانات مطابقة");
+          
                   return null;
             }
         }

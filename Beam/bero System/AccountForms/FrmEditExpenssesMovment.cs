@@ -88,7 +88,7 @@ namespace bero_System.AccountForms
                 }
                 Operation.BeginOperation(this);
 
-                RadMessageBox.Show("تمت عملية التعديل", "نجاح العملية", MessageBoxButtons.OK, RadMessageIcon.Info);
+                _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
                 this.Close();
             }
 

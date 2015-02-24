@@ -53,8 +53,7 @@ namespace bero_System.AccountForms
             AccountCategoryCmd.EditAccountCategory( TragetActCategory);
 
             Operation.EndOperation(this);
-
-            Operation.ShowToustOk("Accout Category Has Been Updated  Successfull", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
         }
 

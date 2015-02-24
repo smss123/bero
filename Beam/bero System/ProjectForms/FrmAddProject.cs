@@ -176,7 +176,7 @@ namespace bero_System.ProjectForms
           
             //========================================================================================================
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
            
         }
         

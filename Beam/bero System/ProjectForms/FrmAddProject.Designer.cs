@@ -149,7 +149,7 @@
             this.DeliverDateText.Size = new System.Drawing.Size(106, 21);
             this.DeliverDateText.TabIndex = 17;
             this.DeliverDateText.TabStop = false;
-            this.DeliverDateText.Text = "12/01/2015";
+            this.DeliverDateText.Text = "1/12/2015";
             this.DeliverDateText.ThemeName = "Office2013Light";
             this.DeliverDateText.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 

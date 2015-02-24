@@ -175,7 +175,7 @@ namespace bero_System.ProjectInstallmentForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
 
 

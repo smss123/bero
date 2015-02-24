@@ -24,9 +24,9 @@ namespace bero_System.SecurityForms
         {
           
             //==========================================================
-            if (OldpwdTextBox.Text == "") { MessageBox.Show("يجب أولا التحقق من كلمة المرور القديمة"); return; }
-            if ( NewPwdTextBox .Text  == "") { MessageBox.Show(" يجب أدخال كلمة المرور الجدييدة أو أغلاق النافذة"); return; }
-            if (OldpwdTextBox.Text != LoginInfomation .CurrnetUser .pwd ) { MessageBox.Show("كلمة المرور خاصتك غير سليمة"); return; }
+            if (OldpwdTextBox.Text == "") { _Alert .Warning ("يجب أولا التحقق من كلمة المرور القديمة"); return; }
+            if (NewPwdTextBox.Text == "") { _Alert.Warning(" يجب أدخال كلمة المرور الجدييدة أو أغلاق النافذة"); return; }
+            if (OldpwdTextBox.Text != LoginInfomation.CurrnetUser.pwd) { _Alert.Error ("كلمة المرور خاصتك غير سليمة"); return; }
             //==========================================================
             // Start Change :
             Operation.BeginOperation(this);
@@ -43,7 +43,7 @@ namespace bero_System.SecurityForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
         }
 
         private void FrmChangeUSerPassword_Load(object sender, EventArgs e)

@@ -159,7 +159,7 @@ namespace bero_System.projectLevelSellForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
         }
         public ProjectProfile TargetProject { get; set; }
         private void FrmAddprojectLevelSell_Load(object sender, EventArgs e)

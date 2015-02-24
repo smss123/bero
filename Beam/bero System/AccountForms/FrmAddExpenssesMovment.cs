@@ -90,7 +90,7 @@ namespace bero_System.AccountForms
 
                 }))
                 {
-                    Operation.ShowToustOk("Expenss Has Been Saved", this);
+                    _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
                     foreach (Control item in radGroupBox1.Controls)
                     {
                         if (item is TextBox)

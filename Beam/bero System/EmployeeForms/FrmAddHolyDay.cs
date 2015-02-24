@@ -120,7 +120,7 @@ namespace bero_System.EmployeeForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
         }
     }

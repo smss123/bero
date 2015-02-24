@@ -84,7 +84,7 @@ namespace bero_System.SecurityForms
             }
 
 
-            MessageBox.Show(" تــم حــــفظ التغيــــيرات");
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
             this.Close(); 
         }

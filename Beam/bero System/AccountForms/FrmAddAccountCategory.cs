@@ -24,6 +24,7 @@ namespace bero_System.AccountForms
         private void AddBtn_Click(object sender, EventArgs e)
         {
             Operation.BeginOperation(this);
+
             AccountCategory tb = new AccountCategory() {
                  AccountCategoryName = accountCategoryNameTextBox .Text ,
                   Description = descriptionTextBox .Text 
@@ -32,7 +33,9 @@ namespace bero_System.AccountForms
             AccountCategoryCmd.NewAccountCategory(tb);
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
+
             accountCategoryNameTextBox.Text = "";
             descriptionTextBox.Text = "";
             accountCategoryNameTextBox.Focus();

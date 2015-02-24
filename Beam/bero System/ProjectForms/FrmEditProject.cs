@@ -129,7 +129,7 @@ namespace bero_System.ProjectForms
          
             ProjectProfileCommand.EditProject (TargetProject);
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تـــم الحـــفظ بنجــــاح", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
        
         }

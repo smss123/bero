@@ -544,6 +544,7 @@
     <Compile Include="SecurityForms\FrmManageUser.Designer.cs">
       <DependentUpon>FrmManageUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Alert.cs" />
     <EmbeddedResource Include="AccountForms\frmAccountDailySHow.resx">
       <DependentUpon>frmAccountDailySHow.cs</DependentUpon>
     </EmbeddedResource>
@@ -818,7 +819,9 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\BAlaert.gif" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Users.png" />
   </ItemGroup>
@@ -980,6 +983,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BError.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BInfo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOkey.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BWarnnig.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

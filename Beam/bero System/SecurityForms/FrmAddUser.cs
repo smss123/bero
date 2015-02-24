@@ -65,8 +65,8 @@ namespace bero_System.SecurityForms
                 Operation.BeginOperation(this);
 
                  SystemUser Usr = UsersCmd.GetByName(userNameTextBox.Text);
-                
-                 MessageBox.Show("موجود مسبقا");
+
+                 _Alert.Warning("موجــــود مســــــــبقا");
               
                  foreach (Control item in radGroupBox1.Controls)
                  {
@@ -95,7 +95,7 @@ namespace bero_System.SecurityForms
                 }
 
                 Operation.EndOperation(this);
-                Operation.ShowToustOk("تم الحفظ", this);
+                _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
             }
 
       }

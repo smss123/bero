@@ -62,7 +62,7 @@ namespace bero_System.ProjectAttachmentForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
         }
         OpenFileDialog Op = new OpenFileDialog();
         private void BwrsBtn_Click(object sender, EventArgs e)

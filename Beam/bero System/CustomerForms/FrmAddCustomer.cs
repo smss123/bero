@@ -48,7 +48,7 @@ namespace bero_System.CustomerForms
             try
             {
                 Customer ChkHim = CustomerCommand.GetCustomerByName(customerNameTextBox.Text);
-                MessageBox.Show("موجود مسبقا");
+                _Alert .Warning("موجـــــود مســـــــبقا");
                 broom();
             }
             catch (Exception)
@@ -62,7 +62,8 @@ namespace bero_System.CustomerForms
                     No_permissibility = no_permissibilityTextBox .Text ,
                      Total_Need = 0 
                 };
-                CustomerCommand.NewCustomer(CustTb);                
+                CustomerCommand.NewCustomer(CustTb);
+                _Alert.Info("تــــم الحــــــــفظ بنجـــــاح");
                 broom();
                 }
 

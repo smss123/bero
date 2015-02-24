@@ -253,7 +253,7 @@
             this.radDateTimePicker1.Size = new System.Drawing.Size(98, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "26/01/2015";
+            this.radDateTimePicker1.Text = "1/26/2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
             this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 26, 0, 0, 0, 0);
             // 

@@ -14,37 +14,12 @@ namespace DataLayer.XProject
         public static  event OnchangeCallBack ProcessChange;
         public static bool NewProject(ProjectProfile Pro)
         {
-            //try
-            //{
-
+            db = new dbDataContext();
                 db.ProjectProfiles.InsertOnSubmit(Pro);
                 db.SubmitChanges();
-                History NewHistory = new History()
-                {
-                    ActionName = "Adding New Project Profile",
-                    Description = "ProjectProfile Name " + Pro.ProjectName +
-                     "\n Description : " + Pro.ProjectDescription +
-                     "Created At " + Pro.createdDate.ToString() +
-                     "Deliver Date" + Pro.DeliverDate.ToString() +
-                     "Project Full Amount" + Pro.ProjectFullAmount.ToString() +
-                     "Customer" + Pro.CustomerID.ToString(),
-                    DateOfProcess = DateTime.Now,
-                    SystemUser = LoginInfomation.CurrnetUser,
-                    HistoryAction = "Adding New Project Profile",
-
-                };
-                db.Histories.InsertOnSubmit(NewHistory);
-                db.SubmitChanges();
-                string str = Pro.ProjectName;
-                ProcessChange("Adding Project Profile", str + " has Been Saved ", "-");
+                
               return true;
-            //}
-            //catch (Exception e)
-            //{
-
-            //    ProcessChange("Error message", "Can't Project Profile", e.ToString());
-                //return false;
-           // }
+   
         }
 
         public static bool EditProject(ProjectProfile pro)

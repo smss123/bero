@@ -117,7 +117,7 @@ namespace bero_System.AccountForms
 
             Operation.EndOperation(this);
 
-            Operation.ShowToustOk("", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
             txtDescription .Text = "";
             txtAccountName .Text = "";

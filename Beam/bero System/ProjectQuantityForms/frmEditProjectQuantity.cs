@@ -85,7 +85,7 @@ namespace bero_System.ProjectQuantityForms
             }
 
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
             this.Hide();
         }
 

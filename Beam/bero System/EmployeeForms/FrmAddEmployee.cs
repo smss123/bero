@@ -63,7 +63,7 @@ namespace bero_System.EmployeeForms
             try
             {
                 Employee EmpTb = EmployeesCmd.GetByName(employeeNameTextBox.Text);
-                MessageBox.Show("مسجل مســـبقا");
+                _Alert.Warning("موجــــود مســــــــبقا");
                 Operation.EndOperation(this);
                 foreach (Control item in radGroupBox1.Controls)
                 {
@@ -102,7 +102,7 @@ namespace bero_System.EmployeeForms
             }
             employeeNameTextBox.Focus();
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم الحفظ", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
             }
             Operation.EndOperation(this);
 

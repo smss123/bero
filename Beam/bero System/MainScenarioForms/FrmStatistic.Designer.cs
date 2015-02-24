@@ -55,7 +55,7 @@
             this.DgvStatistic.Name = "DgvStatistic";
             this.DgvStatistic.ReadOnly = true;
             this.DgvStatistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvStatistic.Size = new System.Drawing.Size(748, 320);
+            this.DgvStatistic.Size = new System.Drawing.Size(748, 390);
             this.DgvStatistic.TabIndex = 0;
             // 
             // ColProjectName
@@ -100,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(789, 400);
+            this.ClientSize = new System.Drawing.Size(789, 469);
             this.Controls.Add(this.DgvStatistic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -108,7 +108,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmStatistic";
+            this.Text = "ميـــزان المراجــــــــعه";
             this.Load += new System.EventHandler(this.FrmStatistic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvStatistic)).EndInit();
             this.ResumeLayout(false);

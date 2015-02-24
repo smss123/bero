@@ -51,7 +51,7 @@ namespace bero_System.BulidItemForms
             {
              Operation.BeginOperation(this);
              BulidItem xtb = BulidItemCommand.GetBuildItemByItemName(itemNameTextBox.Text);
-             MessageBox.Show("موجود مسبقا");
+             _Alert .Warning ("موجــــود مســــــــبقا");
              Operation.EndOperation(this);
              return;
 
@@ -70,7 +70,7 @@ namespace bero_System.BulidItemForms
 
             Operation.EndOperation(this);
 
-            Operation.ShowToustOk("تم الحفظ بنجاح", this);
+          _Alert .Info ("تـــــــم الحــــفظ بنجــــــــاح");
             itemDescriptionTextBox.Text = "";
             itemNameTextBox.Text = "";
             itemSummeryTextBox.Text = "";

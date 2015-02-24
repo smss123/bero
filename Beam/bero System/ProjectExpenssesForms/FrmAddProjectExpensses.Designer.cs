@@ -313,7 +313,7 @@
             this.DateProcessBox.Size = new System.Drawing.Size(106, 21);
             this.DateProcessBox.TabIndex = 18;
             this.DateProcessBox.TabStop = false;
-            this.DateProcessBox.Text = "12/01/2015";
+            this.DateProcessBox.Text = "1/12/2015";
             this.DateProcessBox.ThemeName = "Office2013Light";
             this.DateProcessBox.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
             // 

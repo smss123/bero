@@ -77,7 +77,8 @@ namespace bero_System.SecurityForms
             else
             {
                 Operation.EndOperation(this);
-                MessageBox.Show(" كلمة المرور خــــــاطئة");
+                _Alert .Error (" كـــلمة المـــــــرور خــــــاطئة");
+             
             }
         }
 

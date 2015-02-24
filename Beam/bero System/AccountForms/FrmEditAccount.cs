@@ -106,7 +106,7 @@ namespace bero_System.AccountForms
             TargetAccount.CategoryID = int .Parse ( CmbCategories.SelectedValue.ToString());
             AccountCommand.EditAccount(TargetAccount);
             Operation.EndOperation(this);
-            Operation.ShowToustOk("تم التعديل", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
             txtAccountName.Text = "";
             txtAccountName.Text = "";
             this.Hide();
