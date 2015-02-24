@@ -13,14 +13,16 @@ using System.Threading;
 using DataLayer;
 using DataLayer.XProject;
 using DataLayer.XAccountant;
+using Telerik.WinControls.UI;
 
 namespace bero_System.AccountForms
 {
-    public partial class FrmStatistic : Form
+    public partial class FrmStatistic : RadForm
     {
         public FrmStatistic()
         {
             InitializeComponent();
+            _Alert.Warning("يتـــــم الان تحميـــــــل البيـــانات أنتـــظر");
 
         }
 
@@ -60,8 +62,12 @@ namespace bero_System.AccountForms
                         {
                             SumSelles += Convert.ToDouble(SellAmount.Amount);
                         }
-                       // txtSells.Text = ; ;
-                        DgvStatistic.Rows.Add(new string[] { Prj.ProjectName, Prj.ProjectFullAmount .ToString (), SumExpensses.ToString(), SumSelles.ToString(), SumInstallments.ToString() });
+                        this.Invoke((MethodInvoker)delegate {
+
+                            DgvStatistic.Rows.Add(new string[] { Prj.ProjectName, Prj.ProjectFullAmount .ToString (),
+                            SumExpensses.ToString(), SumSelles.ToString(), SumInstallments.ToString() });
+                        });
+                     
 
             } // End Loop
             //===============================================================

@@ -78,7 +78,9 @@ namespace bero_System.SecurityForms
             {
                 Operation.EndOperation(this);
                 _Alert .Error (" كـــلمة المـــــــرور خــــــاطئة");
-             
+                userNameTextBox.Text = "";
+                pwdTextBox.Text = "";
+                userNameTextBox.Focus();
             }
         }
 
@@ -89,7 +91,8 @@ namespace bero_System.SecurityForms
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            userNameTextBox.Text = "";
+            pwdTextBox.Text = "";
         }
     }
 }
