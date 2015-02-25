@@ -57,7 +57,7 @@ namespace bero_System.BulidItemForms
             BulidItemCommand.EditBulidItem(TargetBuildItem);
             Operation.EndOperation(this);
 
-            Operation.ShowToustOk("تم الحفظ بنجاح", this);
+            _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
             itemDescriptionTextBox.Text = "";
             itemNameTextBox.Text = "";
             itemSummeryTextBox.Text = "";
