@@ -15,6 +15,7 @@ namespace DataLayer.Security
         {
             try
             {
+                db = new dbDataContext();
                 db.Histories.InsertOnSubmit(his);
                 db.SubmitChanges();
                 ProcessChange("Adding History", string.Format("{0} has {1}", his.SystemUser.UserName, his.ActionName), his.Description);

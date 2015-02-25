@@ -13,9 +13,8 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewProjectExpenss(ProjectExpenss tb)
         {
-            //try
-            //{
 
+                db = new dbDataContext();
                 db.ProjectExpensses.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -31,15 +30,9 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Expenss",
 
                 });
-           ProcessChange("Adding Project Expenss ", tb.ExpenssesID + " has Been Saved ", null);
+          
           return true;
-            //}
-            //catch (Exception e)
-            //{
-
-            //    ProcessChange("Error message", "Can't Project Expenss", e.ToString());
-            //    return false;
-           // }
+            
         }
 
         public static bool EditProjectExpenss(ProjectExpenss tb)

@@ -15,6 +15,7 @@ namespace DataLayer.XEmployees
         public  static   dbDataContext db = new dbDataContext();
         public static bool NewEmployee(Employee tb)
         {
+            db = new dbDataContext();
             db.Employees.InsertOnSubmit(tb);
             db.SubmitChanges();
             HistoryCommand.NewHistory(new History()

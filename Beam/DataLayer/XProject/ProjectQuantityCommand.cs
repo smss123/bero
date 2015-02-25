@@ -17,7 +17,7 @@ namespace DataLayer.XProject
         {
             //try
             //{
-            //    db = new dbDataContext();
+             db = new dbDataContext();
                 db.ProjectQuantities.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()

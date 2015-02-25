@@ -154,6 +154,7 @@ namespace bero_System.ProjectExpenssesForms
             Operation.BeginOperation (this);
 
             ProjectExpenss ExpTb = new ProjectExpenss() {
+                 
              ExpenssesID =int.Parse ( expenssesComboBox .SelectedValue .ToString ()),
              Amount = Convert.ToDouble (amountTextBox.Text) ,
              Description = descriptionTextBox .Text ,

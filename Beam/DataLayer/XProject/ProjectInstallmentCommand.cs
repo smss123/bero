@@ -14,9 +14,8 @@ namespace DataLayer.XProject
         public static event OnchangeCallBack ProcessChange;
         public static bool NewProjectInstallment(ProjectInstallment tb)
         {
-            //try
-            //{
 
+            db = new dbDataContext();
                 db.ProjectInstallments.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -37,13 +36,7 @@ namespace DataLayer.XProject
                 });
                 ProcessChange("Adding Project Installment", tb.Installments_name + " has Been Saved ", null);
                 return true;
-            //}
-            //catch (Exception e)
-            //{
-
-            //    ProcessChange("Error message", "Can't Project Installment", e.ToString());
-            //    return false;
-            //}
+        
         }
 
         public static bool EditProjectInstallment(ProjectInstallment tb)
