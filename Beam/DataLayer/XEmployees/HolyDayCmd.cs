@@ -55,5 +55,41 @@ namespace DataLayer.XEmployees
 
             return q;
         }
+
+
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="empid">Insert Employee Id</param>
+       /// <param name="_fromDate">Insert Start Date</param>
+       /// <param name="_toDate">Insert End Date  </param>
+       /// <returns></returns>
+        public static List<HolyDay> GetHolydaysBetween2Days(int empid, DateTime _fromDate, DateTime _toDate)
+        {
+            List<HolyDay> GetData = (from h in db.HolyDays
+                                     where h.EmployeeID == empid
+                                         && h.fromDate.Value.Year >= _fromDate.Year
+                                         && h.fromDate.Value.Month >= _fromDate.Month
+                                         && h.fromDate.Value.Day >= _fromDate.Day
+                                         && h.ToDatetime .Value .Year <= _toDate .Year 
+                                         && h.ToDatetime .Value .Month <= _toDate .Month 
+                                         && h.ToDatetime .Value .Day <= _toDate .Day 
+                                     select h).ToList();               
+            return GetData ;
+        }
+
+        public static List<HolyDay> GetHolydaysBetween2Days( DateTime _fromDate, DateTime _toDate)
+        {
+            List<HolyDay> GetData = (from h in db.HolyDays
+                                     where
+                                         h.fromDate.Value.Year >= _fromDate.Year
+                                         && h.fromDate.Value.Month >= _fromDate.Month
+                                         && h.fromDate.Value.Day >= _fromDate.Day
+                                         && h.ToDatetime.Value.Year <= _toDate.Year
+                                         && h.ToDatetime.Value.Month <= _toDate.Month
+                                         && h.ToDatetime.Value.Day <= _toDate.Day
+                                     select h).ToList();
+            return GetData;
+        }
     }
 }
