@@ -256,6 +256,10 @@
             // 
             this.nationaltyComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nationaltyComboBox.FormattingEnabled = true;
+            this.nationaltyComboBox.Items.AddRange(new object[] {
+            "ذكر",
+            "انثى",
+            "اخرى"});
             this.nationaltyComboBox.Location = new System.Drawing.Point(113, 52);
             this.nationaltyComboBox.Name = "nationaltyComboBox";
             this.nationaltyComboBox.Size = new System.Drawing.Size(152, 21);

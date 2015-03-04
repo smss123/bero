@@ -76,13 +76,13 @@ namespace DataLayer.Security
                        where u.SystemUserID == usrid
                        select u).ToList();
 
-            var IDes = new List<int>();
-            IDes.Clear();
+            var iDes = new List<int>();
+            iDes.Clear();
             foreach (var i in lst)
             {
-                IDes.Add(i.ID);
+                iDes.Add(i.ID);
             }
-            foreach (var item in IDes)
+            foreach (var item in iDes)
             {
                 tb = db.UserPermessions.Where(x => x.ID == item).Single();
                 db.UserPermessions.DeleteOnSubmit(tb);

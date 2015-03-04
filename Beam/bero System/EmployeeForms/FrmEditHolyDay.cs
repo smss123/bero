@@ -32,8 +32,8 @@ namespace bero_System.EmployeeForms
                 this.EmployeeComboBox.MultiColumnComboBoxElement.DropDownWidth = 1000;
 
                 this.EmployeeComboBox.AutoFilter = true;
-                this.EmployeeComboBox.ValueMember = "id";
-                this.EmployeeComboBox.DisplayMember = "EmployeeName";
+                //this.EmployeeComboBox.ValueMember = "id";
+                //this.EmployeeComboBox.DisplayMember = "EmployeeName";
             });
             Operation.BeginOperation(this);
             var q = EmployeesCmd.GetAllEmployees();
@@ -50,6 +50,8 @@ namespace bero_System.EmployeeForms
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
 
                 this.EmployeeComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
+                this.EmployeeComboBox.SelectedValue = TargetHolyday.EmployeeID;
+
                 ///
 
             });

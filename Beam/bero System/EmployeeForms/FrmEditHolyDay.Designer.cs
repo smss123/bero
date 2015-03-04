@@ -52,6 +52,7 @@
             this.toDatetimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label1 = new System.Windows.Forms.Label();
             fromDateLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Savebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +144,8 @@
             // 
             // EmployeeComboBox
             // 
+            this.EmployeeComboBox.DataSource = this.employeeBindingSource;
+            this.EmployeeComboBox.DisplayMember = "EmployeeName";
             // 
             // EmployeeComboBox.NestedRadGridView
             // 
@@ -229,6 +233,7 @@
             gridViewDateTimeColumn2,
             gridViewDecimalColumn2,
             gridViewTextBoxColumn5});
+            this.EmployeeComboBox.EditorControl.MasterTemplate.DataSource = this.employeeBindingSource;
             this.EmployeeComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
             this.EmployeeComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
             this.EmployeeComboBox.EditorControl.Name = "NestedRadGridView";
@@ -243,6 +248,7 @@
             this.EmployeeComboBox.TabIndex = 24;
             this.EmployeeComboBox.TabStop = false;
             this.EmployeeComboBox.ThemeName = "Office2013Light";
+            this.EmployeeComboBox.ValueMember = "id";
             // 
             // Savebtn
             // 
@@ -303,6 +309,10 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(DataLayer.Employee);
+            // 
             // FrmEditHolyDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +343,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Savebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -349,5 +360,6 @@
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Telerik.WinControls.UI.RadMultiColumnComboBox EmployeeComboBox;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
     }
 }
