@@ -49,8 +49,7 @@ namespace DataLayer.XCustomer
             {
                 var q = db.Customers.Where(p => p.ID == cust.ID).Single();
                 q.CustomerName = cust.CustomerName;
-                q.No_building = cust.No_building;
-                q.No_permissibility = cust.No_permissibility;
+                
                 q.PhoneNumber = cust.PhoneNumber;
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()

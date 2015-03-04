@@ -47,8 +47,7 @@ namespace bero_System.CustomerForms
 
             TargetRecord.CustomerName = this.customerNameTextBox.Text;
             TargetRecord.PhoneNumber = this.phoneNumberTextBox.Text;
-            TargetRecord.No_building = this.no_buildingTextBox.Text;
-            TargetRecord.No_permissibility = this.no_permissibilityTextBox.Text;
+            
             TargetRecord.Total_Need = 0;
             CustomerCommand.EditCustomer(TargetRecord);
             this.Hide();
@@ -58,8 +57,7 @@ namespace bero_System.CustomerForms
         {
             this.customerNameTextBox.Text = this.TargetRecord.CustomerName;
             this.phoneNumberTextBox.Text = this.TargetRecord.PhoneNumber;
-            this.no_buildingTextBox.Text  = this.TargetRecord.No_building;
-            this.no_permissibilityTextBox.Text = this.TargetRecord.No_permissibility;
+           
 
         }
 

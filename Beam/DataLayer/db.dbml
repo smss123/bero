@@ -15,6 +15,17 @@
       <Association Name="AccountCategory_Account" Member="AccountCategory" ThisKey="CategoryID" OtherKey="ID" Type="AccountCategory" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="Security.UserPermession" Member="UserPermessions">
+    <Type Name="UserPermession">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SystemUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SystemPermessionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PermessionValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="SystemPermession_UserPermession" Member="SystemPermession" ThisKey="SystemPermessionID" OtherKey="ID" Type="SystemPermession" IsForeignKey="true" />
+      <Association Name="SystemUser_UserPermession" Member="SystemUser" ThisKey="SystemUserID" OtherKey="ID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="Accountant.AccountCategory" Member="AccountCategories">
     <Type Name="AccountCategory">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -65,9 +76,7 @@
       <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="No_building" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="No_permissibility" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="Total_Need" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="Customer_ProjectProfile" Member="ProjectProfiles" ThisKey="ID" OtherKey="CustomerID" Type="ProjectProfile" />
@@ -156,7 +165,7 @@
       <Column Name="ProjectProfileID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LevelAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="projectLevel_ProjectExpenss" Member="ProjectExpensses" ThisKey="id" OtherKey="ProjectLevelID" Type="ProjectExpenss" />
       <Association Name="projectLevel_ProjectInstallment" Member="ProjectInstallments" ThisKey="id" OtherKey="ProjectLevelID" Type="ProjectInstallment" />
       <Association Name="projectLevel_projectLevelSell" Member="projectLevelSells" ThisKey="id" OtherKey="ProjectLevelID" Type="projectLevelSell" />
@@ -186,13 +195,26 @@
       <Column Name="DeliverDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="ProjectFullAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AccountID" AutoSync="Always" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="No_building" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="No_permissibility" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Association Name="ProjectProfile_ProjectAttachment" Member="ProjectAttachments" ThisKey="ID" OtherKey="ProjectProfileID" Type="ProjectAttachment" />
       <Association Name="ProjectProfile_projectLevel" Member="projectLevels" ThisKey="ID" OtherKey="ProjectProfileID" Type="projectLevel" />
       <Association Name="ProjectProfile_ProjectQuantity" Member="ProjectQuantities" ThisKey="ID" OtherKey="ProjectProfileID" Type="ProjectQuantity" />
       <Association Name="Account_ProjectProfile" Member="Account" ThisKey="AccountID" OtherKey="ID" Type="Account" IsForeignKey="true" />
       <Association Name="Customer_ProjectProfile" Member="Customer" ThisKey="CustomerID" OtherKey="ID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="pro.ProjectQuantity" Member="ProjectQuantities">
+    <Type Name="ProjectQuantity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProjectProfileID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="BulidItem_ProjectQuantity" Member="BulidItem" ThisKey="ItemID" OtherKey="ID" Type="BulidItem" IsForeignKey="true" />
+      <Association Name="ProjectProfile_ProjectQuantity" Member="ProjectProfile" ThisKey="ProjectProfileID" OtherKey="ID" Type="ProjectProfile" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="Security.History" Member="Histories">
@@ -205,17 +227,6 @@
       <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Association Name="SystemUser_History" Member="SystemUser" ThisKey="UserID" OtherKey="ID" Type="SystemUser" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="pro.ProjectQuantity" Member="ProjectQuantities">
-    <Type Name="ProjectQuantity">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Qty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ProjectProfileID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Association Name="BulidItem_ProjectQuantity" Member="BulidItem" ThisKey="ItemID" OtherKey="ID" Type="BulidItem" IsForeignKey="true" />
-      <Association Name="ProjectProfile_ProjectQuantity" Member="ProjectProfile" ThisKey="ProjectProfileID" OtherKey="ID" Type="ProjectProfile" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="Security.SystemPermession" Member="SystemPermessions">
@@ -235,19 +246,8 @@
       <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Association Name="SystemUser_History" Member="Histories" ThisKey="ID" OtherKey="UserID" Type="History" />
       <Association Name="SystemUser_UserPermession" Member="UserPermessions" ThisKey="ID" OtherKey="SystemUserID" Type="UserPermession" />
-    </Type>
-  </Table>
-  <Table Name="Security.UserPermession" Member="UserPermessions">
-    <Type Name="UserPermession">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SystemUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SystemPermessionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PermessionValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Association Name="SystemPermession_UserPermession" Member="SystemPermession" ThisKey="SystemPermessionID" OtherKey="ID" Type="SystemPermession" IsForeignKey="true" />
-      <Association Name="SystemUser_UserPermession" Member="SystemUser" ThisKey="SystemUserID" OtherKey="ID" Type="SystemUser" IsForeignKey="true" />
+      <Association Name="SystemUser_History" Member="Histories" ThisKey="ID" OtherKey="UserID" Type="History" />
     </Type>
   </Table>
 </Database>

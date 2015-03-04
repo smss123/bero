@@ -30,8 +30,7 @@ namespace bero_System.MainScenarioForms
             this.Invoke((MethodInvoker)delegate {
 
                 customerNameTextBox.Text = TargetCustomer.CustomerName;
-                no_buildingTextBox.Text = TargetCustomer.No_building;
-                no_permissibilityTextBox.Text = TargetCustomer.No_permissibility;
+               
                 phoneNumberTextBox.Text = TargetCustomer.PhoneNumber;
 
                 ProjectGridView.DataSource = lst; 

@@ -30,8 +30,7 @@ namespace bero_System.ReportSystem.ReportCommand
                    
                     CustomerName=item.Customer.CustomerName,
                     PhoneNumber=item.Customer.PhoneNumber,
-                    No_building=item.Customer.No_building,
-                    No_permissibility=item.Customer.No_permissibility,
+                  
                     Total_Need=item.Customer.Total_Need.Value,
                     /// information Projcet
                     ProjectName=item.ProjectName,
