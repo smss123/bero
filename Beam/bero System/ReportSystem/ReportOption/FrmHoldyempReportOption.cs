@@ -1,4 +1,5 @@
-﻿using DataLayer.XEmployees;
+﻿using bero_System.ReportSystem.ReportCommand;
+using DataLayer.XEmployees;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +64,11 @@ namespace bero_System.ReportSystem.ReportOption
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            if (EmpCheck.Checked == true)
+            {
+                HolyDayCommandRpt Cmd = new HolyDayCommandRpt();
+                Cmd.HolyDayByEmpId(int .Parse (EmployeeComboBox.SelectedValue.ToString ()));
+            }
         }
     }
 }
