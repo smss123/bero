@@ -230,6 +230,12 @@ namespace bero_System.MainScenarioForms
 
         }
 
+        private void تقاريرالاجازاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHoldyempReportOption frm = new FrmHoldyempReportOption();
+            frm.ShowDialog();
+        }
+
    
 
     }
