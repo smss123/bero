@@ -9,10 +9,10 @@ using System.Windows.Forms;
 namespace bero_System
 {
    public class Operation
-    {
-     
+   {
 
 
+       #region "       Form Controler          "
        public static void ShowToustOk(string msg, Control frm)
        {
            ToastNotification.Show(frm, msg, null, 1000, eToastGlowColor.Green, eToastPosition.MiddleCenter);
@@ -38,5 +38,24 @@ namespace bero_System
 
            });
        }
+
+
+       #endregion 
+
+
+
+       #region "   ^^^ Check End Of Month  For Expire Projects   "
+       public static bool IsEndOfMonth()
+       {
+           int day = DateTime.Now.Day;
+           bool status = false;
+           if (day == DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))
+           {
+               status = true;
+           }
+           return status;
+       }
+
+        #endregion
     }
 }
