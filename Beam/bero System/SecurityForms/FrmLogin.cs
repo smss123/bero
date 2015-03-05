@@ -66,6 +66,7 @@ namespace bero_System.SecurityForms
             var q =  LoginInfomation .Login (userNameTextBox .Text ,pwdTextBox.Text);
             if (q != null)
             {
+                timer1.Enabled = false;
                 LoginInfomation.CurrnetUser = q;
                 this.Text = LoginInfomation.CurrnetUser .UserName ;
                 MainForms frm = new MainForms();
@@ -91,8 +92,21 @@ namespace bero_System.SecurityForms
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            lblTimeLogIn.Text = "";
             userNameTextBox.Text = "";
             pwdTextBox.Text = "";
+        }
+
+        int TimeLogIn = 60;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeLogIn -= 1;
+            lblTimeLogIn.Text = TimeLogIn.ToString();
+            if (TimeLogIn == 0)
+            {
+                timer1.Enabled = false;
+                Application.Exit();
+            }
         }
     }
 }
