@@ -48,5 +48,39 @@ namespace bero_System.ReportSystem.ReportCommand
 
 
         }
+
+
+
+       public void AllHolyDays()
+       {
+
+           var q = HolyDayCmd.GetAllHolyDays();
+           ReportDataSource rs = new ReportDataSource();
+           List<HolyDayObj> ls = new List<HolyDayObj>();
+
+           foreach (var item in q)
+           {
+
+               ls.Add(new HolyDayObj()
+               {             
+                   ID = item.ID,
+                   EmployeeName = item.Employee.EmployeeName,
+                   fromDate = item.fromDate.Value,
+                   ToDatetime = item.ToDatetime.Value,
+                   commint = item.commint,
+                   Staus = item.status
+               });
+           }
+           rs.Name = "DataSet1";
+           rs.Value = ls;
+           FrmReportViewer frm = new FrmReportViewer();
+           frm.reportViewer1.LocalReport.DataSources.Clear();
+           frm.reportViewer1.LocalReport.DataSources.Add(rs);
+           frm.reportViewer1.LocalReport.ReportEmbeddedResource = "bero_System.ReportSystem.ReportDesign.RptAllHolyDay.rdlc";
+           frm.ShowDialog();
+
+       }
+
+
     }
 }

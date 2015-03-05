@@ -446,6 +446,7 @@
             // 
             this.CreatDatetextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CreatDatetextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.CreatDatetextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CreatDatetextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreatDatetextBox.Location = new System.Drawing.Point(437, 64);
             this.CreatDatetextBox.Name = "CreatDatetextBox";
@@ -457,6 +458,7 @@
             // 
             this.DeliverDatetextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DeliverDatetextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.DeliverDatetextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DeliverDatetextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliverDatetextBox.Location = new System.Drawing.Point(437, 99);
             this.DeliverDatetextBox.Name = "DeliverDatetextBox";
@@ -468,6 +470,7 @@
             // 
             this.projectDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectDescriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.projectDescriptionTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectDescriptionTextBox.Location = new System.Drawing.Point(720, 64);
             this.projectDescriptionTextBox.Multiline = true;
@@ -480,6 +483,7 @@
             // 
             this.projectFullAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectFullAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectFullAmountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.projectFullAmountTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectFullAmountTextBox.Location = new System.Drawing.Point(437, 30);
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
@@ -491,6 +495,7 @@
             // 
             this.projectNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.projectNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.projectNameTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectNameTextBox.Location = new System.Drawing.Point(720, 30);
             this.projectNameTextBox.Name = "projectNameTextBox";
@@ -522,6 +527,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.textBox1.Location = new System.Drawing.Point(720, 43);
@@ -533,6 +539,8 @@
             // 
             // chart1
             // 
+            this.chart1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+            this.chart1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkUpwardDiagonal;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -551,6 +559,7 @@
             // txtInstallments
             // 
             this.txtInstallments.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtInstallments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInstallments.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstallments.Location = new System.Drawing.Point(723, 160);
             this.txtInstallments.Name = "txtInstallments";
@@ -573,6 +582,7 @@
             // txtSells
             // 
             this.txtSells.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtSells.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSells.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSells.Location = new System.Drawing.Point(722, 118);
             this.txtSells.Name = "txtSells";
@@ -595,6 +605,7 @@
             // txtExpensses
             // 
             this.txtExpensses.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtExpensses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtExpensses.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpensses.Location = new System.Drawing.Point(723, 76);
             this.txtExpensses.Name = "txtExpensses";

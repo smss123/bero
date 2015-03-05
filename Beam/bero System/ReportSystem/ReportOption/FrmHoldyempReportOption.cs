@@ -64,10 +64,18 @@ namespace bero_System.ReportSystem.ReportOption
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (EmpCheck.Checked == true)
+            HolyDayCommandRpt Cmd = new HolyDayCommandRpt();
+
+
+            if (EmpCheck.CheckState == CheckState.Checked)
             {
-                HolyDayCommandRpt Cmd = new HolyDayCommandRpt();
+                 Cmd = new HolyDayCommandRpt();
                 Cmd.HolyDayByEmpId(int .Parse (EmployeeComboBox.SelectedValue.ToString ()));
+            }
+            if (AllCheck.CheckState == CheckState.Checked)
+            {
+                Cmd = new HolyDayCommandRpt();
+                Cmd.AllHolyDays();
             }
         }
     }
