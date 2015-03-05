@@ -83,7 +83,9 @@ namespace DataLayer.XProject
 
         public static List<ProjectProfile> GetAll()
         {
+            db = new dbDataContext();
             return db.ProjectProfiles.ToList();
+            
         }
         public static ProjectProfile GetByProjId(int ProjectId)
         {

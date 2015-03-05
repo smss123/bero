@@ -56,6 +56,15 @@ namespace bero_System.MainScenarioForms
             Thread th = new Thread(LoadingAllCustomers);
             th.Start();
             SetBalloonTip();
+
+
+            bool checkprojects = IsEndOfMonth();
+            if (checkprojects == true)
+            {
+                FrmAlertExpireProjects frm = new FrmAlertExpireProjects();
+                frm.Show();
+            }
+
         }
 
         #region " ^^^ Open Forms"
@@ -103,7 +112,16 @@ namespace bero_System.MainScenarioForms
                 Operation.EndOperation(this);
             }
         }
-
+        public static bool IsEndOfMonth()
+        {
+            int day = DateTime.Now.Day;
+            bool status = false;
+            if (day == DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))
+            {
+                status = true;
+            }
+            return status;
+        }
         private void ManageAccountCategory_Click(object sender, EventArgs e)
         {
             FrmManageAccountCategory frm = new FrmManageAccountCategory();

@@ -355,6 +355,12 @@
     <Compile Include="ProjectForms\FrmAddProject.Designer.cs">
       <DependentUpon>FrmAddProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectForms\FrmAlertExpireProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\FrmAlertExpireProjects.Designer.cs">
+      <DependentUpon>FrmAlertExpireProjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectForms\FrmEditProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -659,6 +665,9 @@
     <EmbeddedResource Include="ProjectForms\FrmAddProject.resx">
       <DependentUpon>FrmAddProject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\FrmAlertExpireProjects.resx">
+      <DependentUpon>FrmAlertExpireProjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectForms\FrmEditProject.resx">
       <DependentUpon>FrmEditProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -720,6 +729,8 @@
     <EmbeddedResource Include="ReportSystem\FrmReportViewer.resx">
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptAllHolyDay.rdlc" />
+    <EmbeddedResource Include="ReportSystem\ReportDesign\RptAllHolyDayBetween2dates.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptBalanceSheet.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptCustomerProject.rdlc" />
     <EmbeddedResource Include="ReportSystem\ReportDesign\RptEmployee.rdlc" />
