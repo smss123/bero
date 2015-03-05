@@ -77,6 +77,12 @@ namespace bero_System.ReportSystem.ReportOption
                 Cmd = new HolyDayCommandRpt();
                 Cmd.AllHolyDays();
             }
+          
+            if  ( DateCheck .CheckState == CheckState.Checked)
+                    {
+                        Cmd = new HolyDayCommandRpt();
+                        Cmd.AllHolyDaysBetween2Dates(dtFrom .Value ,dtTo .Value );
+                    }
         }
     }
 }
