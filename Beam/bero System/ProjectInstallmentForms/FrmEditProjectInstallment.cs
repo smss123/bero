@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using bero_System.ReportSystem.ReportCommand;
+using DataLayer;
 using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
@@ -167,6 +168,16 @@ namespace bero_System.ProjectInstallmentForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+            ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
+            cmd.xCustomerName = TargetProject.Customer.CustomerName;
+            cmd.xProject = TargetProject.ProjectName;
+
+            ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
+            RepCmd.PrintCurrentInstallment(TargetInstalment .id );
         }
       
     }

@@ -22,20 +22,23 @@ namespace bero_System.MainScenarioForms
             InitializeComponent();
         }
         public Customer TargetCustomer { get; set; }
-
+        public ProjectProfile  xproject  { get; set; }
 
         void GetAllProjectForCurrentCustomer()
         {
-            var lst = ProjectProfileCommand.GetAllByCustomerId(TargetCustomer.ID);
+            var lst = TargetCustomer.ProjectProfiles.ToList(); //ProjectProfileCommand.GetAllByCustomerId(TargetCustomer.ID);
             this.Invoke((MethodInvoker)delegate {
 
                 customerNameTextBox.Text = TargetCustomer.CustomerName;
                
                 phoneNumberTextBox.Text = TargetCustomer.PhoneNumber;
 
+                CreateTextBox.Text = TargetCustomer.CreateDate.ToString();
+
+               
                 ProjectGridView.DataSource = lst; 
 
-            
+                
             });
 
         }
@@ -75,6 +78,11 @@ namespace bero_System.MainScenarioForms
         }
 
         private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

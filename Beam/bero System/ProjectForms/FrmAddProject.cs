@@ -129,13 +129,15 @@ namespace bero_System.ProjectForms
             Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int .Parse (CustomerComboBox.SelectedValue .ToString ()));
 
             ProjectProfile PrjTb = new ProjectProfile() {
+                 No_building = txtBuild .Text ,
+                  No_permissibility = permissibility .Text ,
                   ProjectName = projectNameTextBox .Text ,
                   ProjectDescription = projectDescriptionTextBox.Text ,
                   createdDate = DateTime .Now ,
                   DeliverDate =  DeliverDateText .Value ,
                   ProjectFullAmount =   Convert.ToDouble ( projectFullAmountTextBox .Text) ,
                   CustomerID = int.Parse (CustomerComboBox.SelectedValue .ToString ())  
-                 
+                  
             };
             ProjectProfileCommand.NewProject(PrjTb);
             //===================================================================

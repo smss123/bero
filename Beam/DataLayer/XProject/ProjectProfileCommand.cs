@@ -32,7 +32,7 @@ namespace DataLayer.XProject
                 q.createdDate = pro.createdDate;
                 q.DeliverDate = pro.DeliverDate;
                 q.ProjectFullAmount = pro.ProjectFullAmount;
-                q.CustomerID = pro.CustomerID;
+                //q.CustomerID = (int)pro.CustomerID;
                 q.SerialNumber = pro.SerialNumber;
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -43,8 +43,13 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
 
-                ProcessChange("Edit ProjectProfile", pro.ProjectName + " has Been Edited ", null);
-                q = null;
+                if (ProcessChange!=null)
+                {
+                    ProcessChange("Edit ProjectProfile", pro.ProjectName + " has Been Edited ", null);
+                    q = null;
+                    
+                }
+             
                 return true;
             }
             catch (Exception e)
@@ -105,7 +110,7 @@ namespace DataLayer.XProject
         {
 
             Customer TargetCustomer = (from c in db.Customers where c.ID == CustmerId select c).Single();
-
+            
             return TargetCustomer;
            
         }

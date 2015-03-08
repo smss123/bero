@@ -63,7 +63,7 @@ namespace bero_System.ProjectInstallmentForms
         }
         private void FrmAddProjectInstallment_Load(object sender, EventArgs e)
         {
-            ReportBtn.Enabled = false;
+            ReportBtn.Visible = false;
             th = new Thread(FillCombo);
             th.Start();
         }
@@ -132,6 +132,7 @@ namespace bero_System.ProjectInstallmentForms
             Operation.BeginOperation(this);
            InstalmentTb = new ProjectInstallment()
             {
+               
                 Installments_name = installments_nameTextBox .Text ,
                 ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ()),
                 Amount = Convert.ToDouble(amountTextBox .Text ),
@@ -139,20 +140,23 @@ namespace bero_System.ProjectInstallmentForms
                 ActiveStatus  = CmbActiveStatus.Text,
                 PayBy = payByTextBox .Text ,
                 PayDescription = payDescriptionTextBox .Text ,
-
-
             };
             ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
-      
+      //==================================================================================
+
+
+
+
+            Customer CurrentCustomer = InstalmentTb.projectLevel.ProjectProfile.Customer;
             ReportBtn.Enabled = true;
             //==================================================================
-            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
+            //Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
             // Start Save AT AccountDaily :
             // ^^^  خرج من حساب العميل __ دائن
             AccountDaily tb = new AccountDaily()
             {
-                AccountID = CurrentCustomer.AccountID ,
+                AccountID = CurrentCustomer.AccountID   ,
                 DateOfProcess = DateTime.Now,
                 TotalIn = 0f,
                 TotalOut = Convert.ToDouble(amountTextBox.Text),
@@ -186,8 +190,14 @@ namespace bero_System.ProjectInstallmentForms
             Operation.EndOperation(this);
             _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
-
-
+            if (CmbActiveStatus.Text == "تمت الجدوله")
+            {
+                ReportBtn.Visible = false;
+            }
+            else
+            {
+                ReportBtn.Visible = true;
+            }
 
 
 
@@ -211,7 +221,7 @@ namespace bero_System.ProjectInstallmentForms
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
-            AddBtn.Enabled = false;
+            
             ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
             cmd.xCustomerName = TargetProject.Customer.CustomerName;
             cmd.xProject = TargetProject.ProjectName;

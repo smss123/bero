@@ -4400,7 +4400,7 @@ namespace DataLayer
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
 					this.OnCustomerIDChanging(value);
-					this.SendPropertyChanging();
+                    this.SendPropertyChanging();
 					this._CustomerID = value;
 					this.SendPropertyChanged("CustomerID");
 					this.OnCustomerIDChanged();

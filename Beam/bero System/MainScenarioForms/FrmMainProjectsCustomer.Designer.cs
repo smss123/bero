@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label no_buildingLabel;
-            System.Windows.Forms.Label no_permissibilityLabel;
             System.Windows.Forms.Label phoneNumberLabel;
             System.Windows.Forms.Label customerNameLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn4 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainProjectsCustomer));
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -49,15 +48,13 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.no_buildingTextBox = new System.Windows.Forms.TextBox();
-            this.no_permissibilityTextBox = new System.Windows.Forms.TextBox();
+            this.CreateTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.ProjectGridView = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             no_buildingLabel = new System.Windows.Forms.Label();
-            no_permissibilityLabel = new System.Windows.Forms.Label();
             phoneNumberLabel = new System.Windows.Forms.Label();
             customerNameLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
@@ -78,21 +75,9 @@
             no_buildingLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             no_buildingLabel.Location = new System.Drawing.Point(527, 82);
             no_buildingLabel.Name = "no_buildingLabel";
-            no_buildingLabel.Size = new System.Drawing.Size(68, 19);
+            no_buildingLabel.Size = new System.Drawing.Size(84, 19);
             no_buildingLabel.TabIndex = 14;
-            no_buildingLabel.Text = "رقم المبنى:";
-            // 
-            // no_permissibilityLabel
-            // 
-            no_permissibilityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            no_permissibilityLabel.AutoSize = true;
-            no_permissibilityLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            no_permissibilityLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            no_permissibilityLabel.Location = new System.Drawing.Point(251, 82);
-            no_permissibilityLabel.Name = "no_permissibilityLabel";
-            no_permissibilityLabel.Size = new System.Drawing.Size(112, 19);
-            no_permissibilityLabel.TabIndex = 12;
-            no_permissibilityLabel.Text = "رقم الوحدة السكنية:";
+            no_buildingLabel.Text = "تاريخ الانشاء:";
             // 
             // phoneNumberLabel
             // 
@@ -131,6 +116,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(887, 39);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // RefreshBtn
             // 
@@ -173,9 +159,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(no_buildingLabel);
-            this.radGroupBox1.Controls.Add(this.no_buildingTextBox);
-            this.radGroupBox1.Controls.Add(no_permissibilityLabel);
-            this.radGroupBox1.Controls.Add(this.no_permissibilityTextBox);
+            this.radGroupBox1.Controls.Add(this.CreateTextBox);
             this.radGroupBox1.Controls.Add(phoneNumberLabel);
             this.radGroupBox1.Controls.Add(this.phoneNumberTextBox);
             this.radGroupBox1.Controls.Add(customerNameLabel);
@@ -191,27 +175,16 @@
             this.radGroupBox1.ThemeName = "Office2013Light";
             this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
-            // no_buildingTextBox
+            // CreateTextBox
             // 
-            this.no_buildingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_buildingTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.no_buildingTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.no_buildingTextBox.Location = new System.Drawing.Point(376, 79);
-            this.no_buildingTextBox.Name = "no_buildingTextBox";
-            this.no_buildingTextBox.ReadOnly = true;
-            this.no_buildingTextBox.Size = new System.Drawing.Size(149, 26);
-            this.no_buildingTextBox.TabIndex = 11;
-            // 
-            // no_permissibilityTextBox
-            // 
-            this.no_permissibilityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_permissibilityTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.no_permissibilityTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.no_permissibilityTextBox.Location = new System.Drawing.Point(98, 79);
-            this.no_permissibilityTextBox.Name = "no_permissibilityTextBox";
-            this.no_permissibilityTextBox.ReadOnly = true;
-            this.no_permissibilityTextBox.Size = new System.Drawing.Size(151, 26);
-            this.no_permissibilityTextBox.TabIndex = 13;
+            this.CreateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CreateTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.CreateTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateTextBox.Location = new System.Drawing.Point(376, 79);
+            this.CreateTextBox.Name = "CreateTextBox";
+            this.CreateTextBox.ReadOnly = true;
+            this.CreateTextBox.Size = new System.Drawing.Size(149, 26);
+            this.CreateTextBox.TabIndex = 11;
             // 
             // phoneNumberTextBox
             // 
@@ -265,72 +238,72 @@
             this.ProjectGridView.MasterTemplate.AllowSearchRow = true;
             this.ProjectGridView.MasterTemplate.AutoGenerateColumns = false;
             this.ProjectGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn3.EnableExpressionEditor = false;
-            gridViewDecimalColumn3.FieldName = "ID";
-            gridViewDecimalColumn3.HeaderText = "ID";
-            gridViewDecimalColumn3.IsAutoGenerated = true;
-            gridViewDecimalColumn3.IsVisible = false;
-            gridViewDecimalColumn3.Name = "ID";
-            gridViewDecimalColumn3.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
-            gridViewDecimalColumn3.Width = 61;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "ProjectName";
-            gridViewTextBoxColumn4.HeaderText = "اسم المشروع";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "ProjectName";
-            gridViewTextBoxColumn4.Width = 162;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "ProjectDescription";
-            gridViewTextBoxColumn5.HeaderText = "وصف المشروع";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "ProjectDescription";
-            gridViewTextBoxColumn5.Width = 162;
-            gridViewDecimalColumn4.EnableExpressionEditor = false;
-            gridViewDecimalColumn4.FieldName = "ProjectFullAmount";
-            gridViewDecimalColumn4.HeaderText = "موازنة المشروع";
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.Name = "ProjectFullAmount";
-            gridViewDecimalColumn4.Width = 162;
-            gridViewDateTimeColumn3.EnableExpressionEditor = false;
-            gridViewDateTimeColumn3.FieldName = "createdDate";
-            gridViewDateTimeColumn3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn3.HeaderText = "تاريخ الاضافة";
-            gridViewDateTimeColumn3.IsAutoGenerated = true;
-            gridViewDateTimeColumn3.Name = "createdDate";
-            gridViewDateTimeColumn3.Width = 162;
-            gridViewDateTimeColumn4.EnableExpressionEditor = false;
-            gridViewDateTimeColumn4.FieldName = "DeliverDate";
-            gridViewDateTimeColumn4.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn4.HeaderText = "تاريخ التسليم";
-            gridViewDateTimeColumn4.IsAutoGenerated = true;
-            gridViewDateTimeColumn4.Name = "DeliverDate";
-            gridViewDateTimeColumn4.Width = 165;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "SerialNumber";
-            gridViewTextBoxColumn6.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "SerialNumber";
-            gridViewTextBoxColumn6.Width = 148;
-            gridViewCommandColumn2.EnableExpressionEditor = false;
-            gridViewCommandColumn2.HeaderText = "دخول";
-            gridViewCommandColumn2.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn2.Image")));
-            gridViewCommandColumn2.MaxWidth = 50;
-            gridViewCommandColumn2.MinWidth = 50;
-            gridViewCommandColumn2.Name = "Enter";
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "ID";
+            gridViewDecimalColumn1.HeaderText = "ID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.IsVisible = false;
+            gridViewDecimalColumn1.Name = "ID";
+            gridViewDecimalColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
+            gridViewDecimalColumn1.Width = 61;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "ProjectName";
+            gridViewTextBoxColumn1.HeaderText = "اسم المشروع";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "ProjectName";
+            gridViewTextBoxColumn1.Width = 162;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "ProjectDescription";
+            gridViewTextBoxColumn2.HeaderText = "وصف المشروع";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "ProjectDescription";
+            gridViewTextBoxColumn2.Width = 162;
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "ProjectFullAmount";
+            gridViewDecimalColumn2.HeaderText = "موازنة المشروع";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "ProjectFullAmount";
+            gridViewDecimalColumn2.Width = 162;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "createdDate";
+            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn1.HeaderText = "تاريخ الاضافة";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "createdDate";
+            gridViewDateTimeColumn1.Width = 162;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "DeliverDate";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn2.HeaderText = "تاريخ التسليم";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "DeliverDate";
+            gridViewDateTimeColumn2.Width = 165;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "SerialNumber";
+            gridViewTextBoxColumn3.HeaderText = "SerialNumber";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.IsVisible = false;
+            gridViewTextBoxColumn3.Name = "SerialNumber";
+            gridViewTextBoxColumn3.Width = 148;
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.HeaderText = "دخول";
+            gridViewCommandColumn1.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn1.Image")));
+            gridViewCommandColumn1.MaxWidth = 50;
+            gridViewCommandColumn1.MinWidth = 50;
+            gridViewCommandColumn1.Name = "Enter";
             this.ProjectGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewDecimalColumn4,
-            gridViewDateTimeColumn3,
-            gridViewDateTimeColumn4,
-            gridViewTextBoxColumn6,
-            gridViewCommandColumn2});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewDecimalColumn2,
+            gridViewDateTimeColumn1,
+            gridViewDateTimeColumn2,
+            gridViewTextBoxColumn3,
+            gridViewCommandColumn1});
             this.ProjectGridView.MasterTemplate.EnableFiltering = true;
-            sortDescriptor2.PropertyName = "ID";
+            sortDescriptor1.PropertyName = "ID";
             this.ProjectGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
+            sortDescriptor1});
             this.ProjectGridView.Name = "ProjectGridView";
             this.ProjectGridView.ReadOnly = true;
             this.ProjectGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -380,8 +353,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private System.Windows.Forms.TextBox no_buildingTextBox;
-        private System.Windows.Forms.TextBox no_permissibilityTextBox;
+        private System.Windows.Forms.TextBox CreateTextBox;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox customerNameTextBox;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;

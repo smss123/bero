@@ -51,6 +51,7 @@
             this.installments_nameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ReportBtn = new System.Windows.Forms.Button();
             projectLevelIDLabel = new System.Windows.Forms.Label();
             activeStatusLabel = new System.Windows.Forms.Label();
             payDescriptionLabel = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.ReportBtn);
             this.radGroupBox1.Controls.Add(projectLevelIDLabel);
             this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(activeStatusLabel);
@@ -191,7 +193,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // projectLevelComboBox.NestedRadGridView
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -306,6 +308,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportBtn.Location = new System.Drawing.Point(48, 241);
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(175, 32);
+            this.ReportBtn.TabIndex = 21;
+            this.ReportBtn.Text = "طبـــــــــاعة أيصــــــــال دفـــــــــع";
+            this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
+            // 
             // FrmEditProjectInstallment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,5 +367,6 @@
         private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
+        private System.Windows.Forms.Button ReportBtn;
     }
 }

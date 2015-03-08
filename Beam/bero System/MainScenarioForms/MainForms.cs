@@ -106,6 +106,7 @@ namespace bero_System.MainScenarioForms
                 FrmMainProjectsCustomer frm = new FrmMainProjectsCustomer();
 
                 Customer tb = (Customer)CustomerGridView.CurrentRow.DataBoundItem;
+              
                 frm.TargetCustomer = tb;
 
                 frm.ShowDialog();
@@ -252,6 +253,11 @@ namespace bero_System.MainScenarioForms
         {
             FrmHoldyempReportOption frm = new FrmHoldyempReportOption();
             frm.ShowDialog();
+        }
+
+        private void CustomerGridView_Click(object sender, EventArgs e)
+        {
+
         }
 
    

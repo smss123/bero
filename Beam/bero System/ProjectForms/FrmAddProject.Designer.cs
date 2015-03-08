@@ -50,6 +50,10 @@
             this.object_77c47ca6_f4db_413a_9876_66f5e21071bc = new Telerik.WinControls.RootRadElement();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtBuild = new System.Windows.Forms.TextBox();
+            this.permissibility = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             customerIDLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
@@ -70,7 +74,7 @@
             // 
             customerIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             customerIDLabel.AutoSize = true;
-            customerIDLabel.Location = new System.Drawing.Point(255, 178);
+            customerIDLabel.Location = new System.Drawing.Point(422, 178);
             customerIDLabel.Name = "customerIDLabel";
             customerIDLabel.Size = new System.Drawing.Size(42, 13);
             customerIDLabel.TabIndex = 6;
@@ -80,7 +84,7 @@
             // 
             label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(256, 148);
+            label1.Location = new System.Drawing.Point(423, 148);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(76, 13);
             label1.TabIndex = 18;
@@ -90,7 +94,7 @@
             // 
             projectDescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             projectDescriptionLabel.AutoSize = true;
-            projectDescriptionLabel.Location = new System.Drawing.Point(256, 91);
+            projectDescriptionLabel.Location = new System.Drawing.Point(423, 91);
             projectDescriptionLabel.Name = "projectDescriptionLabel";
             projectDescriptionLabel.Size = new System.Drawing.Size(80, 13);
             projectDescriptionLabel.TabIndex = 16;
@@ -100,7 +104,7 @@
             // 
             projectFullAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             projectFullAmountLabel.AutoSize = true;
-            projectFullAmountLabel.Location = new System.Drawing.Point(255, 65);
+            projectFullAmountLabel.Location = new System.Drawing.Point(422, 65);
             projectFullAmountLabel.Name = "projectFullAmountLabel";
             projectFullAmountLabel.Size = new System.Drawing.Size(83, 13);
             projectFullAmountLabel.TabIndex = 13;
@@ -110,7 +114,7 @@
             // 
             projectNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             projectNameLabel.AutoSize = true;
-            projectNameLabel.Location = new System.Drawing.Point(255, 35);
+            projectNameLabel.Location = new System.Drawing.Point(422, 35);
             projectNameLabel.Name = "projectNameLabel";
             projectNameLabel.Size = new System.Drawing.Size(82, 13);
             projectNameLabel.TabIndex = 11;
@@ -119,6 +123,10 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.label3);
+            this.radGroupBox1.Controls.Add(this.label2);
+            this.radGroupBox1.Controls.Add(this.permissibility);
+            this.radGroupBox1.Controls.Add(this.txtBuild);
             this.radGroupBox1.Controls.Add(label1);
             this.radGroupBox1.Controls.Add(this.DeliverDateText);
             this.radGroupBox1.Controls.Add(projectDescriptionLabel);
@@ -135,7 +143,7 @@
             this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(349, 260);
+            this.radGroupBox1.Size = new System.Drawing.Size(516, 362);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
@@ -157,7 +165,7 @@
             // 
             this.projectDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectDescriptionTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.projectDescriptionTextBox.Location = new System.Drawing.Point(21, 84);
+            this.projectDescriptionTextBox.Location = new System.Drawing.Point(188, 84);
             this.projectDescriptionTextBox.Multiline = true;
             this.projectDescriptionTextBox.Name = "projectDescriptionTextBox";
             this.projectDescriptionTextBox.Size = new System.Drawing.Size(229, 55);
@@ -167,7 +175,7 @@
             // 
             this.projectFullAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectFullAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.projectFullAmountTextBox.Location = new System.Drawing.Point(96, 58);
+            this.projectFullAmountTextBox.Location = new System.Drawing.Point(263, 58);
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
             this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
             this.projectFullAmountTextBox.TabIndex = 14;
@@ -177,7 +185,7 @@
             // 
             this.projectNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectNameTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.projectNameTextBox.Location = new System.Drawing.Point(21, 32);
+            this.projectNameTextBox.Location = new System.Drawing.Point(188, 32);
             this.projectNameTextBox.Name = "projectNameTextBox";
             this.projectNameTextBox.Size = new System.Drawing.Size(229, 20);
             this.projectNameTextBox.TabIndex = 12;
@@ -187,7 +195,7 @@
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddBtn.Location = new System.Drawing.Point(235, 216);
+            this.AddBtn.Location = new System.Drawing.Point(308, 314);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(109, 36);
             this.AddBtn.TabIndex = 5;
@@ -210,7 +218,7 @@
             this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // 
+            // CustomerComboBox.NestedRadGridView
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -262,7 +270,7 @@
             this.CustomerComboBox.EditorControl.ShowGroupPanel = false;
             this.CustomerComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.CustomerComboBox.EditorControl.TabIndex = 0;
-            this.CustomerComboBox.Location = new System.Drawing.Point(21, 173);
+            this.CustomerComboBox.Location = new System.Drawing.Point(188, 173);
             this.CustomerComboBox.Name = "CustomerComboBox";
             this.CustomerComboBox.Size = new System.Drawing.Size(229, 20);
             this.CustomerComboBox.TabIndex = 4;
@@ -284,14 +292,45 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtBuild
+            // 
+            this.txtBuild.Location = new System.Drawing.Point(198, 259);
+            this.txtBuild.Name = "txtBuild";
+            this.txtBuild.Size = new System.Drawing.Size(229, 20);
+            this.txtBuild.TabIndex = 19;
+            // 
+            // permissibility
+            // 
+            this.permissibility.Location = new System.Drawing.Point(198, 222);
+            this.permissibility.Name = "permissibility";
+            this.permissibility.Size = new System.Drawing.Size(229, 20);
+            this.permissibility.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(447, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "رقم الجواز";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(445, 259);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "رقم المبنى";
+            // 
             // FrmAddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 260);
+            this.ClientSize = new System.Drawing.Size(516, 362);
             this.Controls.Add(this.radGroupBox1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(357, 291);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(357, 291);
             this.Name = "FrmAddProject";
@@ -300,7 +339,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.RootElement.MaxSize = new System.Drawing.Size(357, 291);
+            this.RootElement.MaxSize = new System.Drawing.Size(0, 0);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة مشروع";
@@ -333,5 +372,9 @@
         private System.Windows.Forms.TextBox projectNameTextBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox permissibility;
+        private System.Windows.Forms.TextBox txtBuild;
     }
 }

@@ -187,52 +187,52 @@
             // AddEmpployeeBtn
             // 
             this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
-            this.AddEmpployeeBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddEmpployeeBtn.Size = new System.Drawing.Size(145, 22);
             this.AddEmpployeeBtn.Text = "اضافة موظف";
             this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
             // 
             // EditEmployeebtn
             // 
             this.EditEmployeebtn.Name = "EditEmployeebtn";
-            this.EditEmployeebtn.Size = new System.Drawing.Size(152, 22);
+            this.EditEmployeebtn.Size = new System.Drawing.Size(145, 22);
             this.EditEmployeebtn.Text = "ادارة الموظفين";
             this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(142, 6);
             // 
             // AddHolyDayBtn
             // 
             this.AddHolyDayBtn.Name = "AddHolyDayBtn";
-            this.AddHolyDayBtn.Size = new System.Drawing.Size(152, 22);
+            this.AddHolyDayBtn.Size = new System.Drawing.Size(145, 22);
             this.AddHolyDayBtn.Text = "اضافة اجازة";
             this.AddHolyDayBtn.Click += new System.EventHandler(this.AddHolyDayBtn_Click);
             // 
             // ManageHolyDayBtn
             // 
             this.ManageHolyDayBtn.Name = "ManageHolyDayBtn";
-            this.ManageHolyDayBtn.Size = new System.Drawing.Size(152, 22);
+            this.ManageHolyDayBtn.Size = new System.Drawing.Size(145, 22);
             this.ManageHolyDayBtn.Text = "ادارة الاجازات";
             this.ManageHolyDayBtn.Click += new System.EventHandler(this.ManageHolyDayBtn_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(142, 6);
             // 
             // empReportBtn
             // 
             this.empReportBtn.Name = "empReportBtn";
-            this.empReportBtn.Size = new System.Drawing.Size(152, 22);
+            this.empReportBtn.Size = new System.Drawing.Size(145, 22);
             this.empReportBtn.Text = "تقارير الموظفين";
             this.empReportBtn.Click += new System.EventHandler(this.empReportBtn_Click);
             // 
             // تقاريرالاجازاتToolStripMenuItem
             // 
             this.تقاريرالاجازاتToolStripMenuItem.Name = "تقاريرالاجازاتToolStripMenuItem";
-            this.تقاريرالاجازاتToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تقاريرالاجازاتToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.تقاريرالاجازاتToolStripMenuItem.Text = "تقارير الاجازات";
             this.تقاريرالاجازاتToolStripMenuItem.Click += new System.EventHandler(this.تقاريرالاجازاتToolStripMenuItem_Click);
             // 
@@ -526,6 +526,7 @@
             this.CustomerGridView.Text = "radGridView1";
             this.CustomerGridView.ThemeName = "Office2013Light";
             this.CustomerGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.CustomerGridView_CommandCellClick);
+            this.CustomerGridView.Click += new System.EventHandler(this.CustomerGridView_Click);
             // 
             // notifyIcon1
             // 
