@@ -164,16 +164,16 @@ namespace bero_System.ProjectInstallmentForms
             };
             AccountDailyCommand.NewAccountDaily (tb);
             
-            // ^^^ دخل في حساب المشروع  ___مدين)
-            AccountDaily xtb = new AccountDaily()
-            {
-                AccountID =  TargetProject .AccountID  ,
-                DateOfProcess = DateTime.Now,
-                TotalIn = Convert.ToDouble(amountTextBox.Text),
-                TotalOut = 0f,
-                Description = payDescriptionTextBox .Text
-            };
-            AccountDailyCommand.NewAccountDaily(xtb);
+            //// ^^^ دخل في حساب المشروع  ___مدين)
+            //AccountDaily xtb = new AccountDaily()
+            //{
+            //    AccountID =  TargetProject .AccountID  ,
+            //    DateOfProcess = DateTime.Now,
+            //    TotalIn = Convert.ToDouble(amountTextBox.Text),
+            //    TotalOut = 0f,
+            //    Description = payDescriptionTextBox .Text
+            //};
+            //AccountDailyCommand.NewAccountDaily(xtb);
             //======================================================================================================================
            // Update Customer's Total_Need At Customer Table After Installment :       
             CurrentCustomer.Total_Need =  AccountDailyCommand.GetBalanceByAccountID(Convert.ToInt32  (CurrentCustomer .AccountID) );
