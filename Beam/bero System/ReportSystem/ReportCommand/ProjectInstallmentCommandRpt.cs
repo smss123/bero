@@ -74,6 +74,7 @@ namespace bero_System.ReportSystem.ReportCommand
                {
                    /// information Level
                    /// 
+                   
                    ProjectName = xProject ,
                    CustomerName = xCustomerName ,
                   Installments_name = q.Installments_name,

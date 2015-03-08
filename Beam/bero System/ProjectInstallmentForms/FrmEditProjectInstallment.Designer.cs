@@ -41,6 +41,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ReportBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.installments_nameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ReportBtn = new System.Windows.Forms.Button();
             projectLevelIDLabel = new System.Windows.Forms.Label();
             activeStatusLabel = new System.Windows.Forms.Label();
             payDescriptionLabel = new System.Windows.Forms.Label();
@@ -167,6 +167,17 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportBtn.Location = new System.Drawing.Point(48, 241);
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(175, 32);
+            this.ReportBtn.TabIndex = 21;
+            this.ReportBtn.Text = "طبـــــــــاعة أيصــــــــال دفـــــــــع";
+            this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
+            // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -193,7 +204,7 @@
             this.projectLevelComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.projectLevelComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // projectLevelComboBox.NestedRadGridView
+            // 
             // 
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.projectLevelComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -307,17 +318,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // ReportBtn
-            // 
-            this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReportBtn.Location = new System.Drawing.Point(48, 241);
-            this.ReportBtn.Name = "ReportBtn";
-            this.ReportBtn.Size = new System.Drawing.Size(175, 32);
-            this.ReportBtn.TabIndex = 21;
-            this.ReportBtn.Text = "طبـــــــــاعة أيصــــــــال دفـــــــــع";
-            this.ReportBtn.UseVisualStyleBackColor = true;
-            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
             // FrmEditProjectInstallment
             // 

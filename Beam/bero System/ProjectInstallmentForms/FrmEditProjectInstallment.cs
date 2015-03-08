@@ -130,13 +130,16 @@ namespace bero_System.ProjectInstallmentForms
 
             #endregion
 
+            int id = TargetInstalment.id;
+            TargetInstalment = new ProjectInstallment();
+            TargetInstalment.id = id;
             TargetInstalment.Installments_name = installments_nameTextBox.Text;
              TargetInstalment.ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ());
-             TargetInstalment.   Amount = Convert.ToDouble(amountTextBox .Text );
-              TargetInstalment.  DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ;
+             TargetInstalment.Amount = Convert.ToDouble(amountTextBox .Text );
+              TargetInstalment.DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ;
               TargetInstalment.ActiveStatus = comboBox1.Text;
-               TargetInstalment. PayBy = payByTextBox .Text ;
-               TargetInstalment. PayDescription = payDescriptionTextBox .Text ;
+               TargetInstalment.PayBy = payByTextBox .Text ;
+               TargetInstalment.PayDescription = payDescriptionTextBox .Text ;
 
                ProjectInstallmentCommand.EditProjectInstallment (TargetInstalment);
             
@@ -173,8 +176,9 @@ namespace bero_System.ProjectInstallmentForms
         private void ReportBtn_Click(object sender, EventArgs e)
         {
             ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
-            cmd.xCustomerName = TargetProject.Customer.CustomerName;
-            cmd.xProject = TargetProject.ProjectName;
+            var q = ProjectProfileCommand.GetAll().Where(p=>p.ID== TargetInstalment.projectLevel.ProjectProfile.ID ).SingleOrDefault();
+            cmd.xCustomerName = q.Customer.CustomerName;
+            cmd.xProject = q.ProjectName ;
 
             ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
             RepCmd.PrintCurrentInstallment(TargetInstalment .id );
