@@ -12,8 +12,8 @@ namespace bero_System.ReportSystem.ReportCommand
    public class ProjectInstallmentCommandRpt
     {
 
-        public string xProject { get; set; }
-        public string  xCustomerName { get; set; }
+       public static string xProject;
+       public static string xCustomerName;
        public ProjectInstallmentCommandRpt() { }
 
        public void ProjectInstallmentByProId(int ProId)

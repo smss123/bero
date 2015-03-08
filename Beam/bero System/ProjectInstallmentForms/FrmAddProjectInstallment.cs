@@ -221,10 +221,10 @@ namespace bero_System.ProjectInstallmentForms
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
-            
-            ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
-            cmd.xCustomerName = TargetProject.Customer.CustomerName;
-            cmd.xProject = TargetProject.ProjectName;
+
+
+            ProjectInstallmentCommandRpt.xCustomerName = TargetProject.Customer.CustomerName;
+            ProjectInstallmentCommandRpt.xProject = TargetProject.ProjectName;
 
             ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
             RepCmd.PrintCurrentInstallment(InstalmentTb .id );

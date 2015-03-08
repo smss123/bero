@@ -175,10 +175,10 @@ namespace bero_System.ProjectInstallmentForms
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
-            ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
+         
             var q = ProjectProfileCommand.GetAll().Where(p=>p.ID== TargetInstalment.projectLevel.ProjectProfile.ID ).SingleOrDefault();
-            cmd.xCustomerName = q.Customer.CustomerName;
-            cmd.xProject = q.ProjectName ;
+            ProjectInstallmentCommandRpt.xCustomerName = q.Customer.CustomerName;
+            ProjectInstallmentCommandRpt.xProject = q.ProjectName;
 
             ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
             RepCmd.PrintCurrentInstallment(TargetInstalment .id );
