@@ -55,5 +55,41 @@ namespace bero_System.ReportSystem.ReportCommand
 
         }
 
+
+       public void PrintCurrentInstallment(int xId)
+       {
+           
+           var q = ProjectInstallmentCommand.GetById(xId);
+           ReportDataSource rs = new ReportDataSource();
+           List<ProjectInstallmentObj> ls = new List<ProjectInstallmentObj>();
+
+
+
+     
+
+               ls.Add(new ProjectInstallmentObj()
+               {
+                   /// information Level
+                   Installments_name = q.Installments_name,
+                   Amount = q.Amount.Value,
+                   DateOfInstallments = q.DateOfInstallments.Value,
+                   ActiveStatus = q.ActiveStatus,
+                   PayBy = q.PayBy,
+                   PayDescription = q.PayDescription,
+                   
+
+               });
+         
+       
+           rs.Name = "DataSet1";
+           rs.Value = ls;
+           FrmReportViewer frm = new FrmReportViewer();
+           frm.reportViewer1.LocalReport.DataSources.Clear();
+           frm.reportViewer1.LocalReport.DataSources.Add(rs);
+           frm.reportViewer1.LocalReport.ReportEmbeddedResource = "bero_System.ReportSystem.ReportDesign.RptProjectInstallment.rdlc";
+           frm.ShowDialog();
+
+
+       }
     }
 }

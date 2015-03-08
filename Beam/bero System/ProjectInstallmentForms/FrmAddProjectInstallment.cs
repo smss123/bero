@@ -17,6 +17,8 @@ using DataLayer;
 using DataLayer.XProject;
 using DataLayer.XAccountant;
 using DataLayer.XCustomer;
+using bero_System.ReportSystem.ReportCommand;
+using bero_System.ReportSystem.ReportOBj;
 namespace bero_System.ProjectInstallmentForms
 {
     public partial class FrmAddProjectInstallment : RadForm
@@ -61,12 +63,17 @@ namespace bero_System.ProjectInstallmentForms
         }
         private void FrmAddProjectInstallment_Load(object sender, EventArgs e)
         {
+            ReportBtn.Enabled = false;
             th = new Thread(FillCombo);
             th.Start();
         }
 
         public ProjectProfile TargetProject { get; set; }
-     
+        public int xid { get; set; }
+
+
+        ProjectInstallment InstalmentTb = new ProjectInstallment();
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -123,7 +130,7 @@ namespace bero_System.ProjectInstallmentForms
             #endregion
 
             Operation.BeginOperation(this);
-            ProjectInstallment InstalmentTb = new ProjectInstallment()
+           InstalmentTb = new ProjectInstallment()
             {
                 Installments_name = installments_nameTextBox .Text ,
                 ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ()),
@@ -136,6 +143,8 @@ namespace bero_System.ProjectInstallmentForms
 
             };
             ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
+      
+            ReportBtn.Enabled = true;
             //==================================================================
             Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
@@ -198,6 +207,17 @@ namespace bero_System.ProjectInstallmentForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+            AddBtn.Enabled = false;
+            ProjectInstallmentObj cmd = new ProjectInstallmentObj();
+            cmd.CustomerName = TargetProject.Customer.CustomerName;
+            cmd.ProjectName = TargetProject.ProjectName;
+
+            ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
+            RepCmd.PrintCurrentInstallment(InstalmentTb .id );
         }
     }
 }
