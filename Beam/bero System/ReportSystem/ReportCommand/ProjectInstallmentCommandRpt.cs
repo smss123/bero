@@ -11,6 +11,9 @@ namespace bero_System.ReportSystem.ReportCommand
 {
    public class ProjectInstallmentCommandRpt
     {
+
+        public string xProject { get; set; }
+        public string  xCustomerName { get; set; }
        public ProjectInstallmentCommandRpt() { }
 
        public void ProjectInstallmentByProId(int ProId)
@@ -70,7 +73,10 @@ namespace bero_System.ReportSystem.ReportCommand
                ls.Add(new ProjectInstallmentObj()
                {
                    /// information Level
-                   Installments_name = q.Installments_name,
+                   /// 
+                   ProjectName = xProject ,
+                   CustomerName = xCustomerName ,
+                  Installments_name = q.Installments_name,
                    Amount = q.Amount.Value,
                    DateOfInstallments = q.DateOfInstallments.Value,
                    ActiveStatus = q.ActiveStatus,

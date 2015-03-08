@@ -212,9 +212,9 @@ namespace bero_System.ProjectInstallmentForms
         private void ReportBtn_Click(object sender, EventArgs e)
         {
             AddBtn.Enabled = false;
-            ProjectInstallmentObj cmd = new ProjectInstallmentObj();
-            cmd.CustomerName = TargetProject.Customer.CustomerName;
-            cmd.ProjectName = TargetProject.ProjectName;
+            ProjectInstallmentCommandRpt cmd = new ProjectInstallmentCommandRpt();
+            cmd.xCustomerName = TargetProject.Customer.CustomerName;
+            cmd.xProject = TargetProject.ProjectName;
 
             ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
             RepCmd.PrintCurrentInstallment(InstalmentTb .id );
