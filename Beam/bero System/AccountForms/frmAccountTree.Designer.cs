@@ -221,7 +221,7 @@
             // 
             // TreeAccounts
             // 
-            this.TreeAccounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TreeAccounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.TreeAccounts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TreeAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TreeAccounts.FullRowSelect = true;
