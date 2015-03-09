@@ -45,6 +45,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.EmployeeComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Savebtn = new Telerik.WinControls.UI.RadButton();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.commintTextBox = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.toDatetimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label1 = new System.Windows.Forms.Label();
             fromDateLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
@@ -63,9 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Savebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,6 +250,10 @@
             this.EmployeeComboBox.ThemeName = "Office2013Light";
             this.EmployeeComboBox.ValueMember = "id";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(DataLayer.Employee);
+            // 
             // Savebtn
             // 
             this.Savebtn.Image = global::bero_System.Properties.Resources.Save;
@@ -309,10 +313,6 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(DataLayer.Employee);
-            // 
             // FrmEditHolyDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,9 +341,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Savebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

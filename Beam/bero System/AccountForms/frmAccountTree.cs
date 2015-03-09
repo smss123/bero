@@ -50,14 +50,23 @@ namespace bero_System.AccountForms
 
         private void frmAccountTree_Load(object sender, EventArgs e)
         {
-            TreeAccounts.Nodes.Clear();
-            TreeAccounts.ImageList = imageList1;
-            TreeAccounts.Nodes.Add("AbuEhab", "شجرة الحسابات", 0).ForeColor = Color .Red ;
-            TreeAccounts .Nodes ["AbuEhab"].NodeFont = new System.Drawing.Font ("Times New Roman",10, FontStyle.Bold );
+            TreeMainPopulate();
             Thread TreeThread = new Thread(PopulateTreeAccounts);
             TreeThread.Start();
             //===============================
             DGVAccountsDaily.Rows.Clear();
+
+            var Accts = (from c in AccountCommand.GetAll() select c.AccountName).ToArray();
+            TextBoxAutoComplate(SearchTextBox, Accts);
+
+        }
+
+        private void TreeMainPopulate()
+        {
+            TreeAccounts.Nodes.Clear();
+            TreeAccounts.ImageList = imageList1;
+            TreeAccounts.Nodes.Add("AbuEhab", "شجرة الحسابات", 0).ForeColor = Color.Red;
+            TreeAccounts.Nodes["AbuEhab"].NodeFont = new System.Drawing.Font("Times New Roman", 10, FontStyle.Bold);
         }
 
         private void ExpandBtn_Click(object sender, EventArgs e)
@@ -107,22 +116,70 @@ namespace bero_System.AccountForms
         void Broom() { txtDescription.Text = ""; txtAccountName.Text = ""; txtBalance.Text = ""; DGVAccountsDaily.Rows.Clear(); }
         #endregion 
 
-        private void txtAccountName_TextChanged(object sender, EventArgs e)
+    
+
+        #region "      *** AutoComplate              "
+
+        private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-         
+            TextKeyDown(SearchTextBox, e);
 
-               
+            if (e.KeyCode == Keys.Enter)
+            {
+          
+                Broom();
+                var accts = AccountCommand.GetAccountByName(SearchTextBox.Text);
+                foreach (var actitem in accts)
+                {
+                    AcctID = actitem.ID;
+                    txtAccountName.Text = actitem.AccountName;
+                    txtDescription.Text = actitem.Description;
 
-              
-            
+                }
+
+                Thread DGVThread = new Thread(GetAccountDetails);
+                DGVThread.Start();
+            }
+
         }
 
-        private void ReportOptionBtn_Click(object sender, EventArgs e)
+
+        public static void TextKeyDown(TextBox TextBoxName, KeyEventArgs e)
         {
-        
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (!TextBoxName.AutoCompleteCustomSource.Contains(TextBoxName.Text))
+                {
+
+                    TextBoxName.AutoCompleteCustomSource.Add(TextBoxName.Text);
+                }
+
+            }
+            else if (e.KeyCode == Keys.Delete)
+            {
+                ((AutoCompleteStringCollection)TextBoxName.AutoCompleteCustomSource).Remove(TextBoxName.Text);
+                TextBoxName.Clear();
+            }
         }
 
+
+        public static void TextBoxAutoComplate(TextBox TextBoxName, string[] Datasource)
+        {
+            TextBoxName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            TextBoxName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection TheSource = new AutoCompleteStringCollection();
+            TextBoxName.AutoCompleteCustomSource = TheSource;
+            TheSource.AddRange(Datasource);
+
+        }
+
+
         
-       
+
+  
+
+
+        #endregion
     }
 }
