@@ -65,5 +65,10 @@ namespace bero_System.CustomerForms
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
