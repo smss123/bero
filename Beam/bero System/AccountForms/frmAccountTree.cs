@@ -113,7 +113,7 @@ namespace bero_System.AccountForms
             });
             Operation.EndOperation(this);
         }
-        void Broom() { txtDescription.Text = ""; txtAccountName.Text = ""; txtBalance.Text = ""; DGVAccountsDaily.Rows.Clear(); }
+        void Broom() { SearchTextBox.Text = ""; txtDescription.Text = ""; txtAccountName.Text = ""; txtBalance.Text = ""; DGVAccountsDaily.Rows.Clear(); }
         #endregion 
 
     
@@ -136,6 +136,9 @@ namespace bero_System.AccountForms
                     txtDescription.Text = actitem.Description;
 
                 }
+
+                TreeViewSearch(TreeAccounts, SearchTextBox.Text);
+
 
                 Thread DGVThread = new Thread(GetAccountDetails);
                 DGVThread.Start();
@@ -181,5 +184,49 @@ namespace bero_System.AccountForms
 
 
         #endregion
+
+
+        #region  "     TreeView        "
+
+        public static void TreeViewSearch(TreeView TreeViewName, string NodeText)
+        {
+            TreeNodeCollection nodes = TreeViewName.Nodes;
+            foreach (TreeNode n in nodes)
+            {
+
+                GetNode(n, NodeText);
+                n.Expand();
+            }
+
+        }
+        static void GetNode(TreeNode treeNode, string xText)
+        {
+
+            if (treeNode.Text.Contains(xText))
+            {
+
+                treeNode.BackColor = Color.Black;
+                treeNode.ForeColor = Color.Gold;
+            }
+            else
+            {
+                treeNode.BackColor = Color.Empty;
+                treeNode.ForeColor = Color.Empty;
+            }
+
+            foreach (TreeNode tn in treeNode.Nodes)
+            {
+
+                GetNode(tn, xText);
+                tn.Expand();
+            }
+
+        }
+
+
+        #endregion 
+
+
+
     }
 }
