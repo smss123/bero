@@ -39,6 +39,9 @@ namespace bero_System.MainScenarioForms
             projectFullAmountTextBox.Text = TargetProject.ProjectFullAmount.ToString ();
             CreatDatetextBox.Text = TargetProject.createdDate.ToString();
             DeliverDatetextBox.Text = TargetProject.DeliverDate.ToString();
+            bulidTextBox.Text = TargetProject.No_building;
+            okyTextbox.Text = TargetProject.No_permissibility;
+
 
 
         }

@@ -72,8 +72,7 @@ namespace bero_System.CustomerForms
         {
             customerNameTextBox.Text = "";
             phoneNumberTextBox.Text = "";
-            no_buildingTextBox.Text = "";
-            no_permissibilityTextBox.Text = "";
+        
             customerNameTextBox.Focus();
         }
 
@@ -86,6 +85,11 @@ namespace bero_System.CustomerForms
         private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

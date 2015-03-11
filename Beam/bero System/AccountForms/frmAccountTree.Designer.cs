@@ -49,6 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.CollapseBtn = new Telerik.WinControls.UI.RadButton();
             this.ExpandBtn = new Telerik.WinControls.UI.RadButton();
             this.TreeAccounts = new System.Windows.Forms.TreeView();
@@ -90,7 +92,6 @@
             this.ReportOptionBtn.Name = "ReportOptionBtn";
             this.ReportOptionBtn.Size = new System.Drawing.Size(147, 22);
             this.ReportOptionBtn.Text = "Report";
-            this.ReportOptionBtn.Click += new System.EventHandler(this.ReportOptionBtn_Click);
             // 
             // aToolStripMenuItem
             // 
@@ -156,7 +157,6 @@
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(227, 20);
             this.txtAccountName.TabIndex = 3;
-            this.txtAccountName.TextChanged += new System.EventHandler(this.txtAccountName_TextChanged);
             // 
             // label3
             // 
@@ -188,6 +188,8 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.SearchTextBox);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.CollapseBtn);
             this.groupBox1.Controls.Add(this.ExpandBtn);
             this.groupBox1.Controls.Add(this.TreeAccounts);
@@ -196,6 +198,31 @@
             this.groupBox1.Size = new System.Drawing.Size(341, 306);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.Location = new System.Drawing.Point(50, 231);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(227, 22);
+            this.SearchTextBox.TabIndex = 8;
+            this.SearchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
+        //    this.SearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchTextBox_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 223);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(313, 44);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "بحــث";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CollapseBtn
             // 
@@ -221,7 +248,7 @@
             // 
             // TreeAccounts
             // 
-            this.TreeAccounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TreeAccounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.TreeAccounts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TreeAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TreeAccounts.FullRowSelect = true;
@@ -229,7 +256,7 @@
             this.TreeAccounts.Location = new System.Drawing.Point(16, 19);
             this.TreeAccounts.Name = "TreeAccounts";
             this.TreeAccounts.RightToLeftLayout = true;
-            this.TreeAccounts.Size = new System.Drawing.Size(313, 245);
+            this.TreeAccounts.Size = new System.Drawing.Size(313, 201);
             this.TreeAccounts.TabIndex = 0;
             this.TreeAccounts.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeAccounts_NodeMouseDoubleClick);
             // 
@@ -337,6 +364,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CollapseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpandBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
@@ -369,5 +397,7 @@
         private Telerik.WinControls.UI.RadGridView DGVAccountsDaily;
         private Telerik.WinControls.UI.RadButton CollapseBtn;
         private Telerik.WinControls.UI.RadButton ExpandBtn;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label label4;
     }
 }

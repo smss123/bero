@@ -116,15 +116,22 @@ namespace bero_System.ProjectForms
 
             #endregion
 
-            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(CustomerComboBox.SelectedValue.ToString()));
+           // Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(CustomerComboBox.SelectedValue.ToString()));
+            int id = 0;
+            int accountID = TargetProject.AccountID.Value  ;
+            id = TargetProject.ID;
 
-           
-              TargetProject.  ProjectName = projectNameTextBox.Text;
-              TargetProject.  ProjectDescription = projectDescriptionTextBox.Text;
+            TargetProject = new ProjectProfile();
+                TargetProject.  ProjectName = projectNameTextBox.Text;
+               TargetProject.  ProjectDescription = projectDescriptionTextBox.Text;
                TargetProject. createdDate = DateTime.Now;
               TargetProject.  DeliverDate = DeliverDateText.Value;
                TargetProject. ProjectFullAmount = Convert.ToDouble(projectFullAmountTextBox.Text);
                TargetProject.CustomerID = int.Parse(CustomerComboBox.SelectedValue.ToString());
+               TargetProject.No_building = txtBuild.Text;
+               TargetProject.No_permissibility = txtpermissibility.Text;
+               TargetProject.ID = id;
+               TargetProject.AccountID = accountID;
                 // AccountID = 
          
             ProjectProfileCommand.EditProject (TargetProject);
@@ -136,7 +143,7 @@ namespace bero_System.ProjectForms
 
         private void FrmEditProject_Load(object sender, EventArgs e)
         {
-
+            CustomerComboBox.Enabled = true;
             // ^^^ Display Data In TextBoxes :
             projectNameTextBox.Text = TargetProject.ProjectName;
             projectDescriptionTextBox.Text = TargetProject.ProjectDescription;
@@ -162,6 +169,11 @@ namespace bero_System.ProjectForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void CustomerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
       

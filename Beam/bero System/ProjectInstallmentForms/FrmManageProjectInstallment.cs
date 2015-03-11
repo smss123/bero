@@ -13,6 +13,8 @@ using Telerik.WinControls.UI;
 using DataLayer.XProject;
 using DataLayer;
 using System.Threading;
+using bero_System.ReportSystem.ReportOBj;
+using bero_System.ReportSystem.ReportCommand;
 
 namespace bero_System.ProjectInstallmentForms
 {
@@ -79,6 +81,16 @@ namespace bero_System.ProjectInstallmentForms
 
                 Operation.EndOperation(this);
             }
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+            ProjectInstallmentObj cmd = new ProjectInstallmentObj();
+            cmd.CustomerName = TargetProject.Customer.CustomerName;
+            cmd.ProjectName = TargetProject.ProjectName;
+
+            ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
+            RepCmd.ProjectInstallmentByProId(TargetProject.ID);
         }
     }
 }

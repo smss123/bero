@@ -50,7 +50,7 @@ namespace bero_System.CustomerForms
         private void BulidItemGridView_CommandCellClick(object sender, EventArgs e)
         {
             var col = BulidItemGridView.CurrentColumn.Index;
-            if (col == 7)
+            if (col == 4)
             {
                
                 Operation.BeginOperation(this);
@@ -62,7 +62,7 @@ namespace bero_System.CustomerForms
                 frm.ShowDialog();
                 Operation.EndOperation(this);
             }
-            if (col == 8)
+            if (col == 5)
             {
 
                 Operation.BeginOperation(this);

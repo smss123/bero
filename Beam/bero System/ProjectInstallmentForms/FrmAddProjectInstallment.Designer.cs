@@ -42,6 +42,7 @@
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ReportBtn = new System.Windows.Forms.Button();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.CmbActiveStatus = new System.Windows.Forms.ComboBox();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
@@ -136,6 +137,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.ReportBtn);
             this.radGroupBox1.Controls.Add(this.AddBtn);
             this.radGroupBox1.Controls.Add(this.CmbActiveStatus);
             this.radGroupBox1.Controls.Add(projectLevelIDLabel);
@@ -159,6 +161,17 @@
             this.radGroupBox1.Size = new System.Drawing.Size(393, 291);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportBtn.Location = new System.Drawing.Point(60, 245);
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(175, 32);
+            this.ReportBtn.TabIndex = 14;
+            this.ReportBtn.Text = "طبـــــــــاعة أيصــــــــال دفـــــــــع";
+            this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
             // AddBtn
             // 
@@ -351,5 +364,6 @@
         private Telerik.WinControls.UI.RadButton AddBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.BindingSource projectLevelBindingSource;
+        private System.Windows.Forms.Button ReportBtn;
     }
 }

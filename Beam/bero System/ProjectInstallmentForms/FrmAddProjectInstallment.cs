@@ -17,6 +17,8 @@ using DataLayer;
 using DataLayer.XProject;
 using DataLayer.XAccountant;
 using DataLayer.XCustomer;
+using bero_System.ReportSystem.ReportCommand;
+using bero_System.ReportSystem.ReportOBj;
 namespace bero_System.ProjectInstallmentForms
 {
     public partial class FrmAddProjectInstallment : RadForm
@@ -61,12 +63,17 @@ namespace bero_System.ProjectInstallmentForms
         }
         private void FrmAddProjectInstallment_Load(object sender, EventArgs e)
         {
+            ReportBtn.Visible = false;
             th = new Thread(FillCombo);
             th.Start();
         }
 
         public ProjectProfile TargetProject { get; set; }
-     
+        public int xid { get; set; }
+
+
+        ProjectInstallment InstalmentTb = new ProjectInstallment();
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             #region "  CheckFillTextBox "
@@ -123,8 +130,9 @@ namespace bero_System.ProjectInstallmentForms
             #endregion
 
             Operation.BeginOperation(this);
-            ProjectInstallment InstalmentTb = new ProjectInstallment()
+           InstalmentTb = new ProjectInstallment()
             {
+               
                 Installments_name = installments_nameTextBox .Text ,
                 ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ()),
                 Amount = Convert.ToDouble(amountTextBox .Text ),
@@ -132,18 +140,23 @@ namespace bero_System.ProjectInstallmentForms
                 ActiveStatus  = CmbActiveStatus.Text,
                 PayBy = payByTextBox .Text ,
                 PayDescription = payDescriptionTextBox .Text ,
-
-
             };
             ProjectInstallmentCommand.NewProjectInstallment(InstalmentTb);
+      //==================================================================================
+
+
+
+
+            Customer CurrentCustomer = InstalmentTb.projectLevel.ProjectProfile.Customer;
+            ReportBtn.Enabled = true;
             //==================================================================
-            Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
+            //Customer CurrentCustomer = ProjectProfileCommand.GetAccountNumberForCustomer(int.Parse(projectLevelComboBox.SelectedValue.ToString()));
 
             // Start Save AT AccountDaily :
             // ^^^  خرج من حساب العميل __ دائن
             AccountDaily tb = new AccountDaily()
             {
-                AccountID = CurrentCustomer.AccountID ,
+                AccountID = CurrentCustomer.AccountID   ,
                 DateOfProcess = DateTime.Now,
                 TotalIn = 0f,
                 TotalOut = Convert.ToDouble(amountTextBox.Text),
@@ -151,16 +164,16 @@ namespace bero_System.ProjectInstallmentForms
             };
             AccountDailyCommand.NewAccountDaily (tb);
             
-            // ^^^ دخل في حساب المشروع  ___مدين)
-            AccountDaily xtb = new AccountDaily()
-            {
-                AccountID =  TargetProject .AccountID  ,
-                DateOfProcess = DateTime.Now,
-                TotalIn = Convert.ToDouble(amountTextBox.Text),
-                TotalOut = 0f,
-                Description = payDescriptionTextBox .Text
-            };
-            AccountDailyCommand.NewAccountDaily(xtb);
+            //// ^^^ دخل في حساب المشروع  ___مدين)
+            //AccountDaily xtb = new AccountDaily()
+            //{
+            //    AccountID =  TargetProject .AccountID  ,
+            //    DateOfProcess = DateTime.Now,
+            //    TotalIn = Convert.ToDouble(amountTextBox.Text),
+            //    TotalOut = 0f,
+            //    Description = payDescriptionTextBox .Text
+            //};
+            //AccountDailyCommand.NewAccountDaily(xtb);
             //======================================================================================================================
            // Update Customer's Total_Need At Customer Table After Installment :       
             CurrentCustomer.Total_Need =  AccountDailyCommand.GetBalanceByAccountID(Convert.ToInt32  (CurrentCustomer .AccountID) );
@@ -177,8 +190,14 @@ namespace bero_System.ProjectInstallmentForms
             Operation.EndOperation(this);
             _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
 
-
-
+            if (CmbActiveStatus.Text == "تمت الجدوله")
+            {
+                ReportBtn.Visible = false;
+            }
+            else
+            {
+                ReportBtn.Visible = true;
+            }
 
 
 
@@ -198,6 +217,17 @@ namespace bero_System.ProjectInstallmentForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+
+
+            ProjectInstallmentCommandRpt.xCustomerName = TargetProject.Customer.CustomerName;
+            ProjectInstallmentCommandRpt.xProject = TargetProject.ProjectName;
+
+            ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
+            RepCmd.PrintCurrentInstallment(InstalmentTb .id );
         }
     }
 }

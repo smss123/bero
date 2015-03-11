@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using bero_System.ReportSystem.ReportCommand;
+using DataLayer;
 using DataLayer.XProject;
 using System;
 using System.Collections.Generic;
@@ -129,13 +130,16 @@ namespace bero_System.ProjectInstallmentForms
 
             #endregion
 
+            int id = TargetInstalment.id;
+            TargetInstalment = new ProjectInstallment();
+            TargetInstalment.id = id;
             TargetInstalment.Installments_name = installments_nameTextBox.Text;
              TargetInstalment.ProjectLevelID = int .Parse (projectLevelComboBox.SelectedValue .ToString ());
-             TargetInstalment.   Amount = Convert.ToDouble(amountTextBox .Text );
-              TargetInstalment.  DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ;
+             TargetInstalment.Amount = Convert.ToDouble(amountTextBox .Text );
+              TargetInstalment.DateOfInstallments = dateOfInstallmentsDateTimePicker.Value ;
               TargetInstalment.ActiveStatus = comboBox1.Text;
-               TargetInstalment. PayBy = payByTextBox .Text ;
-               TargetInstalment. PayDescription = payDescriptionTextBox .Text ;
+               TargetInstalment.PayBy = payByTextBox .Text ;
+               TargetInstalment.PayDescription = payDescriptionTextBox .Text ;
 
                ProjectInstallmentCommand.EditProjectInstallment (TargetInstalment);
             
@@ -167,6 +171,17 @@ namespace bero_System.ProjectInstallmentForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+         
+            var q = ProjectProfileCommand.GetAll().Where(p=>p.ID== TargetInstalment.projectLevel.ProjectProfile.ID ).SingleOrDefault();
+            ProjectInstallmentCommandRpt.xCustomerName = q.Customer.CustomerName;
+            ProjectInstallmentCommandRpt.xProject = q.ProjectName;
+
+            ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
+            RepCmd.PrintCurrentInstallment(TargetInstalment .id );
         }
       
     }

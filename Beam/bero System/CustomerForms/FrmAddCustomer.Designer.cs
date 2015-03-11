@@ -31,20 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label customerNameLabel;
             System.Windows.Forms.Label phoneNumberLabel;
-            System.Windows.Forms.Label no_permissibilityLabel;
-            System.Windows.Forms.Label no_buildingLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
-            this.no_buildingTextBox = new System.Windows.Forms.TextBox();
-            this.no_permissibilityTextBox = new System.Windows.Forms.TextBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             customerNameLabel = new System.Windows.Forms.Label();
             phoneNumberLabel = new System.Windows.Forms.Label();
-            no_permissibilityLabel = new System.Windows.Forms.Label();
-            no_buildingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
@@ -72,34 +66,10 @@
             phoneNumberLabel.TabIndex = 2;
             phoneNumberLabel.Text = "رقم الهاتف:";
             // 
-            // no_permissibilityLabel
-            // 
-            no_permissibilityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            no_permissibilityLabel.AutoSize = true;
-            no_permissibilityLabel.Location = new System.Drawing.Point(264, 129);
-            no_permissibilityLabel.Name = "no_permissibilityLabel";
-            no_permissibilityLabel.Size = new System.Drawing.Size(56, 13);
-            no_permissibilityLabel.TabIndex = 4;
-            no_permissibilityLabel.Text = "رقم الجواز:";
-            // 
-            // no_buildingLabel
-            // 
-            no_buildingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            no_buildingLabel.AutoSize = true;
-            no_buildingLabel.Location = new System.Drawing.Point(264, 96);
-            no_buildingLabel.Name = "no_buildingLabel";
-            no_buildingLabel.Size = new System.Drawing.Size(63, 13);
-            no_buildingLabel.TabIndex = 6;
-            no_buildingLabel.Text = "رقم المبنى:";
-            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.AddBtn);
-            this.radGroupBox1.Controls.Add(no_buildingLabel);
-            this.radGroupBox1.Controls.Add(this.no_buildingTextBox);
-            this.radGroupBox1.Controls.Add(no_permissibilityLabel);
-            this.radGroupBox1.Controls.Add(this.no_permissibilityTextBox);
             this.radGroupBox1.Controls.Add(phoneNumberLabel);
             this.radGroupBox1.Controls.Add(this.phoneNumberTextBox);
             this.radGroupBox1.Controls.Add(customerNameLabel);
@@ -109,16 +79,17 @@
             this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(333, 217);
+            this.radGroupBox1.Size = new System.Drawing.Size(333, 150);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddBtn.Location = new System.Drawing.Point(214, 169);
+            this.AddBtn.Location = new System.Drawing.Point(151, 97);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 5;
@@ -127,31 +98,13 @@
             this.AddBtn.ThemeName = "Office2013Light";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // no_buildingTextBox
-            // 
-            this.no_buildingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_buildingTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.no_buildingTextBox.Location = new System.Drawing.Point(68, 93);
-            this.no_buildingTextBox.Name = "no_buildingTextBox";
-            this.no_buildingTextBox.Size = new System.Drawing.Size(194, 20);
-            this.no_buildingTextBox.TabIndex = 3;
-            // 
-            // no_permissibilityTextBox
-            // 
-            this.no_permissibilityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_permissibilityTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.no_permissibilityTextBox.Location = new System.Drawing.Point(68, 125);
-            this.no_permissibilityTextBox.Name = "no_permissibilityTextBox";
-            this.no_permissibilityTextBox.Size = new System.Drawing.Size(194, 20);
-            this.no_permissibilityTextBox.TabIndex = 4;
-            // 
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneNumberTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(67, 61);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(14, 61);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(194, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(247, 20);
             this.phoneNumberTextBox.TabIndex = 2;
             this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextBox_KeyPress);
             // 
@@ -173,19 +126,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 217);
+            this.ClientSize = new System.Drawing.Size(333, 150);
             this.Controls.Add(this.radGroupBox1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(341, 248);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(341, 248);
             this.Name = "FrmAddCustomer";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.RootElement.MaxSize = new System.Drawing.Size(341, 248);
+            this.RootElement.MaxSize = new System.Drawing.Size(0, 0);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة عميل";
@@ -205,8 +156,6 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadButton AddBtn;
-        private System.Windows.Forms.TextBox no_buildingTextBox;
-        private System.Windows.Forms.TextBox no_permissibilityTextBox;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox customerNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;

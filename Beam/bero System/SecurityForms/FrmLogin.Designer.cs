@@ -32,16 +32,16 @@
             System.Windows.Forms.Label pwdLabel;
             System.Windows.Forms.Label userNameLabel;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTimeLogIn = new System.Windows.Forms.Label();
             this.ExitBtn = new Telerik.WinControls.UI.RadButton();
             this.EnterBtn = new Telerik.WinControls.UI.RadButton();
             this.pwdTextBox = new System.Windows.Forms.TextBox();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.lblTimeLogIn = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             pwdLabel = new System.Windows.Forms.Label();
             userNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
@@ -94,6 +94,43 @@
             this.radGroupBox1.Text = "بيانات المستخدم";
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 23);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "تسجيل الدخــــول للنــظام";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Silver;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(321, 23);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "يتم منحـــك دقيــفة للتسجيل";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTimeLogIn
+            // 
+            this.lblTimeLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTimeLogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTimeLogIn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeLogIn.ForeColor = System.Drawing.Color.Lime;
+            this.lblTimeLogIn.Location = new System.Drawing.Point(137, 150);
+            this.lblTimeLogIn.Name = "lblTimeLogIn";
+            this.lblTimeLogIn.Size = new System.Drawing.Size(91, 36);
+            this.lblTimeLogIn.TabIndex = 8;
+            this.lblTimeLogIn.Text = "60";
+            this.lblTimeLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ExitBtn
             // 
             this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -145,48 +182,11 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
-            // lblTimeLogIn
-            // 
-            this.lblTimeLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTimeLogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTimeLogIn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeLogIn.ForeColor = System.Drawing.Color.Lime;
-            this.lblTimeLogIn.Location = new System.Drawing.Point(137, 150);
-            this.lblTimeLogIn.Name = "lblTimeLogIn";
-            this.lblTimeLogIn.Size = new System.Drawing.Size(91, 36);
-            this.lblTimeLogIn.TabIndex = 8;
-            this.lblTimeLogIn.Text = "60";
-            this.lblTimeLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Silver;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 23);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "يتم منحـــك دقيــفة للتسجيل";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 23);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "تسجيل الدخــــول للنــظام";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmLogin
             // 

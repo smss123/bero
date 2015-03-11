@@ -41,6 +41,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.ReportBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
             this.projectLevelComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -141,6 +142,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.ReportBtn);
             this.radGroupBox1.Controls.Add(projectLevelIDLabel);
             this.radGroupBox1.Controls.Add(this.SaveBtn);
             this.radGroupBox1.Controls.Add(activeStatusLabel);
@@ -164,6 +166,17 @@
             this.radGroupBox1.Size = new System.Drawing.Size(371, 298);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // ReportBtn
+            // 
+            this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportBtn.Location = new System.Drawing.Point(48, 241);
+            this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.Size = new System.Drawing.Size(175, 32);
+            this.ReportBtn.TabIndex = 21;
+            this.ReportBtn.Text = "طبـــــــــاعة أيصــــــــال دفـــــــــع";
+            this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
             // SaveBtn
             // 
@@ -354,5 +367,6 @@
         private Telerik.WinControls.UI.RadButton SaveBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Telerik.WinControls.UI.RadMultiColumnComboBox projectLevelComboBox;
+        private System.Windows.Forms.Button ReportBtn;
     }
 }

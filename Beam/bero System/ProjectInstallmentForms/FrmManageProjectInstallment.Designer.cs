@@ -48,6 +48,7 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.DGVInstalments = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -70,7 +71,8 @@
             this.AddBtn,
             this.toolStripSeparator1,
             this.RefreshBtn,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(927, 40);
@@ -219,6 +221,13 @@
             this.DGVInstalments.ThemeName = "Office2013Light";
             this.DGVInstalments.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVInstalments_CommandCellClick);
             // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 40);
+            this.toolStripTextBox1.Text = "طباعه الكل";
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            // 
             // FrmManageProjectInstallment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,5 +270,6 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView DGVInstalments;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

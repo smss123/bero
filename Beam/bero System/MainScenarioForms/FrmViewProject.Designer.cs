@@ -36,6 +36,8 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.Label label7;
+            System.Windows.Forms.Label label8;
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ProjectLevelsBtn = new System.Windows.Forms.ToolStripDropDownButton();
@@ -84,11 +86,15 @@
             this.txtExpensses = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.okyTextbox = new System.Windows.Forms.TextBox();
+            this.bulidTextBox = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
             projectNameLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -421,8 +427,12 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.bulidTextBox);
+            this.radGroupBox1.Controls.Add(label8);
             this.radGroupBox1.Controls.Add(this.CreatDatetextBox);
+            this.radGroupBox1.Controls.Add(this.okyTextbox);
             this.radGroupBox1.Controls.Add(label2);
+            this.radGroupBox1.Controls.Add(label7);
             this.radGroupBox1.Controls.Add(this.DeliverDatetextBox);
             this.radGroupBox1.Controls.Add(label1);
             this.radGroupBox1.Controls.Add(projectDescriptionLabel);
@@ -636,6 +646,54 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "باقي على زمن المشروع:";
             // 
+            // label7
+            // 
+            label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.ForeColor = System.Drawing.Color.RoyalBlue;
+            label7.Location = new System.Drawing.Point(334, 65);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(71, 19);
+            label7.TabIndex = 18;
+            label7.Text = "رقم الاباحة:";
+            // 
+            // okyTextbox
+            // 
+            this.okyTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.okyTextbox.BackColor = System.Drawing.SystemColors.Menu;
+            this.okyTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.okyTextbox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.okyTextbox.Location = new System.Drawing.Point(175, 65);
+            this.okyTextbox.Name = "okyTextbox";
+            this.okyTextbox.ReadOnly = true;
+            this.okyTextbox.Size = new System.Drawing.Size(153, 26);
+            this.okyTextbox.TabIndex = 19;
+            // 
+            // label8
+            // 
+            label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label8.ForeColor = System.Drawing.Color.RoyalBlue;
+            label8.Location = new System.Drawing.Point(334, 33);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(68, 19);
+            label8.TabIndex = 20;
+            label8.Text = "رقم المبنى:";
+            // 
+            // bulidTextBox
+            // 
+            this.bulidTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bulidTextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.bulidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bulidTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bulidTextBox.Location = new System.Drawing.Point(175, 30);
+            this.bulidTextBox.Name = "bulidTextBox";
+            this.bulidTextBox.ReadOnly = true;
+            this.bulidTextBox.Size = new System.Drawing.Size(154, 26);
+            this.bulidTextBox.TabIndex = 21;
+            // 
             // FrmViewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -721,5 +779,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox bulidTextBox;
+        private System.Windows.Forms.TextBox okyTextbox;
     }
 }
