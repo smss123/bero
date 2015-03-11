@@ -99,7 +99,7 @@ namespace bero_System.MainScenarioForms
         private void CustomerGridView_CommandCellClick(object sender, EventArgs e)
         {
             var col = CustomerGridView.CurrentColumn.Index;
-            if (col == 7)
+            if (col == 5)
             {
 
                 Operation.BeginOperation(this);

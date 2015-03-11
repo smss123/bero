@@ -34,8 +34,6 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForms));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -132,32 +130,32 @@
             this.UsersManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UsersManager.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UsersManager.Name = "UsersManager";
-            this.UsersManager.Size = new System.Drawing.Size(114, 47);
+            this.UsersManager.Size = new System.Drawing.Size(122, 47);
             this.UsersManager.Text = "المستخدمين";
             // 
             // AddUser
             // 
             this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(153, 22);
+            this.AddUser.Size = new System.Drawing.Size(161, 22);
             this.AddUser.Text = "اضافة مستخدم";
             this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // EditUser
             // 
             this.EditUser.Name = "EditUser";
-            this.EditUser.Size = new System.Drawing.Size(153, 22);
+            this.EditUser.Size = new System.Drawing.Size(161, 22);
             this.EditUser.Text = "ادارة المستخدمين";
             this.EditUser.Click += new System.EventHandler(this.EditUser_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(158, 6);
             // 
             // ChangePasswordBtn
             // 
             this.ChangePasswordBtn.Name = "ChangePasswordBtn";
-            this.ChangePasswordBtn.Size = new System.Drawing.Size(153, 22);
+            this.ChangePasswordBtn.Size = new System.Drawing.Size(161, 22);
             this.ChangePasswordBtn.Text = "تعديل كلمة المرور";
             this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click);
             // 
@@ -181,58 +179,58 @@
             this.EmployeesManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EmployeesManager.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.EmployeesManager.Name = "EmployeesManager";
-            this.EmployeesManager.Size = new System.Drawing.Size(101, 47);
+            this.EmployeesManager.Size = new System.Drawing.Size(110, 47);
             this.EmployeesManager.Text = "الموظفين";
             // 
             // AddEmpployeeBtn
             // 
             this.AddEmpployeeBtn.Name = "AddEmpployeeBtn";
-            this.AddEmpployeeBtn.Size = new System.Drawing.Size(145, 22);
+            this.AddEmpployeeBtn.Size = new System.Drawing.Size(153, 22);
             this.AddEmpployeeBtn.Text = "اضافة موظف";
             this.AddEmpployeeBtn.Click += new System.EventHandler(this.AddEmpployeeBtn_Click);
             // 
             // EditEmployeebtn
             // 
             this.EditEmployeebtn.Name = "EditEmployeebtn";
-            this.EditEmployeebtn.Size = new System.Drawing.Size(145, 22);
+            this.EditEmployeebtn.Size = new System.Drawing.Size(153, 22);
             this.EditEmployeebtn.Text = "ادارة الموظفين";
             this.EditEmployeebtn.Click += new System.EventHandler(this.EditEmployeebtn_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(142, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(150, 6);
             // 
             // AddHolyDayBtn
             // 
             this.AddHolyDayBtn.Name = "AddHolyDayBtn";
-            this.AddHolyDayBtn.Size = new System.Drawing.Size(145, 22);
+            this.AddHolyDayBtn.Size = new System.Drawing.Size(153, 22);
             this.AddHolyDayBtn.Text = "اضافة اجازة";
             this.AddHolyDayBtn.Click += new System.EventHandler(this.AddHolyDayBtn_Click);
             // 
             // ManageHolyDayBtn
             // 
             this.ManageHolyDayBtn.Name = "ManageHolyDayBtn";
-            this.ManageHolyDayBtn.Size = new System.Drawing.Size(145, 22);
+            this.ManageHolyDayBtn.Size = new System.Drawing.Size(153, 22);
             this.ManageHolyDayBtn.Text = "ادارة الاجازات";
             this.ManageHolyDayBtn.Click += new System.EventHandler(this.ManageHolyDayBtn_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(142, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(150, 6);
             // 
             // empReportBtn
             // 
             this.empReportBtn.Name = "empReportBtn";
-            this.empReportBtn.Size = new System.Drawing.Size(145, 22);
+            this.empReportBtn.Size = new System.Drawing.Size(153, 22);
             this.empReportBtn.Text = "تقارير الموظفين";
             this.empReportBtn.Click += new System.EventHandler(this.empReportBtn_Click);
             // 
             // تقاريرالاجازاتToolStripMenuItem
             // 
             this.تقاريرالاجازاتToolStripMenuItem.Name = "تقاريرالاجازاتToolStripMenuItem";
-            this.تقاريرالاجازاتToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.تقاريرالاجازاتToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.تقاريرالاجازاتToolStripMenuItem.Text = "تقارير الاجازات";
             this.تقاريرالاجازاتToolStripMenuItem.Click += new System.EventHandler(this.تقاريرالاجازاتToolStripMenuItem_Click);
             // 
@@ -250,20 +248,20 @@
             this.CustomersManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CustomersManager.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CustomersManager.Name = "CustomersManager";
-            this.CustomersManager.Size = new System.Drawing.Size(86, 47);
+            this.CustomersManager.Size = new System.Drawing.Size(91, 47);
             this.CustomersManager.Text = "العملاء";
             // 
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Name = "AddCustomerBtn";
-            this.AddCustomerBtn.Size = new System.Drawing.Size(127, 22);
+            this.AddCustomerBtn.Size = new System.Drawing.Size(133, 22);
             this.AddCustomerBtn.Text = "اضافة عميل";
             this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // ManageCustomerBtn
             // 
             this.ManageCustomerBtn.Name = "ManageCustomerBtn";
-            this.ManageCustomerBtn.Size = new System.Drawing.Size(127, 22);
+            this.ManageCustomerBtn.Size = new System.Drawing.Size(133, 22);
             this.ManageCustomerBtn.Text = "ادارة العملاء";
             this.ManageCustomerBtn.Click += new System.EventHandler(this.ManageCustomerBtn_Click);
             // 
@@ -283,33 +281,33 @@
             this.ManageProjects.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ManageProjects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ManageProjects.Name = "ManageProjects";
-            this.ManageProjects.Size = new System.Drawing.Size(104, 47);
+            this.ManageProjects.Size = new System.Drawing.Size(107, 47);
             this.ManageProjects.Text = "المشاريع";
             this.ManageProjects.Click += new System.EventHandler(this.ManageProjects_Click);
             // 
             // AddProjectBtn
             // 
             this.AddProjectBtn.Name = "AddProjectBtn";
-            this.AddProjectBtn.Size = new System.Drawing.Size(163, 22);
+            this.AddProjectBtn.Size = new System.Drawing.Size(165, 22);
             this.AddProjectBtn.Text = "اضافة مشروع";
             this.AddProjectBtn.Click += new System.EventHandler(this.AddProjectBtn_Click);
             // 
             // ManageProjectBtn
             // 
             this.ManageProjectBtn.Name = "ManageProjectBtn";
-            this.ManageProjectBtn.Size = new System.Drawing.Size(163, 22);
+            this.ManageProjectBtn.Size = new System.Drawing.Size(165, 22);
             this.ManageProjectBtn.Text = "ادارة المشاريع";
             this.ManageProjectBtn.Click += new System.EventHandler(this.ManageProjectBtn_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(162, 6);
             // 
             // ProjectOffersBtn
             // 
             this.ProjectOffersBtn.Name = "ProjectOffersBtn";
-            this.ProjectOffersBtn.Size = new System.Drawing.Size(163, 22);
+            this.ProjectOffersBtn.Size = new System.Drawing.Size(165, 22);
             this.ProjectOffersBtn.Text = "انشاء عرض مشروع";
             this.ProjectOffersBtn.Click += new System.EventHandler(this.ProjectOffersBtn_Click);
             // 
@@ -327,21 +325,21 @@
             this.ItemsManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ItemsManager.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ItemsManager.Name = "ItemsManager";
-            this.ItemsManager.Size = new System.Drawing.Size(98, 47);
+            this.ItemsManager.Size = new System.Drawing.Size(102, 47);
             this.ItemsManager.Text = "الاصناف";
             this.ItemsManager.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
             // 
             // AddItem
             // 
             this.AddItem.Name = "AddItem";
-            this.AddItem.Size = new System.Drawing.Size(136, 22);
+            this.AddItem.Size = new System.Drawing.Size(140, 22);
             this.AddItem.Text = "اضافة صنف ";
             this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
             // ManageItem
             // 
             this.ManageItem.Name = "ManageItem";
-            this.ManageItem.Size = new System.Drawing.Size(136, 22);
+            this.ManageItem.Size = new System.Drawing.Size(140, 22);
             this.ManageItem.Text = "ادارة الأصناف";
             this.ManageItem.Click += new System.EventHandler(this.ManageItem_Click);
             // 
@@ -364,53 +362,53 @@
             this.AccountsManager.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AccountsManager.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AccountsManager.Name = "AccountsManager";
-            this.AccountsManager.Size = new System.Drawing.Size(104, 47);
+            this.AccountsManager.Size = new System.Drawing.Size(107, 47);
             this.AccountsManager.Text = "الحسابات";
             // 
             // ManageAccountCategory
             // 
             this.ManageAccountCategory.Name = "ManageAccountCategory";
-            this.ManageAccountCategory.Size = new System.Drawing.Size(177, 22);
+            this.ManageAccountCategory.Size = new System.Drawing.Size(182, 22);
             this.ManageAccountCategory.Text = "تصنيف الحسابات";
             this.ManageAccountCategory.Click += new System.EventHandler(this.ManageAccountCategory_Click);
             // 
             // ManageAccount
             // 
             this.ManageAccount.Name = "ManageAccount";
-            this.ManageAccount.Size = new System.Drawing.Size(177, 22);
+            this.ManageAccount.Size = new System.Drawing.Size(182, 22);
             this.ManageAccount.Text = "الحسابات";
             this.ManageAccount.Click += new System.EventHandler(this.ManageAccount_Click);
             // 
             // AccountDailySHow
             // 
             this.AccountDailySHow.Name = "AccountDailySHow";
-            this.AccountDailySHow.Size = new System.Drawing.Size(177, 22);
+            this.AccountDailySHow.Size = new System.Drawing.Size(182, 22);
             this.AccountDailySHow.Text = "حركة الحسابات اليومية";
             this.AccountDailySHow.Click += new System.EventHandler(this.AccountDailySHow_Click);
             // 
             // AccountsTreeBtn
             // 
             this.AccountsTreeBtn.Name = "AccountsTreeBtn";
-            this.AccountsTreeBtn.Size = new System.Drawing.Size(177, 22);
+            this.AccountsTreeBtn.Size = new System.Drawing.Size(182, 22);
             this.AccountsTreeBtn.Text = "شجرة الحسابات";
             this.AccountsTreeBtn.Click += new System.EventHandler(this.AccountsTreeBtn_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(174, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(179, 6);
             // 
             // ManageExpensses
             // 
             this.ManageExpensses.Name = "ManageExpensses";
-            this.ManageExpensses.Size = new System.Drawing.Size(177, 22);
+            this.ManageExpensses.Size = new System.Drawing.Size(182, 22);
             this.ManageExpensses.Text = "المصروفات";
             this.ManageExpensses.Click += new System.EventHandler(this.ManageExpensses_Click);
             // 
             // TrialbalanceBtn
             // 
             this.TrialbalanceBtn.Name = "TrialbalanceBtn";
-            this.TrialbalanceBtn.Size = new System.Drawing.Size(177, 22);
+            this.TrialbalanceBtn.Size = new System.Drawing.Size(182, 22);
             this.TrialbalanceBtn.Text = "ميزان المراجعه";
             this.TrialbalanceBtn.Click += new System.EventHandler(this.TrialbalanceBtn_Click);
             // 
@@ -469,39 +467,27 @@
             gridViewTextBoxColumn1.HeaderText = "اسم العميل";
             gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "CustomerName";
-            gridViewTextBoxColumn1.Width = 195;
+            gridViewTextBoxColumn1.Width = 332;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "PhoneNumber";
             gridViewTextBoxColumn2.HeaderText = "رقم الهاتف";
             gridViewTextBoxColumn2.IsAutoGenerated = true;
             gridViewTextBoxColumn2.Name = "PhoneNumber";
-            gridViewTextBoxColumn2.Width = 195;
+            gridViewTextBoxColumn2.Width = 332;
             gridViewDateTimeColumn1.EnableExpressionEditor = false;
             gridViewDateTimeColumn1.FieldName = "CreateDate";
             gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             gridViewDateTimeColumn1.HeaderText = "تاريخ الاضافة";
             gridViewDateTimeColumn1.IsAutoGenerated = true;
             gridViewDateTimeColumn1.Name = "CreateDate";
-            gridViewDateTimeColumn1.Width = 195;
+            gridViewDateTimeColumn1.Width = 332;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "No_building";
-            gridViewTextBoxColumn3.HeaderText = "رقم البناية";
+            gridViewTextBoxColumn3.FieldName = "SerialNumber";
+            gridViewTextBoxColumn3.HeaderText = "SerialNumber";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "No_building";
-            gridViewTextBoxColumn3.Width = 195;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "No_permissibility";
-            gridViewTextBoxColumn4.HeaderText = "رقم الجواز";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "No_permissibility";
-            gridViewTextBoxColumn4.Width = 218;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "SerialNumber";
-            gridViewTextBoxColumn5.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.IsVisible = false;
-            gridViewTextBoxColumn5.Name = "SerialNumber";
-            gridViewTextBoxColumn5.Width = 93;
+            gridViewTextBoxColumn3.IsVisible = false;
+            gridViewTextBoxColumn3.Name = "SerialNumber";
+            gridViewTextBoxColumn3.Width = 93;
             gridViewCommandColumn1.EnableExpressionEditor = false;
             gridViewCommandColumn1.HeaderText = "دخول";
             gridViewCommandColumn1.Image = ((System.Drawing.Image)(resources.GetObject("gridViewCommandColumn1.Image")));
@@ -514,8 +500,6 @@
             gridViewTextBoxColumn2,
             gridViewDateTimeColumn1,
             gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
             gridViewCommandColumn1});
             this.CustomerGridView.MasterTemplate.EnableFiltering = true;
             this.CustomerGridView.Name = "CustomerGridView";
