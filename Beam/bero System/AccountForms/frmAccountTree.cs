@@ -126,7 +126,7 @@ namespace bero_System.AccountForms
 
             if (e.KeyCode == Keys.Enter)
             {
-          
+                TreeViewSearch(TreeAccounts, SearchTextBox.Text);
                 Broom();
                 var accts = AccountCommand.GetAccountByName(SearchTextBox.Text);
                 foreach (var actitem in accts)
@@ -137,7 +137,7 @@ namespace bero_System.AccountForms
 
                 }
 
-                TreeViewSearch(TreeAccounts, SearchTextBox.Text);
+                
 
 
                 Thread DGVThread = new Thread(GetAccountDetails);
