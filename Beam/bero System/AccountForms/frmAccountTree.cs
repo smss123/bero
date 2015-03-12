@@ -196,6 +196,7 @@ namespace bero_System.AccountForms
 
                 GetNode(n, NodeText);
                 n.Expand();
+                TreeViewName.SelectedNode = n;
             }
 
         }

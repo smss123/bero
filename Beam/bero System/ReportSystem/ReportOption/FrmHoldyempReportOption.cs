@@ -69,17 +69,26 @@ namespace bero_System.ReportSystem.ReportOption
 
             if (EmpCheck.CheckState == CheckState.Checked)
             {
+
+                AllCheck.CheckState = CheckState.Unchecked;
+                DateCheck.CheckState = CheckState.Unchecked;
+
                  Cmd = new HolyDayCommandRpt();
                 Cmd.HolyDayByEmpId(int .Parse (EmployeeComboBox.SelectedValue.ToString ()));
             }
             if (AllCheck.CheckState == CheckState.Checked)
             {
+                EmpCheck.CheckState = CheckState.Unchecked ;
+                DateCheck.CheckState = CheckState.Unchecked;
                 Cmd = new HolyDayCommandRpt();
                 Cmd.AllHolyDays();
+
             }
           
             if  ( DateCheck .CheckState == CheckState.Checked)
                     {
+                        AllCheck.CheckState = CheckState.Unchecked;
+                        EmpCheck.CheckState = CheckState.Unchecked;
                         Cmd = new HolyDayCommandRpt();
                         Cmd.AllHolyDaysBetween2Dates(dtFrom .Value ,dtTo .Value );
                     }
