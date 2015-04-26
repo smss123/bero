@@ -15,10 +15,9 @@ namespace DataLayer.Security
         {
             try
             {
-            SystemUser q = db.SystemUsers.Where( p => p.UserName == usr && p.pwd == pass && db.SystemUsers!=null&&db.SystemUsers.Count()>0).Single ();
+            SystemUser q = db.SystemUsers.Where(p => p.UserName == usr && p.pwd == pass).Single ();
             if (q.ID  != 0 )
             {
-   
                 CurrnetUser = q;
 
                 var htb = new History();
@@ -31,6 +30,7 @@ namespace DataLayer.Security
                 HistoryCommand.NewHistory(htb);
                 return q;
             }
+                          
             return null;
             }
             catch (Exception)
