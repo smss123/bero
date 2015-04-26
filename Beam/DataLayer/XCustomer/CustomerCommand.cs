@@ -16,7 +16,7 @@ namespace DataLayer.XCustomer
         {
             try
             {
-                db = new dbDataContext();
+                db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                         db.Customers.InsertOnSubmit(cust);
                         db.SubmitChanges();
 
@@ -27,6 +27,7 @@ namespace DataLayer.XCustomer
                            "Created At "+cust.CreateDate.ToString(),
                             DateOfProcess = DateTime.Now,
                              SystemUser = LoginInfomation.CurrnetUser,
+                             
                          HistoryAction = "Adding New Customer",
                  
                         });
@@ -51,6 +52,7 @@ namespace DataLayer.XCustomer
                 q.CustomerName = cust.CustomerName;
                 
                 q.PhoneNumber = cust.PhoneNumber;
+                q.CustomerEmail = cust.CustomerEmail;
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
                 {
@@ -93,12 +95,13 @@ namespace DataLayer.XCustomer
             {
 
                 ProcessChange("Error message", "Can't Delete Customer", e.ToString());
-                return false;
+                throw new Exception(e.Message);
             }
         }
 
         public static List<Customer> GetAll()
         {
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             return db.Customers.ToList();
         }
 

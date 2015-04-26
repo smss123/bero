@@ -51,7 +51,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(279, 45);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.Size = new System.Drawing.Size(40, 13);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = "الوصف:";
             // 
@@ -60,7 +60,7 @@
             accountCategoryNameLabel.AutoSize = true;
             accountCategoryNameLabel.Location = new System.Drawing.Point(279, 19);
             accountCategoryNameLabel.Name = "accountCategoryNameLabel";
-            accountCategoryNameLabel.Size = new System.Drawing.Size(77, 13);
+            accountCategoryNameLabel.Size = new System.Drawing.Size(74, 13);
             accountCategoryNameLabel.TabIndex = 0;
             accountCategoryNameLabel.Text = "تصنيف الحساب";
             // 

@@ -162,15 +162,16 @@ namespace bero_System.ProjectExpenssesForms
                ProjectLevelID =int .Parse ( projectLevelComboBox.SelectedValue .ToString ())
             };
             ProjectExpenssesCommand.NewProjectExpenss(ExpTb);
-
+            LevelAccount = ExpTb.projectLevel.AccountID;
+            ExpenssAccount = ExpTb.Expenss.AccountID;
             //=========================================================
             // Start Write At  : AccountDaily
             // ^^^ [حساب المستوى \ مدين]
             AccountDaily actTb2 = new AccountDaily()
             {
               AccountID = LevelAccount ,  
-               TotalIn = Convert.ToDouble(amountTextBox.Text),
-               TotalOut = 0f,
+               TotalIn = 0f,
+              TotalOut = Convert.ToDouble(amountTextBox.Text),
                 DateOfProcess = DateTime.Now,
                 Description = string.Format("inCame in of the Level  {0} account and the amount of {1}",projectLevelComboBox .Text , amountTextBox.Text),
                 CommandArg = ""
@@ -207,6 +208,7 @@ namespace bero_System.ProjectExpenssesForms
 
         private void FrmAddProjectExpensses_Load(object sender, EventArgs e)
         {
+            DateProcessBox.Value = DateTime.Now;
             th = new Thread(FillCombo);
             th.Start();
         }

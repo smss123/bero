@@ -79,5 +79,10 @@ namespace bero_System.AccountForms
 
             Operation.EndOperation(this);
         }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            FrmManageExpenssesMovment_Load(null, null);
+        }
     }
 }

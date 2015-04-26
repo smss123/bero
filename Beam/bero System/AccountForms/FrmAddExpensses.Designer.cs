@@ -52,7 +52,7 @@
             expenssesNameLabel.AutoSize = true;
             expenssesNameLabel.Location = new System.Drawing.Point(251, 34);
             expenssesNameLabel.Name = "expenssesNameLabel";
-            expenssesNameLabel.Size = new System.Drawing.Size(53, 13);
+            expenssesNameLabel.Size = new System.Drawing.Size(50, 13);
             expenssesNameLabel.TabIndex = 0;
             expenssesNameLabel.Text = "المصروف:";
             // 

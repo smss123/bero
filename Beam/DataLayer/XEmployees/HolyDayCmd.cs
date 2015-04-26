@@ -11,10 +11,10 @@ namespace DataLayer.XEmployees
         public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
         public static event OnchangeCallBack ProcessChange;
 
-        public static dbDataContext db = new dbDataContext();
+        public static dbDataContext db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
         public static bool NewHolyDay(HolyDay HolyTb)
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             db.HolyDays.InsertOnSubmit(HolyTb);
             db.SubmitChanges();
             return true;
@@ -22,7 +22,7 @@ namespace DataLayer.XEmployees
 
         public static bool EditHolyDay(HolyDay HolyTb)
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
 
             var q = db.HolyDays.Where(d => d.ID == HolyTb.ID).Single();
             q.fromDate = HolyTb.fromDate;

@@ -166,6 +166,7 @@ namespace bero_System.projectLevelSellForms
         {
             th = new Thread(FillCombo);
             th.Start();
+            radDateTimePicker1.Value = DateTime.Now;
         }
 
         private void amountTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -182,6 +183,11 @@ namespace bero_System.projectLevelSellForms
             {
                 e.Handled = true;
             }
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

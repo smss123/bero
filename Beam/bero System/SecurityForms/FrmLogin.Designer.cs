@@ -42,6 +42,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.office2013LightTheme2 = new Telerik.WinControls.Themes.Office2013LightTheme();
             pwdLabel = new System.Windows.Forms.Label();
             userNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
@@ -58,7 +59,7 @@
             pwdLabel.AutoSize = true;
             pwdLabel.Location = new System.Drawing.Point(259, 94);
             pwdLabel.Name = "pwdLabel";
-            pwdLabel.Size = new System.Drawing.Size(63, 13);
+            pwdLabel.Size = new System.Drawing.Size(60, 13);
             pwdLabel.TabIndex = 2;
             pwdLabel.Text = "كلمة المرور:";
             // 
@@ -68,7 +69,7 @@
             userNameLabel.AutoSize = true;
             userNameLabel.Location = new System.Drawing.Point(259, 59);
             userNameLabel.Name = "userNameLabel";
-            userNameLabel.Size = new System.Drawing.Size(85, 13);
+            userNameLabel.Size = new System.Drawing.Size(71, 13);
             userNameLabel.TabIndex = 0;
             userNameLabel.Text = "اسم المستخدم:";
             // 
@@ -234,5 +235,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme2;
     }
 }

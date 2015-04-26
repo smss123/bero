@@ -15,6 +15,7 @@ using DataLayer;
 using System.Threading;
 using bero_System.ReportSystem.ReportOBj;
 using bero_System.ReportSystem.ReportCommand;
+using Telerik.WinControls;
 
 namespace bero_System.ProjectInstallmentForms
 {
@@ -62,7 +63,7 @@ namespace bero_System.ProjectInstallmentForms
 
                 ProjectInstallment tb = (ProjectInstallment)DGVInstalments.CurrentRow.DataBoundItem;
 
-                frm.projectLevelComboBox.Text = DGVInstalments.CurrentRow.Cells[7].Value.ToString();
+               // frm.projectLevelComboBox.Text = DGVInstalments.CurrentRow.Cells[7].Value.ToString();
 
                 frm.TargetInstalment = tb;
 
@@ -74,10 +75,25 @@ namespace bero_System.ProjectInstallmentForms
             {
 
                 Operation.BeginOperation(this);
+                RadMessageBox.ThemeName = this.ThemeName;
+                if (RadMessageBox.Show("هل تريد الحذف؟")==System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        ProjectInstallmentCommand.DeleteprojectInstallment(int.Parse(DGVInstalments.CurrentRow.Cells[0].Value.ToString()));
 
-                ProjectInstallmentCommand .DeleteprojectInstallment (int.Parse(DGVInstalments.CurrentRow.Cells[0].Value.ToString()));
+                        FrmManageProjectInstallment_Load(sender, e);
+                    }
+                    catch (Exception EX)
+                    {
 
-                FrmManageProjectInstallment_Load(sender, e);
+                        RadMessageBox.Show("لا بمكن الحذف لانه قد يكون العنصر مربوط مع عناصر اخرى");
+
+                    }
+                   
+
+                  
+                }
 
                 Operation.EndOperation(this);
             }
@@ -85,12 +101,22 @@ namespace bero_System.ProjectInstallmentForms
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
             ProjectInstallmentObj cmd = new ProjectInstallmentObj();
             cmd.CustomerName = TargetProject.Customer.CustomerName;
             cmd.ProjectName = TargetProject.ProjectName;
 
             ProjectInstallmentCommandRpt RepCmd = new ProjectInstallmentCommandRpt();
             RepCmd.ProjectInstallmentByProId(TargetProject.ID);
+        }
+
+        private void DGVInstalments_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,7 +48,7 @@ namespace bero_System.ProjectInstallmentForms
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
                 this.projectLevelComboBox.EditorControl.FilterDescriptors.Add(compositeFilter);
 
-
+                projectLevelComboBox.SelectedValue = TargetInstalment.ProjectLevelID;
 
 
             });
@@ -67,7 +67,7 @@ namespace bero_System.ProjectInstallmentForms
             comboBox1.Text = TargetInstalment.ActiveStatus ;
             payByTextBox.Text = TargetInstalment.PayBy ;
             payDescriptionTextBox.Text = TargetInstalment.PayDescription ;
-
+            projectLevelComboBox.SelectedValue = TargetInstalment.ProjectLevelID;
 
             //==============================================
              th = new Thread(FillCombo);
@@ -140,7 +140,7 @@ namespace bero_System.ProjectInstallmentForms
               TargetInstalment.ActiveStatus = comboBox1.Text;
                TargetInstalment.PayBy = payByTextBox .Text ;
                TargetInstalment.PayDescription = payDescriptionTextBox .Text ;
-
+          
                ProjectInstallmentCommand.EditProjectInstallment (TargetInstalment);
             
             foreach (Control item in radGroupBox1.Controls)
@@ -153,7 +153,7 @@ namespace bero_System.ProjectInstallmentForms
 
             Operation.EndOperation(this);
             _Alert.Info("تـــــــم الحــــفظ بنجــــــــاح");
-            this.Hide();
+            
 
         }
 
@@ -175,8 +175,20 @@ namespace bero_System.ProjectInstallmentForms
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
-         
-            var q = ProjectProfileCommand.GetAll().Where(p=>p.ID== TargetInstalment.projectLevel.ProjectProfile.ID ).SingleOrDefault();
+            dbDataContext db = new dbDataContext(Properties.Settings.Default.constr);
+            if (TargetInstalment.projectLevel==null)
+            {
+                try
+                {
+                     TargetInstalment.projectLevel = db.projectLevels.Where(p => p.id == TargetInstalment.ProjectLevelID).SingleOrDefault();
+                }
+                catch (Exception ex)
+                {
+
+                    TargetInstalment.projectLevel = db.projectLevels.Where(p => p.id == TargetInstalment.ProjectLevelID).ToList()[0];
+                }
+            }
+            var q = ProjectProfileCommand.GetAll().Where(p=>p.ID== TargetInstalment.projectLevel.ProjectProfile.ID && TargetInstalment.projectLevel!=null).SingleOrDefault();
             ProjectInstallmentCommandRpt.xCustomerName = q.Customer.CustomerName;
             ProjectInstallmentCommandRpt.xProject = q.ProjectName;
 

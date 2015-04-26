@@ -11,6 +11,7 @@ using Telerik.WinControls.UI;
 using System.Threading;
 using DataLayer;
 using DataLayer.XAccountant;
+using Telerik.WinControls;
 namespace bero_System.AccountForms
 {
     public partial class FrmEditExpensses : RadForm
@@ -49,6 +50,7 @@ namespace bero_System.AccountForms
             TragetExpenss.ExpenssesName = expenssesNameTextBox.Text;
             TragetExpenss.Description = descriptionTextBox.Text;
             ExpenssesCommand.EditExpensses(TragetExpenss);
+            RadMessageBox.Show("تم التعديل...");
 
         }
 

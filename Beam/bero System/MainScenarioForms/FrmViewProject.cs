@@ -37,8 +37,8 @@ namespace bero_System.MainScenarioForms
             projectNameTextBox.Text = TargetProject.ProjectName;
             projectDescriptionTextBox.Text = TargetProject.ProjectDescription ;
             projectFullAmountTextBox.Text = TargetProject.ProjectFullAmount.ToString ();
-            CreatDatetextBox.Text = TargetProject.createdDate.ToString();
-            DeliverDatetextBox.Text = TargetProject.DeliverDate.ToString();
+            CreatDatetextBox.Text = TargetProject.createdDate.Value.ToString("dd/MM/yyyy");
+            DeliverDatetextBox.Text = TargetProject.DeliverDate.Value.ToString("dd/MM/yyyy");
             bulidTextBox.Text = TargetProject.No_building;
             okyTextbox.Text = TargetProject.No_permissibility;
 
@@ -183,8 +183,19 @@ namespace bero_System.MainScenarioForms
             // Date :
 
             DateTime TheTimeNow =  DateTime.Parse( DateTime .Now .ToString ()).Date ;
-            
-            DateTime DeliverProjectDate =  DateTime.Parse(DeliverDatetextBox .Text ).Date ;
+             DateTime DeliverProjectDate;
+            try
+            {
+                DeliverProjectDate = DateTime.Parse(TargetProject.DeliverDate.Value.ToString()).Date;
+            }
+            catch (Exception)
+            {
+                DateTime myd = DateTime.Now;
+                DateTime.TryParse(DeliverDatetextBox.Text, out myd);
+
+                DeliverProjectDate = myd.Date;
+            }
+           
 
             TimeSpan xDays = DeliverProjectDate - TheTimeNow ;
            

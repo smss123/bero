@@ -15,7 +15,7 @@ namespace DataLayer.XBulidItem
         {
             try
             {
-                db = new dbDataContext();
+                db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.BulidItems.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -71,9 +71,11 @@ namespace DataLayer.XBulidItem
 
         public static bool DeleteBulidItem(int iD)
         {
-            try
-            {
-                var q = db.BulidItems.Where(p => int.Parse(p.ID.ToString()) == iD).Single();
+            //try
+            //{
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
+                var q = db.BulidItems.Where(p =>p.ID  == iD).Single();
+
                 db.BulidItems.DeleteOnSubmit(q);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -83,16 +85,22 @@ namespace DataLayer.XBulidItem
                     DateOfProcess = DateTime.Now,
                     SystemUser = LoginInfomation.CurrnetUser
                 });
-                q = null;
-                ProcessChange("Delete Bulid Item", q.ItemName + " has Been Deleted ", null);
+             //   q = null;
+                if (ProcessChange != null)
+                {
+                    ProcessChange("Delete Bulid Item", q.ItemName + " has Been Deleted ", null);
+                }
                 return true;
-            }
-            catch (Exception e)
-            {
-
-                ProcessChange("Error message", "Can't Delete Bulid Item", e.ToString());
-                return false;
-            }
+            //}
+            //catch (Exception e)
+            //{
+                //if (ProcessChange!=null)
+                //{
+                //    ProcessChange("Error message", "Can't Delete Bulid Item", e.ToString());
+                //}
+              
+                //return false;
+            //}
         }
 
         #region "^^^ Searching Data"

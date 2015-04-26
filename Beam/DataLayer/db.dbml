@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="xprema_bero" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=jasmine.arvixe.com;Initial Catalog=xprema_bero;User ID=xama" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SEZEROFFICE-PC\SQL2008;Initial Catalog=xprema_bero;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="xprema_beroConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="Accountant.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -9,9 +9,9 @@
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Association Name="Account_AccountDaily" Member="AccountDailies" ThisKey="ID" OtherKey="AccountID" Type="AccountDaily" />
       <Association Name="Account_Expenss" Member="Expensses" ThisKey="ID" OtherKey="AccountID" Type="Expenss" />
-      <Association Name="Account_Customer" Member="Customers" ThisKey="ID" OtherKey="AccountID" Type="Customer" />
       <Association Name="Account_projectLevel" Member="projectLevels" ThisKey="ID" OtherKey="AccountID" Type="projectLevel" />
       <Association Name="Account_ProjectProfile" Member="ProjectProfiles" ThisKey="ID" OtherKey="AccountID" Type="ProjectProfile" />
+      <Association Name="Account_Customer" Member="Customers" ThisKey="ID" OtherKey="AccountID" Type="Customer" />
       <Association Name="AccountCategory_Account" Member="AccountCategory" ThisKey="CategoryID" OtherKey="ID" Type="AccountCategory" IsForeignKey="true" />
     </Type>
   </Table>
@@ -68,19 +68,6 @@
       <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Association Name="Expenss_ExpenssesMovment" Member="Expenss" ThisKey="ExpenssesID" OtherKey="ID" Type="Expenss" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Customer" Member="Customers">
-    <Type Name="Customer">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
-      <Column Name="Total_Need" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="Customer_ProjectProfile" Member="ProjectProfiles" ThisKey="ID" OtherKey="CustomerID" Type="ProjectProfile" />
-      <Association Name="Account_Customer" Member="Account" ThisKey="AccountID" OtherKey="ID" Type="Account" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="emp.Employee" Member="Employees">
@@ -248,6 +235,20 @@
       <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Association Name="SystemUser_UserPermession" Member="UserPermessions" ThisKey="ID" OtherKey="SystemUserID" Type="UserPermession" />
       <Association Name="SystemUser_History" Member="Histories" ThisKey="ID" OtherKey="UserID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerEmail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Total_Need" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Customer_ProjectProfile" Member="ProjectProfiles" ThisKey="ID" OtherKey="CustomerID" Type="ProjectProfile" />
+      <Association Name="Account_Customer" Member="Account" ThisKey="AccountID" OtherKey="ID" Type="Account" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
 </Database>

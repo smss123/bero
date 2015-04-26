@@ -36,13 +36,13 @@ namespace DataLayer.XAccountant
            catch (Exception e)
            {
 
-               ProcessChange("Error message", "Can't Account", e.ToString());
+               
                return false;
            }
        }
        public static List<Account> GetAccountByCategoryID(int Categid)
        {
-           db = new dbDataContext();
+           db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
            var Lst = (from c in db.Accounts where c.CategoryID == Categid select c).ToList();
            return Lst;
 
@@ -71,7 +71,7 @@ namespace DataLayer.XAccountant
            catch (Exception e)
            {
 
-               ProcessChange("Error message", "Can't Edit Account", e.ToString());
+               
                return false;
            }
        }
@@ -120,7 +120,7 @@ namespace DataLayer.XAccountant
            double NetBalance = 0;
            try
            {
-               db = new dbDataContext();
+               db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
 
                var TotIn = (from d in db.AccountDailies
                             where d.AccountID == actid

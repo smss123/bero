@@ -15,7 +15,7 @@ namespace DataLayer.Security
         {
             try
             {
-            SystemUser q = db.SystemUsers.Where(p => p.UserName == usr && p.pwd == pass).Single ();
+            SystemUser q = db.SystemUsers.Where( p => p.UserName == usr && p.pwd == pass && db.SystemUsers!=null&&db.SystemUsers.Count()>0).Single ();
             if (q.ID  != 0 )
             {
    

@@ -40,6 +40,8 @@
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtpermissibility = new System.Windows.Forms.TextBox();
+            this.txtBuild = new System.Windows.Forms.TextBox();
             this.DeliverDateText = new Telerik.WinControls.UI.RadDateTimePicker();
             this.CustomerComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.SaveBtn = new Telerik.WinControls.UI.RadButton();
@@ -48,10 +50,8 @@
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtpermissibility = new System.Windows.Forms.TextBox();
-            this.txtBuild = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             customerIDLabel = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
             projectFullAmountLabel = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             customerIDLabel.AutoSize = true;
             customerIDLabel.Location = new System.Drawing.Point(301, 172);
             customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new System.Drawing.Size(42, 13);
+            customerIDLabel.Size = new System.Drawing.Size(38, 13);
             customerIDLabel.TabIndex = 6;
             customerIDLabel.Text = "العميل:";
             // 
@@ -84,7 +84,7 @@
             projectDescriptionLabel.AutoSize = true;
             projectDescriptionLabel.Location = new System.Drawing.Point(306, 89);
             projectDescriptionLabel.Name = "projectDescriptionLabel";
-            projectDescriptionLabel.Size = new System.Drawing.Size(80, 13);
+            projectDescriptionLabel.Size = new System.Drawing.Size(75, 13);
             projectDescriptionLabel.TabIndex = 4;
             projectDescriptionLabel.Text = "وصف المشروع:";
             // 
@@ -94,7 +94,7 @@
             projectFullAmountLabel.AutoSize = true;
             projectFullAmountLabel.Location = new System.Drawing.Point(305, 63);
             projectFullAmountLabel.Name = "projectFullAmountLabel";
-            projectFullAmountLabel.Size = new System.Drawing.Size(83, 13);
+            projectFullAmountLabel.Size = new System.Drawing.Size(79, 13);
             projectFullAmountLabel.TabIndex = 2;
             projectFullAmountLabel.Text = "موازنة المشروع:";
             // 
@@ -104,7 +104,7 @@
             projectNameLabel.AutoSize = true;
             projectNameLabel.Location = new System.Drawing.Point(305, 33);
             projectNameLabel.Name = "projectNameLabel";
-            projectNameLabel.Size = new System.Drawing.Size(82, 13);
+            projectNameLabel.Size = new System.Drawing.Size(73, 13);
             projectNameLabel.TabIndex = 0;
             projectNameLabel.Text = "اسم المشرورع:";
             // 
@@ -114,15 +114,15 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(306, 146);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 13);
+            label1.Size = new System.Drawing.Size(72, 13);
             label1.TabIndex = 10;
             label1.Text = "تار يخ التسليم:";
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox1.Controls.Add(this.label3);
-            this.radGroupBox1.Controls.Add(this.label2);
+            this.radGroupBox1.Controls.Add(this.label4);
+            this.radGroupBox1.Controls.Add(this.label5);
             this.radGroupBox1.Controls.Add(this.txtpermissibility);
             this.radGroupBox1.Controls.Add(this.txtBuild);
             this.radGroupBox1.Controls.Add(label1);
@@ -141,17 +141,31 @@
             this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(399, 366);
+            this.radGroupBox1.Size = new System.Drawing.Size(399, 329);
             this.radGroupBox1.TabIndex = 1;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // txtpermissibility
+            // 
+            this.txtpermissibility.Location = new System.Drawing.Point(71, 198);
+            this.txtpermissibility.Name = "txtpermissibility";
+            this.txtpermissibility.Size = new System.Drawing.Size(229, 20);
+            this.txtpermissibility.TabIndex = 24;
+            // 
+            // txtBuild
+            // 
+            this.txtBuild.Location = new System.Drawing.Point(71, 224);
+            this.txtBuild.Name = "txtBuild";
+            this.txtBuild.Size = new System.Drawing.Size(229, 20);
+            this.txtBuild.TabIndex = 23;
             // 
             // DeliverDateText
             // 
             this.DeliverDateText.CustomFormat = "d";
             this.DeliverDateText.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DeliverDateText.Location = new System.Drawing.Point(126, 143);
+            this.DeliverDateText.Location = new System.Drawing.Point(71, 143);
             this.DeliverDateText.Name = "DeliverDateText";
-            this.DeliverDateText.Size = new System.Drawing.Size(124, 21);
+            this.DeliverDateText.Size = new System.Drawing.Size(229, 21);
             this.DeliverDateText.TabIndex = 9;
             this.DeliverDateText.TabStop = false;
             this.DeliverDateText.Text = "1/12/2015";
@@ -228,9 +242,9 @@
             this.CustomerComboBox.EditorControl.Size = new System.Drawing.Size(240, 150);
             this.CustomerComboBox.EditorControl.TabIndex = 0;
             this.CustomerComboBox.Enabled = false;
-            this.CustomerComboBox.Location = new System.Drawing.Point(73, 172);
+            this.CustomerComboBox.Location = new System.Drawing.Point(71, 172);
             this.CustomerComboBox.Name = "CustomerComboBox";
-            this.CustomerComboBox.Size = new System.Drawing.Size(227, 20);
+            this.CustomerComboBox.Size = new System.Drawing.Size(229, 20);
             this.CustomerComboBox.TabIndex = 7;
             this.CustomerComboBox.TabStop = false;
             this.CustomerComboBox.ThemeName = "Office2013Light";
@@ -241,7 +255,7 @@
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveBtn.Image = global::bero_System.Properties.Resources.Save;
             this.SaveBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SaveBtn.Location = new System.Drawing.Point(284, 207);
+            this.SaveBtn.Location = new System.Drawing.Point(264, 281);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(110, 36);
             this.SaveBtn.TabIndex = 5;
@@ -264,9 +278,9 @@
             // 
             this.projectFullAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectFullAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.projectFullAmountTextBox.Location = new System.Drawing.Point(146, 56);
+            this.projectFullAmountTextBox.Location = new System.Drawing.Point(71, 56);
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
-            this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
+            this.projectFullAmountTextBox.Size = new System.Drawing.Size(229, 20);
             this.projectFullAmountTextBox.TabIndex = 2;
             this.projectFullAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectFullAmountTextBox_KeyPress);
             // 
@@ -284,43 +298,29 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(318, 302);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "رقم المبنى";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(304, 227);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "رقم قطعة الأرض";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(320, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "رقم الجواز";
-            // 
-            // txtpermissibility
-            // 
-            this.txtpermissibility.Location = new System.Drawing.Point(71, 265);
-            this.txtpermissibility.Name = "txtpermissibility";
-            this.txtpermissibility.Size = new System.Drawing.Size(229, 20);
-            this.txtpermissibility.TabIndex = 24;
-            // 
-            // txtBuild
-            // 
-            this.txtBuild.Location = new System.Drawing.Point(71, 302);
-            this.txtBuild.Name = "txtBuild";
-            this.txtBuild.Size = new System.Drawing.Size(229, 20);
-            this.txtBuild.TabIndex = 23;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(306, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "رقم الإباحة/التصريح";
             // 
             // FrmEditProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 366);
+            this.ClientSize = new System.Drawing.Size(399, 329);
             this.Controls.Add(this.radGroupBox1);
             this.Name = "FrmEditProject";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -358,10 +358,10 @@
         private Telerik.WinControls.UI.RadDateTimePicker DeliverDateText;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Telerik.WinControls.UI.RadMultiColumnComboBox CustomerComboBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtpermissibility;
         private System.Windows.Forms.TextBox txtBuild;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
 
     }
 }

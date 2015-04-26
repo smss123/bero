@@ -15,7 +15,7 @@ namespace DataLayer.XAccountant
         {
 
 
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.AccountDailies.InsertOnSubmit(tb);          
                 db.SubmitChanges();
            
@@ -88,7 +88,7 @@ namespace DataLayer.XAccountant
 
         public static List<AccountDaily> GetAllAccountDailyByAccountID(int actid)
         {
-            db = new dbDataContext(); ;
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString); ;
             var dy = (from d in db.AccountDailies
                       orderby d.DateOfProcess ascending
                       where d.AccountID == actid

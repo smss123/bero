@@ -34,12 +34,16 @@
             System.Windows.Forms.Label projectDescriptionLabel;
             System.Windows.Forms.Label projectFullAmountLabel;
             System.Windows.Forms.Label projectNameLabel;
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.permissibility = new System.Windows.Forms.TextBox();
+            this.txtBuild = new System.Windows.Forms.TextBox();
             this.DeliverDateText = new Telerik.WinControls.UI.RadDateTimePicker();
             this.projectDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.projectFullAmountTextBox = new System.Windows.Forms.TextBox();
@@ -50,10 +54,6 @@
             this.object_77c47ca6_f4db_413a_9876_66f5e21071bc = new Telerik.WinControls.RootRadElement();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtBuild = new System.Windows.Forms.TextBox();
-            this.permissibility = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             customerIDLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             projectDescriptionLabel = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             customerIDLabel.AutoSize = true;
             customerIDLabel.Location = new System.Drawing.Point(422, 178);
             customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new System.Drawing.Size(42, 13);
+            customerIDLabel.Size = new System.Drawing.Size(38, 13);
             customerIDLabel.TabIndex = 6;
             customerIDLabel.Text = "العميل:";
             // 
@@ -86,7 +86,7 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(423, 148);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 13);
+            label1.Size = new System.Drawing.Size(72, 13);
             label1.TabIndex = 18;
             label1.Text = "تار يخ التسليم:";
             // 
@@ -96,7 +96,7 @@
             projectDescriptionLabel.AutoSize = true;
             projectDescriptionLabel.Location = new System.Drawing.Point(423, 91);
             projectDescriptionLabel.Name = "projectDescriptionLabel";
-            projectDescriptionLabel.Size = new System.Drawing.Size(80, 13);
+            projectDescriptionLabel.Size = new System.Drawing.Size(75, 13);
             projectDescriptionLabel.TabIndex = 16;
             projectDescriptionLabel.Text = "وصف المشروع:";
             // 
@@ -106,7 +106,7 @@
             projectFullAmountLabel.AutoSize = true;
             projectFullAmountLabel.Location = new System.Drawing.Point(422, 65);
             projectFullAmountLabel.Name = "projectFullAmountLabel";
-            projectFullAmountLabel.Size = new System.Drawing.Size(83, 13);
+            projectFullAmountLabel.Size = new System.Drawing.Size(79, 13);
             projectFullAmountLabel.TabIndex = 13;
             projectFullAmountLabel.Text = "موازنة المشروع:";
             // 
@@ -116,7 +116,7 @@
             projectNameLabel.AutoSize = true;
             projectNameLabel.Location = new System.Drawing.Point(422, 35);
             projectNameLabel.Name = "projectNameLabel";
-            projectNameLabel.Size = new System.Drawing.Size(82, 13);
+            projectNameLabel.Size = new System.Drawing.Size(73, 13);
             projectNameLabel.TabIndex = 11;
             projectNameLabel.Text = "اسم المشرورع:";
             // 
@@ -143,18 +143,50 @@
             this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(516, 362);
+            this.radGroupBox1.Size = new System.Drawing.Size(516, 307);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(421, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "رقم قطعة الأرض";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(423, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "رقم الإباحة/التصريح";
+            // 
+            // permissibility
+            // 
+            this.permissibility.Location = new System.Drawing.Point(188, 199);
+            this.permissibility.Name = "permissibility";
+            this.permissibility.Size = new System.Drawing.Size(229, 20);
+            this.permissibility.TabIndex = 20;
+            // 
+            // txtBuild
+            // 
+            this.txtBuild.Location = new System.Drawing.Point(188, 225);
+            this.txtBuild.Name = "txtBuild";
+            this.txtBuild.Size = new System.Drawing.Size(229, 20);
+            this.txtBuild.TabIndex = 19;
             // 
             // DeliverDateText
             // 
             this.DeliverDateText.CustomFormat = "d";
             this.DeliverDateText.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DeliverDateText.Location = new System.Drawing.Point(144, 145);
+            this.DeliverDateText.Location = new System.Drawing.Point(188, 145);
             this.DeliverDateText.Name = "DeliverDateText";
             this.DeliverDateText.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DeliverDateText.Size = new System.Drawing.Size(106, 21);
+            this.DeliverDateText.Size = new System.Drawing.Size(229, 21);
             this.DeliverDateText.TabIndex = 17;
             this.DeliverDateText.TabStop = false;
             this.DeliverDateText.Text = "1/12/2015";
@@ -175,9 +207,9 @@
             // 
             this.projectFullAmountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.projectFullAmountTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.projectFullAmountTextBox.Location = new System.Drawing.Point(263, 58);
+            this.projectFullAmountTextBox.Location = new System.Drawing.Point(188, 58);
             this.projectFullAmountTextBox.Name = "projectFullAmountTextBox";
-            this.projectFullAmountTextBox.Size = new System.Drawing.Size(154, 20);
+            this.projectFullAmountTextBox.Size = new System.Drawing.Size(229, 20);
             this.projectFullAmountTextBox.TabIndex = 14;
             this.projectFullAmountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectFullAmountTextBox_KeyPress);
             // 
@@ -195,7 +227,7 @@
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddBtn.Location = new System.Drawing.Point(308, 314);
+            this.AddBtn.Location = new System.Drawing.Point(308, 251);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(109, 36);
             this.AddBtn.TabIndex = 5;
@@ -218,50 +250,50 @@
             this.CustomerComboBox.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CustomerComboBox.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // CustomerComboBox.NestedRadGridView
+            // 
             // 
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AllowColumnChooser = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AutoGenerateColumns = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "ID";
-            gridViewDecimalColumn1.HeaderText = "ID";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.IsVisible = false;
-            gridViewDecimalColumn1.Name = "ID";
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "CustomerName";
-            gridViewTextBoxColumn1.HeaderText = "اسم العميل";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "CustomerName";
-            gridViewTextBoxColumn1.Width = 80;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "PhoneNumber";
-            gridViewTextBoxColumn2.HeaderText = "رقم الهاتف";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "PhoneNumber";
-            gridViewTextBoxColumn2.Width = 55;
-            gridViewDateTimeColumn1.EnableExpressionEditor = false;
-            gridViewDateTimeColumn1.FieldName = "CreateDate";
-            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn1.HeaderText = "تاريخ الاضافة";
-            gridViewDateTimeColumn1.IsAutoGenerated = true;
-            gridViewDateTimeColumn1.Name = "CreateDate";
-            gridViewDateTimeColumn1.Width = 49;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "SerialNumber";
-            gridViewTextBoxColumn3.HeaderText = "SerialNumber";
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "SerialNumber";
-            gridViewTextBoxColumn3.Width = 39;
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "ID";
+            gridViewDecimalColumn2.HeaderText = "ID";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.IsVisible = false;
+            gridViewDecimalColumn2.Name = "ID";
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "CustomerName";
+            gridViewTextBoxColumn4.HeaderText = "اسم العميل";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "CustomerName";
+            gridViewTextBoxColumn4.Width = 80;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "PhoneNumber";
+            gridViewTextBoxColumn5.HeaderText = "رقم الهاتف";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "PhoneNumber";
+            gridViewTextBoxColumn5.Width = 55;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "CreateDate";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn2.HeaderText = "تاريخ الاضافة";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "CreateDate";
+            gridViewDateTimeColumn2.Width = 49;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "SerialNumber";
+            gridViewTextBoxColumn6.HeaderText = "SerialNumber";
+            gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Name = "SerialNumber";
+            gridViewTextBoxColumn6.Width = 39;
             this.CustomerComboBox.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewDateTimeColumn1,
-            gridViewTextBoxColumn3});
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn2,
+            gridViewTextBoxColumn6});
             this.CustomerComboBox.EditorControl.MasterTemplate.EnableGrouping = false;
             this.CustomerComboBox.EditorControl.MasterTemplate.ShowFilteringRow = false;
             this.CustomerComboBox.EditorControl.Name = "NestedRadGridView";
@@ -292,43 +324,11 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtBuild
-            // 
-            this.txtBuild.Location = new System.Drawing.Point(198, 259);
-            this.txtBuild.Name = "txtBuild";
-            this.txtBuild.Size = new System.Drawing.Size(229, 20);
-            this.txtBuild.TabIndex = 19;
-            // 
-            // permissibility
-            // 
-            this.permissibility.Location = new System.Drawing.Point(198, 222);
-            this.permissibility.Name = "permissibility";
-            this.permissibility.Size = new System.Drawing.Size(229, 20);
-            this.permissibility.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(447, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "رقم الجواز";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(445, 259);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "رقم المبنى";
-            // 
             // FrmAddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 362);
+            this.ClientSize = new System.Drawing.Size(516, 307);
             this.Controls.Add(this.radGroupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

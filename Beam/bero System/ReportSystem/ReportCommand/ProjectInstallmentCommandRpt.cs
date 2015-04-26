@@ -47,6 +47,16 @@ namespace bero_System.ReportSystem.ReportCommand
                    
                 });
             }
+            var cp = q.Where(p => p.ActiveStatus.Contains("تم الدفع") && q != null);
+            double amount = 0;
+            foreach (var item in cp)
+            {
+                amount = amount + (item.Amount.HasValue? item.Amount.Value:0d);
+            }
+            foreach (var item in ls)
+            {
+                item.AllPay = amount.ToString();
+            }
             rs.Name = "DataSet1";
             rs.Value = ls;
             FrmReportViewer frm = new FrmReportViewer();

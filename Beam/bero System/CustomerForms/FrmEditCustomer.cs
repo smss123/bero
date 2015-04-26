@@ -47,8 +47,8 @@ namespace bero_System.CustomerForms
 
             TargetRecord.CustomerName = this.customerNameTextBox.Text;
             TargetRecord.PhoneNumber = this.phoneNumberTextBox.Text;
-            
-            TargetRecord.Total_Need = 0;
+            TargetRecord.CustomerEmail = this.txtEmail.Text;
+           // TargetRecord.Total_Need = 0;
             CustomerCommand.EditCustomer(TargetRecord);
             this.Hide();
         }
@@ -57,7 +57,7 @@ namespace bero_System.CustomerForms
         {
             this.customerNameTextBox.Text = this.TargetRecord.CustomerName;
             this.phoneNumberTextBox.Text = this.TargetRecord.PhoneNumber;
-           
+            txtEmail.Text = TargetRecord.CustomerEmail;
 
         }
 

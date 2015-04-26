@@ -26,8 +26,8 @@ namespace DataLayer.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=jasmine.arvixe.com;Initial Catalog=xprema_bero;User ID=xama;Password=" +
-            "Pa$$w0rd")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SEZEROFFICE-PC\\SQL2008;Initial Catalog=xprema_bero;Integrated Securit" +
+            "y=True")]
         public string xprema_beroConnectionString {
             get {
                 return ((string)(this["xprema_beroConnectionString"]));

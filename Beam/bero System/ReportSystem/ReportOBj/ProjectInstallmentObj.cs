@@ -22,5 +22,6 @@ namespace bero_System.ReportSystem.ReportOBj
         //
         public string ProjectName { get; set; }
         public string CustomerName { get; set; }
+        public string  AllPay { get; set; }
     }
 }

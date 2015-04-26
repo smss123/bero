@@ -40,6 +40,7 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblAvailableAmount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
@@ -94,7 +95,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(313, 194);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "الوصف:";
             // 
@@ -112,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "الى حساب:";
             // 
@@ -122,7 +123,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(308, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "من حساب:";
             // 
@@ -195,7 +196,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(326, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "المبلغ:";
             // 
@@ -227,7 +228,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "المبلغ المتوفر:";
             // 
@@ -282,5 +283,6 @@
         private Telerik.WinControls.UI.RadMultiColumnComboBox CmbToAccount;
         private Telerik.WinControls.UI.RadMultiColumnComboBox CmbFromAccount;
         private Telerik.WinControls.UI.RadButton AddBtn;
+        private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
     }
 }

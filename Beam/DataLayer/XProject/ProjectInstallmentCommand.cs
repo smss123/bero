@@ -15,7 +15,7 @@ namespace DataLayer.XProject
         public static bool NewProjectInstallment(ProjectInstallment tb)
         {
 
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.ProjectInstallments.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -121,7 +121,8 @@ namespace DataLayer.XProject
     
             foreach (var item in GetAllLevelsByProjectId)
             {
-             
+
+                db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 Lst = (from i in db.ProjectInstallments
                                         where i.ProjectLevelID == item.id
                                         select i).ToList ();

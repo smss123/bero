@@ -13,6 +13,7 @@ using DataLayer;
 using DataLayer.XProject;
 using System.Threading;
 using System.Diagnostics;
+using Telerik.WinControls;
 namespace bero_System.ProjectAttachmentForms
 {
     public partial class FrmManageProjectAttachment : RadForm
@@ -49,26 +50,52 @@ namespace bero_System.ProjectAttachmentForms
 
         private void ProjectAttachmentGridView_CommandCellClick(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
             var col = ProjectAttachmentGridView.CurrentColumn.Index;
             if (col ==3)
             {
 
                 Operation.BeginOperation(this);
+                try
+                {
+                    ProjectAttachment tb = (ProjectAttachment)ProjectAttachmentGridView.CurrentRow.DataBoundItem;
+                    Process.Start(tb.FilePath);
+                    Operation.EndOperation(this);
 
+                }
+                catch (Exception)
+                {
 
-                ProjectAttachment  tb = (ProjectAttachment)ProjectAttachmentGridView.CurrentRow.DataBoundItem;
-                Process.Start(tb.FilePath);
-                Operation.EndOperation(this);
+                    RadMessageBox.Show("لا يمكن تشغيل الملف حاليا");
+                }
+
+               
             }
             if (col == 4)
             {
+                if (RadMessageBox.Show("هل تريد الحذف؟","",MessageBoxButtons.YesNo,RadMessageIcon.Question)==System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        Operation.BeginOperation(this);
+                        ProjectAttachmentCommand.DeleteProjectAttachment(Guid.Parse(ProjectAttachmentGridView.CurrentRow.Cells[0].Value.ToString()));
+                        FrmManageProjectAttachment_Load(sender, e);
+                        Operation.EndOperation(this);
+                    }
+                    catch (Exception)
+                    {
 
-                Operation.BeginOperation(this);
-                ProjectAttachmentCommand .DeleteProjectAttachment (int.Parse(ProjectAttachmentGridView.CurrentRow.Cells[0].Value.ToString()));
-                FrmManageProjectAttachment_Load(sender, e);
-
-                Operation.EndOperation(this);
+                        RadMessageBox.Show("لا يمكن الحذف حاليا");
+                    }
+                   
+                }
+               
             }
+        }
+
+        private void ProjectAttachmentGridView_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

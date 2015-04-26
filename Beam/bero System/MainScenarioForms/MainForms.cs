@@ -27,8 +27,8 @@ namespace bero_System.MainScenarioForms
           
 
             notifyIcon1.Icon = SystemIcons.Information;
-            notifyIcon1.BalloonTipTitle = "Berm";
-            notifyIcon1.BalloonTipText = "Powered By : Xprema Software Systems Company  2015";
+            notifyIcon1.BalloonTipTitle = "Welcome";
+            notifyIcon1.BalloonTipText = "Powered By : mazoon adv  2015";
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(3000);
@@ -48,8 +48,22 @@ namespace bero_System.MainScenarioForms
 
         void LoadingAllCustomers()
         {
-            var LstCustomers = CustomerCommand.GetAll();
-            this.Invoke((MethodInvoker)delegate { CustomerGridView.DataSource = LstCustomers; });
+            while (true)
+            {
+                try
+                {
+                    var LstCustomers = CustomerCommand.GetAll();
+                    this.Invoke((MethodInvoker)delegate { CustomerGridView.DataSource = LstCustomers; });
+                    Thread.Sleep(5000);
+                }
+                catch (System.InvalidOperationException ex)
+                {
+                    
+                    
+                }
+               
+            }
+            
         }
         private void MainForms_Load(object sender, EventArgs e)
         {
@@ -228,8 +242,7 @@ namespace bero_System.MainScenarioForms
 
         private void TrialbalanceBtn_Click(object sender, EventArgs e)
         {
-            FrmAllStatistices frm = new FrmAllStatistices();
-            frm.ShowDialog();
+           
         }
 
         private void empReportBtn_Click(object sender, EventArgs e)
@@ -258,6 +271,18 @@ namespace bero_System.MainScenarioForms
         private void CustomerGridView_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void بينفترتينToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportOptionBalanceSheet frm = new frmReportOptionBalanceSheet();
+            frm.ShowDialog();
+        }
+
+        private void عامToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAllStatistices frm = new FrmAllStatistices();
+            frm.ShowDialog();
         }
 
    

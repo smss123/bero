@@ -48,9 +48,6 @@ namespace DataLayer
     partial void InsertExpenssesMovment(ExpenssesMovment instance);
     partial void UpdateExpenssesMovment(ExpenssesMovment instance);
     partial void DeleteExpenssesMovment(ExpenssesMovment instance);
-    partial void InsertCustomer(Customer instance);
-    partial void UpdateCustomer(Customer instance);
-    partial void DeleteCustomer(Customer instance);
     partial void InsertEmployee(Employee instance);
     partial void UpdateEmployee(Employee instance);
     partial void DeleteEmployee(Employee instance);
@@ -90,6 +87,9 @@ namespace DataLayer
     partial void InsertSystemUser(SystemUser instance);
     partial void UpdateSystemUser(SystemUser instance);
     partial void DeleteSystemUser(SystemUser instance);
+    partial void InsertCustomer(Customer instance);
+    partial void UpdateCustomer(Customer instance);
+    partial void DeleteCustomer(Customer instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -167,14 +167,6 @@ namespace DataLayer
 			get
 			{
 				return this.GetTable<ExpenssesMovment>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Customer> Customers
-		{
-			get
-			{
-				return this.GetTable<Customer>();
 			}
 		}
 		
@@ -281,6 +273,14 @@ namespace DataLayer
 				return this.GetTable<SystemUser>();
 			}
 		}
+		
+		public System.Data.Linq.Table<Customer> Customers
+		{
+			get
+			{
+				return this.GetTable<Customer>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="Accountant.Account")]
@@ -303,11 +303,11 @@ namespace DataLayer
 		
 		private EntitySet<Expenss> _Expensses;
 		
-		private EntitySet<Customer> _Customers;
-		
 		private EntitySet<projectLevel> _projectLevels;
 		
 		private EntitySet<ProjectProfile> _ProjectProfiles;
+		
+		private EntitySet<Customer> _Customers;
 		
 		private EntityRef<AccountCategory> _AccountCategory;
 		
@@ -331,9 +331,9 @@ namespace DataLayer
 		{
 			this._AccountDailies = new EntitySet<AccountDaily>(new Action<AccountDaily>(this.attach_AccountDailies), new Action<AccountDaily>(this.detach_AccountDailies));
 			this._Expensses = new EntitySet<Expenss>(new Action<Expenss>(this.attach_Expensses), new Action<Expenss>(this.detach_Expensses));
-			this._Customers = new EntitySet<Customer>(new Action<Customer>(this.attach_Customers), new Action<Customer>(this.detach_Customers));
 			this._projectLevels = new EntitySet<projectLevel>(new Action<projectLevel>(this.attach_projectLevels), new Action<projectLevel>(this.detach_projectLevels));
 			this._ProjectProfiles = new EntitySet<ProjectProfile>(new Action<ProjectProfile>(this.attach_ProjectProfiles), new Action<ProjectProfile>(this.detach_ProjectProfiles));
+			this._Customers = new EntitySet<Customer>(new Action<Customer>(this.attach_Customers), new Action<Customer>(this.detach_Customers));
 			this._AccountCategory = default(EntityRef<AccountCategory>);
 			OnCreated();
 		}
@@ -468,19 +468,6 @@ namespace DataLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Customer", Storage="_Customers", ThisKey="ID", OtherKey="AccountID")]
-		public EntitySet<Customer> Customers
-		{
-			get
-			{
-				return this._Customers;
-			}
-			set
-			{
-				this._Customers.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_projectLevel", Storage="_projectLevels", ThisKey="ID", OtherKey="AccountID")]
 		public EntitySet<projectLevel> projectLevels
 		{
@@ -504,6 +491,19 @@ namespace DataLayer
 			set
 			{
 				this._ProjectProfiles.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Customer", Storage="_Customers", ThisKey="ID", OtherKey="AccountID")]
+		public EntitySet<Customer> Customers
+		{
+			get
+			{
+				return this._Customers;
+			}
+			set
+			{
+				this._Customers.Assign(value);
 			}
 		}
 		
@@ -585,18 +585,6 @@ namespace DataLayer
 			entity.Account = null;
 		}
 		
-		private void attach_Customers(Customer entity)
-		{
-			this.SendPropertyChanging();
-			entity.Account = this;
-		}
-		
-		private void detach_Customers(Customer entity)
-		{
-			this.SendPropertyChanging();
-			entity.Account = null;
-		}
-		
 		private void attach_projectLevels(projectLevel entity)
 		{
 			this.SendPropertyChanging();
@@ -616,6 +604,18 @@ namespace DataLayer
 		}
 		
 		private void detach_ProjectProfiles(ProjectProfile entity)
+		{
+			this.SendPropertyChanging();
+			entity.Account = null;
+		}
+		
+		private void attach_Customers(Customer entity)
+		{
+			this.SendPropertyChanging();
+			entity.Account = this;
+		}
+		
+		private void detach_Customers(Customer entity)
 		{
 			this.SendPropertyChanging();
 			entity.Account = null;
@@ -1746,281 +1746,6 @@ namespace DataLayer
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Customer")]
-	public partial class Customer : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _CustomerName;
-		
-		private string _PhoneNumber;
-		
-		private System.Nullable<System.DateTime> _CreateDate;
-		
-		private System.Nullable<int> _AccountID;
-		
-		private System.Nullable<System.Guid> _SerialNumber;
-		
-		private System.Nullable<double> _Total_Need;
-		
-		private EntitySet<ProjectProfile> _ProjectProfiles;
-		
-		private EntityRef<Account> _Account;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnCustomerNameChanging(string value);
-    partial void OnCustomerNameChanged();
-    partial void OnPhoneNumberChanging(string value);
-    partial void OnPhoneNumberChanged();
-    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreateDateChanged();
-    partial void OnAccountIDChanging(System.Nullable<int> value);
-    partial void OnAccountIDChanged();
-    partial void OnSerialNumberChanging(System.Nullable<System.Guid> value);
-    partial void OnSerialNumberChanged();
-    partial void OnTotal_NeedChanging(System.Nullable<double> value);
-    partial void OnTotal_NeedChanged();
-    #endregion
-		
-		public Customer()
-		{
-			this._ProjectProfiles = new EntitySet<ProjectProfile>(new Action<ProjectProfile>(this.attach_ProjectProfiles), new Action<ProjectProfile>(this.detach_ProjectProfiles));
-			this._Account = default(EntityRef<Account>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerName", DbType="NVarChar(50)")]
-		public string CustomerName
-		{
-			get
-			{
-				return this._CustomerName;
-			}
-			set
-			{
-				if ((this._CustomerName != value))
-				{
-					this.OnCustomerNameChanging(value);
-					this.SendPropertyChanging();
-					this._CustomerName = value;
-					this.SendPropertyChanged("CustomerName");
-					this.OnCustomerNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(50)")]
-		public string PhoneNumber
-		{
-			get
-			{
-				return this._PhoneNumber;
-			}
-			set
-			{
-				if ((this._PhoneNumber != value))
-				{
-					this.OnPhoneNumberChanging(value);
-					this.SendPropertyChanging();
-					this._PhoneNumber = value;
-					this.SendPropertyChanged("PhoneNumber");
-					this.OnPhoneNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> CreateDate
-		{
-			get
-			{
-				return this._CreateDate;
-			}
-			set
-			{
-				if ((this._CreateDate != value))
-				{
-					this.OnCreateDateChanging(value);
-					this.SendPropertyChanging();
-					this._CreateDate = value;
-					this.SendPropertyChanged("CreateDate");
-					this.OnCreateDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountID", DbType="Int")]
-		public System.Nullable<int> AccountID
-		{
-			get
-			{
-				return this._AccountID;
-			}
-			set
-			{
-				if ((this._AccountID != value))
-				{
-					if (this._Account.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnAccountIDChanging(value);
-					this.SendPropertyChanging();
-					this._AccountID = value;
-					this.SendPropertyChanged("AccountID");
-					this.OnAccountIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerialNumber", DbType="UniqueIdentifier")]
-		public System.Nullable<System.Guid> SerialNumber
-		{
-			get
-			{
-				return this._SerialNumber;
-			}
-			set
-			{
-				if ((this._SerialNumber != value))
-				{
-					this.OnSerialNumberChanging(value);
-					this.SendPropertyChanging();
-					this._SerialNumber = value;
-					this.SendPropertyChanged("SerialNumber");
-					this.OnSerialNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Need", DbType="Float")]
-		public System.Nullable<double> Total_Need
-		{
-			get
-			{
-				return this._Total_Need;
-			}
-			set
-			{
-				if ((this._Total_Need != value))
-				{
-					this.OnTotal_NeedChanging(value);
-					this.SendPropertyChanging();
-					this._Total_Need = value;
-					this.SendPropertyChanged("Total_Need");
-					this.OnTotal_NeedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_ProjectProfile", Storage="_ProjectProfiles", ThisKey="ID", OtherKey="CustomerID")]
-		public EntitySet<ProjectProfile> ProjectProfiles
-		{
-			get
-			{
-				return this._ProjectProfiles;
-			}
-			set
-			{
-				this._ProjectProfiles.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Customer", Storage="_Account", ThisKey="AccountID", OtherKey="ID", IsForeignKey=true, DeleteRule="CASCADE")]
-		public Account Account
-		{
-			get
-			{
-				return this._Account.Entity;
-			}
-			set
-			{
-				Account previousValue = this._Account.Entity;
-				if (((previousValue != value) 
-							|| (this._Account.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Account.Entity = null;
-						previousValue.Customers.Remove(this);
-					}
-					this._Account.Entity = value;
-					if ((value != null))
-					{
-						value.Customers.Add(this);
-						this._AccountID = value.ID;
-					}
-					else
-					{
-						this._AccountID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Account");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_ProjectProfiles(ProjectProfile entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = this;
-		}
-		
-		private void detach_ProjectProfiles(ProjectProfile entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = null;
 		}
 	}
 	
@@ -4400,7 +4125,7 @@ namespace DataLayer
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
 					this.OnCustomerIDChanging(value);
-                    this.SendPropertyChanging();
+					this.SendPropertyChanging();
 					this._CustomerID = value;
 					this.SendPropertyChanged("CustomerID");
 					this.OnCustomerIDChanged();
@@ -5540,6 +5265,305 @@ namespace DataLayer
 		{
 			this.SendPropertyChanging();
 			entity.SystemUser = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Customer")]
+	public partial class Customer : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _CustomerName;
+		
+		private string _PhoneNumber;
+		
+		private string _CustomerEmail;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+		private System.Nullable<int> _AccountID;
+		
+		private System.Nullable<System.Guid> _SerialNumber;
+		
+		private System.Nullable<double> _Total_Need;
+		
+		private EntitySet<ProjectProfile> _ProjectProfiles;
+		
+		private EntityRef<Account> _Account;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnCustomerNameChanging(string value);
+    partial void OnCustomerNameChanged();
+    partial void OnPhoneNumberChanging(string value);
+    partial void OnPhoneNumberChanged();
+    partial void OnCustomerEmailChanging(string value);
+    partial void OnCustomerEmailChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    partial void OnAccountIDChanging(System.Nullable<int> value);
+    partial void OnAccountIDChanged();
+    partial void OnSerialNumberChanging(System.Nullable<System.Guid> value);
+    partial void OnSerialNumberChanged();
+    partial void OnTotal_NeedChanging(System.Nullable<double> value);
+    partial void OnTotal_NeedChanged();
+    #endregion
+		
+		public Customer()
+		{
+			this._ProjectProfiles = new EntitySet<ProjectProfile>(new Action<ProjectProfile>(this.attach_ProjectProfiles), new Action<ProjectProfile>(this.detach_ProjectProfiles));
+			this._Account = default(EntityRef<Account>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerName", DbType="NVarChar(500)")]
+		public string CustomerName
+		{
+			get
+			{
+				return this._CustomerName;
+			}
+			set
+			{
+				if ((this._CustomerName != value))
+				{
+					this.OnCustomerNameChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerName = value;
+					this.SendPropertyChanged("CustomerName");
+					this.OnCustomerNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(50)")]
+		public string PhoneNumber
+		{
+			get
+			{
+				return this._PhoneNumber;
+			}
+			set
+			{
+				if ((this._PhoneNumber != value))
+				{
+					this.OnPhoneNumberChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerEmail", DbType="NVarChar(500)")]
+		public string CustomerEmail
+		{
+			get
+			{
+				return this._CustomerEmail;
+			}
+			set
+			{
+				if ((this._CustomerEmail != value))
+				{
+					this.OnCustomerEmailChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerEmail = value;
+					this.SendPropertyChanged("CustomerEmail");
+					this.OnCustomerEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountID", DbType="Int")]
+		public System.Nullable<int> AccountID
+		{
+			get
+			{
+				return this._AccountID;
+			}
+			set
+			{
+				if ((this._AccountID != value))
+				{
+					if (this._Account.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnAccountIDChanging(value);
+					this.SendPropertyChanging();
+					this._AccountID = value;
+					this.SendPropertyChanged("AccountID");
+					this.OnAccountIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SerialNumber", DbType="UniqueIdentifier")]
+		public System.Nullable<System.Guid> SerialNumber
+		{
+			get
+			{
+				return this._SerialNumber;
+			}
+			set
+			{
+				if ((this._SerialNumber != value))
+				{
+					this.OnSerialNumberChanging(value);
+					this.SendPropertyChanging();
+					this._SerialNumber = value;
+					this.SendPropertyChanged("SerialNumber");
+					this.OnSerialNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Need", DbType="Float")]
+		public System.Nullable<double> Total_Need
+		{
+			get
+			{
+				return this._Total_Need;
+			}
+			set
+			{
+				if ((this._Total_Need != value))
+				{
+					this.OnTotal_NeedChanging(value);
+					this.SendPropertyChanging();
+					this._Total_Need = value;
+					this.SendPropertyChanged("Total_Need");
+					this.OnTotal_NeedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_ProjectProfile", Storage="_ProjectProfiles", ThisKey="ID", OtherKey="CustomerID")]
+		public EntitySet<ProjectProfile> ProjectProfiles
+		{
+			get
+			{
+				return this._ProjectProfiles;
+			}
+			set
+			{
+				this._ProjectProfiles.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Customer", Storage="_Account", ThisKey="AccountID", OtherKey="ID", IsForeignKey=true, DeleteRule="CASCADE")]
+		public Account Account
+		{
+			get
+			{
+				return this._Account.Entity;
+			}
+			set
+			{
+				Account previousValue = this._Account.Entity;
+				if (((previousValue != value) 
+							|| (this._Account.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Account.Entity = null;
+						previousValue.Customers.Remove(this);
+					}
+					this._Account.Entity = value;
+					if ((value != null))
+					{
+						value.Customers.Add(this);
+						this._AccountID = value.ID;
+					}
+					else
+					{
+						this._AccountID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Account");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ProjectProfiles(ProjectProfile entity)
+		{
+			this.SendPropertyChanging();
+			entity.Customer = this;
+		}
+		
+		private void detach_ProjectProfiles(ProjectProfile entity)
+		{
+			this.SendPropertyChanging();
+			entity.Customer = null;
 		}
 	}
 }

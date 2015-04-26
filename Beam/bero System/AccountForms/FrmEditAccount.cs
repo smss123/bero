@@ -48,7 +48,7 @@ namespace bero_System.AccountForms
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
                 this.CmbCategories.EditorControl.FilterDescriptors.Add(compositeFilter);
 
-
+                CmbCategories.SelectedValue = TargetAccount.CategoryID;
 
 
             });
@@ -101,6 +101,10 @@ namespace bero_System.AccountForms
             #endregion
 
             Operation.BeginOperation(this);
+            int id = TargetAccount.ID;
+            TargetAccount = new Account();
+            TargetAccount.ID = id;
+           
             TargetAccount.Description = txtDescription.Text;
             TargetAccount.AccountName = txtAccountName.Text;
             TargetAccount.CategoryID = int .Parse ( CmbCategories.SelectedValue.ToString());
@@ -116,7 +120,7 @@ namespace bero_System.AccountForms
         {
             txtAccountName.Text = TargetAccount.AccountName;
             txtDescription.Text = TargetAccount.Description;
-
+            CmbCategories.SelectedValue = TargetAccount.CategoryID;
             th = new Thread(FillCombo);
             th.Start();
         }

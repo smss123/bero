@@ -78,7 +78,7 @@
             expenssesIDLabel.AutoSize = true;
             expenssesIDLabel.Location = new System.Drawing.Point(238, 35);
             expenssesIDLabel.Name = "expenssesIDLabel";
-            expenssesIDLabel.Size = new System.Drawing.Size(53, 13);
+            expenssesIDLabel.Size = new System.Drawing.Size(50, 13);
             expenssesIDLabel.TabIndex = 0;
             expenssesIDLabel.Text = "المصروف:";
             // 
@@ -88,7 +88,7 @@
             amountLabel.AutoSize = true;
             amountLabel.Location = new System.Drawing.Point(239, 67);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(38, 13);
+            amountLabel.Size = new System.Drawing.Size(35, 13);
             amountLabel.TabIndex = 2;
             amountLabel.Text = "المبلغ:";
             // 
@@ -98,7 +98,7 @@
             dateOfExpenssesLabel.AutoSize = true;
             dateOfExpenssesLabel.Location = new System.Drawing.Point(239, 99);
             dateOfExpenssesLabel.Name = "dateOfExpenssesLabel";
-            dateOfExpenssesLabel.Size = new System.Drawing.Size(68, 13);
+            dateOfExpenssesLabel.Size = new System.Drawing.Size(67, 13);
             dateOfExpenssesLabel.TabIndex = 4;
             dateOfExpenssesLabel.Text = "تاريخ العملية:";
             // 
@@ -108,7 +108,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(239, 133);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.Size = new System.Drawing.Size(40, 13);
             descriptionLabel.TabIndex = 5;
             descriptionLabel.Text = "الوصف:";
             // 
@@ -118,7 +118,7 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(239, 209);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(55, 13);
+            label1.Size = new System.Drawing.Size(50, 13);
             label1.TabIndex = 22;
             label1.Text = "المستوى:";
             // 

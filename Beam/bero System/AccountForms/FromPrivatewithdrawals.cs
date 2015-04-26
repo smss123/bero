@@ -44,6 +44,7 @@ namespace bero_System.AccountForms
 
 
             var q = AccountCommand.GetAll();
+            var q1 = AccountCommand.GetAll();
             this.Invoke((MethodInvoker)delegate
             {
                 CmbFromAccount.DataSource = q;
@@ -53,7 +54,7 @@ namespace bero_System.AccountForms
                 this.CmbFromAccount.EditorControl.MasterTemplate.FilterDescriptors.Add(filter);
 
                 ////
-                CmbToAccount.DataSource = q;
+                CmbToAccount.DataSource = q1;
                 FilterDescriptor filter1 = new FilterDescriptor();
                 filter1.PropertyName = this.CmbToAccount.DisplayMember;
                 filter1.Operator = FilterOperator.Contains;

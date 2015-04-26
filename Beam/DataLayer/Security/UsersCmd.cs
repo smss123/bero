@@ -12,7 +12,7 @@ namespace DataLayer.Security
         public static event OnchangeCallBack ProcessChange;
         public static bool NewUser(SystemUser usr)
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             db.SystemUsers.InsertOnSubmit(usr);
             db.SubmitChanges();
             var parmList = db.SystemPermessions.ToList();

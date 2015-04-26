@@ -59,7 +59,7 @@
             qtyLabel.AutoSize = true;
             qtyLabel.Location = new System.Drawing.Point(250, 59);
             qtyLabel.Name = "qtyLabel";
-            qtyLabel.Size = new System.Drawing.Size(40, 13);
+            qtyLabel.Size = new System.Drawing.Size(37, 13);
             qtyLabel.TabIndex = 2;
             qtyLabel.Text = "الكمية:";
             // 
@@ -80,6 +80,7 @@
             this.radGroupBox1.TabIndex = 1;
             this.radGroupBox1.Tag = "";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // CmbItems
             // 
@@ -184,7 +185,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(250, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "الصنف:";
             // 

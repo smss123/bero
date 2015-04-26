@@ -16,7 +16,7 @@ namespace DataLayer.XProject
             {
                 //try
                 //{
-                db = new dbDataContext();
+                db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                     db.projectLevels.InsertOnSubmit(tb);
                     db.SubmitChanges();
                     HistoryCommand.NewHistory(new History()
@@ -43,8 +43,9 @@ namespace DataLayer.XProject
             }
             private static bool WriteHistory(History htb)
             {
-                db.Histories.InsertOnSubmit(htb);
-                db.SubmitChanges();
+                //db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
+                //db.Histories.InsertOnSubmit(htb);
+                //db.SubmitChanges();
                 return true;
             }
             public static bool EditprojectLevel(projectLevel tb)
@@ -64,7 +65,7 @@ namespace DataLayer.XProject
                     History htb = new History()
                     {
                         ActionName = "Edit project Level",
-                        Description = String.Format("old Info Is Level Name {0}\n Project Description : {1}Project Profile {2} Level Amount {3} \n New Info is Level Name {4}\n Project Description : {5}Project Profile {6} Level Amount {7}", q.LevelName, q.Descripotion, q.LevelAmount, tb.LevelName, tb.Descripotion, tb.ProjectProfile.ProjectName, tb.LevelAmount),
+                        Description = String.Format("old Info Is Level Name {0}\n Project Description : {1} \n Project Profile {2} Level Amount {3} \n New Info is Level Name {4}\n Project Description : {5}Project Profile {6} Level Amount ", q.LevelName, q.Descripotion, q.ProjectProfile.ProjectName, tb.LevelName, tb.Descripotion, tb.ProjectProfile.ProjectName, tb.LevelAmount),
                         DateOfProcess = DateTime.Now,
                         SystemUser = LoginInfomation.CurrnetUser
                     };
@@ -94,10 +95,12 @@ namespace DataLayer.XProject
                     //{
                     History htb = new History()
                     {
+
                         ActionName = "Edit project Level",
-                        Description = String.Format(" Info Is Level Name {0}\n Project Description : {1}Project Profile {2} Level Amount {3}", q.LevelName, q.Descripotion, q.ProjectProfile.ProjectName, q.LevelAmount),
+                        Description = String.Format(" Info Is Level Name {0} \n Project Description : {1} Project Profile {2} Level Amount {3}", q.LevelName, q.Descripotion, q.ProjectProfileID, q.LevelAmount),
                         DateOfProcess = DateTime.Now,
-                        SystemUser = LoginInfomation.CurrnetUser
+
+                        UserID = LoginInfomation.CurrnetUser.ID
                     };
                     WriteHistory(htb);
                    // });;

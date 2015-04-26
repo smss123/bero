@@ -55,7 +55,7 @@
             expenssesIDLabel.AutoSize = true;
             expenssesIDLabel.Location = new System.Drawing.Point(294, 26);
             expenssesIDLabel.Name = "expenssesIDLabel";
-            expenssesIDLabel.Size = new System.Drawing.Size(53, 13);
+            expenssesIDLabel.Size = new System.Drawing.Size(50, 13);
             expenssesIDLabel.TabIndex = 0;
             expenssesIDLabel.Text = "المصروف:";
             // 
@@ -65,7 +65,7 @@
             amountLabel.AutoSize = true;
             amountLabel.Location = new System.Drawing.Point(291, 53);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(43, 13);
+            amountLabel.Size = new System.Drawing.Size(40, 13);
             amountLabel.TabIndex = 2;
             amountLabel.Text = "التكلفة:";
             // 
@@ -75,7 +75,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(292, 79);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.Size = new System.Drawing.Size(40, 13);
             descriptionLabel.TabIndex = 4;
             descriptionLabel.Text = "الوصف:";
             // 

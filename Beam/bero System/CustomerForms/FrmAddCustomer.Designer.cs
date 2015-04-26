@@ -31,14 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label customerNameLabel;
             System.Windows.Forms.Label phoneNumberLabel;
+            System.Windows.Forms.Label label1;
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtEmail = new System.Windows.Forms.TextBox();
             customerNameLabel = new System.Windows.Forms.Label();
             phoneNumberLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
@@ -50,9 +53,9 @@
             // 
             customerNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             customerNameLabel.AutoSize = true;
-            customerNameLabel.Location = new System.Drawing.Point(265, 33);
+            customerNameLabel.Location = new System.Drawing.Point(281, 24);
             customerNameLabel.Name = "customerNameLabel";
-            customerNameLabel.Size = new System.Drawing.Size(70, 13);
+            customerNameLabel.Size = new System.Drawing.Size(61, 13);
             customerNameLabel.TabIndex = 0;
             customerNameLabel.Text = " اسم العميل:";
             // 
@@ -60,9 +63,9 @@
             // 
             phoneNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(264, 64);
+            phoneNumberLabel.Location = new System.Drawing.Point(280, 55);
             phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new System.Drawing.Size(59, 13);
+            phoneNumberLabel.Size = new System.Drawing.Size(58, 13);
             phoneNumberLabel.TabIndex = 2;
             phoneNumberLabel.Text = "رقم الهاتف:";
             // 
@@ -70,7 +73,9 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.AddBtn);
+            this.radGroupBox1.Controls.Add(label1);
             this.radGroupBox1.Controls.Add(phoneNumberLabel);
+            this.radGroupBox1.Controls.Add(this.txtEmail);
             this.radGroupBox1.Controls.Add(this.phoneNumberTextBox);
             this.radGroupBox1.Controls.Add(customerNameLabel);
             this.radGroupBox1.Controls.Add(this.customerNameTextBox);
@@ -79,7 +84,7 @@
             this.radGroupBox1.HeaderText = "";
             this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(333, 150);
+            this.radGroupBox1.Size = new System.Drawing.Size(374, 161);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
             this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
@@ -89,7 +94,7 @@
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddBtn.Image = global::bero_System.Properties.Resources.Add;
             this.AddBtn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AddBtn.Location = new System.Drawing.Point(151, 97);
+            this.AddBtn.Location = new System.Drawing.Point(259, 118);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(110, 36);
             this.AddBtn.TabIndex = 5;
@@ -102,7 +107,7 @@
             // 
             this.phoneNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneNumberTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(14, 61);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(30, 52);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(247, 20);
             this.phoneNumberTextBox.TabIndex = 2;
@@ -112,7 +117,7 @@
             // 
             this.customerNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.customerNameTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.customerNameTextBox.Location = new System.Drawing.Point(14, 30);
+            this.customerNameTextBox.Location = new System.Drawing.Point(30, 21);
             this.customerNameTextBox.Name = "customerNameTextBox";
             this.customerNameTextBox.Size = new System.Drawing.Size(248, 20);
             this.customerNameTextBox.TabIndex = 1;
@@ -122,11 +127,31 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.RightToLeft = true;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txtEmail.Location = new System.Drawing.Point(31, 78);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(247, 20);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextBox_KeyPress);
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(281, 81);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(88, 13);
+            label1.TabIndex = 2;
+            label1.Text = " البريد الالكتروني:";
+            // 
             // FrmAddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 150);
+            this.ClientSize = new System.Drawing.Size(374, 161);
             this.Controls.Add(this.radGroupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -160,5 +185,6 @@
         private System.Windows.Forms.TextBox customerNameTextBox;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

@@ -75,7 +75,7 @@
             projectLevelIDLabel.AutoSize = true;
             projectLevelIDLabel.Location = new System.Drawing.Point(269, 199);
             projectLevelIDLabel.Name = "projectLevelIDLabel";
-            projectLevelIDLabel.Size = new System.Drawing.Size(100, 13);
+            projectLevelIDLabel.Size = new System.Drawing.Size(91, 13);
             projectLevelIDLabel.TabIndex = 20;
             projectLevelIDLabel.Text = "المستوى المخصص:";
             // 
@@ -85,7 +85,7 @@
             activeStatusLabel.AutoSize = true;
             activeStatusLabel.Location = new System.Drawing.Point(274, 169);
             activeStatusLabel.Name = "activeStatusLabel";
-            activeStatusLabel.Size = new System.Drawing.Size(36, 13);
+            activeStatusLabel.Size = new System.Drawing.Size(35, 13);
             activeStatusLabel.TabIndex = 19;
             activeStatusLabel.Text = "الحالة:";
             // 
@@ -105,7 +105,7 @@
             payByLabel.AutoSize = true;
             payByLabel.Location = new System.Drawing.Point(274, 111);
             payByLabel.Name = "payByLabel";
-            payByLabel.Size = new System.Drawing.Size(66, 13);
+            payByLabel.Size = new System.Drawing.Size(65, 13);
             payByLabel.TabIndex = 17;
             payByLabel.Text = "دفع بواسطة:";
             // 
@@ -115,7 +115,7 @@
             amountLabel.AutoSize = true;
             amountLabel.Location = new System.Drawing.Point(274, 81);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(38, 13);
+            amountLabel.Size = new System.Drawing.Size(35, 13);
             amountLabel.TabIndex = 16;
             amountLabel.Text = "المبلغ:";
             // 
@@ -125,7 +125,7 @@
             dateOfInstallmentsLabel.AutoSize = true;
             dateOfInstallmentsLabel.Location = new System.Drawing.Point(269, 52);
             dateOfInstallmentsLabel.Name = "dateOfInstallmentsLabel";
-            dateOfInstallmentsLabel.Size = new System.Drawing.Size(58, 13);
+            dateOfInstallmentsLabel.Size = new System.Drawing.Size(62, 13);
             dateOfInstallmentsLabel.TabIndex = 15;
             dateOfInstallmentsLabel.Text = "تاريخ الدفع:";
             // 
@@ -135,7 +135,7 @@
             installments_nameLabel.AutoSize = true;
             installments_nameLabel.Location = new System.Drawing.Point(270, 24);
             installments_nameLabel.Name = "installments_nameLabel";
-            installments_nameLabel.Size = new System.Drawing.Size(68, 13);
+            installments_nameLabel.Size = new System.Drawing.Size(57, 13);
             installments_nameLabel.TabIndex = 14;
             installments_nameLabel.Text = "اسم القسط:";
             // 

@@ -11,10 +11,10 @@ namespace DataLayer
         public delegate void OnchangeCallBackX(string msg);
         public static event OnchangeCallBackX StatusChange;
 
-        public static dbDataContext db = new dbDataContext();
+        public static dbDataContext db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
         public static void ini()
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             db.Connection.StateChange += Connection_StateChange;
         }
 

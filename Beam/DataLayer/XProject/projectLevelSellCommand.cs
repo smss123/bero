@@ -15,7 +15,7 @@ namespace DataLayer.XProject
         {
             //try
             //{
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.projectLevelSells.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -32,7 +32,8 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New roject Level Sell",
 
                 });
-             ProcessChange("Adding project Level Sell", tb.Sell_Item + " has Been Saved ", null);
+            
+            // ProcessChange("Adding project Level Sell", tb.Sell_Item + " has Been Saved ", null);
                 return true;
             //}
             //catch (Exception e)
@@ -59,19 +60,20 @@ namespace DataLayer.XProject
                 HistoryCommand.NewHistory(new History()
                 {
                     ActionName = "Edit project Level Sell",
-                    Description = String.Format("old Info Is Sell Item {0}\n Amount : {1}Date Of Sell {2} Description {3} Status {4}  Project Level {5} \n New Info is Sell Item {6}\n Amount : {7}Date Of Sell {8} Description {9} Status {10}  Project Level {11}", q.Sell_Item, q.Amount, q.DateOfSell, q.Description, q.Status,q.projectLevel.LevelName, tb.Sell_Item, tb.Amount, tb.DateOfSell, tb.Description, tb.Status,tb.projectLevel.LevelName),
+                    Description =
+                    String.Format("old Info Is Sell Item {0}\n Amount : {1}Date Of Sell {2} Description {3} Status {4}  Project Level {5} \n New Info is Sell Item {6}\n Amount : {7}Date Of Sell {8} Description {9} Status {10}  Project Level {11}", q.Sell_Item, q.Amount, q.DateOfSell, q.Description, q.Status,q.projectLevel.LevelName, tb.Sell_Item, tb.Amount, tb.DateOfSell, tb.Description, tb.Status,""),
                     DateOfProcess = DateTime.Now,
-                    SystemUser = LoginInfomation.CurrnetUser
+                  UserID = LoginInfomation.CurrnetUser.ID
                 });
 
-                ProcessChange("Edit project Level Sell", tb.Sell_Item + " has Been Edited ", null);
+                //ProcessChange("Edit project Level Sell", tb.Sell_Item + " has Been Edited ", null);
                 q = null;
                 return true;
             }
             catch (Exception e)
             {
 
-                ProcessChange("Error message", "Can't Edit project Level Sell", e.ToString());
+              //  ProcessChange("Error message", "Can't Edit project Level Sell", e.ToString());
                 return false;
             }
         }
@@ -97,7 +99,7 @@ namespace DataLayer.XProject
             catch (Exception e)
             {
 
-                ProcessChange("Error message", "Can't Delete project Level Sell", e.ToString());
+               // ProcessChange("Error message", "Can't Delete project Level Sell", e.ToString());
                 return false;
             }
         }
@@ -126,7 +128,8 @@ namespace DataLayer.XProject
 
             foreach (var item in GetAllLevelsByProjectId)
             {
-
+                db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
+                
                 Lst = (from i in db.projectLevelSells
                        where i.ProjectLevelID == item.id
                        select i).ToList();

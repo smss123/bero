@@ -55,7 +55,7 @@
             itemNameLabel.AutoSize = true;
             itemNameLabel.Location = new System.Drawing.Point(274, 26);
             itemNameLabel.Name = "itemNameLabel";
-            itemNameLabel.Size = new System.Drawing.Size(65, 13);
+            itemNameLabel.Size = new System.Drawing.Size(58, 13);
             itemNameLabel.TabIndex = 0;
             itemNameLabel.Text = "اسم الصنف:";
             // 
@@ -65,7 +65,7 @@
             itemDescriptionLabel.AutoSize = true;
             itemDescriptionLabel.Location = new System.Drawing.Point(276, 53);
             itemDescriptionLabel.Name = "itemDescriptionLabel";
-            itemDescriptionLabel.Size = new System.Drawing.Size(41, 13);
+            itemDescriptionLabel.Size = new System.Drawing.Size(40, 13);
             itemDescriptionLabel.TabIndex = 2;
             itemDescriptionLabel.Text = "الوصف:";
             // 

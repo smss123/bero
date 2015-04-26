@@ -59,7 +59,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(260, 82);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.Size = new System.Drawing.Size(40, 13);
             descriptionLabel.TabIndex = 6;
             descriptionLabel.Text = "الوصف:";
             // 
@@ -68,7 +68,7 @@
             accountNameLabel.AutoSize = true;
             accountNameLabel.Location = new System.Drawing.Point(258, 47);
             accountNameLabel.Name = "accountNameLabel";
-            accountNameLabel.Size = new System.Drawing.Size(73, 13);
+            accountNameLabel.Size = new System.Drawing.Size(64, 13);
             accountNameLabel.TabIndex = 4;
             accountNameLabel.Text = "اسم الحساب:";
             // 
@@ -127,7 +127,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(258, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "تصنيف الحساب:";
             // 

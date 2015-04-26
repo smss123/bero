@@ -70,7 +70,7 @@ namespace DataLayer.Security
 
         public static bool ClearAllUserPermessions(int usrid)
         {
-          
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             var tb = new UserPermession();
             var lst = (from u in db.UserPermessions
                        where u.SystemUserID == usrid

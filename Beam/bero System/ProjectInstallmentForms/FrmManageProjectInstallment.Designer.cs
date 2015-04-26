@@ -45,10 +45,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.RefreshBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.DGVInstalments = new Telerik.WinControls.UI.RadGridView();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -72,10 +72,10 @@
             this.toolStripSeparator1,
             this.RefreshBtn,
             this.toolStripSeparator2,
-            this.toolStripTextBox1});
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(927, 40);
+            this.toolStrip1.Size = new System.Drawing.Size(927, 49);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -85,14 +85,14 @@
             this.AddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(71, 37);
+            this.AddBtn.Size = new System.Drawing.Size(71, 46);
             this.AddBtn.Text = "اضافة";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
             // 
             // RefreshBtn
             // 
@@ -100,14 +100,24 @@
             this.RefreshBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(111, 37);
+            this.RefreshBtn.Size = new System.Drawing.Size(111, 46);
             this.RefreshBtn.Text = "تحديث السجلات";
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::bero_System.Properties.Resources.Project42Px;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(101, 46);
+            this.toolStripButton1.Text = "طباعةالكل";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // radGroupBox1
             // 
@@ -116,9 +126,9 @@
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
             this.radGroupBox1.HeaderText = "";
-            this.radGroupBox1.Location = new System.Drawing.Point(0, 40);
+            this.radGroupBox1.Location = new System.Drawing.Point(0, 49);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(927, 449);
+            this.radGroupBox1.Size = new System.Drawing.Size(927, 440);
             this.radGroupBox1.TabIndex = 6;
             this.radGroupBox1.ThemeName = "Office2013Light";
             // 
@@ -215,18 +225,12 @@
             this.DGVInstalments.Name = "DGVInstalments";
             this.DGVInstalments.ReadOnly = true;
             this.DGVInstalments.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGVInstalments.Size = new System.Drawing.Size(923, 429);
+            this.DGVInstalments.Size = new System.Drawing.Size(923, 420);
             this.DGVInstalments.TabIndex = 0;
             this.DGVInstalments.Text = "radGridView1";
             this.DGVInstalments.ThemeName = "Office2013Light";
             this.DGVInstalments.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.DGVInstalments_CommandCellClick);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 40);
-            this.toolStripTextBox1.Text = "طباعه الكل";
-            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            this.DGVInstalments.Click += new System.EventHandler(this.DGVInstalments_Click);
             // 
             // FrmManageProjectInstallment
             // 
@@ -270,6 +274,6 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGridView DGVInstalments;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

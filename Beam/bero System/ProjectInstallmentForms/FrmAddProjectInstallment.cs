@@ -43,7 +43,7 @@ namespace bero_System.ProjectInstallmentForms
             });
 
 
-            var q1 = projectLevelCommand.GetByProjectProfileID(TargetProject.ID);
+            var q1 = TargetProject.projectLevels.ToList(); // projectLevelCommand.GetByProjectProfileID(TargetProject.ID);
             this.Invoke((MethodInvoker)delegate
             {
                 projectLevelComboBox.DataSource = q1;

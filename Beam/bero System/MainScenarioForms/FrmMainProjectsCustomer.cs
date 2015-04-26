@@ -28,17 +28,10 @@ namespace bero_System.MainScenarioForms
         {
             var lst = TargetCustomer.ProjectProfiles.ToList(); //ProjectProfileCommand.GetAllByCustomerId(TargetCustomer.ID);
             this.Invoke((MethodInvoker)delegate {
-
-                customerNameTextBox.Text = TargetCustomer.CustomerName;
-               
+                customerNameTextBox.Text = TargetCustomer.CustomerName;              
                 phoneNumberTextBox.Text = TargetCustomer.PhoneNumber;
-
                 CreateTextBox.Text = TargetCustomer.CreateDate.ToString();
-
-               
                 ProjectGridView.DataSource = lst; 
-
-                
             });
 
         }
@@ -74,7 +67,7 @@ namespace bero_System.MainScenarioForms
         {
 
             CustomerProjectCommand cmdRpt = new CustomerProjectCommand();
-            cmdRpt.CustomerProjectByCusId(1);
+            cmdRpt.CustomerProjectByCusId(TargetCustomer.ID);
         }
 
         private void radGroupBox1_Click(object sender, EventArgs e)

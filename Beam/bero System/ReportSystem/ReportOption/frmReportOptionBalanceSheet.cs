@@ -28,7 +28,8 @@ namespace bero_System.ReportSystem.ReportOption
             }
             else
             {
-                //--
+                BalanceSheetCommandRpt cmd = new BalanceSheetCommandRpt();
+               cmd.GetBalanceSheet(dtFrom.Value,dtTo.Value);
             }
         }
     }

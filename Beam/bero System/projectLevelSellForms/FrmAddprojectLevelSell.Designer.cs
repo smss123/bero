@@ -74,7 +74,7 @@
             sell_ItemLabel.AutoSize = true;
             sell_ItemLabel.Location = new System.Drawing.Point(278, 15);
             sell_ItemLabel.Name = "sell_ItemLabel";
-            sell_ItemLabel.Size = new System.Drawing.Size(36, 13);
+            sell_ItemLabel.Size = new System.Drawing.Size(35, 13);
             sell_ItemLabel.TabIndex = 0;
             sell_ItemLabel.Text = "الصنف";
             // 
@@ -84,7 +84,7 @@
             amountLabel.AutoSize = true;
             amountLabel.Location = new System.Drawing.Point(278, 41);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(43, 13);
+            amountLabel.Size = new System.Drawing.Size(40, 13);
             amountLabel.TabIndex = 2;
             amountLabel.Text = "التكلفة:";
             // 
@@ -94,7 +94,7 @@
             dateOfSellLabel.AutoSize = true;
             dateOfSellLabel.Location = new System.Drawing.Point(275, 67);
             dateOfSellLabel.Name = "dateOfSellLabel";
-            dateOfSellLabel.Size = new System.Drawing.Size(68, 13);
+            dateOfSellLabel.Size = new System.Drawing.Size(67, 13);
             dateOfSellLabel.TabIndex = 4;
             dateOfSellLabel.Text = "تاريخ العملية:";
             // 
@@ -104,7 +104,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(279, 100);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(41, 13);
+            descriptionLabel.Size = new System.Drawing.Size(40, 13);
             descriptionLabel.TabIndex = 6;
             descriptionLabel.Text = "الوصف:";
             // 
@@ -114,7 +114,7 @@
             statusLabel.AutoSize = true;
             statusLabel.Location = new System.Drawing.Point(276, 160);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(36, 13);
+            statusLabel.Size = new System.Drawing.Size(35, 13);
             statusLabel.TabIndex = 8;
             statusLabel.Text = "الحالة:";
             // 
@@ -124,7 +124,7 @@
             projectLevelIDLabel.AutoSize = true;
             projectLevelIDLabel.Location = new System.Drawing.Point(275, 189);
             projectLevelIDLabel.Name = "projectLevelIDLabel";
-            projectLevelIDLabel.Size = new System.Drawing.Size(58, 13);
+            projectLevelIDLabel.Size = new System.Drawing.Size(53, 13);
             projectLevelIDLabel.TabIndex = 10;
             projectLevelIDLabel.Text = "المستوى :";
             // 
@@ -152,6 +152,7 @@
             this.radGroupBox1.Size = new System.Drawing.Size(344, 272);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.ThemeName = "Office2013Light";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // AddBtn
             // 
@@ -174,9 +175,9 @@
             this.radDateTimePicker1.Size = new System.Drawing.Size(112, 21);
             this.radDateTimePicker1.TabIndex = 18;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12/01/2015";
+            this.radDateTimePicker1.Text = "3/24/2015";
             this.radDateTimePicker1.ThemeName = "Office2013Light";
-            this.radDateTimePicker1.Value = new System.DateTime(2015, 1, 12, 23, 5, 45, 544);
+            this.radDateTimePicker1.Value = new System.DateTime(2015, 3, 24, 0, 0, 0, 0);
             // 
             // projectLevelComboBox
             // 
@@ -261,6 +262,9 @@
             this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.BackColor = System.Drawing.SystemColors.Menu;
             this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "تم الشراء",
+            "تم التسليم"});
             this.statusComboBox.Location = new System.Drawing.Point(136, 157);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(137, 21);
@@ -312,6 +316,7 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة مشتريات";
             this.ThemeName = "Office2013Light";

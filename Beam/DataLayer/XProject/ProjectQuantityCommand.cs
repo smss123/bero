@@ -17,7 +17,7 @@ namespace DataLayer.XProject
         {
             //try
             //{
-             db = new dbDataContext();
+             db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.ProjectQuantities.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -46,6 +46,7 @@ namespace DataLayer.XProject
         {
             //try
             //{
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 var q = db.ProjectQuantities.Where(p => p.ID == tb.ID).Single();
                 q.ItemID = tb.ItemID;
                 q.Qty = tb.Qty;
@@ -76,7 +77,8 @@ namespace DataLayer.XProject
         {
             //try
             //{
-                var q = db.ProjectQuantities.Where(p => p.ID == iD).Single();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
+                var q = db.ProjectQuantities.Where(p => p.ID == iD).SingleOrDefault();
                 db.ProjectQuantities.DeleteOnSubmit(q);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -87,7 +89,7 @@ namespace DataLayer.XProject
                     SystemUser = LoginInfomation.CurrnetUser
                 });
                 q = null;
-              ProcessChange("Delete Project Quantity", q.ID + " has Been Deleted ", null);
+            
               return true;
             //}
             //catch (Exception e)

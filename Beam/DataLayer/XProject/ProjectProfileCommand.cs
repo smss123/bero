@@ -14,7 +14,7 @@ namespace DataLayer.XProject
         public static  event OnchangeCallBack ProcessChange;
         public static bool NewProject(ProjectProfile Pro)
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
                 db.ProjectProfiles.InsertOnSubmit(Pro);
                 db.SubmitChanges();
                 
@@ -62,8 +62,8 @@ namespace DataLayer.XProject
 
         public static bool DeleteProject(int iD)
         {
-            try
-            {
+            //try
+            //{
                 var q = db.ProjectProfiles.Where(p => p.ID == iD).Single();
                 db.ProjectProfiles.DeleteOnSubmit(q);
                 db.SubmitChanges();
@@ -77,18 +77,18 @@ namespace DataLayer.XProject
                 q = null;
                 ProcessChange("Delete Project Profile", q.ProjectName + " has Been Deleted ", null);
                 return true;
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-                ProcessChange("Error message", "Can't Delete Project Profile", e.ToString());
-                return false;
-            }
+            //    ProcessChange("Error message", "Can't Delete Project Profile", e.ToString());
+            //    return false;
+            //}
         }
 
         public static List<ProjectProfile> GetAll()
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             return db.ProjectProfiles.ToList();
             
         }

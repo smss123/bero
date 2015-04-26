@@ -178,6 +178,7 @@
             this.ProjectAttachmentGridView.Text = "radGridView1";
             this.ProjectAttachmentGridView.ThemeName = "Office2013Light";
             this.ProjectAttachmentGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.ProjectAttachmentGridView_CommandCellClick);
+            this.ProjectAttachmentGridView.Click += new System.EventHandler(this.ProjectAttachmentGridView_Click);
             // 
             // FrmManageProjectAttachment
             // 

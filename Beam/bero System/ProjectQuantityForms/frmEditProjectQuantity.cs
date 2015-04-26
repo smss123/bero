@@ -48,7 +48,7 @@ namespace bero_System.ProjectQuantityForms
                 compositeFilter.FilterDescriptors.Add(LeveName);
                 compositeFilter.LogicalOperator = FilterLogicalOperator.Or;
                 this.CmbItems.EditorControl.FilterDescriptors.Add(compositeFilter);
-
+                CmbItems.SelectedValue = TargetProject.ItemID;
 
 
 
@@ -92,6 +92,11 @@ namespace bero_System.ProjectQuantityForms
         private void QtyText_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

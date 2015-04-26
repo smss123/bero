@@ -12,10 +12,10 @@ namespace DataLayer.XEmployees
         public delegate void OnchangeCallBack(string processName, string Usermsg, string description);
         public static event OnchangeCallBack ProcessChange;
 
-        public  static   dbDataContext db = new dbDataContext();
+        public  static   dbDataContext db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
         public static bool NewEmployee(Employee tb)
         {
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
             db.Employees.InsertOnSubmit(tb);
             db.SubmitChanges();
             HistoryCommand.NewHistory(new History()

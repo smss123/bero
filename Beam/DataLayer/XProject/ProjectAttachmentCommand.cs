@@ -16,7 +16,8 @@ namespace DataLayer.XProject
         {
             //try
             //{
-            db = new dbDataContext();
+            db = new dbDataContext(Properties.Settings.Default.xprema_beroConnectionString);
+            tb.ID = Guid.NewGuid();
                 db.ProjectAttachments.InsertOnSubmit(tb);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -32,7 +33,7 @@ namespace DataLayer.XProject
                     HistoryAction = "Adding New Project Attachment",
 
                 });
-              ProcessChange("Adding Project Attachment ", tb.FileName + " has Been Saved ", null);
+          
             return true;
             //}
             //catch (Exception e)
@@ -75,11 +76,11 @@ namespace DataLayer.XProject
             }
         }
 
-        public static bool DeleteProjectAttachment(int iD)
+        public static bool DeleteProjectAttachment(Guid iD)
         {
             try
             {
-                var q = db.ProjectAttachments.Where(p => int.Parse(p.ID.ToString()) == iD).Single();
+                var q = db.ProjectAttachments.Where(p => p.ID == iD).Single();
                 db.ProjectAttachments.DeleteOnSubmit(q);
                 db.SubmitChanges();
                 HistoryCommand.NewHistory(new History()
@@ -96,7 +97,7 @@ namespace DataLayer.XProject
             catch (Exception e)
             {
 
-                ProcessChange("Error message", "Can't Delete Project Attachment", e.ToString());
+               
                 return false;
             }
         }
@@ -107,9 +108,9 @@ namespace DataLayer.XProject
             return db.ProjectAttachments.ToList();
         }
 
-        public static ProjectAttachment GetByProjectProfileID(int ProjtID)
+        public static List<ProjectAttachment> GetByProjectProfileID(int ProjtID)
         {
-            ProjectAttachment atb = db.ProjectAttachments.Where(a => a.ProjectProfileID == ProjtID).SingleOrDefault();
+            var atb = db.ProjectAttachments.Where(a => a.ProjectProfileID == ProjtID).ToList();
             return atb;
         }
 
